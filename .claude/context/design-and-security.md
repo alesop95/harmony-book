@@ -1,9 +1,10 @@
 ---
-generated-from-commit: PENDING-FIRST-COMMIT
+generated-from-commit: 017b02a
 generated-from-branch: main
 generated-date: 2026-06-15
-covers-paths: []
-last-verified-commit: PENDING-FIRST-COMMIT
+covers-paths:
+  - .claude/context/diagrams/**
+last-verified-commit: 017b02a
 ---
 
 # Design e sicurezza applicativa
@@ -24,4 +25,6 @@ libro tipicamente minima, da dichiarare esplicitamente quando definita>
 
 | Diagramma | Sorgente | Componenti rappresentati |
 |---|---|---|
-| <nome>.svg | <nome>.mmd | <elenco; corrispondenza uno a uno col codice> |
+| flusso-scrittura.svg | flusso-scrittura.mmd | ciclo scrivi → build → rivedi → commit → sync-context, con backup SSD |
+| struttura-progetto.svg | struttura-progetto.mmd | split pubblico (style, scripts, sample, .claude) / privato locale (manuscript, build) |
+| pipeline-build.svg | pipeline-build.mmd | lilypond-book → lualatex → biber/makeindex/makeglossaries → build/main.pdf |

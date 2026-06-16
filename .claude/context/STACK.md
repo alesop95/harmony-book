@@ -1,5 +1,5 @@
 ---
-generated-from-commit: PENDING-FIRST-COMMIT
+generated-from-commit: 017b02a
 generated-from-branch: main
 generated-date: 2026-06-15
 covers-paths:
@@ -10,7 +10,7 @@ covers-paths:
   - .latexmkrc
   - .gitattributes
 source-doc: transform-into-claude-md/devBook settings.docx
-last-verified-commit: PENDING-FIRST-COMMIT
+last-verified-commit: 017b02a
 ---
 
 # Stack applicativo
@@ -75,4 +75,4 @@ l'intera catena per verificarla senza esporre contenuto. Gli script di build ris
 - `style/harmony-macros.sty:\grado` — macro di notazione armonica.
 - `scripts/build.ps1` / `scripts/build.sh` — passata `lilypond-book` + `latexmk -lualatex`.
 - `tex-packages.txt` — manifesto riproducibile dell'ambiente TeX.
-- Riferimento esterno: `transform-into-claude-md/latex4musicians.pdf` (cap. 4, LilyPond+LaTeX).
+- Riferimenti esterni su LilyPond+LaTeX e autopubblicazione: vedi `README.md`, sezione "Risorse e riferimenti".

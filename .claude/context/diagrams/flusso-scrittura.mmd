@@ -1,0 +1,10 @@
+flowchart TD
+  A["Scrivi / modifica<br/>manuscript/*.lytex e music/*.ly"] --> B["scripts/build.ps1<br/>(o build.sh)"]
+  B --> C["build/main.pdf"]
+  C --> D{"La resa va bene?"}
+  D -- "No, correggi" --> A
+  D -- "Sì, traguardo raggiunto" --> E["Aggiorna schede e work-log<br/>in .claude/"]
+  E --> F["git add . &amp;&amp; git commit<br/>(manuale, utente)"]
+  F --> G["skill sync-context<br/>ancora last-verified a HEAD"]
+  G --> A
+  C -. "backup della prosa" .-> H[("SSD locale -> SSD portatile")]

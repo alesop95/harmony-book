@@ -8,7 +8,7 @@
 
 ```
 Branch attivo:        main
-Commit di riferimento: PENDING-FIRST-COMMIT
+Commit di riferimento: 017b02a
 Data snapshot:        2026-06-16
 ```
 
@@ -16,18 +16,18 @@ Data snapshot:        2026-06-16
 
 | Scheda | last-verified | Stato |
 |---|---|---|
-| STACK.md | PENDING-FIRST-COMMIT | popolata (ADR-003) |
-| design-and-security.md | PENDING-FIRST-COMMIT | da popolare |
-| deployment.md | PENDING-FIRST-COMMIT | da popolare |
-| dev-testing.md | PENDING-FIRST-COMMIT | da popolare |
-| current-work.md | PENDING-FIRST-COMMIT | popolata (Fase 1) |
-| roadmap.md | PENDING-FIRST-COMMIT | popolata |
+| STACK.md | 017b02a | aggiornata |
+| design-and-security.md | 017b02a | diagrammi registrati; paradigmi da popolare |
+| deployment.md | 017b02a | da popolare |
+| dev-testing.md | 017b02a | da popolare |
+| current-work.md | 017b02a | aggiornata |
+| roadmap.md | 017b02a | aggiornata |
 
 ## Punto di ripresa
 
-Stack deciso (ADR-003) e privacy decisa (ADR-004). Ambiente installato e catena di build VERIFICATA
-su Windows: `scripts/build.ps1` compila `sample/main.lytex` (lilypond-book -> LuaLaTeX -> biber ->
-makeindex) e lo scheletro `manuscript/`. Prossima azione concreta: avviare la stesura del capitolo 1
-in `manuscript/` (privato, ignorato), e far eseguire all'utente il PRIMO COMMIT, dopo il quale
-lanciare `sync-context` per sostituire ogni `PENDING-FIRST-COMMIT` con l'hash di HEAD. Da collaudare
-ancora la parita' Linux degli script `.sh`. Vedi `context/current-work.md`.
+Sistema ancorato al primo commit `017b02a` (branch `main`). Ambiente e catena di build verificati.
+Prossima azione concreta: iniziare la stesura in `manuscript/` (privato, ignorato) — copertina,
+introduzione e capitolo 1 — compilando con `scripts/build.ps1` per controllare la resa. A ogni
+avanzamento significativo: aggiornare le schede impattate e il work-log, poi l'utente committa e si
+rilancia `sync-context` per bumpare `last-verified-commit`. Da collaudare ancora la parità Linux
+degli script `.sh`.

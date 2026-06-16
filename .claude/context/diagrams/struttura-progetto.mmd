@@ -1,0 +1,18 @@
+flowchart TB
+  subgraph PUB["Repo pubblica su GitHub (tracciata)"]
+    direction TB
+    S["style/<br/>preambolo, macro armoniche"]
+    SC["scripts/<br/>setup-tex, build"]
+    SA["sample/<br/>documento di verifica"]
+    CL[".claude/<br/>contesto, skill, memoria, regole"]
+    CF["config: .latexmkrc, tex-packages.txt,<br/>.gitattributes, README.md"]
+  end
+  subgraph PRIV["Solo locale - IGNORATO da git"]
+    direction TB
+    M["manuscript/<br/>libro reale: capitoli, musica, bibliografia"]
+    BLD["build/<br/>PDF e file ausiliari"]
+  end
+  S --> BLD
+  SC --> BLD
+  M --> BLD
+  M -. "backup" .-> SSD[("SSD locale -> SSD portatile")]

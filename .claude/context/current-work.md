@@ -1,12 +1,12 @@
 ---
-generated-from-commit: PENDING-FIRST-COMMIT
+generated-from-commit: 017b02a
 generated-from-branch: main
 generated-date: 2026-06-15
 covers-paths:
   - scripts/**
   - style/**
   - sample/**
-last-verified-commit: PENDING-FIRST-COMMIT
+last-verified-commit: 017b02a
 stato: in corso
 ---
 
@@ -39,7 +39,7 @@ Definition of done:
 - [x] `scripts/build.ps1` compila `sample/main.lytex` -> `build/main.pdf` senza errori
 - [x] Verificata la resa di un esempio LilyPond e della microtipografia nel PDF (sample ~40 KB)
 - [ ] Avviata la stesura del capitolo 1 in `manuscript/`
-- [ ] Primo commit eseguito dall'utente e `sync-context` lanciata per ancorare i `PENDING-FIRST-COMMIT`
+- [ ] Primo commit eseguito dall'utente e `sync-context` lanciata per ancorare i `017b02a`
 
 Nota: la catena di build e' verificata su Windows. La parita' su Linux (`scripts/*.sh`) e'
 implementata ma non ancora collaudata su una macchina Linux.
@@ -52,4 +52,4 @@ convenzioni di notazione armonica si affina con la stesura.
 
 ## Riconciliazione
 
-Ultima verifica: 2026-06-15 al commit PENDING-FIRST-COMMIT.
+Ultima verifica: 2026-06-15 al commit 017b02a.

@@ -1,0 +1,10 @@
+flowchart LR
+  A["main.lytex<br/>+ capitoli + esempi .ly"] --> B["lilypond-book<br/>rende gli spartiti in immagini"]
+  B --> C["lualatex<br/>LuaLaTeX + microtype + fontspec"]
+  C --> D["biber<br/>bibliografia"]
+  C --> E["makeindex<br/>indice analitico"]
+  C --> F["makeglossaries<br/>glossario e acronimi"]
+  D --> G["lualatex<br/>ripassa e risolve i rimandi"]
+  E --> G
+  F --> G
+  G --> H["build/main.pdf"]

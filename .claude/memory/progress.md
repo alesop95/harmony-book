@@ -6,9 +6,33 @@
 > documenti `.docx`, con il nome del documento sorgente e l'esito, così la data di allineamento
 > sopravvive a un clone.
 
+## 2026-06-16 — Pulizia handoff, strumento diagrammi e diagrammi di flusso
+
+Commit: (pendente, da committare)
+File toccati: rimossa `transform-into-claude-md/` (handoff, era ignorata) dopo aver travasato i
+riferimenti pubblici in `README.md` (sezione "Risorse e riferimenti") e quelli personali in
+`_notes/RESOCONTO.md`; `STACK.md` (riferimento esterno aggiornato); `tools/render-diagrams.mjs` e
+`tools/README.md` istanziati dal bundle; tre diagrammi Mermaid in `.claude/context/diagrams/`
+(`flusso-scrittura`, `struttura-progetto`, `pipeline-build`) come `.mmd` + `.svg`; `README.md`
+(sezione "Diagrammi del flusso di lavoro"); `design-and-security.md` (tabella diagrammi registrata,
+`covers-paths` su `.claude/context/diagrams/**`).
+Motivo: pulizia post-decisione e documentazione visuale dell'uso del progetto. SVG generati con
+`node tools/render-diagrams.mjs` (Edge di sistema, nessun Chromium scaricato).
+
+## 2026-06-16 — Ancoraggio al primo commit (sync-context)
+
+Commit: 017b02a
+File toccati: frontmatter di tutte le schede `context/*.md`, `memory/index.md`, work-log.
+Motivo: eseguito il primo ancoraggio dopo il primo commit reale dell'utente. Sostituito il
+segnaposto `PENDING-FIRST-COMMIT` con l'hash di HEAD (`017b02a`) in `generated-from-commit` e
+`last-verified-commit` di STACK/current-work/roadmap/deployment/design-and-security/dev-testing e
+nel commit di riferimento di `memory/index.md`. Le menzioni descrittive del segnaposto in
+`PROJECT-SYSTEM.md`, nelle skill, nei template e negli ADR restano invariate (storico). Da qui il
+drift si gestisce normalmente con `sync-context`.
+
 ## 2026-06-16 — Ambiente installato e catena di build verificata
 
-Commit: PENDING-FIRST-COMMIT
+Commit: 017b02a
 File toccati: `tex-packages.txt`, `.latexmkrc`, `scripts/setup-tex.ps1`, `scripts/build.ps1`,
 `scripts/build.sh`, `manuscript/main.lytex` (ignorato).
 Motivo: reso operativo lo stack di ADR-003. TinyTeX, `lualatex` e `latexmk` erano gia' presenti;
@@ -32,7 +56,7 @@ perche' attivati a vuoto mandavano latexmk in stallo.
 
 ## 2026-06-16 — Decisione dello stack, privacy del contenuto e attivazione del pacchetto LaTeX
 
-Commit: PENDING-FIRST-COMMIT
+Commit: 017b02a
 File toccati: `STACK.md`, `current-work.md`, `roadmap.md`, `decisions.md` (ADR-003, ADR-004),
 `.latexmkrc`, `tex-packages.txt`, `scripts/{setup-tex,build}.{ps1,sh}`,
 `.claude/skills/latex-build/SKILL.md`, `style/{preamble.tex,harmony-macros.sty}`,
@@ -49,7 +73,7 @@ Riconciliazione handoff: documento sorgente `transform-into-claude-md/devBook se
 
 ## 2026-06-15 — Inizializzazione del sistema di progetto
 
-Commit: PENDING-FIRST-COMMIT
+Commit: 017b02a
 File toccati: anatomia di `.claude` (settings.json, memory/, context/, rules/, skills/, templates/),
 `CLAUDE.md`, `CLAUDE.local.md`, `.gitignore`, `_notes/`.
 Motivo: installazione del sistema portabile di contesto, documentazione e version control descritto

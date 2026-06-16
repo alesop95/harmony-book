@@ -58,6 +58,24 @@ sh scripts/build.sh
 Il PDF esce in `build/`. La procedura e' incapsulata nella skill `latex-build`
 (`.claude/skills/latex-build/SKILL.md`).
 
+## Diagrammi del flusso di lavoro
+
+![Flusso di scrittura](.claude/context/diagrams/flusso-scrittura.svg)
+
+Ciclo quotidiano: scrivere in `manuscript/`, compilare, rivedere il PDF e, al traguardo, committare
+e ri-ancorare con `sync-context`.
+
+![Struttura del progetto](.claude/context/diagrams/struttura-progetto.svg)
+
+Cosa è pubblico (metodo e struttura) e cosa resta privato e locale (il contenuto del libro).
+
+![Pipeline di build](.claude/context/diagrams/pipeline-build.svg)
+
+Come `build.ps1` produce il PDF: `lilypond-book`, LuaLaTeX, `biber`, `makeindex`, `makeglossaries`.
+
+I sorgenti `.mmd` stanno accanto agli `.svg` in `.claude/context/diagrams/`; per rigenerarli dopo
+una modifica: `node tools/render-diagrams.mjs`.
+
 ## Modello di privacy del contenuto
 
 Il contenuto vendibile del libro non deve mai essere pubblicato. La cartella `manuscript/` (capitoli,
@@ -66,6 +84,24 @@ pubblico; il backup della prosa avviene a parte (copia locale da SSD a SSD). `ma
 sottoalbero autonomo: se in futuro serve versionarlo, basta inizializzare un repository git privato
 al suo interno, senza ristrutturare nulla. Il version control pubblico tiene quindi traccia
 dell'avanzamento di *struttura e metodo*, non del testo.
+
+## Risorse e riferimenti
+
+Notazione musicale con LilyPond e integrazione in LaTeX:
+
+- LilyPond, sito e download: https://lilypond.org/
+- LilyPond, uso con LaTeX (`lilypond-book`): https://lilypond.org/doc/stable/Documentation/usage/latex
+- TeX FAQ, comporre musica in LaTeX: https://texfaq.org/FAQ-music
+- Guida di riferimento "LaTeX for Musicians" (LilyPond + LaTeX), cap. 4 sull'integrazione.
+
+Editoria e autopubblicazione con LaTeX:
+
+- Pubblicare un libro con LaTeX (tutorial): https://tex.stackexchange.com/questions/644
+- Usare LaTeX con gli editori: https://writing.stackexchange.com/questions/9875
+- Modelli di libro in LaTeX: https://www.latextemplates.com/cat/books
+- Impostare un documento per l'autopubblicazione: https://tex.stackexchange.com/questions/19497
+- "Better Books with LaTeX, the Agile Way": https://leanpub.com/betterbookswithlatextheagileway
+- Esperienza di autopubblicazione open source: https://hmemcpy.com/2020/02/everything-i-learned-about-self-publishing-an-open-source-book/
 
 ## Note
 
