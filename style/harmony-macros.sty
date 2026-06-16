@@ -18,6 +18,12 @@
 % Termine tecnico alla prima occorrenza (corsivo); abbinabile al glossario.
 \newcommand{\termine}[1]{\emph{#1}}
 
+% Apertura in stile abstract: brano introduttivo in corsivo, rientrato e staccato dal resto.
+% Usato per l'introduzione/abstract del libro.
+\newenvironment{apertura}
+  {\begin{quotation}\itshape\small}
+  {\end{quotation}\par\normalsize}
+
 % Segnaposto: aggiungere qui le convenzioni armoniche che emergeranno dalla
 % stesura (es. basso continuo cifrato, analisi funzionale, condotta delle parti).
 

@@ -6,6 +6,16 @@
 > documenti `.docx`, con il nome del documento sorgente e l'esito, così la data di allineamento
 > sopravvive a un clone.
 
+## 2026-06-16 — Stesura dell'introduzione del libro (da INTRO.docx)
+
+Commit: (pendente; il contenuto NON entra in git)
+File toccati (privati, ignorati): `manuscript/chapters/00-introduzione.lytex`.
+Motivo: l'utente ha fornito `_notes/INTRO.docx` come introduzione/abstract del libro. Ingestione con
+la strategia della sezione 5 (estrazione in `_notes/.tmp-docx-intro/`, lettura mirata) e trascrizione
+fedele nel capitolo di introduzione, senza inventare. Compilazione verificata: `build/main.pdf`
+(~41 KB), zero glyph mancanti (caratteri tipografici Unicode resi da Libertinus via LuaLaTeX).
+Riconciliazione documento sorgente: `_notes/INTRO.docx` (privato), esito = introduzione stesa.
+
 ## 2026-06-16 — Pulizia handoff, strumento diagrammi e diagrammi di flusso
 
 Commit: (pendente, da committare)

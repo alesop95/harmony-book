@@ -38,7 +38,7 @@ Definition of done:
 - [x] Installato l'ambiente: `scripts/setup-tex.ps1` (TinyTeX + pacchetti) e LilyPond sotto Program Files
 - [x] `scripts/build.ps1` compila `sample/main.lytex` -> `build/main.pdf` senza errori
 - [x] Verificata la resa di un esempio LilyPond e della microtipografia nel PDF (sample ~40 KB)
-- [ ] Avviata la stesura del capitolo 1 in `manuscript/`
+- [x] Avviata la stesura: introduzione del libro stesa da `_notes/INTRO.docx`; struttura modulare attiva
 - [ ] Primo commit eseguito dall'utente e `sync-context` lanciata per ancorare i `017b02a`
 
 Nota: la catena di build e' verificata su Windows. La parita' su Linux (`scripts/*.sh`) e'
