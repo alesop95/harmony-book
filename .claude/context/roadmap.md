@@ -13,18 +13,21 @@ last-verified-commit: PENDING-FIRST-COMMIT
 
 ## Direzione
 
-Scrivere un libro di armonia, con scrittura portabile tra Windows 11 e Linux e version control che
-funge di fatto da stato di avanzamento del libro.
+Scrivere un libro di armonia di qualità editoriale, portabile tra Windows 11 e Linux. Stack deciso
+(ADR-003): LaTeX-nativo LuaLaTeX + memoir + LilyPond via lilypond-book. Contenuto privato (ADR-004):
+`manuscript/` ignorata, backup SSD; repo pubblico solo per metodo e struttura.
 
 ## Priorità
 
-1. Decidere lo stack tecnico (motore di composizione e notazione musicale) leggendo l'handoff in
-   `transform-into-claude-md/`, perché determina tutto il resto.
-2. Popolare le schede di `context/` con le scelte effettive e ancorare il sistema al primo commit.
-3. Definire la struttura del libro (capitoli, esempi musicali) e avviare la stesura.
+1. Fase 1 (in corso): bootstrap ambiente, verifica della catena di build su `sample/`, poi stesura
+   dei capitoli in `manuscript/`. Definire struttura del libro e convenzioni di notazione armonica.
+2. Primo commit e ancoraggio del sistema (`sync-context`).
+3. Fase 2 (futura, da valutare): front-end Quarto per edizione web HTML/EPUB interattiva (YouTube,
+   audio) riusando le sorgenti LaTeX+LilyPond. Solo se l'edizione web diventa un obiettivo reale.
+4. Fase 3 (futura, opzionale): Docker + GitHub Actions per build CI multi-formato e pubblicazione;
+   Git LFS per asset audio/immagini pesanti.
 
 ## Idee e ipotesi da verificare
 
-Lo stack candidato emergerà dalla ricerca personale in `transform-into-claude-md/` (LaTeX,
-notazione musicale tipo LilyPond/lilypond-book). Da confermare con l'utente, marcato come da
-verificare finché non deciso.
+Font e stile bibliografico definitivi alla prova del PDF (da verificare). Promozione di
+`manuscript/` a repository privato separato se servira' storia/backup remoti della prosa (ADR-004).

@@ -2,47 +2,53 @@
 generated-from-commit: PENDING-FIRST-COMMIT
 generated-from-branch: main
 generated-date: 2026-06-15
-covers-paths: []
+covers-paths:
+  - scripts/**
+  - style/**
+  - sample/**
 last-verified-commit: PENDING-FIRST-COMMIT
-stato: in pianificazione
+stato: in corso
 ---
 
 # Lavoro in corso
 
 > La fonte di verità su cosa è fatto resta `memory/index.md` e il work-log, non le spunte di
-> questo file. Ogni feature si descrive con lo schema fisso sotto, così il lavoro pendente è
-> leggibile senza ricostruire il contesto da capo.
+> questo file.
 
-## Feature: Decisione dello stack e bootstrap della scrittura
+## Feature: Bootstrap dell'ambiente e verifica della catena di build
 
-Cosa fa: definisce con quale stack tecnico si scrive il libro di armonia (motore di composizione e
-notazione musicale), portabile su Windows 11 e Linux, e prepara lo scheletro delle sorgenti.
+Cosa fa: rende operativo lo stack deciso (ADR-003) installando l'ambiente e verificando che la
+catena `lilypond-book` -> LuaLaTeX produca un PDF, prima di entrare nella stesura vera.
 
 File da creare:
 
 ```
-<da definire dopo la scelta dello stack, es. sorgenti del libro e manifesto di build>
+manuscript/chapters/*.lytex   capitoli reali del libro (privati, ignorati)
 ```
 
 File da modificare:
 
 ```
-.claude/context/STACK.md   popolare con lo stack scelto e le alternative escluse
+tex-packages.txt          aggiungere pacchetti se il preambolo evolve
+style/preamble.tex        rifinire tipografia e macro armoniche
 ```
 
 Definition of done:
 
-- [ ] Letto `transform-into-claude-md/` e discusso lo stack con l'utente
-- [ ] Stack deciso e registrato come ADR in `memory/decisions.md`
-- [ ] Pacchetto LaTeX attivato da `.claude/templates/latex/` se lo stack lo richiede
-- [ ] Schede di `context/` popolate leggendo le scelte
+- [x] Installato l'ambiente: `scripts/setup-tex.ps1` (TinyTeX + pacchetti) e LilyPond sotto Program Files
+- [x] `scripts/build.ps1` compila `sample/main.lytex` -> `build/main.pdf` senza errori
+- [x] Verificata la resa di un esempio LilyPond e della microtipografia nel PDF (sample ~40 KB)
+- [ ] Avviata la stesura del capitolo 1 in `manuscript/`
 - [ ] Primo commit eseguito dall'utente e `sync-context` lanciata per ancorare i `PENDING-FIRST-COMMIT`
+
+Nota: la catena di build e' verificata su Windows. La parita' su Linux (`scripts/*.sh`) e'
+implementata ma non ancora collaudata su una macchina Linux.
 
 Domande aperte:
 
-Quale stack di composizione e quale sistema di notazione musicale offrono il miglior compromesso
-tra qualità tipografica, portabilità Windows/Linux e diff leggibili in git per il version control
-come stato di avanzamento. Da risolvere leggendo l'handoff e discutendo con l'utente.
+Scelta del font definitivo (Libertinus e' il default proposto) e dello stile bibliografico
+(`authoryear` di default) da confermare alla prova del PDF. La struttura dei capitoli e delle
+convenzioni di notazione armonica si affina con la stesura.
 
 ## Riconciliazione
 

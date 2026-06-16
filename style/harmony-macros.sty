@@ -1,0 +1,24 @@
+% =====================================================================
+% harmony-macros.sty - Macro proprie per la notazione armonica
+% =====================================================================
+% Tracciato (pubblico): parte del "metodo", non del contenuto del libro.
+% Raccoglie le scorciatoie di notazione (gradi con numeri romani, sigle
+% accordali, ecc.) cosi' che la notazione resti coerente in tutto il testo.
+% Da estendere man mano che la stesura introduce nuove convenzioni.
+% ---------------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{harmony-macros}[2026/06/15 v0.1 Macro per il libro di armonia]
+
+% Grado armonico in numeri romani, es. \grado{V}, \grado{ii}.
+\newcommand{\grado}[1]{\textsc{#1}}
+
+% Sigla accordale in tondo, es. \accordo{C\textsuperscript{7}}.
+\newcommand{\accordo}[1]{\textnormal{#1}}
+
+% Termine tecnico alla prima occorrenza (corsivo); abbinabile al glossario.
+\newcommand{\termine}[1]{\emph{#1}}
+
+% Segnaposto: aggiungere qui le convenzioni armoniche che emergeranno dalla
+% stesura (es. basso continuo cifrato, analisi funzionale, condotta delle parti).
+
+\endinput

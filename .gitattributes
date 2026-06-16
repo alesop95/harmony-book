@@ -1,0 +1,24 @@
+# Coerenza dei fine-riga tra Windows 11 e Linux: i sorgenti testuali usano sempre LF (\n),
+# cosi' i diff restano puliti a prescindere dal sistema operativo. Git rileva da solo testo/binario.
+* text=auto eol=lf
+
+# Sorgenti del progetto: forzatamente LF.
+*.tex   text eol=lf
+*.lytex text eol=lf
+*.ly    text eol=lf
+*.sty   text eol=lf
+*.cls   text eol=lf
+*.bib   text eol=lf
+*.md    text eol=lf
+*.sh    text eol=lf
+*.latexmkrc text eol=lf
+
+# Gli script PowerShell sono piu' tolleranti ma li teniamo a LF per uniformita'.
+*.ps1   text eol=lf
+
+# Binari noti (mai normalizzati). Quando servira' Git LFS, qui si dichiareranno gli asset pesanti.
+*.pdf   binary
+*.png   binary
+*.jpg   binary
+*.otf   binary
+*.ttf   binary

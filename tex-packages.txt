@@ -1,0 +1,66 @@
+# Manifesto dei pacchetti LaTeX (sezione 13 di .claude/PROJECT-SYSTEM.md).
+# Una voce per riga col nome del pacchetto tlmgr; righe vuote e con # ignorate. tlmgr risolve
+# da solo le dipendenze, quindi si elencano solo i pacchetti di primo livello.
+#
+# Stack: LuaLaTeX + classe memoir + lilypond-book, per un libro di armonia di qualita' editoriale.
+# Adattare al preambolo reale di style/preamble.tex quando evolve.
+
+# --- Strumento di build ---
+latexmk
+
+# --- Engine moderno: font OpenType e Unicode ---
+fontspec
+luatex85
+unicode-math
+
+# --- Classe del libro e impaginazione editoriale ---
+memoir
+xpatch
+microtype
+csquotes
+setspace
+
+# --- Lingua e sillabazione (luatex usa hyph-utf8) ---
+babel
+babel-italian
+hyph-utf8
+
+# --- Riferimenti incrociati, link, bibliografia ---
+hyperref
+cleveref
+biblatex
+biber
+
+# --- Indice analitico e glossario dei termini ---
+imakeidx
+makeindex
+glossaries
+glossaries-italian
+mfirstuc
+xfor
+datatool
+
+# --- Matematica (formule, intervalli, rapporti armonici) ---
+amsmath
+amsfonts
+mathtools
+
+# --- Tabelle e figure ---
+booktabs
+tools
+graphics
+float
+caption
+xcolor
+
+# --- Disegni vettoriali: cerchio delle quinte, schemi tonali ---
+pgf
+pgfplots
+
+# --- Font OpenType editoriale (testo + matematica coordinata) ---
+libertinus-fonts
+
+# --- Notazione musicale ---
+# LilyPond e il preprocessore lilypond-book NON sono pacchetti TeX: sono un binario esterno,
+# installato a parte (vedi scripts/setup-tex e la skill latex-build). I pacchetti TeX che il .tex
+# generato da lilypond-book puo' richiedere (graphicx) sono gia' coperti da 'graphics' sopra.

@@ -3,6 +3,12 @@
 # Va letta nella sessione ripresa per decidere lo stack e riempire le schede claude.
 transform-into-claude-md/
 
+# --- Contenuto privato e output di build di harmony-book ---
+# Il contenuto vendibile del libro non va mai versionato in questa repo pubblica.
+/manuscript/
+# Output di compilazione (lilypond-book + latexmk).
+/build/
+
 # --- Sistema di progetto portabile: livello privato e ignorato (sezione 6/10) ---
 # Da unire al .gitignore del progetto. Inserire PRIMA di creare _notes/, altrimenti
 # la cartella finisce indicizzata.
@@ -30,21 +36,34 @@ __pycache__/
 *.pyc
 # Node
 node_modules/
-# LaTeX: il .tex e' la fonte, il PDF e gli ausiliari sono derivati. Abilitare nei progetti LaTeX.
-# *.aux
-# *.log
-# *.out
-# *.toc
-# *.lof
-# *.lot
-# *.fls
-# *.fdb_latexmk
-# *.synctex.gz
-# *.bbl
-# *.blg
-# *.bcf
-# *.run.xml
-# *.nav
-# *.snm
-# *.vrb
-# *.pdf
+# LaTeX: il .tex/.lytex/.ly e' la fonte, il PDF e gli ausiliari sono derivati. Attivo.
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.nav
+*.snm
+*.vrb
+*.glo
+*.gls
+*.glg
+*.ist
+*.acn
+*.acr
+*.alg
+*.idx
+*.ind
+*.ilg
+*.pdf
+# Ausiliari e immagini generati da lilypond-book fuori da build/ (best-effort).
+*-systems.*
+*.eps

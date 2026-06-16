@@ -1,0 +1,43 @@
+% =====================================================================
+% sample/main.lytex - Documento minimo di verifica della catena tecnica
+% =====================================================================
+% Tracciato (pubblico): NON e' il libro. Esercita lo stack (LuaLaTeX +
+% memoir + microtype + fontspec + babel + LilyPond via lilypond-book +
+% biblatex) per dimostrare che l'ambiente compila, senza esporre contenuto.
+% Build:  scripts/build.ps1   (o build.sh) -> build/main.pdf
+% ---------------------------------------------------------------------
+\documentclass[11pt,a4paper]{memoir}
+\input{preamble}
+
+\addbibresource{references.bib}
+
+\title{Verifica dello stack del libro di armonia}
+\author{alesop95}
+
+\begin{document}
+\maketitle
+
+\chapter{Prova di tipografia e notazione}
+
+Questo documento verifica la catena di compilazione. Il testo usa
+\enquote{virgolette caporali} italiane via \texttt{csquotes} e la
+microtipografia di \texttt{microtype}.
+
+Una relazione armonica elementare: la quinta giusta corrisponde al rapporto
+di frequenze $3:2$, mentre l'ottava al rapporto $2:1$. Il grado di dominante
+si annota \grado{V} e risolve sul grado di tonica \grado{I}.
+
+Esempio musicale incluso da file con \texttt{lilypond-book}:
+
+\lilypondfile{music/cadenza-demo.ly}
+
+Ed esempio in linea:
+
+\begin{lilypond}
+\relative c'' { \time 4/4 c4 d e f g1 \bar "|." }
+\end{lilypond}
+
+Un riferimento bibliografico di prova~\autocite{esempio2025}.
+
+\printbibliography
+\end{document}

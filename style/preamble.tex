@@ -1,0 +1,57 @@
+% =====================================================================
+% style/preamble.tex - Preambolo condiviso del libro di armonia
+% =====================================================================
+% Tracciato (pubblico): contiene SOLO la configurazione tipografica e i
+% pacchetti, nessun contenuto del libro. Caricato dai file principali con
+% \input{preamble} subito dopo \documentclass{memoir} (LuaLaTeX).
+% L'engine e' fissato in .latexmkrc (lualatex). Vedi .claude/context/STACK.md.
+% ---------------------------------------------------------------------
+
+% --- Font e Unicode (LuaLaTeX) ---
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\setmainfont{Libertinus Serif}
+\setsansfont{Libertinus Sans}
+\setmathfont{Libertinus Math}
+
+% --- Lingua italiana ---
+\usepackage[italian]{babel}
+
+% --- Microtipografia editoriale (espansione + protrusione) ---
+\usepackage[final,expansion=true,protrusion=true]{microtype}
+
+% --- Virgolette coerenti con la lingua ---
+\usepackage[autostyle=true,italian=guillemets]{csquotes}
+
+% --- Matematica (intervalli, rapporti, formule armoniche) ---
+\usepackage{amsmath}
+\usepackage{mathtools}
+
+% --- Tabelle ---
+\usepackage{booktabs}
+\usepackage{tabularx}
+
+% --- Figure e disegni vettoriali (cerchio delle quinte, schemi tonali) ---
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% --- Bibliografia (biblatex + biber); ogni main aggiunge \addbibresource ---
+\usepackage[backend=biber,style=authoryear,language=italian]{biblatex}
+
+% --- Indice analitico e glossario dei termini ---
+\usepackage{imakeidx}
+\makeindex[intoc]
+\usepackage[acronym,toc]{glossaries}
+\makeglossaries
+
+% --- Link e riferimenti (hyperref penultimo, cleveref ultimo) ---
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage{cleveref}
+
+% --- Macro proprie di notazione armonica ---
+\usepackage{harmony-macros}
