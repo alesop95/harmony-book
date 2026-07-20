@@ -4,7 +4,7 @@ generated-from-branch: main
 generated-date: 2026-06-15
 covers-paths:
   - .claude/context/diagrams/**
-last-verified-commit: 017b02a
+last-verified-commit: 4942de1
 ---
 
 # Design e sicurezza applicativa

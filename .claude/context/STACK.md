@@ -10,7 +10,7 @@ covers-paths:
   - .latexmkrc
   - .gitattributes
 source-doc: transform-into-claude-md/devBook settings.docx
-last-verified-commit: 017b02a
+last-verified-commit: 4942de1
 ---
 
 # Stack applicativo
@@ -73,6 +73,8 @@ l'intera catena per verificarla senza esporre contenuto. Gli script di build ris
 - `.latexmkrc` — engine LuaLaTeX e pulizia ausiliari.
 - `style/preamble.tex` — pacchetti e tipografia.
 - `style/harmony-macros.sty:\grado` — macro di notazione armonica.
+- `style/harmony-macros.sty:apertura` — ambiente per il brano introduttivo in corsivo, rientrato
+  e staccato dal resto (usato per l'introduzione/abstract del libro).
 - `scripts/build.ps1` / `scripts/build.sh` — passata `lilypond-book` + `latexmk -lualatex`.
 - `tex-packages.txt` — manifesto riproducibile dell'ambiente TeX.
 - Riferimenti esterni su LilyPond+LaTeX e autopubblicazione: vedi `README.md`, sezione "Risorse e riferimenti".

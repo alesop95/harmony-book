@@ -77,7 +77,59 @@ Conseguenze: `.gitignore` esclude `manuscript/` e `build/`; il repository pubbli
 libro reale (compila `sample/`), il libro reale si compila in locale dove `manuscript/` esiste. La
 storia git della prosa, finche' resta locale, dipende dal backup SSD dell'utente.
 
-<!-- ADR-005 — <titolo>
+## ADR-005 — Bibliografia da libri scansionati: verifica visiva del colophon, non OCR/mirror Markdown
+
+Data: 2026-07-16 (decisione emersa nella pratica il 2026-07-15, formalizzata qui il 2026-07-16)
+Stato: accettata
+Contesto: il pacchetto `doc-ingest` (via `markitdown`) produce un mirror Markdown testuale di ogni
+PDF ingerito, ed è il percorso che la skill `book-bib-extract/SKILL.md` dichiara come precondizione
+("legge il mirror Markdown già in cache"). In pratica, la maggior parte dei libri di chitarra/armonia
+posseduti dall'utente sono PDF scansionati senza livello di testo nativo: l'unico run reale di
+`doc-ingest.py` su un campione (5 PDF Piston) ha prodotto mirror Markdown a 0 parole, perché il ramo
+OCR (`pytesseract`+`pdf2image`) non era stato attivato.
+Decisione: per l'estrazione bibliografica di libri scansionati, il percorso effettivo è l'estrazione
+di un piccolo numero di pagine di frontespizio/colophon come immagini PNG (via `pdftoppm`/Poppler,
+ora standardizzata in `tools/extract-titlepages.py` con DPI e range pagine fissi), lette
+visivamente pagina per pagina. Il mirror Markdown di `doc-ingest.py` resta il percorso valido solo
+per PDF con testo nativo estraibile.
+Motivazione: l'OCR testuale su scansioni di libri didattici di chitarra (spesso fotocopie di bassa
+qualità) è inaffidabile o assente nel pacchetto attuale; la lettura visiva diretta della pagina è più
+economica in token (poche pagine mirate, mai il libro intero) e più affidabile per dati strutturati
+come anno/editore/ISBN, che vanno citati esattamente o dichiarati assenti, mai dedotti da OCR
+rumoroso.
+Conseguenze: `book-bib-extract/SKILL.md` descrive ancora la precondizione originaria (mirror
+Markdown); resta da aggiornare la sua sezione "Precondizione" per riflettere questa prassi, cosa
+segnalata ma non ancora eseguita per non modificare un pacchetto condiviso senza conferma esplicita.
+Per un buon numero di libri (soprattutto europei/didattici classici, o copie con difetti di
+scansione che omettono la pagina di copyright) anche il controllo esteso a 6-15 pagine non trova
+alcun anno: sono casi di limite pratico del metodo, non di ricerca insufficiente, e restano
+`da-verificare` a tempo indeterminato salvo accesso alla copia fisica.
+
+## ADR-006 — Ricerca di contenuto nei libri scansionati: estrazione testuale prima, lettura visiva mirata solo sui match
+
+Data: 2026-07-20
+Stato: accettata
+Contesto: ADR-005 aveva fissato il metodo per l'estrazione bibliografica (colophon) da libri
+scansionati senza OCR affidabile: lettura visiva delle sole pagine di frontespizio. La ricerca sul
+tritono nel filone 2 ha posto un problema affine ma diverso: non estrarre un'anagrafica da poche
+pagine fisse, ma trovare in quali punti di un corpo di 29 libri, spesso di centinaia di pagine,
+compaia un argomento specifico, senza aprire ogni libro pagina per pagina.
+Decisione: per la ricerca di contenuto (non di anagrafica) nei libri già ingeriti, il primo passo è
+sempre un'estrazione testuale deterministica con `pdftotext` (Poppler, già in uso) e una ricerca
+per parola chiave con numero di pagina ricavato dai salti di modulo; la lettura visiva pagina per
+pagina (`pdftoppm`, come in ADR-005) si riserva solo ai file dove questa estrazione risulta vuota
+(scansione senza testo nativo) o insufficiente, e anche in quel caso solo sulle pagine dell'indice
+analitico e quelle effettivamente segnalate come pertinenti, mai sul libro intero.
+Motivazione: coerenza con il principio deterministico-prima-del-linguistico di
+`token-economy.md`: `pdftotext` costa CPU locale e nessun token, e su un corpus di 27 file distinti
+ha risolto in pochi secondi la maggioranza dei casi (i libri con testo nativo), lasciando la lettura
+visiva, più costosa, a un sottoinsieme piccolo e noto in anticipo (6 libri su 29 nel caso concreto).
+Conseguenze: il metodo è riusabile per qualunque ricerca di contenuto futura sullo stesso corpus
+(`_notes/book-bib-registry.json`), non solo per il tritono. Non sostituisce ADR-005 per l'anagrafica
+bibliografica, che resta sul solo colophon; i due metodi coesistono per scopi diversi sullo stesso
+insieme di file.
+
+<!-- ADR-007 — <titolo>
 Data: <YYYY-MM-DD>
 Stato: <proposta / accettata / superata da ADR-NNN>
 Contesto: ...
