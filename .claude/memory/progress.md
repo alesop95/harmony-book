@@ -6,6 +6,51 @@
 > documenti `.docx`, con il nome del documento sorgente e l'esito, così la data di allineamento
 > sopravvive a un clone.
 
+## 2026-07-24 — Assemblato il .docx continuo del capitolo tritono, figure in Libertinus Sans
+
+Commit: nessuno (lavoro privato/ignorato: file sotto `_notes/`).
+File toccati: `_notes/appunti-da-inserire-nel-libro/capitolo-tritono-continuo.docx` (nuovo, assemblato
+con script deterministico python-docx), `_notes/appunti-da-inserire-nel-libro/_ly-figure/` (sei sorgenti
+`.ly` resi durevoli e i loro render `imageN.cropped.png`), `_notes/tracciamento-fonti-libro.md` (due voci
+di log: assemblaggio e rirenderizzazione figure), `_notes/appunti-da-inserire-nel-libro/_backup/` (backup
+datato del report). Il report `capitolo-tritono.docx` NON toccato.
+Motivo: chiudere il "prossimo passo" della voce sottostante. Il `.docx` continuo riusa le sei figure già
+renderizzate ai segnaposto `[FIGURA n]`, i riferimenti [1]-[9] verbatim dal report più la nuova voce web
+Springsteen [10] (titolo e canale verificati via oEmbed di YouTube; data non esposta, non inventata). Su
+rilievo dell'utente le sei figure sono poi state rirenderizzate cambiando il solo font del testo delle
+annotazioni, da serif di default a Libertinus Sans tondo (font del libro secondo `STACK.md`, impostato via
+`property-defaults.fonts` nel `\paper`); Emmentaler invariato per la notazione. Scelta dell'utente su
+confronto a quattro varianti.
+Verifica: resa confermata dall'utente via screenshot (Figura 2); 0 trattini lunghi, sei figure ai
+segnaposto, 10 riferimenti. In standby: apertura biografica (Gaetani), data del video Springsteen, voce
+Springsteen nel registro bibliografico. Prossimo passo: trascrizione fedele in
+`manuscript/chapters/*.lytex` quando l'utente dà il via.
+
+## 2026-07-24 — Riscrittura del capitolo sul tritono in prosa continua (report -> capitolo di libro)
+
+Commit: nessuno (lavoro privato/ignorato: file sotto `_notes/`).
+File toccati: `_notes/appunti-da-inserire-nel-libro/capitolo-tritono-continuo.md` (nuovo, capitolo
+continuo A-I), `_notes/cassaforte-capitolo-tritono.md` (risoluzione frigio, due direzioni future,
+puntatore al file continuo), `_notes/tracciamento-fonti-libro.md` (voce di log della riscrittura),
+`_notes/RESUME-PROMPT.md` (nuovo handoff completo), `.claude/context/current-work.md`,
+`.claude/memory/index.md`. Il sorgente `capitolo-tritono.docx` NON toccato.
+Motivo: l'utente ha rilevato che il capitolo report (indice + 8 punti numerati) aveva perso i
+collegamenti e le intuizioni discusse in chat, e voleva il taglio di un capitolo di libro continuo,
+senza sottotitoli, con rottura della quarta parete. Deciso in sessione: voce "Marcato" (lettore con
+"voi", confessione dell'autore-ingegnere), prosa continua, e ambizione dichiarata di costruire un
+impianto universale per leggere tutta l'armonia occidentale a partire dal tritono. Riscrittura fatta
+movimento per movimento con validazione dell'utente a ogni passo (arco A-I). La versione continua è un
+sovrainsieme del report: nessun contenuto tolto, tutto integrato e arricchito; recuperate le intuizioni
+mai entrate nel report (aggancio ai brani, reverse engineering da Do maggiore, dominante come ruolo,
+confine tonale/modale, La minore come Do6, minore naturale terza discendente dalla ionia,
+"meraviglia"/corrispondenza biunivoca). Correzione teorica chiave dell'utente: minore armonico letto
+come dominante del frigio, non dell'eolio. Dettagli completi in `_notes/RESUME-PROMPT.md` e nella voce
+del 2026-07-24 del tracciamento. Prossimo passo: assemblaggio del `.docx` continuo con figure e
+riferimenti.
+Riconciliazione documento sorgente: `MAIN.docx` (voce originale dell'utente), esito = incorporato nel
+capitolo continuo salvo l'apertura biografica in standby (Gaetani), quindi NON ancora spostato in
+`_processati/`.
+
 ## 2026-07-17/20 — Ricerca sul tritono: fonte primaria registrata, ricognizione interna ed esterna concluse
 
 Commit: nessuno (lavoro privato/ignorato, salvo l'entrata già coperta dalla voce del 2026-07-17

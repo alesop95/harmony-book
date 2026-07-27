@@ -100,8 +100,27 @@ su ResearchGate (Babbitt, Vicentino). Quando iniziare a scrivere la sezione/capi
 tritono: in attesa della fonte primaria fisica (Gaetani) o già con il materiale raccolto finora —
 non ancora deciso con l'utente.
 
+## Feature attiva aggiunta il 2026-07-24: stesura del capitolo sul tritono in prosa continua
+
+Su richiesta dell'utente il capitolo sul tritono è stato riscritto dal formato report (indice più
+otto punti numerati) al formato capitolo di libro continuo, senza sottotitoli, con voce "Marcato"
+che rompe la quarta parete (lettore interpellato con "voi", confessione dell'autore-ingegnere) e con
+l'ambizione dichiarata di costruire un impianto universale per leggere tutta l'armonia occidentale a
+partire dal tritono. Bozza completa e validata movimento per movimento (arco A-I) in
+`_notes/appunti-da-inserire-nel-libro/capitolo-tritono-continuo.md`. Il `.docx` sorgente resta
+intatto come backup del report. Il 2026-07-24 il `.docx` continuo è stato assemblato con uno script
+deterministico (`capitolo-tritono-continuo.docx`: prosa continua A-I, sei figure riusate ai segnaposto,
+riferimenti [1]-[10] con la nuova voce web Springsteen verificata via oEmbed), e le sei figure sono state
+rirenderizzate con le annotazioni in font Libertinus Sans (Emmentaler invariato per le note; sorgenti
+`.ly` durevoli in `_notes/appunti-da-inserire-nel-libro/_ly-figure/`). Prossimo passo: trascrizione
+fedele in `manuscript/chapters/NN-...lytex` con `\input` in `main.lytex` e build, quando l'utente dà il
+via; resta in standby l'apertura biografica (Gaetani). Il quadro completo (voce, correzioni, direzioni
+future, risorse pending) è in `_notes/RESUME-PROMPT.md`; i dettagli di tracciamento nelle voci del
+2026-07-24 di `_notes/tracciamento-fonti-libro.md`; la risoluzione teorica frigio e le direzioni future
+nella `_notes/cassaforte-capitolo-tritono.md`.
+
 ## Riconciliazione
 
-Ultima verifica: 2026-07-20, non ancora ancorata a un commit reale (il lavoro di questa sessione
-vive in file privati/ignorati o non ancora tracciati, salvo la parte di sync-context su commit
-reali già riflessa in `memory/index.md`).
+Ultima verifica: 2026-07-24, non ancora ancorata a un commit reale (il lavoro di questa sessione e
+delle precedenti sul filone tritono vive in file privati/ignorati sotto `_notes/`, salvo la parte di
+sync-context su commit reali già riflessa in `memory/index.md`).

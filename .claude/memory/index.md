@@ -52,6 +52,19 @@ contenuto su questa fonte finché non arriva. Prossima decisione aperta con l'ut
 già la stesura della sezione/capitolo sul tritono con il materiale raccolto, o attendere la fonte
 primaria fisica.
 
+Il 2026-07-24 è stato riscritto il capitolo sul tritono dal formato report al formato capitolo di
+libro continuo (voce "Marcato", rottura della quarta parete, ambizione del framework universale):
+bozza completa e validata in `_notes/appunti-da-inserire-nel-libro/capitolo-tritono-continuo.md`,
+il `.docx` report resta intatto come backup. Nella stessa data il `.docx` continuo è stato assemblato
+(`capitolo-tritono-continuo.docx`: arco A-I, sei figure riusate ai segnaposto, riferimenti [1]-[10] con
+la nuova voce web Springsteen), e le sei figure sono state rirenderizzate con le annotazioni in font
+Libertinus Sans (sorgenti `.ly` durevoli in `_notes/appunti-da-inserire-nel-libro/_ly-figure/`).
+Prossimo passo: trascrizione fedele in `manuscript/chapters/NN-...lytex` quando l'utente dà il via, con
+l'apertura biografica ancora in standby. Handoff completo di questa sessione in `_notes/RESUME-PROMPT.md`:
+è il primo file da leggere alla ripresa, insieme a questo. La correzione teorica del minore armonico
+(lettura del frigio, non dell'eolio) e le direzioni future del libro sono in
+`_notes/cassaforte-capitolo-tritono.md`.
+
 A ogni avanzamento significativo sulla stesura vera e propria: aggiornare le schede impattate e
 il work-log, poi l'utente committa e si rilancia `sync-context` per bumpare `last-verified-commit`.
 Da collaudare ancora la parità Linux degli script `.sh`.
