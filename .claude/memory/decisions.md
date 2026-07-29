@@ -129,7 +129,38 @@ Conseguenze: il metodo è riusabile per qualunque ricerca di contenuto futura su
 bibliografica, che resta sul solo colophon; i due metodi coesistono per scopi diversi sullo stesso
 insieme di file.
 
-<!-- ADR-007 — <titolo>
+## ADR-007 — Skill derivate da contenuto privato: tre classi dentro `.claude/skills/`, due ignorate da git
+
+Data: 2026-07-29
+Stato: accettata
+Contesto: la fase "libro -> skill" produce due tipi di artefatto nuovi, entrambi destinati a
+`.claude/skills/`: una skill che distilla la dottrina del libro dell'utente (tesi, voce, fatti
+verificati, agenda di ricerca) e un insieme di skill che distillano i libri di riferimento
+posseduti. La cartella `.claude/skills/` è oggi interamente tracciata, mentre ADR-004 stabilisce
+che il contenuto del libro non si versiona in una repo pubblica e `.gitignore` ignora già
+`/manuscript/` e `/_notes/` per questo motivo. Senza una regola esplicita, il primo `git add`
+dopo la creazione di queste skill pubblicherebbe su GitHub sia il contenuto vendibile del libro
+sia sintesi dense di opere protette di terzi.
+Decisione: dentro `.claude/skills/` convivono tre classi distinte per collocazione e per
+tracciamento. Le skill di tooling, cioè quelle istanziate dai template di sistema come
+`book-digest`, `sync-context` o `book-bib-extract`, restano tracciate perché sono procedure e non
+contenuto. La skill di dottrina del libro vive in `.claude/skills/armonia-libro/` ed è ignorata.
+Le skill-libro derivate dai testi di riferimento vivono in `.claude/skills/libro-<slug>/`, piatte
+e non annidate, e sono ignorate da un glob. Le due regole corrispondenti si aggiungono a
+`.gitignore` accanto alle altre regole ancorate alla radice.
+Motivazione: la discovery delle skill di Claude Code cerca `SKILL.md` a un solo livello di
+profondità sotto `.claude/skills/`, quindi raggruppare le skill private in una sottocartella le
+renderebbe invisibili; la separazione va quindi fatta per convenzione di nome e non per
+annidamento. La distinzione fra procedura e contenuto è la stessa già adottata da ADR-004 per il
+tooling pubblico e il manoscritto privato, e la si estende qui senza introdurre un criterio nuovo.
+Conseguenze: le due classi ignorate non hanno remoto git e dipendono interamente dal backup su
+SSD portatile già in uso per `manuscript/`, che va esteso a coprirle. Una skill-libro che si
+volesse promuovere al contesto globale (`~/.claude/skills/<slug>/`, previsto dal pacchetto
+`book-to-skill` solo su conferma esplicita) esce da questa protezione e va valutata caso per caso.
+La verifica operativa è `git check-ignore -v` sul `SKILL.md` della skill creata, da fare prima del
+primo `git add`, non dopo.
+
+<!-- ADR-008 — <titolo>
 Data: <YYYY-MM-DD>
 Stato: <proposta / accettata / superata da ADR-NNN>
 Contesto: ...

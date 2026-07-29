@@ -65,6 +65,22 @@ l'apertura biografica ancora in standby. Handoff completo di questa sessione in 
 (lettura del frigio, non dell'eolio) e le direzioni future del libro sono in
 `_notes/cassaforte-capitolo-tritono.md`.
 
+Il 2026-07-29 è stata affrontata la fase "libro -> skill", mai avviata prima, nelle sue due accezioni
+e in quest'ordine deciso dall'utente. È nata `.claude/skills/armonia-libro/`, che digerisce la
+dottrina del libro (tesi, voce, fatti verificati con il loro grado di verifica, mappa delle fonti,
+agenda di ricerca) da circa 120 KB di note private a 59 KB, di cui 5 KB in contesto
+all'invocazione. È poi partito `book-digest`: installata la skill dal template, prodotta la triage
+del corpus `ARMONIA E TEORIA` in `_notes/corpus-digest-triage.md` con il nuovo
+`tools/probe-pdf-text.py`, e digerito il primo libro, Berkman 2013, in
+`.claude/skills/libro-berkman/`. ADR-007 fissa che la dottrina e i digest di opere di terzi non si
+versionano: le due cartelle sono ignorate e dipendono dal backup su SSD, non da git. Nuovo
+`tools/skill-freshness.py` per rilevare la deriva fra skill e fonti a costo zero di token.
+
+Correzione di un dato riportato finora sia qui sia in `context/current-work.md`: il registro
+bibliografico ha 161 voci, non 153. La ripartizione (94 verificate, 59 da-verificare, 8 scartate) era
+corretta, era il totale a essere stale. Della coda `book-digest`, 153 voci restano `pending`, 1 è
+`done` e 7 non hanno il campo.
+
 A ogni avanzamento significativo sulla stesura vera e propria: aggiornare le schede impattate e
 il work-log, poi l'utente committa e si rilancia `sync-context` per bumpare `last-verified-commit`.
 Da collaudare ancora la parità Linux degli script `.sh`.

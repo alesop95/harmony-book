@@ -119,6 +119,57 @@ future, risorse pending) è in `_notes/RESUME-PROMPT.md`; i dettagli di tracciam
 2026-07-24 di `_notes/tracciamento-fonti-libro.md`; la risoluzione teorica frigio e le direzioni future
 nella `_notes/cassaforte-capitolo-tritono.md`.
 
+## Feature attiva aggiunta il 2026-07-29: la fase "libro -> skill", entrambe le accezioni
+
+Su richiesta esplicita dell'utente si è affrontata la fase mai avviata "libro -> skill", che nel
+progetto aveva due letture possibili. L'utente le ha volute entrambe, in quest'ordine, con un
+obiettivo dichiarato oltre alla stesura: usare le skill risultanti anche per cercare fonti nuove
+fuori dai libri posseduti, su forum, community, video e pareri di esperti. L'ordine non è arbitrario,
+perché la dottrina del proprio libro definisce cosa cercare e rende mirata la seconda fase.
+
+Prima accezione, conclusa: `.claude/skills/armonia-libro/`, il digest della dottrina del libro
+dell'utente. Contiene `SKILL.md`, `tesi.md` (tritono identificatore, doppia eredità, lettura del
+frigio, e le tre affermazioni dichiarate come intuizione e non teorema), `voce.md` (prosa continua,
+voce Marcato, vincoli di stile e di intervento, flusso a quattro passi), `capitoli/01-tritono.md`
+(arco A-I movimento per movimento), `fatti-verificati.md` (distingue confermato con citazione
+diretta, confermato per voto, confutato e da non usare), `fonti.md` (mappa citekey e le due anomalie
+da risolvere alla trascrizione in LaTeX) e `agenda-ricerca.md`.
+
+Due anomalie bibliografiche emerse costruendo la skill e da risolvere prima della trascrizione in
+LaTeX. Il riferimento [8] del capitolo continuo copre due fonti Sarti distinte, le slide
+`sarti2018tonal` e la trascrizione della lezione CMRM2018, che non ha una voce propria nel registro:
+in numerazione IEEE passa, con `biblatex` no. Il riferimento [10], la video-intervista di
+Springsteen, non ha ancora voce né nel registro né nel `.bib`.
+
+Seconda accezione, avviata con un pilota: installata la skill `book-digest` dal template, scritto
+`tools/probe-pdf-text.py` e prodotta la triage dei 30 PDF di `ARMONIA E TEORIA` in
+`_notes/corpus-digest-triage.md`. Digerito il primo libro, Berkman 2013, in
+`.claude/skills/libro-berkman/`; la sua voce di registro è passata a `skill_status: done`. Restano
+153 voci `pending`.
+
+Decisione strutturale: ADR-007. Dentro `.claude/skills/` convivono tre classi, le skill di tooling
+tracciate, `armonia-libro/` ignorata e `libro-*/` ignorate da glob, perché la dottrina è contenuto
+del libro (ADR-004) e i digest sono materiale derivato da opere protette. Conseguenza operativa: le
+due cartelle non hanno remoto git e vanno incluse nel backup su SSD portatile già in uso per
+`manuscript/`.
+
+Rilievo metodologico da conservare, perché correggeva un'ipotesi sbagliata: la qualità del testo
+estraibile da un PDF non si misura né dal conteggio di caratteri né su un campione delle prime
+pagine. I frontespizi sono tipografia decorativa che l'OCR rende male anche su volumi puliti, e
+`Jazz Theory (1995, M.Levine).pdf` ne è il caso concreto, illeggibile in testa e integro a metà
+volume. Lo strumento campiona quindi a metà libro e affianca all'indice di qualità la densità di
+caratteri per pagina, che separa i libri di prosa da quelli di sola notazione.
+
+Costo misurato del pilota, che serve a dimensionare il lotto successivo: 448 KB di testo, circa 112
+mila token di sola lettura, per un libro di 215 pagine, con un digest risultante di 96 KB.
+
+Domande aperte di questa feature. Quali libri digerire nel prossimo lotto, dato che la selezione per
+rilevanza conta più della disponibilità: i candidati con testo pulito e alta rilevanza sono
+Mulholland 2013, Blatter, Berklee Jazz Composition, Kostka e Levine 1995. Se e quando affrontare i
+libri scansionati ad alta rilevanza, cioè i Piston e Schoenberg, che restano sulla via visiva mirata
+di ADR-006 o richiedono una copia migliore del PDF, che l'utente si è offerto di procurare. Se
+estendere il lavoro al corpus `CHITARRA`, 169 PDF, che è una decisione separata.
+
 ## Riconciliazione
 
 Ultima verifica: 2026-07-24, non ancora ancorata a un commit reale (il lavoro di questa sessione e

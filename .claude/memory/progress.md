@@ -6,6 +6,64 @@
 > documenti `.docx`, con il nome del documento sorgente e l'esito, così la data di allineamento
 > sopravvive a un clone.
 
+## 2026-07-29 — Fase "libro -> skill": dottrina propria digerita, book-digest avviato con pilota
+
+Commit: nessuno al momento della scrittura (l'utente committa i soli file tracciati).
+File toccati e tracciati: `.claude/memory/decisions.md` (ADR-007), `.gitignore` (due regole nuove),
+`.claude/skills/book-digest/SKILL.md` (istanziata dal template, identica), `tools/skill-freshness.py`
+(nuovo), `tools/probe-pdf-text.py` (nuovo), piu questo work-log, `memory/index.md` e
+`context/current-work.md`.
+File toccati e ignorati: gli alberi `.claude/skills/armonia-libro/` e `.claude/skills/libro-berkman/`,
+`_notes/corpus-digest-triage.md` (nuovo), `_notes/book-bib-registry.json` e il `.md` rigenerato,
+`_notes/tracciamento-fonti-libro.md`.
+
+Motivo: su richiesta dell'utente si e affrontata in un colpo solo la fase mai avviata "libro ->
+skill", nelle sue due accezioni e in quest'ordine. Prima la dottrina del libro dell'utente, poi
+`book-digest` sui libri di riferimento posseduti. Obiettivo dichiarato dall'utente oltre alla
+stesura: usare le skill anche per cercare fonti nuove fuori dai libri posseduti, su forum,
+community, video e letteratura.
+
+ADR-007 registrato prima di creare qualunque file, perche `.claude/skills/` e tracciato mentre il
+contenuto del libro non e versionabile (ADR-004) e i digest di opere di terzi non vanno pubblicati.
+Tre classi: skill di tooling tracciate, `armonia-libro/` ignorata, `libro-*/` ignorate da glob.
+Verificato con `git check-ignore -v` prima del primo `git add`.
+
+Fase 1. Costruita `.claude/skills/armonia-libro/`: `SKILL.md` piu `tesi.md`, `voce.md`,
+`capitoli/01-tritono.md`, `fatti-verificati.md`, `fonti.md`, `agenda-ricerca.md`. Digerisce circa
+120 KB di note private in 59 KB, di cui solo 5 KB entrano in contesto all'invocazione. Il file
+`agenda-ricerca.md` risponde al secondo obiettivo: per ogni affermazione non corroborata registra
+cosa dimostrare, quale angolo di ricerca ha senso e cosa e gia stato tentato con quale esito, con la
+lezione di costo su `deep-research` in fondo. Introdotto `tools/skill-freshness.py`, che confronta
+gli sha256 registrati in `.sources.json` con quelli attuali e segnala le fonti cambiate a costo
+zero di token; collaudato su fixture per i rami CAMBIATA e MANCANTE, e corretto in corsa per
+accettare percorsi assoluti, perche su Windows un percorso relativo non attraversa i drive.
+
+Fase 2. Installata `book-digest` dal template senza modifiche. Scritto `tools/probe-pdf-text.py` e
+prodotta la triage di `ARMONIA E TEORIA` (30 PDF) in `_notes/corpus-digest-triage.md`. Rilievo
+importante emerso in calibrazione, che corregge una premessa sbagliata di inizio sessione: un
+campione preso dalle prime pagine scarta a torto libri buoni, perche i frontespizi sono tipografia
+decorativa che l'OCR rende male anche quando il volume e pulito. Il caso concreto e Levine 1995, che
+sul frontespizio da "J ll o THE A z z THE 0 Ry B0 0 K" ma a meta volume da prosa integra. Lo
+strumento campiona quindi a meta libro e combina tre segnali piu la densita di caratteri per pagina,
+che separa i libri di prosa da quelli di sola notazione (Beato e Pozzoli finiscono in `poco-testo`).
+Esito: 11 alto, 5 medio, 1 basso, 2 poco-testo, 10 assente, 1 illeggibile.
+
+Pilota: digerito Berkman 2013 in `.claude/skills/libro-berkman/`, 23 capitoli letti per intero, le
+due appendici solo a livello scheletro con il limite dichiarato nel file. Aggiunto `rilevanza.md`,
+non previsto dal modello del pacchetto, che separa cio che Berkman conferma della tesi di
+harmony-book da cio che semplicemente non dice, per evitare che il digest venga usato come sostegno
+a tesi che il libro non sostiene. Registro aggiornato: `berkman2013` passa a `skill_status: done`,
+`skill_slug: libro-berkman`, e `book-bib-registry.md` rigenerato.
+
+Correzione di un dato: il registro ha 161 voci, non 153 come riportato finora in `memory/index.md` e
+in `context/current-work.md`. La ripartizione (94 verificate, 59 da verificare, 8 scartate) era
+giusta, era il totale a essere rimasto indietro. Corretto in questa riconciliazione.
+
+Costo del pilota, misurato per decidere il lotto successivo: il testo integrale di Berkman e circa
+448 KB, cioe circa 112 mila token di sola lettura, per un libro di 215 pagine. Il digest risultante
+e 96 KB. Un lotto va quindi dimensionato su questo ordine di grandezza per libro, e la selezione
+per rilevanza conta piu della disponibilita.
+
 ## 2026-07-24 — Assemblato il .docx continuo del capitolo tritono, figure in Libertinus Sans
 
 Commit: nessuno (lavoro privato/ignorato: file sotto `_notes/`).

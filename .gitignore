@@ -20,6 +20,11 @@ transform-into-claude-md/
 /CLAUDE.local.md
 .claude/settings.local.json
 
+# Skill derivate da contenuto privato (ADR-004/ADR-007): la dottrina del libro e i digest
+# di opere di terzi non si versionano. Le skill di tooling restano tracciate.
+/.claude/skills/armonia-libro/
+/.claude/skills/libro-*/
+
 # Estratti temporanei dei .docx (cartelle scratch)
 /_notes/.tmp-docx-*/
 .tmp-docx-*/
