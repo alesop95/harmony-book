@@ -6,7 +6,9 @@ covers-paths:
   - scripts/**
   - style/**
   - sample/**
-last-verified-commit: 4942de1
+  - tools/**
+  - .claude/skills/**
+last-verified-commit: dd1c4d5
 stato: in corso
 ---
 
@@ -170,8 +172,51 @@ libri scansionati ad alta rilevanza, cioè i Piston e Schoenberg, che restano su
 di ADR-006 o richiedono una copia migliore del PDF, che l'utente si è offerto di procurare. Se
 estendere il lavoro al corpus `CHITARRA`, 169 PDF, che è una decisione separata.
 
+## Feature attiva aggiornata il 2026-08-03: maturazione del capitolo sul tritono
+
+Il ciclo dal 2026-07-29 al 2026-08-03 ha portato il capitolo sul tritono da bozza validata a bozza
+matura, e ha costruito attorno ad esso l'infrastruttura che serviva. Il quadro completo, con la guida
+alla rilettura e l'elenco dei paragrafi cambiati, e in `_notes/STATO-CAPITOLO-TRITONO.md`; la storia
+in `_notes/RESUME-PROMPT.md`, nota del 2026-08-03.
+
+Il capitolo. Nove movimenti, 48314 caratteri, 90 paragrafi nel docx, sei figure, tredici riferimenti.
+Markdown e docx allineati, con otto backup datati in `_backup/`. Proporzioni: i movimenti D ed E, che
+sono il nucleo originale dell'autore, valgono il 38,9 per cento contro il 25 del 2026-07-31; il
+movimento G, storico, e scesa al 13,3. Il movimento E, al 22 per cento, e ormai il piu lungo di
+parecchio, e se crescera ancora conviene valutare se spezzarlo.
+
+Che cosa e entrato nel capitolo, tutto su validazione esplicita dell'utente: Yavorsky nel movimento C,
+che estende il precedente storico a una genealogia Choron-Fetis-Yavorsky; la dichiarazione al lettore
+su dove l'autore ha compagnia e dove e solo, in apertura di D; la catena di quinte come chiave di
+lettura e la tabella a sei operazioni in D, con la comparsa della napoletana; il test della doppia
+eredita e il contatore dei tritoni in E; la testimonianza di Jacques de Liege sul semitritono nei
+canti piani ecclesiastici in G, che porta quel movimento da un argomento per assenza a una
+testimonianza contraria; e la chiusura sulle due dissonanze che fanno una consonanza.
+
+L'infrastruttura. Tre skill nuove: `armonia-libro` e `libro-berkman`, ignorate da git per ADR-007
+perche sono contenuto, e `fonte-nuova`, tracciata perche e procedura. Quattro strumenti Python
+tracciati sotto `tools/`: `skill-freshness.py`, `probe-pdf-text.py`, `tritoni-scale.py`,
+`derivazione-scale.py`. Due ADR nuovi: ADR-008 sui quattro livelli di verifica di una fonte, ADR-009
+sugli strumenti che implementano il contenuto del libro e sul primato delle definizioni del libro.
+
+La bibliografia. Da 91 a 101 voci in `manuscript/bib/references.bib`. Registro a 172 voci in
+`_notes/book-bib-registry.json`, di cui 96 verificate. Tredici voci del corpus portano ora un campo
+`skill_blocker` che dichiara perche non sono digeribili. Dieci PDF durevoli in `_notes/fonti-esterne/`.
+
+Domande aperte di questa feature. Quando trascrivere il capitolo in `manuscript/chapters/`, che resta
+il passo piu urgente. Se e come spezzare il movimento E. Quando aprire l'analisi del livello II della
+macchina, calcolata e registrata nella voce 18 della cassaforte. Come sciogliere i due nodi
+bibliografici prima di LaTeX, cioe il riferimento [8] su due fonti Sarti distinte e la fonte
+Springsteen senza voce nel registro. E i sei ragionamenti ancora "da proporre" in
+`_notes/ragionamenti-da-portare-nel-libro.md`.
+
+In attesa dall'utente: il materiale privato sulla scala napoletana, annunciato e non consegnato, che
+sblocchera l'espansione della tabella con armonizzazioni e riflessioni.
+
 ## Riconciliazione
 
-Ultima verifica: 2026-07-24, non ancora ancorata a un commit reale (il lavoro di questa sessione e
-delle precedenti sul filone tritono vive in file privati/ignorati sotto `_notes/`, salvo la parte di
-sync-context su commit reali già riflessa in `memory/index.md`).
+Ultima verifica: 2026-08-03, ancorata a `dd1c4d5` a mano e non tramite `sync-context`. La quasi
+totalita del lavoro di questo ciclo vive in file privati e ignorati, sotto `_notes/` e nelle due skill
+di contenuto; la parte tracciata sono i quattro strumenti in `tools/`, la skill `fonte-nuova`, i due
+ADR nuovi e queste schede. `covers-paths` e stata estesa a `tools/**` e `.claude/skills/**`, che prima
+non erano coperte da nessuna scheda.

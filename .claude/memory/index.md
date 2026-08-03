@@ -8,19 +8,19 @@
 
 ```
 Branch attivo:        main
-Commit di riferimento: 4942de1 (schede riconciliate con sync-context il 2026-07-17)
-Data snapshot:        2026-07-17
+Commit di riferimento: dd1c4d5 (schede aggiornate a mano il 2026-08-03, non via sync-context)
+Data snapshot:        2026-08-03
 ```
 
 ## Stato di verifica delle schede
 
 | Scheda | last-verified | Stato |
 |---|---|---|
-| STACK.md | 4942de1 | aggiornata (aggiunto riferimento all'ambiente `apertura` in `harmony-macros.sty`) |
+| STACK.md | 4942de1 | da riconciliare: `tools/` ha quattro script nuovi non descritti in scheda |
 | design-and-security.md | 4942de1 | diagrammi registrati e riconciliati; paradigmi da popolare |
 | deployment.md | 017b02a | da popolare (covers-paths vuoto, nessun confronto di drift applicabile) |
 | dev-testing.md | 017b02a | da popolare (covers-paths vuoto, nessun confronto di drift applicabile) |
-| current-work.md | 4942de1 | aggiornata e ri-ancorata a un commit reale |
+| current-work.md | dd1c4d5 | aggiornata il 2026-08-03 con il ciclo su fonti, calcoli e capitolo |
 | roadmap.md | 017b02a | aggiornata (covers-paths vuoto, nessun confronto di drift applicabile) |
 
 **Drift chiuso il 2026-07-17**: i quattro commit intercorsi (`f3a6c45`, `f2d8d9c`, `bb78fca`,
@@ -32,55 +32,47 @@ corretti nel contenuto, solo l'ancoraggio era stale. `deployment.md`, `dev-testi
 
 ## Punto di ripresa
 
-Ambiente e catena di build LaTeX/LilyPond verificati (ADR-003), stesura del libro non ancora
-avviata oltre l'introduzione. In parallelo, sessioni non tracciate in git (15-20 luglio 2026,
-vedi `memory/progress.md`) hanno costruito una bibliografia sostanziale in
-`manuscript/bib/references.bib` (83 voci `@book`) a partire da libri posseduti, con un registro
-di stato in `_notes/book-bib-registry.json` (153 voci: 86 verificate, 58 da-verificare, 8
-scartate, 1 fonte primaria fuori schema `da-verificare`). La fase "libro -> skill" (`book-digest`)
-non è mai partita.
+Aggiornato a mano il 2026-08-03 dopo un ciclo di lavoro fitto, dal 2026-07-29 al 2026-08-03. La
+guida operativa alla ripresa e la nota del 2026-08-03 in testa a `_notes/RESUME-PROMPT.md`, e la
+guida alla rilettura del capitolo e `_notes/STATO-CAPITOLO-TRITONO.md`.
 
-La ricerca bibliografica per la nuova tesi sul tritono (avviata il 2026-07-16, scope chiarito il
-2026-07-17 come "entrambe le vie") è conclusa: ricognizione sui libri posseduti e ricerca esterna
-sono entrambe fissate in `_notes/tritono-ricognizione-interna.md` e
-`_notes/tritono-ricerca-esterna-stato.md` (vedi `context/current-work.md` per la sintesi e ADR-006
-per il metodo). Trovamento principale: il presunto divieto ecclesiastico medievale del tritono
-("diabolus in musica") è un mito storiografico moderno, non un fatto medievale. La fonte primaria
-annunciata dall'utente è stata identificata ("La dialettica del tritono" di Mariano Gaetani, ISBN
-8869244857) ma il contenuto/appunti cartacei non sono ancora stati consegnati — non inventare
-contenuto su questa fonte finché non arriva. Prossima decisione aperta con l'utente: se iniziare
-già la stesura della sezione/capitolo sul tritono con il materiale raccolto, o attendere la fonte
-primaria fisica.
+Ambiente e catena di build LaTeX/LilyPond verificati (ADR-003). Il capitolo sul tritono e una bozza
+matura, 48314 caratteri e nove movimenti, ma vive ancora in `_notes/appunti-da-inserire-nel-libro/` e
+NON e nel manoscritto: `manuscript/chapters/` contiene solo introduzione e scheletro del capitolo 1, e
+`build/main.pdf` e fermo al 2026-07-16. La trascrizione in `.lytex` resta il passo piu urgente e piu
+rinviato.
 
-Il 2026-07-24 è stato riscritto il capitolo sul tritono dal formato report al formato capitolo di
-libro continuo (voce "Marcato", rottura della quarta parete, ambizione del framework universale):
-bozza completa e validata in `_notes/appunti-da-inserire-nel-libro/capitolo-tritono-continuo.md`,
-il `.docx` report resta intatto come backup. Nella stessa data il `.docx` continuo è stato assemblato
-(`capitolo-tritono-continuo.docx`: arco A-I, sei figure riusate ai segnaposto, riferimenti [1]-[10] con
-la nuova voce web Springsteen), e le sei figure sono state rirenderizzate con le annotazioni in font
-Libertinus Sans (sorgenti `.ly` durevoli in `_notes/appunti-da-inserire-nel-libro/_ly-figure/`).
-Prossimo passo: trascrizione fedele in `manuscript/chapters/NN-...lytex` quando l'utente dà il via, con
-l'apertura biografica ancora in standby. Handoff completo di questa sessione in `_notes/RESUME-PROMPT.md`:
-è il primo file da leggere alla ripresa, insieme a questo. La correzione teorica del minore armonico
-(lettura del frigio, non dell'eolio) e le direzioni future del libro sono in
-`_notes/cassaforte-capitolo-tritono.md`.
+Cosa e cambiato in questo ciclo. Sono nate tre skill: `armonia-libro`, che digerisce la dottrina del
+libro dell'utente, `libro-berkman`, che rende interrogabile Berkman 2013, e `fonte-nuova`, che e la
+procedura per far entrare una fonte dichiarandone il livello di verifica. Le prime due sono ignorate
+da git per ADR-007 perche sono contenuto, la terza e tracciata perche e procedura. La bibliografia e
+passata da 91 a 101 voci, con sette fonti nuove, e ogni voce dichiara ora in testa al campo `note` il
+proprio livello di verifica secondo ADR-008. Sono nati quattro strumenti Python che implementano
+affermazioni del libro invece di documentarle, secondo ADR-009, e due di essi hanno cambiato il
+contenuto del capitolo: `tritoni-scale.py` ha smentito l'intuizione sulla corrispondenza biunivoca fra
+scale e coppie di tritoni, `derivazione-scale.py` ha fatto emergere la scala napoletana minore, che
+era registrata come direzione futura sospesa per mancanza di fonti.
 
-Il 2026-07-29 è stata affrontata la fase "libro -> skill", mai avviata prima, nelle sue due accezioni
-e in quest'ordine deciso dall'utente. È nata `.claude/skills/armonia-libro/`, che digerisce la
-dottrina del libro (tesi, voce, fatti verificati con il loro grado di verifica, mappa delle fonti,
-agenda di ricerca) da circa 120 KB di note private a 59 KB, di cui 5 KB in contesto
-all'invocazione. È poi partito `book-digest`: installata la skill dal template, prodotta la triage
-del corpus `ARMONIA E TEORIA` in `_notes/corpus-digest-triage.md` con il nuovo
-`tools/probe-pdf-text.py`, e digerito il primo libro, Berkman 2013, in
-`.claude/skills/libro-berkman/`. ADR-007 fissa che la dottrina e i digest di opere di terzi non si
-versionano: le due cartelle sono ignorate e dipendono dal backup su SSD, non da git. Nuovo
-`tools/skill-freshness.py` per rilevare la deriva fra skill e fonti a costo zero di token.
+Il risultato di contenuto piu importante: girando la macchina delle dominanti secondarie su tutti i
+gradi di Do maggiore, con una sola alterazione per accordo, escono due tonalita confinanti e quattro
+scale derivate, cioe due minori melodiche, una minore armonica e la napoletana minore. La spiegazione
+e che il tritono di una scala diatonica e formato dai due estremi della catena di quinte: alterare un
+estremo fa slittare la catena e produce la tonalita vicina, alterare un interno la spezza e produce
+una scala nuova con due tritoni.
 
-Correzione di un dato riportato finora sia qui sia in `context/current-work.md`: il registro
-bibliografico ha 161 voci, non 153. La ripartizione (94 verificate, 59 da-verificare, 8 scartate) era
-corretta, era il totale a essere stale. Della coda `book-digest`, 153 voci restano `pending`, 1 è
-`done` e 7 non hanno il campo.
+Tre correzioni dell'agente in questo ciclo, tutte registrate in `_notes/STATO-CAPITOLO-TRITONO.md`,
+l'ultima rilevata dall'utente e formalizzata in ADR-009. Da tenere presente alla ripresa: quando si
+usa la macchina delle derivazioni, la definizione di dominante e quella del libro, cioe il tritono fra
+terza maggiore e settima minore, non la quinta giusta.
 
-A ogni avanzamento significativo sulla stesura vera e propria: aggiornare le schede impattate e
-il work-log, poi l'utente committa e si rilancia `sync-context` per bumpare `last-verified-commit`.
-Da collaudare ancora la parità Linux degli script `.sh`.
+Cosa aspetta l'utente: materiale privato sulla scala napoletana, annunciato e non consegnato, che
+sblocchera l'espansione della tabella con le armonizzazioni. Cosa aspetta una sua parola: l'analisi
+del livello II della macchina, calcolata e rinviata; sei ragionamenti ancora in stato "da proporre" in
+`_notes/ragionamenti-da-portare-nel-libro.md`; e due nodi bibliografici da sciogliere prima di andare
+in LaTeX, cioe il riferimento [8] che copre due fonti Sarti distinte e la fonte Springsteen che nel
+capitolo e [10] ma non ha voce nel registro.
+
+A ogni avanzamento significativo sulla stesura vera e propria: aggiornare le schede impattate e il
+work-log, poi l'utente committa e si rilancia `sync-context` per bumpare `last-verified-commit`. Da
+collaudare ancora la parita Linux degli script `.sh`. Da riconciliare `STACK.md`, che non descrive i
+quattro strumenti nuovi sotto `tools/`.

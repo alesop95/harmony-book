@@ -6,9 +6,76 @@
 > documenti `.docx`, con il nome del documento sorgente e l'esito, così la data di allineamento
 > sopravvive a un clone.
 
+## 2026-08-03 - Capitolo tritono: catena di quinte, napoletana minore, sette fonti nuove
+
+Commit: `1917469`, `f3d48d5`, `7b6d1b4`, `dd1c4d5` per la parte tracciata; le schede di questa voce
+restano da committare all'utente.
+File toccati e tracciati: `tools/tritoni-scale.py` (nuovo), `tools/derivazione-scale.py` (nuovo),
+`.claude/skills/fonte-nuova/SKILL.md` (nuova), `.claude/memory/decisions.md` (ADR-008 e ADR-009),
+piu questo work-log, `memory/index.md` e `context/current-work.md`.
+File toccati e ignorati: `_notes/appunti-da-inserire-nel-libro/capitolo-tritono-continuo.md` e il
+`.docx` gemello, con otto backup datati in `_backup/`; `_notes/cassaforte-capitolo-tritono.md`;
+`_notes/tracciamento-fonti-libro.md`; `_notes/ragionamenti-da-portare-nel-libro.md` (nuovo);
+`_notes/INTRECCIO-DELLE-TESI.md` (nuovo); `_notes/COME-SI-USA.md` (nuovo);
+`_notes/STATO-CAPITOLO-TRITONO.md` (nuovo); `_notes/RESUME-PROMPT.md`;
+`_notes/book-bib-registry.json` e il `.md` rigenerato; `manuscript/bib/references.bib`;
+`_notes/fonti-esterne/` (dieci PDF durevoli); gli alberi delle due skill di contenuto.
+
+Motivo: proseguire il filone del capitolo sul tritono su tre fronti insieme, cioe acquisire e leggere
+le fonti che l'utente ha consegnato, calcolare con codice le affermazioni che il capitolo fa e portare
+nel capitolo solo quello che l'utente valida esplicitamente.
+
+Fonti. Sette voci nuove portano la bibliografia da 91 a 101. Butler 1989 e Krumhansl 1990 sono state
+lette per intero dai PDF forniti dall'utente, e la lettura ha corretto un errore dell'agente:
+l'ipotesi sugli intervalli rari come indizio di tonalita e di Richmond Browne (1981), non di Butler,
+che la cita. Smith 1979 sullo Speculum Musicae ha dato al movimento G la prova primaria che gli
+mancava, cioe che Jacques de Liege non mostra consapevolezza della formula "diabolus in musica" e
+riferisce anzi di aver visto il semitritono "in aliquibus ecclesiasticis planis cantibus": il
+movimento passa da argomento per assenza a testimonianza contraria. Il blocco HTTP 403 su
+ResearchGate, fermo dal 2026-07-20, si e rivelato non un paywall: lo stesso PDF era libero sul sito
+della rivista, e questo ha sbloccato in un colpo i tre dettagli sospesi su Fux, Babbitt e Vicentino.
+La lezione e codificata nella skill `fonte-nuova`.
+
+Calcolo. `tritoni-scale.py` calcola il contenuto di tritoni delle famiglie di scale e dimostra due
+teoremi: una scala e la sua trasposizione di tritono hanno contenuto di tritoni identico, quindi la
+degenerazione due-a-uno e il minimo possibile e non un difetto del metodo; e la degenerazione e la
+taglia dello stabilizzatore trasposizionale dell'insieme di note. Questo ha smentito l'intuizione
+dell'utente su una corrispondenza biunivoca fra scale e coppie di tritoni, e il capitolo dice ora che
+il tritono indicizza le scale con la precisione massima che la sua natura consente.
+`derivazione-scale.py` implementa la macchina delle dominanti secondarie ai due livelli.
+
+Il risultato di contenuto. Girando la macchina su tutti i gradi di Do maggiore, con una sola
+alterazione per accordo, escono due tonalita confinanti, Fa e Sol, e quattro scale derivate: La
+armonica minore, Do melodica minore, Re melodica minore e la napoletana minore, che era registrata
+dal 2026-07-23 come direzione futura sospesa per mancanza di fonti. Non serviva una fonte, serviva
+applicare bene il metodo. La spiegazione strutturale e che il tritono di una scala diatonica e formato
+dai due estremi della catena di quinte: alterare un estremo fa slittare la catena e produce la
+tonalita vicina, alterare un interno la spezza e produce una scala nuova con due tritoni. Due casi,
+non tre: l'utente ha corretto una sovra-classificazione dell'agente, e la conservazione della tonica
+al quarto grado e retrocessa a osservazione aggiuntiva.
+
+Correzioni dell'agente, registrate per trasparenza in `_notes/STATO-CAPITOLO-TRITONO.md`. La piu grave
+e stata pretendere la quinta giusta per il Si7, che portava a due alterazioni e alla conclusione
+sbagliata che il settimo grado rompe la doppia eredita: rilevata dall'utente, corretta con quattro
+paragrafi riscritti e due aggiunti, e formalizzata in ADR-009 perche la definizione di dominante che
+governa gli strumenti e quella del libro, cioe il tritono fra terza maggiore e settima minore. Le
+altre due: la parafrasi attribuita a Butler, e la regola della doppia eredita enunciata come "una
+alterazione implica eredita", che il secondo grado smentisce. ADR-008 nasce dalla prima e fissa i
+quattro livelli di verifica di una fonte, con il principio che una voce `.bib` asserisce l'anagrafica,
+non il contenuto.
+
+Il capitolo. Da 39059 a 48314 caratteri, 90 paragrafi nel docx, sei figure intatte, tredici
+riferimenti, markdown e docx allineati. Ogni modifica e stata verificata additiva con un diff frase
+per frase contro il backup, senza perdite. Proporzioni riequilibrate su richiesta dell'utente,
+espandendo D ed E invece di tagliare G: D piu E dal 25 al 38,9 per cento, G dal 16,5 al 13,3. Il
+capitolo NON e ancora nel manoscritto, e la trascrizione in `.lytex` resta il passo piu urgente.
+
+Riconciliazione handoff: nessun documento `.docx` sorgente nuovo in questa sessione. Il `.docx` del
+capitolo e un derivato del markdown, non una fonte, e si aggiorna sempre in coppia con esso.
+
 ## 2026-07-29 — Fase "libro -> skill": dottrina propria digerita, book-digest avviato con pilota
 
-Commit: nessuno al momento della scrittura (l'utente committa i soli file tracciati).
+Commit: `a090f0d` (chiuso a posteriori il 2026-08-03).
 File toccati e tracciati: `.claude/memory/decisions.md` (ADR-007), `.gitignore` (due regole nuove),
 `.claude/skills/book-digest/SKILL.md` (istanziata dal template, identica), `tools/skill-freshness.py`
 (nuovo), `tools/probe-pdf-text.py` (nuovo), piu questo work-log, `memory/index.md` e
