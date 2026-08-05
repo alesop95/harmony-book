@@ -10,7 +10,7 @@ covers-paths:
   - .latexmkrc
   - .gitattributes
 source-doc: transform-into-claude-md/devBook settings.docx
-last-verified-commit: 4942de1
+last-verified-commit: 9acc2e0
 ---
 
 # Stack applicativo

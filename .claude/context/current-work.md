@@ -8,7 +8,7 @@ covers-paths:
   - sample/**
   - tools/**
   - .claude/skills/**
-last-verified-commit: dd1c4d5
+last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
@@ -172,6 +172,32 @@ libri scansionati ad alta rilevanza, cioè i Piston e Schoenberg, che restano su
 di ADR-006 o richiedono una copia migliore del PDF, che l'utente si è offerto di procurare. Se
 estendere il lavoro al corpus `CHITARRA`, 169 PDF, che è una decisione separata.
 
+## Feature chiusa il 2026-08-05: rigenerazione di `armonia-libro` e sanatoria delle note stale
+
+Ciclo breve, senza contenuto nuovo nel libro. `python tools/skill-freshness.py` segnalava una fonte
+cambiata per `armonia-libro`, e la segnalazione in se era rumore, perche l'utente aveva solo tolto
+degli a capo dalla cassaforte. Controllando le date e emerso il difetto vero, che e di procedura: il
+manifesto dichiarava `generated: 2026-08-03` mentre nessun file di contenuto della skill era stato
+riscritto dopo il 2026-07-31, perche `--update` era stato lanciato senza rigenerare. Sette fonti su
+tredici si erano mosse in mezzo, e la skill contraddiceva una fonte canonica, presentando ancora come
+intuizione la corrispondenza fra scale e coppie di tritoni che `tritoni-scale.py` aveva smentito.
+
+Rigenerata la skill per intero salvo `voce.md`, riletta e confermata invariata. Aggiunti al manifesto
+`tools/tritoni-scale.py` e `tools/derivazione-scale.py`, perche la skill ne riporta i risultati come
+fatti calcolati e per ADR-009 le definizioni che implementano sono contenuto del libro. Scritto in
+`SKILL.md` e nel manifesto il vincolo d'ordine, cioe che `--update` si lancia solo dopo aver
+rigenerato. Verifica: `fresca: 15 fonti invariate`, exit code 0.
+
+Sanata una discrepanza fra note canoniche. L'intestazione della voce 19 della cassaforte e
+`_notes/STATO-CAPITOLO-TRITONO.md` dichiaravano ancora non applicato il quadro a sette gradi, mentre
+il capitolo lo contiene dall'ottavo passo del 2026-08-03. Corrette entrambe, con i tre addenda della
+voce 19 che portavano una classificazione a tre casi superata dalla correzione dell'utente a due.
+Riscritto `_notes/COME-SI-USA.md` con i conteggi verificati e un quinto strato che mancava, cioe
+`.claude/`, piu la precisazione che dieci skill su quattordici non sono invocabili dall'agente.
+
+Nota per chi riprende: la sezione precedente di questa scheda dice che il quadro a sette gradi non e
+applicato. E' stale, ed e superata da questa voce. Il capitolo lo contiene.
+
 ## Feature attiva aggiornata il 2026-08-03: maturazione del capitolo sul tritono
 
 Il ciclo dal 2026-07-29 al 2026-08-03 ha portato il capitolo sul tritono da bozza validata a bozza
@@ -204,11 +230,12 @@ La bibliografia. Da 91 a 101 voci in `manuscript/bib/references.bib`. Registro a
 `skill_blocker` che dichiara perche non sono digeribili. Dieci PDF durevoli in `_notes/fonti-esterne/`.
 
 Domande aperte di questa feature. Quando trascrivere il capitolo in `manuscript/chapters/`, che resta
-il passo piu urgente. Se e come spezzare il movimento E. Quando aprire l'analisi del livello II della
-macchina, calcolata e registrata nella voce 18 della cassaforte. Come sciogliere i due nodi
-bibliografici prima di LaTeX, cioe il riferimento [8] su due fonti Sarti distinte e la fonte
-Springsteen senza voce nel registro. E i sei ragionamenti ancora "da proporre" in
-`_notes/ragionamenti-da-portare-nel-libro.md`.
+il passo piu urgente. Se e come spezzare il movimento E, oggi al 22 per cento. Quando aprire l'analisi
+del livello II della macchina, calcolata e registrata nella voce 18 della cassaforte. Il risultato 4
+della voce 14, cioe i tre tipi di coppia di tritoni, calcolato e mai proposto perche toccherebbe i
+movimenti F e H insieme. Come sciogliere i due nodi bibliografici prima di LaTeX, cioe il riferimento
+[8] su due fonti Sarti distinte e la fonte Springsteen senza voce nel registro. E i sei ragionamenti
+ancora "da proporre" in `_notes/ragionamenti-da-portare-nel-libro.md`.
 
 In attesa dall'utente: il materiale privato sulla scala napoletana, annunciato e non consegnato, che
 sblocchera l'espansione della tabella con armonizzazioni e riflessioni.

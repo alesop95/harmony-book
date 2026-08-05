@@ -6,6 +6,39 @@
 > documenti `.docx`, con il nome del documento sorgente e l'esito, così la data di allineamento
 > sopravvive a un clone.
 
+## 2026-08-05 (secondo passo) - Riscritta COME-SI-USA, allineata current-work, riancorate le schede
+
+Commit: da fare.
+File toccati e tracciati: `.claude/context/STACK.md`, `.claude/context/design-and-security.md` e
+`.claude/context/current-work.md` per il solo `last-verified-commit`, piu il corpo di
+`current-work.md`; `.claude/memory/index.md` e questo work-log.
+File toccati e ignorati: `_notes/COME-SI-USA.md`, riscritto.
+
+Motivo: l'utente ha chiesto se la descrizione di come si usa il progetto fosse ancora corretta. Il
+modello a strati regge, i numeri e tre affermazioni operative no.
+
+Correzioni verificate sul disco e riportate in `COME-SI-USA.md`. La bibliografia e a 101 voci e non
+98, il registro a 172 e non 168, i ragionamenti sono 18 e non 11, i backup del capitolo continuo sono
+sei coppie e l'ultimo e `pre-R15-R18` e non `pre-smith-jacques`. Tre correzioni di sostanza. La prima:
+`manuscript/chapters/` contiene solo l'introduzione vera piu uno scheletro di 860 byte e un residuo di
+128, `manuscript/music/` ha solo due prove della catena di build, e le sei figure del capitolo stanno
+ancora in `_notes/`. La seconda: dieci skill su quattordici portano `disable-model-invocation: true`,
+fra cui `armonia-libro`, `libro-berkman`, `fonte-nuova` e `book-digest`, quindi l'agente non le vede
+nel proprio elenco e non le invochera mai da solo; la dottrina la carica l'utente. La terza:
+`manuscript/`, `_notes/` e le due skill di contenuto non sono versionati affatto, quindi i backup
+datati e l'SSD sono l'unico meccanismo di recupero.
+
+Aggiunto a `COME-SI-USA.md` un quinto strato che mancava, cioe `.claude/`, con memoria, schede,
+regole e ADR, e l'elenco completo degli otto strumenti sotto `tools/` invece dei due citati. Aggiunto
+il vincolo d'ordine su `--update` fra le cose che non si fanno mai.
+
+Sync con `sync-context`. Confronto `4942de1..9acc2e0` per STACK.md e design-and-security.md e
+`dd1c4d5..9acc2e0` per current-work.md: zero file cambiati nelle aree coperte, quindi le tre schede
+sono state bumpate a `9acc2e0` come checkpoint e non come riconciliazione. Le tre schede con
+`covers-paths` vuoto restano fuori dal confronto. Resta il gap noto su STACK.md, che non ha `tools/**`
+fra i `covers-paths` e non descrive gli otto script: e la ragione per cui il drift su `tools/` non
+verra mai rilevato per quella scheda, e va sanato aggiungendo il percorso, non bumpando.
+
 ## 2026-08-05 - Rigenerata `armonia-libro`, e la lezione sull'ordine fra `--update` e rigenerazione
 
 Commit: da fare, questa voce e la riga di `memory/index.md` sono l'unica parte tracciata.

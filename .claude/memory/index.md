@@ -8,7 +8,7 @@
 
 ```
 Branch attivo:        main
-Commit di riferimento: dc03440 (schede aggiornate a mano il 2026-08-05, non via sync-context)
+Commit di riferimento: 9acc2e0 (schede riancorate con sync-context il 2026-08-05)
 Data snapshot:        2026-08-05
 ```
 
@@ -16,12 +16,17 @@ Data snapshot:        2026-08-05
 
 | Scheda | last-verified | Stato |
 |---|---|---|
-| STACK.md | 4942de1 | da riconciliare: `tools/` ha quattro script nuovi non descritti in scheda |
-| design-and-security.md | 4942de1 | diagrammi registrati e riconciliati; paradigmi da popolare |
+| STACK.md | 9acc2e0 | nessun drift nelle aree coperte; resta il gap noto, `tools/` non e in `covers-paths` e i suoi otto script non sono descritti in scheda |
+| design-and-security.md | 9acc2e0 | nessun drift; diagrammi registrati e riconciliati, paradigmi da popolare |
 | deployment.md | 017b02a | da popolare (covers-paths vuoto, nessun confronto di drift applicabile) |
 | dev-testing.md | 017b02a | da popolare (covers-paths vuoto, nessun confronto di drift applicabile) |
-| current-work.md | dd1c4d5 | aggiornata il 2026-08-03 con il ciclo su fonti, calcoli e capitolo; la sua nota sul quadro a sette gradi "non applicato" e superata, vedi work-log del 2026-08-05 |
+| current-work.md | 9acc2e0 | aggiornata il 2026-08-05 con la voce sulla rigenerazione di `armonia-libro` |
 | roadmap.md | 017b02a | aggiornata (covers-paths vuoto, nessun confronto di drift applicabile) |
+
+**Sync del 2026-08-05**: confronto `4942de1..9acc2e0` per STACK.md e design-and-security.md,
+`dd1c4d5..9acc2e0` per current-work.md. Zero file cambiati nelle aree coperte da ciascuna scheda,
+quindi il bump e un checkpoint e non una riconciliazione. Le tre schede con `covers-paths` vuoto
+restano fuori dal confronto e non si bumpano.
 
 **Drift chiuso il 2026-07-17**: i quattro commit intercorsi (`f3a6c45`, `f2d8d9c`, `bb78fca`,
 `2c49269`, `4942de1`) sono stati riconciliati con `sync-context`. L'unico cambiamento sostanziale
