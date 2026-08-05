@@ -6,6 +6,67 @@
 > documenti `.docx`, con il nome del documento sorgente e l'esito, così la data di allineamento
 > sopravvive a un clone.
 
+## 2026-08-05 - Rigenerata `armonia-libro`, e la lezione sull'ordine fra `--update` e rigenerazione
+
+Commit: da fare, questa voce e la riga di `memory/index.md` sono l'unica parte tracciata.
+File toccati e tracciati: `.claude/memory/progress.md` e `.claude/memory/index.md`.
+File toccati e ignorati: l'albero `.claude/skills/armonia-libro/` per intero salvo `voce.md`, cioe
+`SKILL.md`, `tesi.md`, `capitoli/01-tritono.md`, `fatti-verificati.md`, `fonti.md`,
+`agenda-ricerca.md` e il manifesto `.sources.json`; piu `_notes/cassaforte-capitolo-tritono.md` e
+`_notes/STATO-CAPITOLO-TRITONO.md`.
+
+Motivo: `python tools/skill-freshness.py` segnalava una fonte cambiata per `armonia-libro`. La
+segnalazione in se era rumore, perche l'utente aveva soltanto tolto degli a capo dalla cassaforte il
+2026-08-05 alle 09:48, ma controllando le date e emerso il problema vero.
+
+Il difetto trovato, che e di procedura e non di contenuto. Il manifesto dichiarava
+`generated: 2026-08-03`, mentre nessun file di contenuto della skill era stato riscritto dopo il
+2026-07-31. Su tredici fonti registrate, sette si erano mosse in mezzo. Il comando `--update`
+riallinea gli hash e non tocca il contenuto: lanciarlo senza aver prima rigenerato equivale a
+dichiarare digerito cio che non lo e, e rende la deriva invisibile invece di chiuderla. Conseguenza
+concreta: la skill non conteneva nulla del ciclo del 3 agosto e contraddiceva una fonte canonica,
+perche `capitoli/01-tritono.md` presentava ancora come intuizione la corrispondenza fra scale e
+coppie di tritoni che `tritoni-scale.py` aveva gia smentito.
+
+Rigenerazione completa, scelta dall'utente fra tre opzioni. In `tesi.md` sono entrati il primato
+della definizione di dominante del libro secondo ADR-009, la catena di quinte come chiave di lettura,
+la tabella a sei operazioni, la regola corretta della doppia eredita, il criterio R14 su come
+raccontarla, il contatore dei tritoni, il vocabolario livello I e livello II con il calcolo del
+secondo, la corrispondenza due a uno con i due teoremi, e il risultato 4 dichiarato come calcolato ma
+non ancora scritto nel capitolo. `capitoli/01-tritono.md` e riallineato al capitolo reale, cioe nove
+movimenti, 48314 caratteri, tredici riferimenti e le proporzioni con E al 22 per cento.
+`fatti-verificati.md` accoglie le quattro citazioni di Smith 1979, i quattro gradini di ADR-008 e una
+categoria nuova, i fatti calcolati, che non hanno fonte perche si rifanno lanciando uno script.
+`fonti.md` e `agenda-ricerca.md` registrano le chiusure di Butler, Krumhansl, Smith e della
+corrispondenza, e riformulano la domanda aperta, che non e piu se la corrispondenza sia biunivoca ma
+se qualcuno l'abbia gia scritta. `voce.md` e stato riletto e lasciato invariato: le sue fonti non
+sono cambiate.
+
+Due decisioni prese durante la rigenerazione. I conteggi bibliografici sono stati ricalcolati sui
+file reali invece di essere ripresi dalle note, e danno 172 voci nel registro con 99 verificate e 101
+voci nel `.bib`. E i due strumenti `tools/tritoni-scale.py` e `tools/derivazione-scale.py` sono stati
+aggiunti al manifesto come fonti, perche la skill ne riporta i risultati come fatti e per ADR-009 le
+definizioni che implementano sono contenuto del libro: un cambio di definizione deve far scattare il
+controllo di freschezza.
+
+Discrepanza trovata e sanata. L'intestazione della voce 19 della cassaforte e
+`_notes/STATO-CAPITOLO-TRITONO.md` dichiaravano ancora "proposta NON applicata" per il quadro a sette
+gradi, perche erano state scritte al settimo passo del 2026-08-03 e non aggiornate dopo l'ottavo, che
+e quello in cui la proposta e entrata nel capitolo. Corrette entrambe, insieme ai tre addenda della
+voce 19, che arrivavano a una classificazione in tre casi superata dalla correzione dell'utente a
+due. Regola che ne discende: quando due note di lavoro si contraddicono vince il tracciamento, che e
+append-only e datato per passo, mentre le intestazioni di stato descrivono un momento e invecchiano
+in silenzio.
+
+Verifica: `python tools/skill-freshness.py` da `fresca: 15 fonti invariate` su `armonia-libro`,
+digerita il 2026-08-05, e `fresca: 1` su `libro-berkman`, con exit code 0. Le occorrenze residue di
+"biunivoca" nella skill stanno tutte in frasi che la dichiarano superata. Zero trattini lunghi o
+medi. La verifica per invocazione della skill non e possibile, perche porta
+`disable-model-invocation: true`, quindi il controllo e stato fatto sul contenuto.
+
+Il vincolo d'ordine e stato scritto in `SKILL.md` e nel campo `note` del manifesto, cosi da
+sopravvivere alla sessione: `--update` si lancia solo dopo aver riscritto i file, mai prima.
+
 ## 2026-08-03 - Capitolo tritono: catena di quinte, napoletana minore, sette fonti nuove
 
 Commit: `1917469`, `f3d48d5`, `7b6d1b4`, `dd1c4d5` per la parte tracciata; le schede di questa voce
