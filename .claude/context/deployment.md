@@ -8,9 +8,7 @@ last-verified-commit: 017b02a
 
 # Deployment
 
-> Popolare leggendo la configurazione reale di build e pubblicazione. Commit, push e deploy restano
-> operazioni manuali dell'utente. Per questo progetto il version control è di fatto lo stato di
-> avanzamento del libro.
+> Popolare leggendo la configurazione reale di build e pubblicazione. Commit, push e deploy restano operazioni manuali dell'utente. Per questo progetto il version control è di fatto lo stato di avanzamento del libro.
 
 ## Livelli
 

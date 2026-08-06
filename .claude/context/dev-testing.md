@@ -8,8 +8,7 @@ last-verified-commit: 017b02a
 
 # Test di sviluppo
 
-> Popolare leggendo la configurazione reale dei controlli. La checklist operativa locale dei test
-> manuali vive invece in `_notes/TEST-CHECKLIST.md`, ignorata da git.
+> Popolare leggendo la configurazione reale dei controlli. La checklist operativa locale dei test manuali vive invece in `_notes/TEST-CHECKLIST.md`, ignorata da git.
 
 ## Test runner e comandi
 

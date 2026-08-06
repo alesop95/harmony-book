@@ -10,55 +10,28 @@ disable-model-invocation: true
 
 ## Premessa
 
-Copre un vuoto lasciato da `doc-ingest` (estrae struttura, non anagrafica) e da
-`academic-researcher` (pensato per paper con DOI, non per libri). Non e' un pacchetto a se: si
-appoggia alla cache Markdown gia' prodotta da `doc-ingest` e scrive nello stesso registro unificato
-che `book-digest` (pattern `book-to-skill`) aggiorna per la propria coda di trasformazione in
-skill. Un solo registro, non due sistemi di stato paralleli da riconciliare a mano.
+Copre un vuoto lasciato da `doc-ingest` (estrae struttura, non anagrafica) e da `academic-researcher` (pensato per paper con DOI, non per libri). Non e' un pacchetto a se: si appoggia alla cache Markdown gia' prodotta da `doc-ingest` e scrive nello stesso registro unificato che `book-digest` (pattern `book-to-skill`) aggiorna per la propria coda di trasformazione in skill. Un solo registro, non due sistemi di stato paralleli da riconciliare a mano.
 
 ## Precondizione
 
-Richiede che `doc-ingest` sia gia' stato eseguito sul file bersaglio: la skill legge il mirror
-Markdown gia' in cache e il `.manifest.json` della cartella di cache indicata. Se il file non
-risulta nel manifest, la skill si ferma e chiede di far girare prima `tools/doc-ingest.py` sulla
-cartella sorgente, invece di leggere il PDF originale essa stessa.
+Richiede che `doc-ingest` sia gia' stato eseguito sul file bersaglio: la skill legge il mirror Markdown gia' in cache e il `.manifest.json` della cartella di cache indicata. Se il file non risulta nel manifest, la skill si ferma e chiede di far girare prima `tools/doc-ingest.py` sulla cartella sorgente, invece di leggere il PDF originale essa stessa.
 
 ## Quando si invoca
 
-Quando un libro e' stato ingerito e si vuole ricavarne una voce bibliografica citabile per
-`manuscript/bib/references.bib` (o l'equivalente `.bib` reale del progetto). Si indica il percorso
-del file sorgente originale (per risalire all'hash nel manifest) o direttamente il file Markdown
-gia' in cache.
+Quando un libro e' stato ingerito e si vuole ricavarne una voce bibliografica citabile per `manuscript/bib/references.bib` (o l'equivalente `.bib` reale del progetto). Si indica il percorso del file sorgente originale (per risalire all'hash nel manifest) o direttamente il file Markdown gia' in cache.
 
 ## Procedura
 
-1. Risolvere l'hash `sha256` del file dal `.manifest.json` di `doc-ingest` corrispondente alla
-   cartella di cache indicata. Se assente, fermarsi (vedi Precondizione).
-2. Leggere **solo** le prime pagine del mirror Markdown: frontespizio, verso del frontespizio,
-   eventuale colophon, al massimo l'indice. Mai il libro intero: stessa disciplina di disclosure
-   progressiva di `doc-ingest`/`book-digest`, applicata qui al solo sottoinsieme "pagine di
-   metadati". Se il mirror e' vuoto o troppo corto (PDF scansionato senza OCR riuscito), segnalarlo
-   e fermarsi: non indovinare i campi dal solo nome del file.
-3. Proporre i campi secondo lo schema del paragrafo "Schema campi" e una citekey secondo la
-   convenzione descritta li sotto, verificando le collisioni contro il `.bib` reale del progetto e
-   contro le citekey gia' presenti nel registro.
-4. Presentare la proposta per la conferma "a colophon": chi invoca la skill guarda una volta il
-   libro vero (il PDF originale o, se gia' inequivocabile, il frontespizio estratto) e conferma,
-   corregge o scarta ogni campo.
-5. Aggiornare la voce del registro (vedi "Registro unificato"): stato `verificata` solo se
-   confermata dall'utente, altrimenti `da-verificare` (proposta ancora aperta) o `scartata`
-   (l'utente ha rifiutato la fonte, per esempio doppione o materiale non citabile).
-6. Solo se `bib_status: verificata`, appendere la voce al file `.bib` reale indicato
-   dall'utente (default: `manuscript/bib/references.bib`), impostando `bib_entry_written: true`.
-   Non scrivere mai una voce non confermata.
-7. Non toccare mai il campo `skill_status` della voce: e' di proprieta' di `book-digest`, che lo
-   aggiorna in modo indipendente quando il libro viene trasformato in skill.
+1. Risolvere l'hash `sha256` del file dal `.manifest.json` di `doc-ingest` corrispondente alla cartella di cache indicata. Se assente, fermarsi (vedi Precondizione).
+2. Leggere **solo** le prime pagine del mirror Markdown: frontespizio, verso del frontespizio, eventuale colophon, al massimo l'indice. Mai il libro intero: stessa disciplina di disclosure progressiva di `doc-ingest`/`book-digest`, applicata qui al solo sottoinsieme "pagine di metadati". Se il mirror e' vuoto o troppo corto (PDF scansionato senza OCR riuscito), segnalarlo e fermarsi: non indovinare i campi dal solo nome del file.
+3. Proporre i campi secondo lo schema del paragrafo "Schema campi" e una citekey secondo la convenzione descritta li sotto, verificando le collisioni contro il `.bib` reale del progetto e contro le citekey gia' presenti nel registro.
+4. Presentare la proposta per la conferma "a colophon": chi invoca la skill guarda una volta il libro vero (il PDF originale o, se gia' inequivocabile, il frontespizio estratto) e conferma, corregge o scarta ogni campo.
+5. Aggiornare la voce del registro (vedi "Registro unificato"): stato `verificata` solo se confermata dall'utente, altrimenti `da-verificare` (proposta ancora aperta) o `scartata` (l'utente ha rifiutato la fonte, per esempio doppione o materiale non citabile).
+6. Solo se `bib_status: verificata`, appendere la voce al file `.bib` reale indicato dall'utente (default: `manuscript/bib/references.bib`), impostando `bib_entry_written: true`. Non scrivere mai una voce non confermata.
+7. Non toccare mai il campo `skill_status` della voce: e' di proprieta' di `book-digest`, che lo aggiorna in modo indipendente quando il libro viene trasformato in skill.
 8. Non eseguire mai `git add`, `commit` o `push`: restano manuali dell'utente.
 
-Idempotenza: rilanciare la skill sullo stesso file aggiorna la voce esistente del registro (stesso
-hash), non ne crea una seconda. Se l'hash del file e' cambiato rispetto alla voce registrata (nuova
-edizione, nuova scansione), la skill lo segnala come potenzialmente obsoleto invece di sovrascrivere
-in silenzio.
+Idempotenza: rilanciare la skill sullo stesso file aggiorna la voce esistente del registro (stesso hash), non ne crea una seconda. Se l'hash del file e' cambiato rispetto alla voce registrata (nuova edizione, nuova scansione), la skill lo segnala come potenzialmente obsoleto invece di sovrascrivere in silenzio.
 
 ## Schema campi (.bib)
 
@@ -77,20 +50,15 @@ Solo `@book`, mai altri tipi salvo indicazione esplicita dell'utente:
 }
 ```
 
-Mai stimare un campo assente dal colophon: si omette, non si inventa. Solo autori/titolo/anno sono
-obbligatori; editore, edizione, ISBN si scrivono solo se effettivamente leggibili sul frontespizio.
+Mai stimare un campo assente dal colophon: si omette, non si inventa. Solo autori/titolo/anno sono obbligatori; editore, edizione, ISBN si scrivono solo se effettivamente leggibili sul frontespizio.
 
 ## Convenzione citekey
 
-`<cognome primo autore><anno>`, tutto minuscolo, senza spazi ne' accenti (traslitterati). In caso
-di collisione (stesso cognome, stesso anno, opera diversa), si aggiunge un suffisso `a`/`b`/`c` in
-ordine di inserimento. Il controllo di collisione si fa contro il `.bib` reale e contro le citekey
-gia' registrate, prima di scrivere.
+`<cognome primo autore><anno>`, tutto minuscolo, senza spazi ne' accenti (traslitterati). In caso di collisione (stesso cognome, stesso anno, opera diversa), si aggiunge un suffisso `a`/`b`/`c` in ordine di inserimento. Il controllo di collisione si fa contro il `.bib` reale e contro le citekey gia' registrate, prima di scrivere.
 
 ## Registro unificato
 
-Percorso: `_notes/book-bib-registry.json` (privato, gia' coperto da `/_notes/` in `.gitignore`).
-Chiave: lo stesso `sha256` che `doc-ingest` calcola per ogni file. Una voce per libro:
+Percorso: `_notes/book-bib-registry.json` (privato, gia' coperto da `/_notes/` in `.gitignore`). Chiave: lo stesso `sha256` che `doc-ingest` calcola per ogni file. Una voce per libro:
 
 ```json
 {
@@ -112,22 +80,12 @@ Chiave: lo stesso `sha256` che `doc-ingest` calcola per ogni file. Una voce per 
 }
 ```
 
-Accanto al JSON, rigenerare sempre `_notes/book-bib-registry.md`: una tabella leggibile (mai
-editata a mano), colonne citekey / titolo / bib_status / skill_status, utile per una scansione
-rapida senza aprire il JSON.
+Accanto al JSON, rigenerare sempre `_notes/book-bib-registry.md`: una tabella leggibile (mai editata a mano), colonne citekey / titolo / bib_status / skill_status, utile per una scansione rapida senza aprire il JSON.
 
 ## Rapporto con gli altri pacchetti
 
-`doc-ingest` e' a monte: fornisce testo e manifest, non si tocca. `book-digest` (pattern
-`book-to-skill`) e' indipendente: legge la stessa fonte per un digest concettuale, non tocca mai la
-bibliografia, e coordina solo il proprio campo `skill_status` nello stesso registro.
-`academic-researcher` non si instanzia per questo scopo: la sua skill `citation-tracker` verifica
-contro Semantic Scholar/OpenAlex/Crossref, un metodo non applicabile a libri senza DOI; solo il
-vocabolario a tre stati (verificata/da-verificare/scartata) e' ripreso qui, con una verifica umana
-da colophon al posto della verifica da database.
+`doc-ingest` e' a monte: fornisce testo e manifest, non si tocca. `book-digest` (pattern `book-to-skill`) e' indipendente: legge la stessa fonte per un digest concettuale, non tocca mai la bibliografia, e coordina solo il proprio campo `skill_status` nello stesso registro. `academic-researcher` non si instanzia per questo scopo: la sua skill `citation-tracker` verifica contro Semantic Scholar/OpenAlex/Crossref, un metodo non applicabile a libri senza DOI; solo il vocabolario a tre stati (verificata/da-verificare/scartata) e' ripreso qui, con una verifica umana da colophon al posto della verifica da database.
 
 ## Vincoli
 
-Densita' sopra completezza nella proposta di ogni campo. Mai testo grezzo ne' pagine intere in
-output: solo i campi estratti. Mai scrivere nel `.bib` reale senza conferma umana esplicita. Mai
-inventare un campo assente. Non eseguire `git add`, `commit` o `push`.
+Densita' sopra completezza nella proposta di ogni campo. Mai testo grezzo ne' pagine intere in output: solo i campi estratti. Mai scrivere nel `.bib` reale senza conferma umana esplicita. Mai inventare un campo assente. Non eseguire `git add`, `commit` o `push`.

@@ -9,8 +9,7 @@ last-verified-commit: 9acc2e0
 
 # Design e sicurezza applicativa
 
-> Popolare leggendo le scelte effettive. I diagrammi referenziati vivono in `diagrams/` in
-> corrispondenza uno a uno con i componenti descritti (sezione 7 di `PROJECT-SYSTEM.md`).
+> Popolare leggendo le scelte effettive. I diagrammi referenziati vivono in `diagrams/` in corrispondenza uno a uno con i componenti descritti (sezione 7 di `PROJECT-SYSTEM.md`).
 
 ## Paradigmi di software design
 
@@ -18,8 +17,7 @@ last-verified-commit: 9acc2e0
 
 ## Sicurezza applicativa
 
-<gestione di eventuali segreti di build o pubblicazione, superfici esposte e mitigazioni; per un
-libro tipicamente minima, da dichiarare esplicitamente quando definita>
+<gestione di eventuali segreti di build o pubblicazione, superfici esposte e mitigazioni; per un libro tipicamente minima, da dichiarare esplicitamente quando definita>
 
 ## Diagrammi
 

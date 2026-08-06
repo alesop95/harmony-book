@@ -1,19 +1,10 @@
 # harmony-book
 
-Stack e strumenti per la scrittura di un libro di armonia occidentale, portabile tra Windows 11 e
-Linux. Questo repository pubblico contiene il *metodo* (configurazione tipografica, build, sistema di
-contesto), non il contenuto del libro: i capitoli sono privati e non vengono versionati qui (vedi
-"Modello di privacy del contenuto").
+Stack e strumenti per la scrittura di un libro di armonia occidentale, portabile tra Windows 11 e Linux. Questo repository pubblico contiene il *metodo* (configurazione tipografica, build, sistema di contesto), non il contenuto del libro: i capitoli sono privati e non vengono versionati qui (vedi "Modello di privacy del contenuto").
 
 ## Stack
 
-La composizione usa LaTeX con engine LuaLaTeX (Unicode nativo, font OpenType via `fontspec`,
-microtipografia completa con `microtype`), classe `memoir`, e gli esempi musicali sono prodotti con
-LilyPond integrato attraverso il preprocessore `lilypond-book`. La bibliografia e' gestita con
-`biblatex` + `biber`, l'indice con `imakeidx`, il glossario con `glossaries`. L'ambiente TeX e'
-TinyTeX user-local, descritto in modo riproducibile dal manifesto `tex-packages.txt`; LilyPond e' un
-binario esterno da installare a parte. Il razionale completo e le alternative scartate sono in
-`.claude/context/STACK.md`.
+La composizione usa LaTeX con engine LuaLaTeX (Unicode nativo, font OpenType via `fontspec`, microtipografia completa con `microtype`), classe `memoir`, e gli esempi musicali sono prodotti con LilyPond integrato attraverso il preprocessore `lilypond-book`. La bibliografia e' gestita con `biblatex` + `biber`, l'indice con `imakeidx`, il glossario con `glossaries`. L'ambiente TeX e' TinyTeX user-local, descritto in modo riproducibile dal manifesto `tex-packages.txt`; LilyPond e' un binario esterno da installare a parte. Il razionale completo e le alternative scartate sono in `.claude/context/STACK.md`.
 
 ## Struttura
 
@@ -36,8 +27,7 @@ harmony-book/
 
 ## Come compilare
 
-Prima volta, per preparare l'ambiente (scarica TinyTeX e i pacchetti; LilyPond va installato a parte
-e messo sul PATH):
+Prima volta, per preparare l'ambiente (scarica TinyTeX e i pacchetti; LilyPond va installato a parte e messo sul PATH):
 
 ```
 # Windows
@@ -55,15 +45,13 @@ powershell -ExecutionPolicy Bypass -File scripts\build.ps1
 sh scripts/build.sh
 ```
 
-Il PDF esce in `build/`. La procedura e' incapsulata nella skill `latex-build`
-(`.claude/skills/latex-build/SKILL.md`).
+Il PDF esce in `build/`. La procedura e' incapsulata nella skill `latex-build` (`.claude/skills/latex-build/SKILL.md`).
 
 ## Diagrammi del flusso di lavoro
 
 ![Flusso di scrittura](.claude/context/diagrams/flusso-scrittura.svg)
 
-Ciclo quotidiano: scrivere in `manuscript/`, compilare, rivedere il PDF e, al traguardo, committare
-e ri-ancorare con `sync-context`.
+Ciclo quotidiano: scrivere in `manuscript/`, compilare, rivedere il PDF e, al traguardo, committare e ri-ancorare con `sync-context`.
 
 ![Struttura del progetto](.claude/context/diagrams/struttura-progetto.svg)
 
@@ -73,17 +61,11 @@ Cosa è pubblico (metodo e struttura) e cosa resta privato e locale (il contenut
 
 Come `build.ps1` produce il PDF: `lilypond-book`, LuaLaTeX, `biber`, `makeindex`, `makeglossaries`.
 
-I sorgenti `.mmd` stanno accanto agli `.svg` in `.claude/context/diagrams/`; per rigenerarli dopo
-una modifica: `node tools/render-diagrams.mjs`.
+I sorgenti `.mmd` stanno accanto agli `.svg` in `.claude/context/diagrams/`; per rigenerarli dopo una modifica: `node tools/render-diagrams.mjs`.
 
 ## Modello di privacy del contenuto
 
-Il contenuto vendibile del libro non deve mai essere pubblicato. La cartella `manuscript/` (capitoli,
-esempi musicali, bibliografia reale) e' percio' ignorata da git e non finisce in questo repository
-pubblico; il backup della prosa avviene a parte (copia locale da SSD a SSD). `manuscript/` e' un
-sottoalbero autonomo: se in futuro serve versionarlo, basta inizializzare un repository git privato
-al suo interno, senza ristrutturare nulla. Il version control pubblico tiene quindi traccia
-dell'avanzamento di *struttura e metodo*, non del testo.
+Il contenuto vendibile del libro non deve mai essere pubblicato. La cartella `manuscript/` (capitoli, esempi musicali, bibliografia reale) e' percio' ignorata da git e non finisce in questo repository pubblico; il backup della prosa avviene a parte (copia locale da SSD a SSD). `manuscript/` e' un sottoalbero autonomo: se in futuro serve versionarlo, basta inizializzare un repository git privato al suo interno, senza ristrutturare nulla. Il version control pubblico tiene quindi traccia dell'avanzamento di *struttura e metodo*, non del testo.
 
 ## Risorse e riferimenti
 
@@ -105,5 +87,4 @@ Editoria e autopubblicazione con LaTeX:
 
 ## Note
 
-Le operazioni git (`add`, `commit`, `push`) sono manuali. L'identita' git e il remoto sono
-configurati a livello locale del repository secondo `.claude/rules/git-identity-and-repo.md`.
+Le operazioni git (`add`, `commit`, `push`) sono manuali. L'identita' git e il remoto sono configurati a livello locale del repository secondo `.claude/rules/git-identity-and-repo.md`.

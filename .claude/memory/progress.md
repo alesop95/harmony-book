@@ -1,480 +1,125 @@
 # Work-log
 
-> Append-only, in ordine cronologico inverso (la voce più recente in alto). Ogni passo
-> significativo di codice e ogni intervento manuale rilevante lascia una voce con data, file
-> toccati, motivo e commit di riferimento. Qui confluisce anche il log di riconciliazione dei
-> documenti `.docx`, con il nome del documento sorgente e l'esito, così la data di allineamento
-> sopravvive a un clone.
+> Append-only, in ordine cronologico inverso (la voce più recente in alto). Ogni passo significativo di codice e ogni intervento manuale rilevante lascia una voce con data, file toccati, motivo e commit di riferimento. Qui confluisce anche il log di riconciliazione dei documenti `.docx`, con il nome del documento sorgente e l'esito, così la data di allineamento sopravvive a un clone.
 
 ## 2026-08-05 (secondo passo) - Riscritta COME-SI-USA, allineata current-work, riancorate le schede
 
-Commit: da fare.
-File toccati e tracciati: `.claude/context/STACK.md`, `.claude/context/design-and-security.md` e
-`.claude/context/current-work.md` per il solo `last-verified-commit`, piu il corpo di
-`current-work.md`; `.claude/memory/index.md` e questo work-log.
-File toccati e ignorati: `_notes/COME-SI-USA.md`, riscritto.
+Commit: da fare. File toccati e tracciati: `.claude/context/STACK.md`, `.claude/context/design-and-security.md` e `.claude/context/current-work.md` per il solo `last-verified-commit`, piu il corpo di `current-work.md`; `.claude/memory/index.md` e questo work-log. File toccati e ignorati: `_notes/COME-SI-USA.md`, riscritto.
 
-Motivo: l'utente ha chiesto se la descrizione di come si usa il progetto fosse ancora corretta. Il
-modello a strati regge, i numeri e tre affermazioni operative no.
+Motivo: l'utente ha chiesto se la descrizione di come si usa il progetto fosse ancora corretta. Il modello a strati regge, i numeri e tre affermazioni operative no.
 
-Correzioni verificate sul disco e riportate in `COME-SI-USA.md`. La bibliografia e a 101 voci e non
-98, il registro a 172 e non 168, i ragionamenti sono 18 e non 11, i backup del capitolo continuo sono
-sei coppie e l'ultimo e `pre-R15-R18` e non `pre-smith-jacques`. Tre correzioni di sostanza. La prima:
-`manuscript/chapters/` contiene solo l'introduzione vera piu uno scheletro di 860 byte e un residuo di
-128, `manuscript/music/` ha solo due prove della catena di build, e le sei figure del capitolo stanno
-ancora in `_notes/`. La seconda: dieci skill su quattordici portano `disable-model-invocation: true`,
-fra cui `armonia-libro`, `libro-berkman`, `fonte-nuova` e `book-digest`, quindi l'agente non le vede
-nel proprio elenco e non le invochera mai da solo; la dottrina la carica l'utente. La terza:
-`manuscript/`, `_notes/` e le due skill di contenuto non sono versionati affatto, quindi i backup
-datati e l'SSD sono l'unico meccanismo di recupero.
+Correzioni verificate sul disco e riportate in `COME-SI-USA.md`. La bibliografia e a 101 voci e non 98, il registro a 172 e non 168, i ragionamenti sono 18 e non 11, i backup del capitolo continuo sono sei coppie e l'ultimo e `pre-R15-R18` e non `pre-smith-jacques`. Tre correzioni di sostanza. La prima: `manuscript/chapters/` contiene solo l'introduzione vera piu uno scheletro di 860 byte e un residuo di 128, `manuscript/music/` ha solo due prove della catena di build, e le sei figure del capitolo stanno ancora in `_notes/`. La seconda: dieci skill su quattordici portano `disable-model-invocation: true`, fra cui `armonia-libro`, `libro-berkman`, `fonte-nuova` e `book-digest`, quindi l'agente non le vede nel proprio elenco e non le invochera mai da solo; la dottrina la carica l'utente. La terza: `manuscript/`, `_notes/` e le due skill di contenuto non sono versionati affatto, quindi i backup datati e l'SSD sono l'unico meccanismo di recupero.
 
-Aggiunto a `COME-SI-USA.md` un quinto strato che mancava, cioe `.claude/`, con memoria, schede,
-regole e ADR, e l'elenco completo degli otto strumenti sotto `tools/` invece dei due citati. Aggiunto
-il vincolo d'ordine su `--update` fra le cose che non si fanno mai.
+Aggiunto a `COME-SI-USA.md` un quinto strato che mancava, cioe `.claude/`, con memoria, schede, regole e ADR, e l'elenco completo degli otto strumenti sotto `tools/` invece dei due citati. Aggiunto il vincolo d'ordine su `--update` fra le cose che non si fanno mai.
 
-Sync con `sync-context`. Confronto `4942de1..9acc2e0` per STACK.md e design-and-security.md e
-`dd1c4d5..9acc2e0` per current-work.md: zero file cambiati nelle aree coperte, quindi le tre schede
-sono state bumpate a `9acc2e0` come checkpoint e non come riconciliazione. Le tre schede con
-`covers-paths` vuoto restano fuori dal confronto. Resta il gap noto su STACK.md, che non ha `tools/**`
-fra i `covers-paths` e non descrive gli otto script: e la ragione per cui il drift su `tools/` non
-verra mai rilevato per quella scheda, e va sanato aggiungendo il percorso, non bumpando.
+Sync con `sync-context`. Confronto `4942de1..9acc2e0` per STACK.md e design-and-security.md e `dd1c4d5..9acc2e0` per current-work.md: zero file cambiati nelle aree coperte, quindi le tre schede sono state bumpate a `9acc2e0` come checkpoint e non come riconciliazione. Le tre schede con `covers-paths` vuoto restano fuori dal confronto. Resta il gap noto su STACK.md, che non ha `tools/**` fra i `covers-paths` e non descrive gli otto script: e la ragione per cui il drift su `tools/` non verra mai rilevato per quella scheda, e va sanato aggiungendo il percorso, non bumpando.
 
 ## 2026-08-05 - Rigenerata `armonia-libro`, e la lezione sull'ordine fra `--update` e rigenerazione
 
-Commit: da fare, questa voce e la riga di `memory/index.md` sono l'unica parte tracciata.
-File toccati e tracciati: `.claude/memory/progress.md` e `.claude/memory/index.md`.
-File toccati e ignorati: l'albero `.claude/skills/armonia-libro/` per intero salvo `voce.md`, cioe
-`SKILL.md`, `tesi.md`, `capitoli/01-tritono.md`, `fatti-verificati.md`, `fonti.md`,
-`agenda-ricerca.md` e il manifesto `.sources.json`; piu `_notes/cassaforte-capitolo-tritono.md` e
-`_notes/STATO-CAPITOLO-TRITONO.md`.
+Commit: da fare, questa voce e la riga di `memory/index.md` sono l'unica parte tracciata. File toccati e tracciati: `.claude/memory/progress.md` e `.claude/memory/index.md`. File toccati e ignorati: l'albero `.claude/skills/armonia-libro/` per intero salvo `voce.md`, cioe `SKILL.md`, `tesi.md`, `capitoli/01-tritono.md`, `fatti-verificati.md`, `fonti.md`, `agenda-ricerca.md` e il manifesto `.sources.json`; piu `_notes/cassaforte-capitolo-tritono.md` e `_notes/STATO-CAPITOLO-TRITONO.md`.
 
-Motivo: `python tools/skill-freshness.py` segnalava una fonte cambiata per `armonia-libro`. La
-segnalazione in se era rumore, perche l'utente aveva soltanto tolto degli a capo dalla cassaforte il
-2026-08-05 alle 09:48, ma controllando le date e emerso il problema vero.
+Motivo: `python tools/skill-freshness.py` segnalava una fonte cambiata per `armonia-libro`. La segnalazione in se era rumore, perche l'utente aveva soltanto tolto degli a capo dalla cassaforte il 2026-08-05 alle 09:48, ma controllando le date e emerso il problema vero.
 
-Il difetto trovato, che e di procedura e non di contenuto. Il manifesto dichiarava
-`generated: 2026-08-03`, mentre nessun file di contenuto della skill era stato riscritto dopo il
-2026-07-31. Su tredici fonti registrate, sette si erano mosse in mezzo. Il comando `--update`
-riallinea gli hash e non tocca il contenuto: lanciarlo senza aver prima rigenerato equivale a
-dichiarare digerito cio che non lo e, e rende la deriva invisibile invece di chiuderla. Conseguenza
-concreta: la skill non conteneva nulla del ciclo del 3 agosto e contraddiceva una fonte canonica,
-perche `capitoli/01-tritono.md` presentava ancora come intuizione la corrispondenza fra scale e
-coppie di tritoni che `tritoni-scale.py` aveva gia smentito.
+Il difetto trovato, che e di procedura e non di contenuto. Il manifesto dichiarava `generated: 2026-08-03`, mentre nessun file di contenuto della skill era stato riscritto dopo il 2026-07-31. Su tredici fonti registrate, sette si erano mosse in mezzo. Il comando `--update` riallinea gli hash e non tocca il contenuto: lanciarlo senza aver prima rigenerato equivale a dichiarare digerito cio che non lo e, e rende la deriva invisibile invece di chiuderla. Conseguenza concreta: la skill non conteneva nulla del ciclo del 3 agosto e contraddiceva una fonte canonica, perche `capitoli/01-tritono.md` presentava ancora come intuizione la corrispondenza fra scale e coppie di tritoni che `tritoni-scale.py` aveva gia smentito.
 
-Rigenerazione completa, scelta dall'utente fra tre opzioni. In `tesi.md` sono entrati il primato
-della definizione di dominante del libro secondo ADR-009, la catena di quinte come chiave di lettura,
-la tabella a sei operazioni, la regola corretta della doppia eredita, il criterio R14 su come
-raccontarla, il contatore dei tritoni, il vocabolario livello I e livello II con il calcolo del
-secondo, la corrispondenza due a uno con i due teoremi, e il risultato 4 dichiarato come calcolato ma
-non ancora scritto nel capitolo. `capitoli/01-tritono.md` e riallineato al capitolo reale, cioe nove
-movimenti, 48314 caratteri, tredici riferimenti e le proporzioni con E al 22 per cento.
-`fatti-verificati.md` accoglie le quattro citazioni di Smith 1979, i quattro gradini di ADR-008 e una
-categoria nuova, i fatti calcolati, che non hanno fonte perche si rifanno lanciando uno script.
-`fonti.md` e `agenda-ricerca.md` registrano le chiusure di Butler, Krumhansl, Smith e della
-corrispondenza, e riformulano la domanda aperta, che non e piu se la corrispondenza sia biunivoca ma
-se qualcuno l'abbia gia scritta. `voce.md` e stato riletto e lasciato invariato: le sue fonti non
-sono cambiate.
+Rigenerazione completa, scelta dall'utente fra tre opzioni. In `tesi.md` sono entrati il primato della definizione di dominante del libro secondo ADR-009, la catena di quinte come chiave di lettura, la tabella a sei operazioni, la regola corretta della doppia eredita, il criterio R14 su come raccontarla, il contatore dei tritoni, il vocabolario livello I e livello II con il calcolo del secondo, la corrispondenza due a uno con i due teoremi, e il risultato 4 dichiarato come calcolato ma non ancora scritto nel capitolo. `capitoli/01-tritono.md` e riallineato al capitolo reale, cioe nove movimenti, 48314 caratteri, tredici riferimenti e le proporzioni con E al 22 per cento. `fatti-verificati.md` accoglie le quattro citazioni di Smith 1979, i quattro gradini di ADR-008 e una categoria nuova, i fatti calcolati, che non hanno fonte perche si rifanno lanciando uno script. `fonti.md` e `agenda-ricerca.md` registrano le chiusure di Butler, Krumhansl, Smith e della corrispondenza, e riformulano la domanda aperta, che non e piu se la corrispondenza sia biunivoca ma se qualcuno l'abbia gia scritta. `voce.md` e stato riletto e lasciato invariato: le sue fonti non sono cambiate.
 
-Due decisioni prese durante la rigenerazione. I conteggi bibliografici sono stati ricalcolati sui
-file reali invece di essere ripresi dalle note, e danno 172 voci nel registro con 99 verificate e 101
-voci nel `.bib`. E i due strumenti `tools/tritoni-scale.py` e `tools/derivazione-scale.py` sono stati
-aggiunti al manifesto come fonti, perche la skill ne riporta i risultati come fatti e per ADR-009 le
-definizioni che implementano sono contenuto del libro: un cambio di definizione deve far scattare il
-controllo di freschezza.
+Due decisioni prese durante la rigenerazione. I conteggi bibliografici sono stati ricalcolati sui file reali invece di essere ripresi dalle note, e danno 172 voci nel registro con 99 verificate e 101 voci nel `.bib`. E i due strumenti `tools/tritoni-scale.py` e `tools/derivazione-scale.py` sono stati aggiunti al manifesto come fonti, perche la skill ne riporta i risultati come fatti e per ADR-009 le definizioni che implementano sono contenuto del libro: un cambio di definizione deve far scattare il controllo di freschezza.
 
-Discrepanza trovata e sanata. L'intestazione della voce 19 della cassaforte e
-`_notes/STATO-CAPITOLO-TRITONO.md` dichiaravano ancora "proposta NON applicata" per il quadro a sette
-gradi, perche erano state scritte al settimo passo del 2026-08-03 e non aggiornate dopo l'ottavo, che
-e quello in cui la proposta e entrata nel capitolo. Corrette entrambe, insieme ai tre addenda della
-voce 19, che arrivavano a una classificazione in tre casi superata dalla correzione dell'utente a
-due. Regola che ne discende: quando due note di lavoro si contraddicono vince il tracciamento, che e
-append-only e datato per passo, mentre le intestazioni di stato descrivono un momento e invecchiano
-in silenzio.
+Discrepanza trovata e sanata. L'intestazione della voce 19 della cassaforte e `_notes/STATO-CAPITOLO-TRITONO.md` dichiaravano ancora "proposta NON applicata" per il quadro a sette gradi, perche erano state scritte al settimo passo del 2026-08-03 e non aggiornate dopo l'ottavo, che e quello in cui la proposta e entrata nel capitolo. Corrette entrambe, insieme ai tre addenda della voce 19, che arrivavano a una classificazione in tre casi superata dalla correzione dell'utente a due. Regola che ne discende: quando due note di lavoro si contraddicono vince il tracciamento, che e append-only e datato per passo, mentre le intestazioni di stato descrivono un momento e invecchiano in silenzio.
 
-Verifica: `python tools/skill-freshness.py` da `fresca: 15 fonti invariate` su `armonia-libro`,
-digerita il 2026-08-05, e `fresca: 1` su `libro-berkman`, con exit code 0. Le occorrenze residue di
-"biunivoca" nella skill stanno tutte in frasi che la dichiarano superata. Zero trattini lunghi o
-medi. La verifica per invocazione della skill non e possibile, perche porta
-`disable-model-invocation: true`, quindi il controllo e stato fatto sul contenuto.
+Verifica: `python tools/skill-freshness.py` da `fresca: 15 fonti invariate` su `armonia-libro`, digerita il 2026-08-05, e `fresca: 1` su `libro-berkman`, con exit code 0. Le occorrenze residue di "biunivoca" nella skill stanno tutte in frasi che la dichiarano superata. Zero trattini lunghi o medi. La verifica per invocazione della skill non e possibile, perche porta `disable-model-invocation: true`, quindi il controllo e stato fatto sul contenuto.
 
-Il vincolo d'ordine e stato scritto in `SKILL.md` e nel campo `note` del manifesto, cosi da
-sopravvivere alla sessione: `--update` si lancia solo dopo aver riscritto i file, mai prima.
+Il vincolo d'ordine e stato scritto in `SKILL.md` e nel campo `note` del manifesto, cosi da sopravvivere alla sessione: `--update` si lancia solo dopo aver riscritto i file, mai prima.
 
 ## 2026-08-03 - Capitolo tritono: catena di quinte, napoletana minore, sette fonti nuove
 
-Commit: `1917469`, `f3d48d5`, `7b6d1b4`, `dd1c4d5` per la parte tracciata; le schede di questa voce
-restano da committare all'utente.
-File toccati e tracciati: `tools/tritoni-scale.py` (nuovo), `tools/derivazione-scale.py` (nuovo),
-`.claude/skills/fonte-nuova/SKILL.md` (nuova), `.claude/memory/decisions.md` (ADR-008 e ADR-009),
-piu questo work-log, `memory/index.md` e `context/current-work.md`.
-File toccati e ignorati: `_notes/appunti-da-inserire-nel-libro/capitolo-tritono-continuo.md` e il
-`.docx` gemello, con otto backup datati in `_backup/`; `_notes/cassaforte-capitolo-tritono.md`;
-`_notes/tracciamento-fonti-libro.md`; `_notes/ragionamenti-da-portare-nel-libro.md` (nuovo);
-`_notes/INTRECCIO-DELLE-TESI.md` (nuovo); `_notes/COME-SI-USA.md` (nuovo);
-`_notes/STATO-CAPITOLO-TRITONO.md` (nuovo); `_notes/RESUME-PROMPT.md`;
-`_notes/book-bib-registry.json` e il `.md` rigenerato; `manuscript/bib/references.bib`;
-`_notes/fonti-esterne/` (dieci PDF durevoli); gli alberi delle due skill di contenuto.
+Commit: `1917469`, `f3d48d5`, `7b6d1b4`, `dd1c4d5` per la parte tracciata; le schede di questa voce restano da committare all'utente. File toccati e tracciati: `tools/tritoni-scale.py` (nuovo), `tools/derivazione-scale.py` (nuovo), `.claude/skills/fonte-nuova/SKILL.md` (nuova), `.claude/memory/decisions.md` (ADR-008 e ADR-009), piu questo work-log, `memory/index.md` e `context/current-work.md`. File toccati e ignorati: `_notes/appunti-da-inserire-nel-libro/capitolo-tritono-continuo.md` e il `.docx` gemello, con otto backup datati in `_backup/`; `_notes/cassaforte-capitolo-tritono.md`; `_notes/tracciamento-fonti-libro.md`; `_notes/ragionamenti-da-portare-nel-libro.md` (nuovo); `_notes/INTRECCIO-DELLE-TESI.md` (nuovo); `_notes/COME-SI-USA.md` (nuovo); `_notes/STATO-CAPITOLO-TRITONO.md` (nuovo); `_notes/RESUME-PROMPT.md`; `_notes/book-bib-registry.json` e il `.md` rigenerato; `manuscript/bib/references.bib`; `_notes/fonti-esterne/` (dieci PDF durevoli); gli alberi delle due skill di contenuto.
 
-Motivo: proseguire il filone del capitolo sul tritono su tre fronti insieme, cioe acquisire e leggere
-le fonti che l'utente ha consegnato, calcolare con codice le affermazioni che il capitolo fa e portare
-nel capitolo solo quello che l'utente valida esplicitamente.
+Motivo: proseguire il filone del capitolo sul tritono su tre fronti insieme, cioe acquisire e leggere le fonti che l'utente ha consegnato, calcolare con codice le affermazioni che il capitolo fa e portare nel capitolo solo quello che l'utente valida esplicitamente.
 
-Fonti. Sette voci nuove portano la bibliografia da 91 a 101. Butler 1989 e Krumhansl 1990 sono state
-lette per intero dai PDF forniti dall'utente, e la lettura ha corretto un errore dell'agente:
-l'ipotesi sugli intervalli rari come indizio di tonalita e di Richmond Browne (1981), non di Butler,
-che la cita. Smith 1979 sullo Speculum Musicae ha dato al movimento G la prova primaria che gli
-mancava, cioe che Jacques de Liege non mostra consapevolezza della formula "diabolus in musica" e
-riferisce anzi di aver visto il semitritono "in aliquibus ecclesiasticis planis cantibus": il
-movimento passa da argomento per assenza a testimonianza contraria. Il blocco HTTP 403 su
-ResearchGate, fermo dal 2026-07-20, si e rivelato non un paywall: lo stesso PDF era libero sul sito
-della rivista, e questo ha sbloccato in un colpo i tre dettagli sospesi su Fux, Babbitt e Vicentino.
-La lezione e codificata nella skill `fonte-nuova`.
+Fonti. Sette voci nuove portano la bibliografia da 91 a 101. Butler 1989 e Krumhansl 1990 sono state lette per intero dai PDF forniti dall'utente, e la lettura ha corretto un errore dell'agente: l'ipotesi sugli intervalli rari come indizio di tonalita e di Richmond Browne (1981), non di Butler, che la cita. Smith 1979 sullo Speculum Musicae ha dato al movimento G la prova primaria che gli mancava, cioe che Jacques de Liege non mostra consapevolezza della formula "diabolus in musica" e riferisce anzi di aver visto il semitritono "in aliquibus ecclesiasticis planis cantibus": il movimento passa da argomento per assenza a testimonianza contraria. Il blocco HTTP 403 su ResearchGate, fermo dal 2026-07-20, si e rivelato non un paywall: lo stesso PDF era libero sul sito della rivista, e questo ha sbloccato in un colpo i tre dettagli sospesi su Fux, Babbitt e Vicentino. La lezione e codificata nella skill `fonte-nuova`.
 
-Calcolo. `tritoni-scale.py` calcola il contenuto di tritoni delle famiglie di scale e dimostra due
-teoremi: una scala e la sua trasposizione di tritono hanno contenuto di tritoni identico, quindi la
-degenerazione due-a-uno e il minimo possibile e non un difetto del metodo; e la degenerazione e la
-taglia dello stabilizzatore trasposizionale dell'insieme di note. Questo ha smentito l'intuizione
-dell'utente su una corrispondenza biunivoca fra scale e coppie di tritoni, e il capitolo dice ora che
-il tritono indicizza le scale con la precisione massima che la sua natura consente.
-`derivazione-scale.py` implementa la macchina delle dominanti secondarie ai due livelli.
+Calcolo. `tritoni-scale.py` calcola il contenuto di tritoni delle famiglie di scale e dimostra due teoremi: una scala e la sua trasposizione di tritono hanno contenuto di tritoni identico, quindi la degenerazione due-a-uno e il minimo possibile e non un difetto del metodo; e la degenerazione e la taglia dello stabilizzatore trasposizionale dell'insieme di note. Questo ha smentito l'intuizione dell'utente su una corrispondenza biunivoca fra scale e coppie di tritoni, e il capitolo dice ora che il tritono indicizza le scale con la precisione massima che la sua natura consente. `derivazione-scale.py` implementa la macchina delle dominanti secondarie ai due livelli.
 
-Il risultato di contenuto. Girando la macchina su tutti i gradi di Do maggiore, con una sola
-alterazione per accordo, escono due tonalita confinanti, Fa e Sol, e quattro scale derivate: La
-armonica minore, Do melodica minore, Re melodica minore e la napoletana minore, che era registrata
-dal 2026-07-23 come direzione futura sospesa per mancanza di fonti. Non serviva una fonte, serviva
-applicare bene il metodo. La spiegazione strutturale e che il tritono di una scala diatonica e formato
-dai due estremi della catena di quinte: alterare un estremo fa slittare la catena e produce la
-tonalita vicina, alterare un interno la spezza e produce una scala nuova con due tritoni. Due casi,
-non tre: l'utente ha corretto una sovra-classificazione dell'agente, e la conservazione della tonica
-al quarto grado e retrocessa a osservazione aggiuntiva.
+Il risultato di contenuto. Girando la macchina su tutti i gradi di Do maggiore, con una sola alterazione per accordo, escono due tonalita confinanti, Fa e Sol, e quattro scale derivate: La armonica minore, Do melodica minore, Re melodica minore e la napoletana minore, che era registrata dal 2026-07-23 come direzione futura sospesa per mancanza di fonti. Non serviva una fonte, serviva applicare bene il metodo. La spiegazione strutturale e che il tritono di una scala diatonica e formato dai due estremi della catena di quinte: alterare un estremo fa slittare la catena e produce la tonalita vicina, alterare un interno la spezza e produce una scala nuova con due tritoni. Due casi, non tre: l'utente ha corretto una sovra-classificazione dell'agente, e la conservazione della tonica al quarto grado e retrocessa a osservazione aggiuntiva.
 
-Correzioni dell'agente, registrate per trasparenza in `_notes/STATO-CAPITOLO-TRITONO.md`. La piu grave
-e stata pretendere la quinta giusta per il Si7, che portava a due alterazioni e alla conclusione
-sbagliata che il settimo grado rompe la doppia eredita: rilevata dall'utente, corretta con quattro
-paragrafi riscritti e due aggiunti, e formalizzata in ADR-009 perche la definizione di dominante che
-governa gli strumenti e quella del libro, cioe il tritono fra terza maggiore e settima minore. Le
-altre due: la parafrasi attribuita a Butler, e la regola della doppia eredita enunciata come "una
-alterazione implica eredita", che il secondo grado smentisce. ADR-008 nasce dalla prima e fissa i
-quattro livelli di verifica di una fonte, con il principio che una voce `.bib` asserisce l'anagrafica,
-non il contenuto.
+Correzioni dell'agente, registrate per trasparenza in `_notes/STATO-CAPITOLO-TRITONO.md`. La piu grave e stata pretendere la quinta giusta per il Si7, che portava a due alterazioni e alla conclusione sbagliata che il settimo grado rompe la doppia eredita: rilevata dall'utente, corretta con quattro paragrafi riscritti e due aggiunti, e formalizzata in ADR-009 perche la definizione di dominante che governa gli strumenti e quella del libro, cioe il tritono fra terza maggiore e settima minore. Le altre due: la parafrasi attribuita a Butler, e la regola della doppia eredita enunciata come "una alterazione implica eredita", che il secondo grado smentisce. ADR-008 nasce dalla prima e fissa i quattro livelli di verifica di una fonte, con il principio che una voce `.bib` asserisce l'anagrafica, non il contenuto.
 
-Il capitolo. Da 39059 a 48314 caratteri, 90 paragrafi nel docx, sei figure intatte, tredici
-riferimenti, markdown e docx allineati. Ogni modifica e stata verificata additiva con un diff frase
-per frase contro il backup, senza perdite. Proporzioni riequilibrate su richiesta dell'utente,
-espandendo D ed E invece di tagliare G: D piu E dal 25 al 38,9 per cento, G dal 16,5 al 13,3. Il
-capitolo NON e ancora nel manoscritto, e la trascrizione in `.lytex` resta il passo piu urgente.
+Il capitolo. Da 39059 a 48314 caratteri, 90 paragrafi nel docx, sei figure intatte, tredici riferimenti, markdown e docx allineati. Ogni modifica e stata verificata additiva con un diff frase per frase contro il backup, senza perdite. Proporzioni riequilibrate su richiesta dell'utente, espandendo D ed E invece di tagliare G: D piu E dal 25 al 38,9 per cento, G dal 16,5 al 13,3. Il capitolo NON e ancora nel manoscritto, e la trascrizione in `.lytex` resta il passo piu urgente.
 
-Riconciliazione handoff: nessun documento `.docx` sorgente nuovo in questa sessione. Il `.docx` del
-capitolo e un derivato del markdown, non una fonte, e si aggiorna sempre in coppia con esso.
+Riconciliazione handoff: nessun documento `.docx` sorgente nuovo in questa sessione. Il `.docx` del capitolo e un derivato del markdown, non una fonte, e si aggiorna sempre in coppia con esso.
 
 ## 2026-07-29 — Fase "libro -> skill": dottrina propria digerita, book-digest avviato con pilota
 
-Commit: `a090f0d` (chiuso a posteriori il 2026-08-03).
-File toccati e tracciati: `.claude/memory/decisions.md` (ADR-007), `.gitignore` (due regole nuove),
-`.claude/skills/book-digest/SKILL.md` (istanziata dal template, identica), `tools/skill-freshness.py`
-(nuovo), `tools/probe-pdf-text.py` (nuovo), piu questo work-log, `memory/index.md` e
-`context/current-work.md`.
-File toccati e ignorati: gli alberi `.claude/skills/armonia-libro/` e `.claude/skills/libro-berkman/`,
-`_notes/corpus-digest-triage.md` (nuovo), `_notes/book-bib-registry.json` e il `.md` rigenerato,
-`_notes/tracciamento-fonti-libro.md`.
+Commit: `a090f0d` (chiuso a posteriori il 2026-08-03). File toccati e tracciati: `.claude/memory/decisions.md` (ADR-007), `.gitignore` (due regole nuove), `.claude/skills/book-digest/SKILL.md` (istanziata dal template, identica), `tools/skill-freshness.py` (nuovo), `tools/probe-pdf-text.py` (nuovo), piu questo work-log, `memory/index.md` e `context/current-work.md`. File toccati e ignorati: gli alberi `.claude/skills/armonia-libro/` e `.claude/skills/libro-berkman/`, `_notes/corpus-digest-triage.md` (nuovo), `_notes/book-bib-registry.json` e il `.md` rigenerato, `_notes/tracciamento-fonti-libro.md`.
 
-Motivo: su richiesta dell'utente si e affrontata in un colpo solo la fase mai avviata "libro ->
-skill", nelle sue due accezioni e in quest'ordine. Prima la dottrina del libro dell'utente, poi
-`book-digest` sui libri di riferimento posseduti. Obiettivo dichiarato dall'utente oltre alla
-stesura: usare le skill anche per cercare fonti nuove fuori dai libri posseduti, su forum,
-community, video e letteratura.
+Motivo: su richiesta dell'utente si e affrontata in un colpo solo la fase mai avviata "libro -> skill", nelle sue due accezioni e in quest'ordine. Prima la dottrina del libro dell'utente, poi `book-digest` sui libri di riferimento posseduti. Obiettivo dichiarato dall'utente oltre alla stesura: usare le skill anche per cercare fonti nuove fuori dai libri posseduti, su forum, community, video e letteratura.
 
-ADR-007 registrato prima di creare qualunque file, perche `.claude/skills/` e tracciato mentre il
-contenuto del libro non e versionabile (ADR-004) e i digest di opere di terzi non vanno pubblicati.
-Tre classi: skill di tooling tracciate, `armonia-libro/` ignorata, `libro-*/` ignorate da glob.
-Verificato con `git check-ignore -v` prima del primo `git add`.
+ADR-007 registrato prima di creare qualunque file, perche `.claude/skills/` e tracciato mentre il contenuto del libro non e versionabile (ADR-004) e i digest di opere di terzi non vanno pubblicati. Tre classi: skill di tooling tracciate, `armonia-libro/` ignorata, `libro-*/` ignorate da glob. Verificato con `git check-ignore -v` prima del primo `git add`.
 
-Fase 1. Costruita `.claude/skills/armonia-libro/`: `SKILL.md` piu `tesi.md`, `voce.md`,
-`capitoli/01-tritono.md`, `fatti-verificati.md`, `fonti.md`, `agenda-ricerca.md`. Digerisce circa
-120 KB di note private in 59 KB, di cui solo 5 KB entrano in contesto all'invocazione. Il file
-`agenda-ricerca.md` risponde al secondo obiettivo: per ogni affermazione non corroborata registra
-cosa dimostrare, quale angolo di ricerca ha senso e cosa e gia stato tentato con quale esito, con la
-lezione di costo su `deep-research` in fondo. Introdotto `tools/skill-freshness.py`, che confronta
-gli sha256 registrati in `.sources.json` con quelli attuali e segnala le fonti cambiate a costo
-zero di token; collaudato su fixture per i rami CAMBIATA e MANCANTE, e corretto in corsa per
-accettare percorsi assoluti, perche su Windows un percorso relativo non attraversa i drive.
+Fase 1. Costruita `.claude/skills/armonia-libro/`: `SKILL.md` piu `tesi.md`, `voce.md`, `capitoli/01-tritono.md`, `fatti-verificati.md`, `fonti.md`, `agenda-ricerca.md`. Digerisce circa 120 KB di note private in 59 KB, di cui solo 5 KB entrano in contesto all'invocazione. Il file `agenda-ricerca.md` risponde al secondo obiettivo: per ogni affermazione non corroborata registra cosa dimostrare, quale angolo di ricerca ha senso e cosa e gia stato tentato con quale esito, con la lezione di costo su `deep-research` in fondo. Introdotto `tools/skill-freshness.py`, che confronta gli sha256 registrati in `.sources.json` con quelli attuali e segnala le fonti cambiate a costo zero di token; collaudato su fixture per i rami CAMBIATA e MANCANTE, e corretto in corsa per accettare percorsi assoluti, perche su Windows un percorso relativo non attraversa i drive.
 
-Fase 2. Installata `book-digest` dal template senza modifiche. Scritto `tools/probe-pdf-text.py` e
-prodotta la triage di `ARMONIA E TEORIA` (30 PDF) in `_notes/corpus-digest-triage.md`. Rilievo
-importante emerso in calibrazione, che corregge una premessa sbagliata di inizio sessione: un
-campione preso dalle prime pagine scarta a torto libri buoni, perche i frontespizi sono tipografia
-decorativa che l'OCR rende male anche quando il volume e pulito. Il caso concreto e Levine 1995, che
-sul frontespizio da "J ll o THE A z z THE 0 Ry B0 0 K" ma a meta volume da prosa integra. Lo
-strumento campiona quindi a meta libro e combina tre segnali piu la densita di caratteri per pagina,
-che separa i libri di prosa da quelli di sola notazione (Beato e Pozzoli finiscono in `poco-testo`).
-Esito: 11 alto, 5 medio, 1 basso, 2 poco-testo, 10 assente, 1 illeggibile.
+Fase 2. Installata `book-digest` dal template senza modifiche. Scritto `tools/probe-pdf-text.py` e prodotta la triage di `ARMONIA E TEORIA` (30 PDF) in `_notes/corpus-digest-triage.md`. Rilievo importante emerso in calibrazione, che corregge una premessa sbagliata di inizio sessione: un campione preso dalle prime pagine scarta a torto libri buoni, perche i frontespizi sono tipografia decorativa che l'OCR rende male anche quando il volume e pulito. Il caso concreto e Levine 1995, che sul frontespizio da "J ll o THE A z z THE 0 Ry B0 0 K" ma a meta volume da prosa integra. Lo strumento campiona quindi a meta libro e combina tre segnali piu la densita di caratteri per pagina, che separa i libri di prosa da quelli di sola notazione (Beato e Pozzoli finiscono in `poco-testo`). Esito: 11 alto, 5 medio, 1 basso, 2 poco-testo, 10 assente, 1 illeggibile.
 
-Pilota: digerito Berkman 2013 in `.claude/skills/libro-berkman/`, 23 capitoli letti per intero, le
-due appendici solo a livello scheletro con il limite dichiarato nel file. Aggiunto `rilevanza.md`,
-non previsto dal modello del pacchetto, che separa cio che Berkman conferma della tesi di
-harmony-book da cio che semplicemente non dice, per evitare che il digest venga usato come sostegno
-a tesi che il libro non sostiene. Registro aggiornato: `berkman2013` passa a `skill_status: done`,
-`skill_slug: libro-berkman`, e `book-bib-registry.md` rigenerato.
+Pilota: digerito Berkman 2013 in `.claude/skills/libro-berkman/`, 23 capitoli letti per intero, le due appendici solo a livello scheletro con il limite dichiarato nel file. Aggiunto `rilevanza.md`, non previsto dal modello del pacchetto, che separa cio che Berkman conferma della tesi di harmony-book da cio che semplicemente non dice, per evitare che il digest venga usato come sostegno a tesi che il libro non sostiene. Registro aggiornato: `berkman2013` passa a `skill_status: done`, `skill_slug: libro-berkman`, e `book-bib-registry.md` rigenerato.
 
-Correzione di un dato: il registro ha 161 voci, non 153 come riportato finora in `memory/index.md` e
-in `context/current-work.md`. La ripartizione (94 verificate, 59 da verificare, 8 scartate) era
-giusta, era il totale a essere rimasto indietro. Corretto in questa riconciliazione.
+Correzione di un dato: il registro ha 161 voci, non 153 come riportato finora in `memory/index.md` e in `context/current-work.md`. La ripartizione (94 verificate, 59 da verificare, 8 scartate) era giusta, era il totale a essere rimasto indietro. Corretto in questa riconciliazione.
 
-Costo del pilota, misurato per decidere il lotto successivo: il testo integrale di Berkman e circa
-448 KB, cioe circa 112 mila token di sola lettura, per un libro di 215 pagine. Il digest risultante
-e 96 KB. Un lotto va quindi dimensionato su questo ordine di grandezza per libro, e la selezione
-per rilevanza conta piu della disponibilita.
+Costo del pilota, misurato per decidere il lotto successivo: il testo integrale di Berkman e circa 448 KB, cioe circa 112 mila token di sola lettura, per un libro di 215 pagine. Il digest risultante e 96 KB. Un lotto va quindi dimensionato su questo ordine di grandezza per libro, e la selezione per rilevanza conta piu della disponibilita.
 
 ## 2026-07-24 — Assemblato il .docx continuo del capitolo tritono, figure in Libertinus Sans
 
-Commit: nessuno (lavoro privato/ignorato: file sotto `_notes/`).
-File toccati: `_notes/appunti-da-inserire-nel-libro/capitolo-tritono-continuo.docx` (nuovo, assemblato
-con script deterministico python-docx), `_notes/appunti-da-inserire-nel-libro/_ly-figure/` (sei sorgenti
-`.ly` resi durevoli e i loro render `imageN.cropped.png`), `_notes/tracciamento-fonti-libro.md` (due voci
-di log: assemblaggio e rirenderizzazione figure), `_notes/appunti-da-inserire-nel-libro/_backup/` (backup
-datato del report). Il report `capitolo-tritono.docx` NON toccato.
-Motivo: chiudere il "prossimo passo" della voce sottostante. Il `.docx` continuo riusa le sei figure già
-renderizzate ai segnaposto `[FIGURA n]`, i riferimenti [1]-[9] verbatim dal report più la nuova voce web
-Springsteen [10] (titolo e canale verificati via oEmbed di YouTube; data non esposta, non inventata). Su
-rilievo dell'utente le sei figure sono poi state rirenderizzate cambiando il solo font del testo delle
-annotazioni, da serif di default a Libertinus Sans tondo (font del libro secondo `STACK.md`, impostato via
-`property-defaults.fonts` nel `\paper`); Emmentaler invariato per la notazione. Scelta dell'utente su
-confronto a quattro varianti.
-Verifica: resa confermata dall'utente via screenshot (Figura 2); 0 trattini lunghi, sei figure ai
-segnaposto, 10 riferimenti. In standby: apertura biografica (Gaetani), data del video Springsteen, voce
-Springsteen nel registro bibliografico. Prossimo passo: trascrizione fedele in
-`manuscript/chapters/*.lytex` quando l'utente dà il via.
+Commit: nessuno (lavoro privato/ignorato: file sotto `_notes/`). File toccati: `_notes/appunti-da-inserire-nel-libro/capitolo-tritono-continuo.docx` (nuovo, assemblato con script deterministico python-docx), `_notes/appunti-da-inserire-nel-libro/_ly-figure/` (sei sorgenti `.ly` resi durevoli e i loro render `imageN.cropped.png`), `_notes/tracciamento-fonti-libro.md` (due voci di log: assemblaggio e rirenderizzazione figure), `_notes/appunti-da-inserire-nel-libro/_backup/` (backup datato del report). Il report `capitolo-tritono.docx` NON toccato. Motivo: chiudere il "prossimo passo" della voce sottostante. Il `.docx` continuo riusa le sei figure già renderizzate ai segnaposto `[FIGURA n]`, i riferimenti [1]-[9] verbatim dal report più la nuova voce web Springsteen [10] (titolo e canale verificati via oEmbed di YouTube; data non esposta, non inventata). Su rilievo dell'utente le sei figure sono poi state rirenderizzate cambiando il solo font del testo delle annotazioni, da serif di default a Libertinus Sans tondo (font del libro secondo `STACK.md`, impostato via `property-defaults.fonts` nel `\paper`); Emmentaler invariato per la notazione. Scelta dell'utente su confronto a quattro varianti. Verifica: resa confermata dall'utente via screenshot (Figura 2); 0 trattini lunghi, sei figure ai segnaposto, 10 riferimenti. In standby: apertura biografica (Gaetani), data del video Springsteen, voce Springsteen nel registro bibliografico. Prossimo passo: trascrizione fedele in `manuscript/chapters/*.lytex` quando l'utente dà il via.
 
 ## 2026-07-24 — Riscrittura del capitolo sul tritono in prosa continua (report -> capitolo di libro)
 
-Commit: nessuno (lavoro privato/ignorato: file sotto `_notes/`).
-File toccati: `_notes/appunti-da-inserire-nel-libro/capitolo-tritono-continuo.md` (nuovo, capitolo
-continuo A-I), `_notes/cassaforte-capitolo-tritono.md` (risoluzione frigio, due direzioni future,
-puntatore al file continuo), `_notes/tracciamento-fonti-libro.md` (voce di log della riscrittura),
-`_notes/RESUME-PROMPT.md` (nuovo handoff completo), `.claude/context/current-work.md`,
-`.claude/memory/index.md`. Il sorgente `capitolo-tritono.docx` NON toccato.
-Motivo: l'utente ha rilevato che il capitolo report (indice + 8 punti numerati) aveva perso i
-collegamenti e le intuizioni discusse in chat, e voleva il taglio di un capitolo di libro continuo,
-senza sottotitoli, con rottura della quarta parete. Deciso in sessione: voce "Marcato" (lettore con
-"voi", confessione dell'autore-ingegnere), prosa continua, e ambizione dichiarata di costruire un
-impianto universale per leggere tutta l'armonia occidentale a partire dal tritono. Riscrittura fatta
-movimento per movimento con validazione dell'utente a ogni passo (arco A-I). La versione continua è un
-sovrainsieme del report: nessun contenuto tolto, tutto integrato e arricchito; recuperate le intuizioni
-mai entrate nel report (aggancio ai brani, reverse engineering da Do maggiore, dominante come ruolo,
-confine tonale/modale, La minore come Do6, minore naturale terza discendente dalla ionia,
-"meraviglia"/corrispondenza biunivoca). Correzione teorica chiave dell'utente: minore armonico letto
-come dominante del frigio, non dell'eolio. Dettagli completi in `_notes/RESUME-PROMPT.md` e nella voce
-del 2026-07-24 del tracciamento. Prossimo passo: assemblaggio del `.docx` continuo con figure e
-riferimenti.
-Riconciliazione documento sorgente: `MAIN.docx` (voce originale dell'utente), esito = incorporato nel
-capitolo continuo salvo l'apertura biografica in standby (Gaetani), quindi NON ancora spostato in
-`_processati/`.
+Commit: nessuno (lavoro privato/ignorato: file sotto `_notes/`). File toccati: `_notes/appunti-da-inserire-nel-libro/capitolo-tritono-continuo.md` (nuovo, capitolo continuo A-I), `_notes/cassaforte-capitolo-tritono.md` (risoluzione frigio, due direzioni future, puntatore al file continuo), `_notes/tracciamento-fonti-libro.md` (voce di log della riscrittura), `_notes/RESUME-PROMPT.md` (nuovo handoff completo), `.claude/context/current-work.md`, `.claude/memory/index.md`. Il sorgente `capitolo-tritono.docx` NON toccato. Motivo: l'utente ha rilevato che il capitolo report (indice + 8 punti numerati) aveva perso i collegamenti e le intuizioni discusse in chat, e voleva il taglio di un capitolo di libro continuo, senza sottotitoli, con rottura della quarta parete. Deciso in sessione: voce "Marcato" (lettore con "voi", confessione dell'autore-ingegnere), prosa continua, e ambizione dichiarata di costruire un impianto universale per leggere tutta l'armonia occidentale a partire dal tritono. Riscrittura fatta movimento per movimento con validazione dell'utente a ogni passo (arco A-I). La versione continua è un sovrainsieme del report: nessun contenuto tolto, tutto integrato e arricchito; recuperate le intuizioni mai entrate nel report (aggancio ai brani, reverse engineering da Do maggiore, dominante come ruolo, confine tonale/modale, La minore come Do6, minore naturale terza discendente dalla ionia, "meraviglia"/corrispondenza biunivoca). Correzione teorica chiave dell'utente: minore armonico letto come dominante del frigio, non dell'eolio. Dettagli completi in `_notes/RESUME-PROMPT.md` e nella voce del 2026-07-24 del tracciamento. Prossimo passo: assemblaggio del `.docx` continuo con figure e riferimenti. Riconciliazione documento sorgente: `MAIN.docx` (voce originale dell'utente), esito = incorporato nel capitolo continuo salvo l'apertura biografica in standby (Gaetani), quindi NON ancora spostato in `_processati/`.
 
 ## 2026-07-17/20 — Ricerca sul tritono: fonte primaria registrata, ricognizione interna ed esterna concluse
 
-Commit: nessuno (lavoro privato/ignorato, salvo l'entrata già coperta dalla voce del 2026-07-17
-sotto per la parte di sync-context).
-File toccati: `_notes/book-bib-registry.json` (nuova voce `manual-isbn-8869244857` per la fonte
-primaria, poi corretta da citekey `gaetani2019` a `gaetani2022`), `_notes/book-bib-registry.md`
-(rigenerata, 153 voci), `_notes/tritono-ricognizione-interna.md` (nuovo), `_notes/tritono-ricerca-esterna-stato.md`
-(nuovo), `.claude/context/current-work.md` (sezione "Feature attiva" aggiornata).
-Motivo: ripresa del filone 2 (tesi sul tritono) dopo il riavvio forzato che aveva interrotto la
-sessione precedente; scope chiarito dall'utente il 2026-07-17 come "entrambe le vie" (ricognizione
-interna + ricerca esterna).
-Fonte primaria: l'utente ha fornito il link Amazon del libro annunciato come riferimento
-"più importante di tutti", "La dialettica del tritono" di Mariano Gaetani (ISBN 8869244857).
-Registrato nel registro bibliografico con `bib_status: da-verificare` (non è stato visto il
-colophon fisico). Editore e anno aggiornati in corso di sessione da un primo indizio debole
-(sintesi di ricerca web, "2019") a uno più solido (articolo del *Resto del Carlino* del
-2022-07-26 su una presentazione pubblica del libro, "Editore: Edizioni Simple", anno 2022):
-citekey corretto di conseguenza.
-Ricognizione interna: scansione deterministica (`pdftotext` + ricerca per parola chiave) dei 29
-libri del corpus `armonia-teoria`, poi lettura visiva mirata (`pdftoppm`, via 6 agenti paralleli
-più due retry per errori transitori 529) dei 6 libri risultati scansioni senza testo nativo
-(Piston *Harmony*, *Counterpoint*, *Orchestration*, *Armonia*-EDT; Schoenberg; Wyatt&Schroeder).
-Trovamenti principali: sezione dedicata "The Tritone" con citazione diretta di "diabolus in musica"
-in tre volumi di Piston; trattazione indiretta in Schoenberg tramite le "vagrant harmonies";
-assente in Piston *Orchestration* (fuori tema) e in un gruppo di manuali minori/solfeggio. Un file
-(`Pozzoli - Corso Facile Di Solfeggio.pdf`) non estraibile con `pdftotext`, non indagato oltre
-(priorità bassa). Esito completo con citekey/pagina/citazione in `_notes/tritono-ricognizione-interna.md`.
-Ricerca esterna: la skill `deep-research` (harness `Workflow`, verifica adversariale a 3 voti per
-affermazione) è stata lanciata due volte sulla stessa domanda ed entrambe le volte ha esaurito il
-limite di sessione nella fase di verifica (fino a ~130 chiamate per 41-43 affermazioni estratte),
-senza mai completare la sintesi finale. Per chiudere lo step senza un terzo giro costoso, le
-affermazioni più rilevanti rimaste in sospeso sono state verificate a mano con 3 chiamate `WebFetch`
-mirate. Trovamento centrale, confermato con citazione diretta (Thomas Forest Kelly, Harvard): il
-"divieto ecclesiastico medievale del tritono come diabolus in musica" è un mito storiografico
-moderno; l'espressione risale a Fux (*Gradus ad Parnassum*, 1725, uso tecnico-pedagogico), poi
-attribuita al medioevo nell'Ottocento (Ambros, 1880). Confermato anche il confronto strutturale
-sesta-eccedente/sostituzione-di-tritono (Biamonte, *Music Theory Online* 14.2, 2008). Lezione
-operativa per sessioni future: l'harness `deep-research` con molte affermazioni da verificare è
-troppo costoso per un limite di sessione in un colpo solo; preferire una domanda più stretta per
-lancio, oppure la verifica manuale mirata via `WebFetch` sulle sole fonti primarie già trovate,
-oppure un resume mirato (`resumeFromRunId`) a inizio sessione quando il limite è fresco. Dettagli
-completi, incluse le affermazioni confutate e quelle non ancora recuperabili (Babbitt 1960,
-Vicentino 1555, bloccate da un 403 su ResearchGate), in `_notes/tritono-ricerca-esterna-stato.md`.
-Fuori scope per ora: avvio della stesura vera e propria della sezione/capitolo sul tritono (in
-attesa di decidere con l'utente se aspettare la fonte primaria fisica).
+Commit: nessuno (lavoro privato/ignorato, salvo l'entrata già coperta dalla voce del 2026-07-17 sotto per la parte di sync-context). File toccati: `_notes/book-bib-registry.json` (nuova voce `manual-isbn-8869244857` per la fonte primaria, poi corretta da citekey `gaetani2019` a `gaetani2022`), `_notes/book-bib-registry.md` (rigenerata, 153 voci), `_notes/tritono-ricognizione-interna.md` (nuovo), `_notes/tritono-ricerca-esterna-stato.md` (nuovo), `.claude/context/current-work.md` (sezione "Feature attiva" aggiornata). Motivo: ripresa del filone 2 (tesi sul tritono) dopo il riavvio forzato che aveva interrotto la sessione precedente; scope chiarito dall'utente il 2026-07-17 come "entrambe le vie" (ricognizione interna + ricerca esterna). Fonte primaria: l'utente ha fornito il link Amazon del libro annunciato come riferimento "più importante di tutti", "La dialettica del tritono" di Mariano Gaetani (ISBN 8869244857). Registrato nel registro bibliografico con `bib_status: da-verificare` (non è stato visto il colophon fisico). Editore e anno aggiornati in corso di sessione da un primo indizio debole (sintesi di ricerca web, "2019") a uno più solido (articolo del *Resto del Carlino* del 2022-07-26 su una presentazione pubblica del libro, "Editore: Edizioni Simple", anno 2022): citekey corretto di conseguenza. Ricognizione interna: scansione deterministica (`pdftotext` + ricerca per parola chiave) dei 29 libri del corpus `armonia-teoria`, poi lettura visiva mirata (`pdftoppm`, via 6 agenti paralleli più due retry per errori transitori 529) dei 6 libri risultati scansioni senza testo nativo (Piston *Harmony*, *Counterpoint*, *Orchestration*, *Armonia*-EDT; Schoenberg; Wyatt&Schroeder). Trovamenti principali: sezione dedicata "The Tritone" con citazione diretta di "diabolus in musica" in tre volumi di Piston; trattazione indiretta in Schoenberg tramite le "vagrant harmonies"; assente in Piston *Orchestration* (fuori tema) e in un gruppo di manuali minori/solfeggio. Un file (`Pozzoli - Corso Facile Di Solfeggio.pdf`) non estraibile con `pdftotext`, non indagato oltre (priorità bassa). Esito completo con citekey/pagina/citazione in `_notes/tritono-ricognizione-interna.md`. Ricerca esterna: la skill `deep-research` (harness `Workflow`, verifica adversariale a 3 voti per affermazione) è stata lanciata due volte sulla stessa domanda ed entrambe le volte ha esaurito il limite di sessione nella fase di verifica (fino a ~130 chiamate per 41-43 affermazioni estratte), senza mai completare la sintesi finale. Per chiudere lo step senza un terzo giro costoso, le affermazioni più rilevanti rimaste in sospeso sono state verificate a mano con 3 chiamate `WebFetch` mirate. Trovamento centrale, confermato con citazione diretta (Thomas Forest Kelly, Harvard): il "divieto ecclesiastico medievale del tritono come diabolus in musica" è un mito storiografico moderno; l'espressione risale a Fux (*Gradus ad Parnassum*, 1725, uso tecnico-pedagogico), poi attribuita al medioevo nell'Ottocento (Ambros, 1880). Confermato anche il confronto strutturale sesta-eccedente/sostituzione-di-tritono (Biamonte, *Music Theory Online* 14.2, 2008). Lezione operativa per sessioni future: l'harness `deep-research` con molte affermazioni da verificare è troppo costoso per un limite di sessione in un colpo solo; preferire una domanda più stretta per lancio, oppure la verifica manuale mirata via `WebFetch` sulle sole fonti primarie già trovate, oppure un resume mirato (`resumeFromRunId`) a inizio sessione quando il limite è fresco. Dettagli completi, incluse le affermazioni confutate e quelle non ancora recuperabili (Babbitt 1960, Vicentino 1555, bloccate da un 403 su ResearchGate), in `_notes/tritono-ricerca-esterna-stato.md`. Fuori scope per ora: avvio della stesura vera e propria della sezione/capitolo sul tritono (in attesa di decidere con l'utente se aspettare la fonte primaria fisica).
 
 ## 2026-07-17 — Riconciliazione del drift con sync-context, ripresa dopo riavvio forzato
 
-Commit: `4942de1` (nuovo commit di riferimento delle schede)
-File toccati: `.claude/context/STACK.md` (aggiunto riferimento all'ambiente `apertura` in
-`style/harmony-macros.sty:73-76`, bump `last-verified-commit`), `.claude/context/design-and-security.md`
-(solo bump `last-verified-commit`, contenuto già coerente), `.claude/context/current-work.md`
-(solo bump `last-verified-commit`, ri-ancorata a un commit reale), `.claude/memory/index.md`
-(tabella di stato aggiornata, nota drift chiusa).
-Motivo: dopo un riavvio forzato del PC, ripresa di sessione secondo la procedura di
-`CLAUDE.md`. Il drift segnalato nella sessione precedente (quattro commit di template/skill mai
-riconciliati) è stato chiuso lanciando `sync-context`: l'unico cambiamento sostanziale nelle aree
-coperte dalle schede era l'ambiente `apertura` (introdotto in `f3a6c45`), ora documentato; i
-diagrammi di `design-and-security.md` erano già corretti nel contenuto. `deployment.md`,
-`dev-testing.md` e `roadmap.md` non hanno `covers-paths` popolati e restano esclusi dal confronto,
-senza modifiche.
-Prossimo passo, per richiesta esplicita dell'utente: procedere sul filone 2 (ricerca bibliografica
-per la tesi sul tritono), scope chiarito come ricognizione interna + ricerca esterna, con la fonte
-primaria "La dialettica del tritono" (ISBN 8869244857) identificata ma non ancora consegnata.
+Commit: `4942de1` (nuovo commit di riferimento delle schede) File toccati: `.claude/context/STACK.md` (aggiunto riferimento all'ambiente `apertura` in `style/harmony-macros.sty:73-76`, bump `last-verified-commit`), `.claude/context/design-and-security.md` (solo bump `last-verified-commit`, contenuto già coerente), `.claude/context/current-work.md` (solo bump `last-verified-commit`, ri-ancorata a un commit reale), `.claude/memory/index.md` (tabella di stato aggiornata, nota drift chiusa). Motivo: dopo un riavvio forzato del PC, ripresa di sessione secondo la procedura di `CLAUDE.md`. Il drift segnalato nella sessione precedente (quattro commit di template/skill mai riconciliati) è stato chiuso lanciando `sync-context`: l'unico cambiamento sostanziale nelle aree coperte dalle schede era l'ambiente `apertura` (introdotto in `f3a6c45`), ora documentato; i diagrammi di `design-and-security.md` erano già corretti nel contenuto. `deployment.md`, `dev-testing.md` e `roadmap.md` non hanno `covers-paths` popolati e restano esclusi dal confronto, senza modifiche. Prossimo passo, per richiesta esplicita dell'utente: procedere sul filone 2 (ricerca bibliografica per la tesi sul tritono), scope chiarito come ricognizione interna + ricerca esterna, con la fonte primaria "La dialettica del tritono" (ISBN 8869244857) identificata ma non ancora consegnata.
 
 ## 2026-07-16 — Chiusura del lotto di ingestione libri interrotto, bibliografia consolidata
 
-Commit: (pendente; i file toccati sono privati/ignorati salvo i tre script sotto `tools/` e la
-skill `.claude/skills/book-bib-extract/`, che sono nuovi e non ancora tracciati)
-File toccati: `tools/render-bib-registry.py` (nuovo, rigenera `_notes/book-bib-registry.md` dal
-JSON in modo deterministico), `tools/extract-titlepages.py` (nuovo, estrazione standardizzata dei
-frontespizi via `pdftoppm`/Poppler con DPI e range pagine fissi, sostituisce comandi ad-hoc mai
-salvati nella sessione precedente), `_notes/book-bib-registry.json` e `manuscript/bib/references.bib`
-(privati, ignorati).
-Motivo: una sessione precedente (vedi voce retroattiva sotto) si era interrotta per esaurimento
-token durante l'ingestione di libri di chitarra/armonia in bibliografia, lasciando un lotto a
-metà (corpus `chitarra-books-folders`, 16 file di frontespizio senza voci di registro) e due gap
-strutturali (tabella `.md` del registro mai rigenerata; meccanismo di generazione PNG dei
-frontespizi non tracciato). Questa sessione ha chiuso il lotto interrotto (15 libri distinti,
-`fabbri4` era una quarta pagina dello stesso libro `fabbri`, non un sedicesimo libro), poi ha
-esteso il controllo del colophon a un lotto ampio delle voci `da-verificare` preesistenti tramite
-agenti paralleli (istruzione esplicita dell'utente per quel giro) più un piccolo lotto manuale di
-verifica.
-Esito bibliografia: `manuscript/bib/references.bib` passato da 58 a 83 voci `@book` (integrità
-verificata: parentesi bilanciate, nessuna citekey duplicata). Registro `_notes/book-bib-registry.json`
-a 152 voci totali: 86 verificate, 58 da-verificare (ciascuna con nota che documenta perché l'anno
-manca — difetto di scansione o colophon genuinamente assente — per non ripetere il lavoro a vuoto
-in una sessione futura), 8 scartate (inclusa una voce riclassificata da "da-verificare" a
-"scartata" perché non è un libro, solo un estratto di rivista di 4 pagine).
-Pulizia: rimossi due PDF di lavoro dimenticati (~40 MB) da `_notes/.tmp-doc-cache/`.
-Fuori scope, per decisione esplicita dell'utente: le 58 voci rimaste senza colophon (limite
-pratico raggiunto per questa via) e la fase `book-digest` (libro -> skill), mai iniziata — tutte
-le 152 voci hanno ancora `skill_status: pending`.
+Commit: (pendente; i file toccati sono privati/ignorati salvo i tre script sotto `tools/` e la skill `.claude/skills/book-bib-extract/`, che sono nuovi e non ancora tracciati) File toccati: `tools/render-bib-registry.py` (nuovo, rigenera `_notes/book-bib-registry.md` dal JSON in modo deterministico), `tools/extract-titlepages.py` (nuovo, estrazione standardizzata dei frontespizi via `pdftoppm`/Poppler con DPI e range pagine fissi, sostituisce comandi ad-hoc mai salvati nella sessione precedente), `_notes/book-bib-registry.json` e `manuscript/bib/references.bib` (privati, ignorati). Motivo: una sessione precedente (vedi voce retroattiva sotto) si era interrotta per esaurimento token durante l'ingestione di libri di chitarra/armonia in bibliografia, lasciando un lotto a metà (corpus `chitarra-books-folders`, 16 file di frontespizio senza voci di registro) e due gap strutturali (tabella `.md` del registro mai rigenerata; meccanismo di generazione PNG dei frontespizi non tracciato). Questa sessione ha chiuso il lotto interrotto (15 libri distinti, `fabbri4` era una quarta pagina dello stesso libro `fabbri`, non un sedicesimo libro), poi ha esteso il controllo del colophon a un lotto ampio delle voci `da-verificare` preesistenti tramite agenti paralleli (istruzione esplicita dell'utente per quel giro) più un piccolo lotto manuale di verifica. Esito bibliografia: `manuscript/bib/references.bib` passato da 58 a 83 voci `@book` (integrità verificata: parentesi bilanciate, nessuna citekey duplicata). Registro `_notes/book-bib-registry.json` a 152 voci totali: 86 verificate, 58 da-verificare (ciascuna con nota che documenta perché l'anno manca — difetto di scansione o colophon genuinamente assente — per non ripetere il lavoro a vuoto in una sessione futura), 8 scartate (inclusa una voce riclassificata da "da-verificare" a "scartata" perché non è un libro, solo un estratto di rivista di 4 pagine). Pulizia: rimossi due PDF di lavoro dimenticati (~40 MB) da `_notes/.tmp-doc-cache/`. Fuori scope, per decisione esplicita dell'utente: le 58 voci rimaste senza colophon (limite pratico raggiunto per questa via) e la fase `book-digest` (libro -> skill), mai iniziata — tutte le 152 voci hanno ancora `skill_status: pending`.
 
 ## 2026-07-15/16 — Avvio dell'ingestione libri e della bibliografia (voce retroattiva, ricostruita)
 
-Commit: nessuno (lavoro mai committato, file coinvolti privati/ignorati o non ancora tracciati)
-File toccati: `tools/doc-ingest.py` (istanziato dal template), `.claude/skills/book-bib-extract/SKILL.md`
-(istanziata), `_notes/book-bib-registry.json`, `manuscript/bib/references.bib`,
-`_notes/.tmp-doc-cache/**` (cache di lavoro, PNG di frontespizio e mirror Markdown).
-Motivo: NON verificabile con certezza dai soli file su disco, perché questa sessione non ha
-lasciato una voce di log né un `RESUME-PROMPT.md` aggiornato prima di interrompersi per
-esaurimento token — questa voce è ricostruita da un'esplorazione dei file `_notes/` e delle
-timestamp all'inizio della sessione del 2026-07-16 (vedi sopra), non da un resoconto diretto.
-Nella sessione (o sessioni) del 15-16 luglio è stata popolata la bibliografia di tre corpus di
-libri posseduti (`armonia-teoria`, `chitarra-books-root`, `chitarra-libri-gianluca`), arrivando a
-137 voci nel registro prima dell'interruzione (60 verificate, 71 da-verificare, 6 scartate), con
-58 voci `@book` reali già scritte in `manuscript/bib/references.bib`. Il lavoro di verifica
-bibliografica è stato condotto leggendo pagine di frontespizio renderizzate come PNG (non il
-mirror Markdown di `doc-ingest.py`, che per questi PDF scansionati risulta vuoto senza OCR), con
-un meccanismo di generazione PNG mai salvato su disco come script.
+Commit: nessuno (lavoro mai committato, file coinvolti privati/ignorati o non ancora tracciati) File toccati: `tools/doc-ingest.py` (istanziato dal template), `.claude/skills/book-bib-extract/SKILL.md` (istanziata), `_notes/book-bib-registry.json`, `manuscript/bib/references.bib`, `_notes/.tmp-doc-cache/**` (cache di lavoro, PNG di frontespizio e mirror Markdown). Motivo: NON verificabile con certezza dai soli file su disco, perché questa sessione non ha lasciato una voce di log né un `RESUME-PROMPT.md` aggiornato prima di interrompersi per esaurimento token — questa voce è ricostruita da un'esplorazione dei file `_notes/` e delle timestamp all'inizio della sessione del 2026-07-16 (vedi sopra), non da un resoconto diretto. Nella sessione (o sessioni) del 15-16 luglio è stata popolata la bibliografia di tre corpus di libri posseduti (`armonia-teoria`, `chitarra-books-root`, `chitarra-libri-gianluca`), arrivando a 137 voci nel registro prima dell'interruzione (60 verificate, 71 da-verificare, 6 scartate), con 58 voci `@book` reali già scritte in `manuscript/bib/references.bib`. Il lavoro di verifica bibliografica è stato condotto leggendo pagine di frontespizio renderizzate come PNG (non il mirror Markdown di `doc-ingest.py`, che per questi PDF scansionati risulta vuoto senza OCR), con un meccanismo di generazione PNG mai salvato su disco come script.
 
 ## 2026-06-16 — Stesura dell'introduzione del libro (da INTRO.docx)
 
-Commit: (pendente; il contenuto NON entra in git)
-File toccati (privati, ignorati): `manuscript/chapters/00-introduzione.lytex`.
-Motivo: l'utente ha fornito `_notes/INTRO.docx` come introduzione/abstract del libro. Ingestione con
-la strategia della sezione 5 (estrazione in `_notes/.tmp-docx-intro/`, lettura mirata) e trascrizione
-fedele nel capitolo di introduzione, senza inventare. Compilazione verificata: `build/main.pdf`
-(~41 KB), zero glyph mancanti (caratteri tipografici Unicode resi da Libertinus via LuaLaTeX).
-Riconciliazione documento sorgente: `_notes/INTRO.docx` (privato), esito = introduzione stesa.
+Commit: (pendente; il contenuto NON entra in git) File toccati (privati, ignorati): `manuscript/chapters/00-introduzione.lytex`. Motivo: l'utente ha fornito `_notes/INTRO.docx` come introduzione/abstract del libro. Ingestione con la strategia della sezione 5 (estrazione in `_notes/.tmp-docx-intro/`, lettura mirata) e trascrizione fedele nel capitolo di introduzione, senza inventare. Compilazione verificata: `build/main.pdf` (~41 KB), zero glyph mancanti (caratteri tipografici Unicode resi da Libertinus via LuaLaTeX). Riconciliazione documento sorgente: `_notes/INTRO.docx` (privato), esito = introduzione stesa.
 
 ## 2026-06-16 — Pulizia handoff, strumento diagrammi e diagrammi di flusso
 
-Commit: (pendente, da committare)
-File toccati: rimossa `transform-into-claude-md/` (handoff, era ignorata) dopo aver travasato i
-riferimenti pubblici in `README.md` (sezione "Risorse e riferimenti") e quelli personali in
-`_notes/RESOCONTO.md`; `STACK.md` (riferimento esterno aggiornato); `tools/render-diagrams.mjs` e
-`tools/README.md` istanziati dal bundle; tre diagrammi Mermaid in `.claude/context/diagrams/`
-(`flusso-scrittura`, `struttura-progetto`, `pipeline-build`) come `.mmd` + `.svg`; `README.md`
-(sezione "Diagrammi del flusso di lavoro"); `design-and-security.md` (tabella diagrammi registrata,
-`covers-paths` su `.claude/context/diagrams/**`).
-Motivo: pulizia post-decisione e documentazione visuale dell'uso del progetto. SVG generati con
-`node tools/render-diagrams.mjs` (Edge di sistema, nessun Chromium scaricato).
+Commit: (pendente, da committare) File toccati: rimossa `transform-into-claude-md/` (handoff, era ignorata) dopo aver travasato i riferimenti pubblici in `README.md` (sezione "Risorse e riferimenti") e quelli personali in `_notes/RESOCONTO.md`; `STACK.md` (riferimento esterno aggiornato); `tools/render-diagrams.mjs` e `tools/README.md` istanziati dal bundle; tre diagrammi Mermaid in `.claude/context/diagrams/` (`flusso-scrittura`, `struttura-progetto`, `pipeline-build`) come `.mmd` + `.svg`; `README.md` (sezione "Diagrammi del flusso di lavoro"); `design-and-security.md` (tabella diagrammi registrata, `covers-paths` su `.claude/context/diagrams/**`). Motivo: pulizia post-decisione e documentazione visuale dell'uso del progetto. SVG generati con `node tools/render-diagrams.mjs` (Edge di sistema, nessun Chromium scaricato).
 
 ## 2026-06-16 — Ancoraggio al primo commit (sync-context)
 
-Commit: 017b02a
-File toccati: frontmatter di tutte le schede `context/*.md`, `memory/index.md`, work-log.
-Motivo: eseguito il primo ancoraggio dopo il primo commit reale dell'utente. Sostituito il
-segnaposto `PENDING-FIRST-COMMIT` con l'hash di HEAD (`017b02a`) in `generated-from-commit` e
-`last-verified-commit` di STACK/current-work/roadmap/deployment/design-and-security/dev-testing e
-nel commit di riferimento di `memory/index.md`. Le menzioni descrittive del segnaposto in
-`PROJECT-SYSTEM.md`, nelle skill, nei template e negli ADR restano invariate (storico). Da qui il
-drift si gestisce normalmente con `sync-context`.
+Commit: 017b02a File toccati: frontmatter di tutte le schede `context/*.md`, `memory/index.md`, work-log. Motivo: eseguito il primo ancoraggio dopo il primo commit reale dell'utente. Sostituito il segnaposto `PENDING-FIRST-COMMIT` con l'hash di HEAD (`017b02a`) in `generated-from-commit` e `last-verified-commit` di STACK/current-work/roadmap/deployment/design-and-security/dev-testing e nel commit di riferimento di `memory/index.md`. Le menzioni descrittive del segnaposto in `PROJECT-SYSTEM.md`, nelle skill, nei template e negli ADR restano invariate (storico). Da qui il drift si gestisce normalmente con `sync-context`.
 
 ## 2026-06-16 — Ambiente installato e catena di build verificata
 
-Commit: 017b02a
-File toccati: `tex-packages.txt`, `.latexmkrc`, `scripts/setup-tex.ps1`, `scripts/build.ps1`,
-`scripts/build.sh`, `manuscript/main.lytex` (ignorato).
-Motivo: reso operativo lo stack di ADR-003. TinyTeX, `lualatex` e `latexmk` erano gia' presenti;
-`scripts/setup-tex.ps1` ha installato i pacchetti del manifesto. LilyPond e' stato installato
-manualmente dall'utente sotto `C:\Program Files\lilypond-2.26.0-mingw-x86_64\...\bin`; gli script lo
-rilevano li' (o via `LILYPOND_BIN`) senza percorsi hardcoded di macchina.
-Correzioni emerse dalla verifica, ora parte del progetto:
-- Manifesto: `tabularx` -> `tools`, rimosso `graphicx` (coperto da `graphics`), aggiunti `xpatch`
-  (dipendenza di memoir) e `makeindex` (binario non incluso nel TinyTeX minimale).
-- `build.ps1`: su Windows `lilypond-book` e' un `.py`; invocato esplicitamente col `python.exe`
-  incluso in LilyPond, mai via associazione di sistema del `.py` (che su questa macchina puntava a
-  un'app Electron). `BIBINPUTS` include anche la cartella sorgente.
-- `.latexmkrc`: aggiunto il supporto `glossaries` (cus_dep `makeglossaries`); l'indice via
-  `makeindex` e' nativo di latexmk.
-Esito verifica (test manuale, vedi `_notes/TEST-CHECKLIST.md`): `scripts/build.ps1 -Main
-sample\main.lytex` produce `build/main.pdf` (catena lilypond-book -> LuaLaTeX -> biber -> makeindex,
-~40 KB, con esempi musicali); il build di default sullo scheletro `manuscript/` produce un PDF
-pulito (~10 KB). Lo scheletro del manoscritto e' stato reso minimo: glossario/indice/bibliografia e
-`\include` dei capitoli restano come blocchi commentati da attivare quando esistono voci reali,
-perche' attivati a vuoto mandavano latexmk in stallo.
+Commit: 017b02a File toccati: `tex-packages.txt`, `.latexmkrc`, `scripts/setup-tex.ps1`, `scripts/build.ps1`, `scripts/build.sh`, `manuscript/main.lytex` (ignorato). Motivo: reso operativo lo stack di ADR-003. TinyTeX, `lualatex` e `latexmk` erano gia' presenti; `scripts/setup-tex.ps1` ha installato i pacchetti del manifesto. LilyPond e' stato installato manualmente dall'utente sotto `C:\Program Files\lilypond-2.26.0-mingw-x86_64\...\bin`; gli script lo rilevano li' (o via `LILYPOND_BIN`) senza percorsi hardcoded di macchina. Correzioni emerse dalla verifica, ora parte del progetto:
+- Manifesto: `tabularx` -> `tools`, rimosso `graphicx` (coperto da `graphics`), aggiunti `xpatch` (dipendenza di memoir) e `makeindex` (binario non incluso nel TinyTeX minimale).
+- `build.ps1`: su Windows `lilypond-book` e' un `.py`; invocato esplicitamente col `python.exe` incluso in LilyPond, mai via associazione di sistema del `.py` (che su questa macchina puntava a un'app Electron). `BIBINPUTS` include anche la cartella sorgente.
+- `.latexmkrc`: aggiunto il supporto `glossaries` (cus_dep `makeglossaries`); l'indice via `makeindex` e' nativo di latexmk. Esito verifica (test manuale, vedi `_notes/TEST-CHECKLIST.md`): `scripts/build.ps1 -Main sample\main.lytex` produce `build/main.pdf` (catena lilypond-book -> LuaLaTeX -> biber -> makeindex, ~40 KB, con esempi musicali); il build di default sullo scheletro `manuscript/` produce un PDF pulito (~10 KB). Lo scheletro del manoscritto e' stato reso minimo: glossario/indice/bibliografia e `\include` dei capitoli restano come blocchi commentati da attivare quando esistono voci reali, perche' attivati a vuoto mandavano latexmk in stallo.
 
 ## 2026-06-16 — Decisione dello stack, privacy del contenuto e attivazione del pacchetto LaTeX
 
-Commit: 017b02a
-File toccati: `STACK.md`, `current-work.md`, `roadmap.md`, `decisions.md` (ADR-003, ADR-004),
-`.latexmkrc`, `tex-packages.txt`, `scripts/{setup-tex,build}.{ps1,sh}`,
-`.claude/skills/latex-build/SKILL.md`, `style/{preamble.tex,harmony-macros.sty}`,
-`sample/`, `manuscript/` (ignorata), `README.md`, `.gitattributes`, `.gitignore`.
-Motivo: ingestione dell'handoff `transform-into-claude-md/` (sezione 5: estrazione del `.docx` in
-`_notes/.tmp-docx-devbook/`, lettura mirata) e decisione condivisa con l'utente. Stack: LaTeX-nativo
-LuaLaTeX + memoir + LilyPond via lilypond-book (ADR-003), pacchetto LaTeX del bundle istanziato e
-adattato (engine lualatex, passata lilypond-book, sorgente manuscript/ con fallback sample/).
-Privacy: split tooling pubblico / `manuscript/` privata ignorata, backup SSD, promovibile a repo
-privato (ADR-004). Schede STACK/current-work/roadmap popolate. Ambiente non ancora installato e
-catena non ancora compilata (richiede TinyTeX + LilyPond): e' la Definition of Done corrente.
-Riconciliazione handoff: documento sorgente `transform-into-claude-md/devBook settings.docx`, esito
-= stack fissato (ADR-003/004). Cartella handoff ignorata, non committata.
+Commit: 017b02a File toccati: `STACK.md`, `current-work.md`, `roadmap.md`, `decisions.md` (ADR-003, ADR-004), `.latexmkrc`, `tex-packages.txt`, `scripts/{setup-tex,build}.{ps1,sh}`, `.claude/skills/latex-build/SKILL.md`, `style/{preamble.tex,harmony-macros.sty}`, `sample/`, `manuscript/` (ignorata), `README.md`, `.gitattributes`, `.gitignore`. Motivo: ingestione dell'handoff `transform-into-claude-md/` (sezione 5: estrazione del `.docx` in `_notes/.tmp-docx-devbook/`, lettura mirata) e decisione condivisa con l'utente. Stack: LaTeX-nativo LuaLaTeX + memoir + LilyPond via lilypond-book (ADR-003), pacchetto LaTeX del bundle istanziato e adattato (engine lualatex, passata lilypond-book, sorgente manuscript/ con fallback sample/). Privacy: split tooling pubblico / `manuscript/` privata ignorata, backup SSD, promovibile a repo privato (ADR-004). Schede STACK/current-work/roadmap popolate. Ambiente non ancora installato e catena non ancora compilata (richiede TinyTeX + LilyPond): e' la Definition of Done corrente. Riconciliazione handoff: documento sorgente `transform-into-claude-md/devBook settings.docx`, esito = stack fissato (ADR-003/004). Cartella handoff ignorata, non committata.
 
 ## 2026-06-15 — Inizializzazione del sistema di progetto
 
-Commit: 017b02a
-File toccati: anatomia di `.claude` (settings.json, memory/, context/, rules/, skills/, templates/),
-`CLAUDE.md`, `CLAUDE.local.md`, `.gitignore`, `_notes/`.
-Motivo: installazione del sistema portabile di contesto, documentazione e version control descritto
-in `.claude/PROJECT-SYSTEM.md`, eseguita in modalità greenfield. Repo git inizializzato su branch
-`main` con identità locale `alesop95 <alessio.sopranzi.95@gmail.com>` e remoto
-`git@github-personal:alesop95/harmony-book.git` (vedi `.claude/rules/git-identity-and-repo.md`).
-Protezione globale `user.useConfigOnly` già attiva sulla macchina, non modificata. Schede di
-`context/` create con sola struttura e frontmatter (segnaposto `PENDING-FIRST-COMMIT`), da popolare
-nelle sessioni successive senza inventare contenuto.
+Commit: 017b02a File toccati: anatomia di `.claude` (settings.json, memory/, context/, rules/, skills/, templates/), `CLAUDE.md`, `CLAUDE.local.md`, `.gitignore`, `_notes/`. Motivo: installazione del sistema portabile di contesto, documentazione e version control descritto in `.claude/PROJECT-SYSTEM.md`, eseguita in modalità greenfield. Repo git inizializzato su branch `main` con identità locale `alesop95 <alessio.sopranzi.95@gmail.com>` e remoto `git@github-personal:alesop95/harmony-book.git` (vedi `.claude/rules/git-identity-and-repo.md`). Protezione globale `user.useConfigOnly` già attiva sulla macchina, non modificata. Schede di `context/` create con sola struttura e frontmatter (segnaposto `PENDING-FIRST-COMMIT`), da popolare nelle sessioni successive senza inventare contenuto.
 
 Decisioni di processo registrate in questa sessione:
-- Stack non ancora deciso: la lettura di `transform-into-claude-md/` (handoff ignorato) e la scelta
-  dello stack per il libro di armonia sono rimandate alla sessione ripresa, da svolgere insieme
-  all'utente. Vedi `_notes/RESUME-PROMPT.md`.
-- MCP non configurato: nessun `.mcp.json` né cartella `mcp/`. Resta istanziabile in seguito dal
-  template `.claude/templates/mcp.json` rieseguendo il passo MCP della skill `init-project-system`.
-- Pacchetto LaTeX non ancora attivato: resta istanziabile da `.claude/templates/latex/` quando lo
-  stack lo confermerà.
+- Stack non ancora deciso: la lettura di `transform-into-claude-md/` (handoff ignorato) e la scelta dello stack per il libro di armonia sono rimandate alla sessione ripresa, da svolgere insieme all'utente. Vedi `_notes/RESUME-PROMPT.md`.
+- MCP non configurato: nessun `.mcp.json` né cartella `mcp/`. Resta istanziabile in seguito dal template `.claude/templates/mcp.json` rieseguendo il passo MCP della skill `init-project-system`.
+- Pacchetto LaTeX non ancora attivato: resta istanziabile da `.claude/templates/latex/` quando lo stack lo confermerà.
