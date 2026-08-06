@@ -32,7 +32,9 @@ Data snapshot:         2026-08-06
 
 ## Punto di ripresa
 
-Aggiornato a mano il 2026-08-05. Il ciclo di lavoro fitto va dal 2026-07-29 al 2026-08-03; il 2026-08-05 non ha aggiunto contenuto al libro, ha rimesso in pari la skill `armonia-libro` e sanato due note stale, come racconta la voce in testa al work-log. La guida operativa alla ripresa e la nota del 2026-08-03 in testa a `_notes/RESUME-PROMPT.md`, e la guida alla rilettura del capitolo e `_notes/STATO-CAPITOLO-TRITONO.md`, rivista il 2026-08-05.
+Aggiornato a mano il 2026-08-06. Il ciclo di lavoro fitto va dal 2026-07-29 al 2026-08-03; il 2026-08-05 e il 2026-08-06 non hanno aggiunto contenuto al libro, hanno rimesso in pari la skill `armonia-libro`, sanato quattro note stale e verificato i fatti del progetto contro i file, come raccontano le due voci in testa al work-log. La guida operativa alla ripresa e la nota del 2026-08-06 in testa a `_notes/RESUME-PROMPT.md`, e la guida alla rilettura del capitolo e `_notes/STATO-CAPITOLO-TRITONO.md`, rivista il 2026-08-05.
+
+Una cosa da portare al template e non a questo repository, aperta il 2026-08-06: `python tools/lint-md-commands.py .claude` segnala che in `.claude/PROJECT-SYSTEM.md`, sezione 15, il comando di wipe totale sta su tre righe unite da backslash, e copiandone solo la prima si ottiene un wipe parziale che sembra completo. Va unito in una riga sola in `template-claude-developing` e propagato, perche qui il file e una copia arrivata con `6f9c2bc`. La segnalazione su `skills/init-project-system/SKILL.md` riga 62 e invece un falso positivo dell'euristica.
 
 Una cosa da sapere prima di usare gli strumenti di freschezza, perche e costata un ciclo di deriva invisibile: `python tools/skill-freshness.py <skill> --update` riallinea gli hash e non tocca il contenuto, quindi si lancia soltanto dopo aver rigenerato i file della skill, mai prima. Il 2026-08-03 e stato lanciato senza rigenerare, e l'intero lavoro di quel giorno e rimasto fuori da `armonia-libro` fino al 2026-08-05.
 
