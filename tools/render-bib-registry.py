@@ -2,9 +2,9 @@
 
 Script deterministico, nessuna chiamata LLM. Da rilanciare a ogni aggiornamento del registro
 JSON (per esempio dopo ogni libro confermato da book-bib-extract), non come generazione una
-tantum. Il titolo mostrato in tabella viene letto dal .bib reale quando la voce e' gia' stata
+tantum. Il titolo mostrato in tabella viene letto dal .bib reale quando la voce è già stata
 scritta (bib_entry_written: true); altrimenti si usa il nome del file sorgente come segnaposto,
-perche' il registro non conserva il titolo prima della conferma umana.
+perché il registro non conserva il titolo prima della conferma umana.
 
 Uso:
     py -3 tools/render-bib-registry.py [--registry _notes/book-bib-registry.json]

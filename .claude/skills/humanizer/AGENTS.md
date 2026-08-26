@@ -8,8 +8,8 @@ A **Claude Code / OpenCode skill** implemented entirely as Markdown. The runtime
 
 ## Key files
 
-- `SKILL.md` — the skill itself. YAML frontmatter (`name`, `version`, `description`, `allowed-tools`) followed by the canonical, numbered pattern list with before/after examples. **This is the source of truth.**
-- `README.md` — for humans: installation, usage, a summary table of the patterns, and a version history.
+- `SKILL.md` - the skill itself. YAML frontmatter (`name`, `version`, `description`, `allowed-tools`) followed by the canonical, numbered pattern list with before/after examples. **This is the source of truth.**
+- `README.md` - for humans: installation, usage, a summary table of the patterns, and a version history.
 
 ## The maintenance contract
 

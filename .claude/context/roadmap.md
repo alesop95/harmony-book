@@ -23,4 +23,4 @@ Scrivere un libro di armonia di qualità editoriale, portabile tra Windows 11 e 
 
 ## Idee e ipotesi da verificare
 
-Font e stile bibliografico definitivi alla prova del PDF (da verificare). Promozione di `manuscript/` a repository privato separato se servira' storia/backup remoti della prosa (ADR-004).
+Font e stile bibliografico definitivi alla prova del PDF (da verificare). Promozione di `manuscript/` a repository privato separato se servirà storia/backup remoti della prosa (ADR-004).

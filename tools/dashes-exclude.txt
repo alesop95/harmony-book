@@ -1,0 +1,4 @@
+## File esclusi dalla normalizzazione dei trattini in questo progetto.
+## Una riga per percorso, con il motivo dopo il cancelletto.
+
+build # cartella dei derivati di compilazione, si rigenera e non si corregge a mano

@@ -1,6 +1,6 @@
 # Pacchetto doc-ingest
 
-> Pacchetto opzionale del sistema di progetto. Estrae un corpus di documenti voluminosi, in `.pdf`, `.docx`, `.pptx`, `.xlsx` o `.html`, in una cache Markdown locale e ignorata da git, con ingest incrementale a content-hash e un indice di Livello 1 rigenerato a ogni corsa. Zero consumo di token: l'estrazione e' interamente locale e deterministica, nessuna chiamata LLM. Si offre al gate dei pacchetti (vedi ../PACKAGES.md) ai progetti che hanno o riceveranno piu documenti voluminosi da consultare durante il lavoro, senza bisogno di versionarli. Non si propone dove basta l'ingestione manuale di un singolo documento gia descritta nel README di radice, ne dove serve produrre una documentazione tecnica versionata da un `.docx`: per quel caso c'e il pacchetto `docx-to-docs`.
+> Pacchetto opzionale del sistema di progetto. Estrae un corpus di documenti voluminosi, in `.pdf`, `.docx`, `.pptx`, `.xlsx` o `.html`, in una cache Markdown locale e ignorata da git, con ingest incrementale a content-hash e un indice di Livello 1 rigenerato a ogni corsa. Zero consumo di token: l'estrazione è interamente locale e deterministica, nessuna chiamata LLM. Si offre al gate dei pacchetti (vedi ../PACKAGES.md) ai progetti che hanno o riceveranno piu documenti voluminosi da consultare durante il lavoro, senza bisogno di versionarli. Non si propone dove basta l'ingestione manuale di un singolo documento gia descritta nel README di radice, ne dove serve produrre una documentazione tecnica versionata da un `.docx`: per quel caso c'e il pacchetto `docx-to-docs`.
 
 ## Rapporto con l'ingestione manuale e con docx-to-docs
 
@@ -8,7 +8,7 @@ Tre strumenti distinti coprono lo stesso principio, la disclosure progressiva de
 
 ## Mappa di istanziazione
 
-L'istanziazione copia lo script nella cartella `tools/` del progetto; la cache si crea alla prima esecuzione, sotto `_notes/`, gia' ignorato da git secondo `.claude/PROJECT-SYSTEM.md`.
+L'istanziazione copia lo script nella cartella `tools/` del progetto; la cache si crea alla prima esecuzione, sotto `_notes/`, già ignorato da git secondo `.claude/PROJECT-SYSTEM.md`.
 
 ```
 templates/doc-ingest/doc-ingest.py  ->  <radice>/tools/doc-ingest.py        (tracciato)

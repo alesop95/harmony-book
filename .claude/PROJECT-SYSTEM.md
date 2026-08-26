@@ -265,17 +265,17 @@ Accanto allo script va copiato il suo companion `scrub-claude-json.js`, che è c
 
 Poiché l'hook è una proprietà dell'account e non del progetto, il sistema verifica che l'account attivo sia in regola tramite `templates/tools/check-account-hygiene` (`.ps1` su Windows, `.sh` su Linux), uno script di sola lettura che controlla `autoMemoryEnabled: false` e la presenza dell'hook `SessionEnd` di wipe, stampando un report PASS/FAIL con le azioni di rimedio. Il check si esegue al Passo 0 dell'inizializzazione e dell'allineamento di un progetto, prima di toccare il repository, e in caso di FAIL l'agente propone di installare lo script e registrare l'hook, senza mai modificare il `settings.json` dell'account senza conferma.
 
-Complementare al wipe c'e' la sessione incognito: invece di pulire dopo, si evita del tutto di scrivere nell'account reale, redirigendo `HOME` e le cartelle XDG (`XDG_CONFIG_HOME`, `XDG_CACHE_HOME`) su una directory temporanea e azzerando `CLAUDE_CONFIG_DIR`, cosi la sessione parte vergine e la temp si rimuove alla chiusura. Gli script `templates/tools/claude-incognito.ps1` e `claude-incognito.sh` la avviano su un progetto a scelta. E' utile per lavorare su materiale sensibile senza lasciare traccia in credenziali, cronologia o configurazione dell'account. La tecnica si basa sulla specifica XDG Base Directory piu la redirezione di `HOME`.
+Complementare al wipe c'è la sessione incognito: invece di pulire dopo, si evita del tutto di scrivere nell'account reale, redirigendo `HOME` e le cartelle XDG (`XDG_CONFIG_HOME`, `XDG_CACHE_HOME`) su una directory temporanea e azzerando `CLAUDE_CONFIG_DIR`, cosi la sessione parte vergine e la temp si rimuove alla chiusura. Gli script `templates/tools/claude-incognito.ps1` e `claude-incognito.sh` la avviano su un progetto a scelta. È utile per lavorare su materiale sensibile senza lasciare traccia in credenziali, cronologia o configurazione dell'account. La tecnica si basa sulla specifica XDG Base Directory piu la redirezione di `HOME`.
 
 ---
 
-[^1]: *Skill* — workflow richiamabile descritto in un file `SKILL.md`, che incapsula istruzioni operative e comandi pre-eseguiti il cui output viene iniettato nel contesto.
-[^2]: *MCP*, Model Context Protocol — protocollo per collegare a Claude server esterni che espongono strumenti e dati; configurato in `.mcp.json`.
-[^3]: *Drift* — divergenza accumulata tra ciò che un documento descrive e lo stato attuale del codice.
-[^4]: *YAML*, YAML Ain't Markup Language — formato di serializzazione leggibile usato qui per il blocco di metadati in testa ai documenti.
-[^5]: *Glob* — sintassi di pattern per percorsi di file, dove ad esempio `**` indica una qualsiasi profondità di sottocartelle.
-[^6]: *TBC*, to be confirmed — marcatore che segnala un punto del documento ancora da confermare.
-[^7]: *SMTP*, Simple Mail Transfer Protocol — protocollo di invio della posta; le sue credenziali sono un segreto da non committare.
-[^8]: *MMD*, estensione dei file Mermaid — sorgente testuale da cui si genera un diagramma.
-[^9]: *ADR*, Architecture Decision Record — voce numerata che registra una singola decisione architetturale; nella forma *lite* tiene solo contesto, decisione, motivazione e conseguenze.
-[^10]: *POSIX*, Portable Operating System Interface — famiglia di standard che definisce l'interfaccia delle shell e degli strumenti di tipo Unix; uno script POSIX gira su Linux e macOS.
+[^1]: *Skill* - workflow richiamabile descritto in un file `SKILL.md`, che incapsula istruzioni operative e comandi pre-eseguiti il cui output viene iniettato nel contesto.
+[^2]: *MCP*, Model Context Protocol - protocollo per collegare a Claude server esterni che espongono strumenti e dati; configurato in `.mcp.json`.
+[^3]: *Drift* - divergenza accumulata tra ciò che un documento descrive e lo stato attuale del codice.
+[^4]: *YAML*, YAML Ain't Markup Language - formato di serializzazione leggibile usato qui per il blocco di metadati in testa ai documenti.
+[^5]: *Glob* - sintassi di pattern per percorsi di file, dove ad esempio `**` indica una qualsiasi profondità di sottocartelle.
+[^6]: *TBC*, to be confirmed - marcatore che segnala un punto del documento ancora da confermare.
+[^7]: *SMTP*, Simple Mail Transfer Protocol - protocollo di invio della posta; le sue credenziali sono un segreto da non committare.
+[^8]: *MMD*, estensione dei file Mermaid - sorgente testuale da cui si genera un diagramma.
+[^9]: *ADR*, Architecture Decision Record - voce numerata che registra una singola decisione architetturale; nella forma *lite* tiene solo contesto, decisione, motivazione e conseguenze.
+[^10]: *POSIX*, Portable Operating System Interface - famiglia di standard che definisce l'interfaccia delle shell e degli strumenti di tipo Unix; uno script POSIX gira su Linux e macOS.

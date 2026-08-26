@@ -7,7 +7,7 @@ fra una scala e la sua coppia di tritoni.
 Nasce per verificare l'intuizione registrata nel movimento E del capitolo sul tritono: se
 ogni scala minore melodica di prima derivazione porta esattamente due tritoni, e se quella
 coppia individua la scala, allora fra scale e coppie di tritoni c'e una corrispondenza
-biunivoca. E' una proprieta combinatoria, quindi si verifica contando, non cercando una
+biunivoca. È una proprieta combinatoria, quindi si verifica contando, non cercando una
 fonte: e il precedente metodologico esiste, perche Browne nel 1981 ricavo l'ipotesi degli
 intervalli rari contando le molteplicita degli intervalli nel set diatonico.
 
@@ -60,7 +60,7 @@ def trasponi(pcs, n):
 
 
 def stabilizzatore(pcs):
-    """Le trasposizioni che lasciano l'insieme invariato. E' il gruppo di simmetria
+    """Le trasposizioni che lasciano l'insieme invariato. È il gruppo di simmetria
     per trasposizione, e la sua ampiezza spiega la degenerazione del descrittore."""
     return [n for n in range(12) if trasponi(pcs, n) == frozenset(pcs)]
 

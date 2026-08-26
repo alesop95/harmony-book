@@ -4,7 +4,7 @@ Stack e strumenti per la scrittura di un libro di armonia occidentale, portabile
 
 ## Stack
 
-La composizione usa LaTeX con engine LuaLaTeX (Unicode nativo, font OpenType via `fontspec`, microtipografia completa con `microtype`), classe `memoir`, e gli esempi musicali sono prodotti con LilyPond integrato attraverso il preprocessore `lilypond-book`. La bibliografia e' gestita con `biblatex` + `biber`, l'indice con `imakeidx`, il glossario con `glossaries`. L'ambiente TeX e' TinyTeX user-local, descritto in modo riproducibile dal manifesto `tex-packages.txt`; LilyPond e' un binario esterno da installare a parte. Il razionale completo e le alternative scartate sono in `.claude/context/STACK.md`.
+La composizione usa LaTeX con engine LuaLaTeX (Unicode nativo, font OpenType via `fontspec`, microtipografia completa con `microtype`), classe `memoir`, e gli esempi musicali sono prodotti con LilyPond integrato attraverso il preprocessore `lilypond-book`. La bibliografia è gestita con `biblatex` + `biber`, l'indice con `imakeidx`, il glossario con `glossaries`. L'ambiente TeX è TinyTeX user-local, descritto in modo riproducibile dal manifesto `tex-packages.txt`; LilyPond è un binario esterno da installare a parte. Il razionale completo e le alternative scartate sono in `.claude/context/STACK.md`.
 
 ## Struttura
 
@@ -45,7 +45,7 @@ powershell -ExecutionPolicy Bypass -File scripts\build.ps1
 sh scripts/build.sh
 ```
 
-Il PDF esce in `build/`. La procedura e' incapsulata nella skill `latex-build` (`.claude/skills/latex-build/SKILL.md`).
+Il PDF esce in `build/`. La procedura è incapsulata nella skill `latex-build` (`.claude/skills/latex-build/SKILL.md`).
 
 ## Diagrammi del flusso di lavoro
 
@@ -65,7 +65,7 @@ I sorgenti `.mmd` stanno accanto agli `.svg` in `.claude/context/diagrams/`; per
 
 ## Modello di privacy del contenuto
 
-Il contenuto vendibile del libro non deve mai essere pubblicato. La cartella `manuscript/` (capitoli, esempi musicali, bibliografia reale) e' percio' ignorata da git e non finisce in questo repository pubblico; il backup della prosa avviene a parte (copia locale da SSD a SSD). `manuscript/` e' un sottoalbero autonomo: se in futuro serve versionarlo, basta inizializzare un repository git privato al suo interno, senza ristrutturare nulla. Il version control pubblico tiene quindi traccia dell'avanzamento di *struttura e metodo*, non del testo.
+Il contenuto vendibile del libro non deve mai essere pubblicato. La cartella `manuscript/` (capitoli, esempi musicali, bibliografia reale) è perciò ignorata da git e non finisce in questo repository pubblico; il backup della prosa avviene a parte (copia locale da SSD a SSD). `manuscript/` è un sottoalbero autonomo: se in futuro serve versionarlo, basta inizializzare un repository git privato al suo interno, senza ristrutturare nulla. Il version control pubblico tiene quindi traccia dell'avanzamento di *struttura e metodo*, non del testo.
 
 ## Risorse e riferimenti
 
@@ -87,4 +87,4 @@ Editoria e autopubblicazione con LaTeX:
 
 ## Note
 
-Le operazioni git (`add`, `commit`, `push`) sono manuali. L'identita' git e il remoto sono configurati a livello locale del repository secondo `.claude/rules/git-identity-and-repo.md`.
+Le operazioni git (`add`, `commit`, `push`) sono manuali. L'identità git e il remoto sono configurati a livello locale del repository secondo `.claude/rules/git-identity-and-repo.md`.

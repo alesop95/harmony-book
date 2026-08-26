@@ -1,7 +1,7 @@
 % =====================================================================
 % sample/main.lytex - Documento minimo di verifica della catena tecnica
 % =====================================================================
-% Tracciato (pubblico): NON e' il libro. Esercita lo stack (LuaLaTeX +
+% Tracciato (pubblico): NON è il libro. Esercita lo stack (LuaLaTeX +
 % memoir + microtype + fontspec + babel + LilyPond via lilypond-book +
 % biblatex) per dimostrare che l'ambiente compila, senza esporre contenuto.
 % Build:  scripts/build.ps1   (o build.sh) -> build/main.pdf

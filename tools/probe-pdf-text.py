@@ -1,40 +1,40 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-probe-pdf-text.py - Triage deterministica della qualita' del testo estraibile da un corpus PDF.
+probe-pdf-text.py - Triage deterministica della qualità del testo estraibile da un corpus PDF.
 
 Serve a decidere quali PDF si possono digerire leggendone il testo e quali no, prima di spendere
-un solo token. Ne' il conteggio di caratteri ne' un campione preso dalle prime pagine bastano a
-dire se un PDF e' utilizzabile, e sbagliano in direzioni opposte.
+un solo token. Né il conteggio di caratteri né un campione preso dalle prime pagine bastano a
+dire se un PDF è utilizzabile, e sbagliano in direzioni opposte.
 
-Un PDF puo' portare uno strato di testo corposo ma inservibile, e allora il solo conteggio inganna
+Un PDF può portare uno strato di testo corposo ma inservibile, e allora il solo conteggio inganna
 in eccesso. Al contrario, le prime pagine di un libro scansionato sono frontespizi con tipografia
-decorativa, che qualunque OCR rende male anche quando il resto del volume e' pulito: caso reale di
+decorativa, che qualunque OCR rende male anche quando il resto del volume è pulito: caso reale di
 questo corpus, "Jazz Theory (1995, M.Levine).pdf" restituisce "J ll o THE A z z THE 0 Ry B0 0 K"
-sul frontespizio ma prosa integra e leggibile a meta' volume. Un campione preso in testa lo
+sul frontespizio ma prosa integra e leggibile a metà volume. Un campione preso in testa lo
 scarterebbe a torto.
 
-Per questo il campione si prende a meta' libro, dove ci si aspetta prosa corrente, e la qualita'
+Per questo il campione si prende a metà libro, dove ci si aspetta prosa corrente, e la qualità
 si misura con un indice invece che con un conteggio. L'indice combina tre segnali indipendenti, tutti
-robusti rispetto alla lingua (il corpus e' misto inglese/italiano) e insensibili al vocabolario:
+robusti rispetto alla lingua (il corpus è misto inglese/italiano) e insensibili al vocabolario:
 
   parole_lunghe  quota di token di almeno 4 lettere alfabetiche. L'OCR rotto frammenta le parole
                  in schegge di 1-2 caratteri, quindi questa quota crolla.
   alfabetico     quota di caratteri alfabetici sul totale dei non-spazi. Le scansioni di spartiti
                  producono pioggia di simboli e cifre.
-  righe_prosa    quota di righe non vuote che sembrano prosa, cioe' con almeno cinque parole e una
+  righe_prosa    quota di righe non vuote che sembrano prosa, cioè con almeno cinque parole e una
                  lunghezza media di parola plausibile.
 
 Verdetto: alto (digeribile leggendo il testo), medio (utilizzabile con cautela, controllare a
 campione), basso (strato di testo inservibile: serve una copia migliore del PDF o la lettura visiva
 mirata di ADR-006), assente (nessuno strato di testo).
 
-Dipendenze: pdftotext e pdfinfo (Poppler), gia' in uso nel progetto. Nessuna chiamata LLM.
+Dipendenze: pdftotext e pdfinfo (Poppler), già in uso nel progetto. Nessuna chiamata LLM.
 
 Uso:
     python tools/probe-pdf-text.py "J:/.../ARMONIA E TEORIA"
     python tools/probe-pdf-text.py <cartella> --out _notes/corpus-digest-triage.md
-    python tools/probe-pdf-text.py <cartella> --sample 6      # pagine campionate a meta' libro
+    python tools/probe-pdf-text.py <cartella> --sample 6      # pagine campionate a metà libro
 """
 
 import argparse
@@ -46,7 +46,7 @@ from pathlib import Path
 WORD = re.compile(r"[^\W\d_]+", re.UNICODE)
 
 # Soglie dell'indice composito, tarate sui casi noti di questo corpus: Berkman 2013 (testo
-# digitale nativo) e Levine 1995 (OCR buono a meta' volume) devono finire in "alto"; i Piston,
+# digitale nativo) e Levine 1995 (OCR buono a metà volume) devono finire in "alto"; i Piston,
 # che non hanno alcuno strato di testo, in "assente".
 SOGLIA_ALTO = 0.62
 SOGLIA_MEDIO = 0.38
@@ -55,8 +55,8 @@ SOGLIA_MEDIO = 0.38
 # poche decine di caratteri sono rumore del layer immagine, non testo. I Piston ne danno 4.
 MIN_CHARS_TESTO = 200
 
-# Densita' minima di caratteri per pagina campionata perche' valga la pena digerire il testo.
-# Sopra questa soglia c'e' prosa corrente; sotto, il testo e' leggibile ma la pagina e' fatta
+# Densità minima di caratteri per pagina campionata perché valga la pena digerire il testo.
+# Sopra questa soglia c'e' prosa corrente; sotto, il testo è leggibile ma la pagina è fatta
 # di notazione musicale o di tabelle, e digerirla dal testo estratto non rende. Riferimenti di
 # questo corpus: Berkman circa 1980, Levine circa 1550, Kostka circa 750, Beato circa 125.
 MIN_DENSITA = 300
@@ -92,7 +92,7 @@ def extract(pdf, first, last):
 
 
 def quality(text):
-    """Indice composito in [0,1] piu' i tre segnali che lo compongono."""
+    """Indice composito in [0,1] più i tre segnali che lo compongono."""
     tokens = text.split()
     if len(tokens) < 40:
         return 0.0, {"parole_lunghe": 0.0, "alfabetico": 0.0, "righe_prosa": 0.0}
@@ -130,7 +130,7 @@ def verdict(chars, indice, densita):
     if chars < MIN_CHARS_TESTO:
         return "assente"
     if densita < MIN_DENSITA:
-        # Il testo che c'e' e' leggibile, ma ce n'e' troppo poco: pagine di sola notazione o
+        # Il testo che c'e' è leggibile, ma ce n'e' troppo poco: pagine di sola notazione o
         # di tabelle. Digerirle dal testo estratto non rende, a prescindere dall'indice.
         return "poco-testo"
     if indice >= SOGLIA_ALTO:
@@ -152,7 +152,7 @@ def probe(pdf, sample):
             "verdetto": "illeggibile",
         }
 
-    # Campione a meta' libro: li' c'e' prosa, non frontespizi ne' indici.
+    # Campione a metà libro: lì c'e' prosa, non frontespizi né indici.
     start = max(1, pages // 2 - sample // 2)
     end = min(pages, start + sample - 1)
     text = extract(pdf, start, end)
@@ -189,18 +189,18 @@ def render(rows, source):
     rows = sorted(rows, key=lambda r: (rank[r["verdetto"]], -r["indice"]))
 
     out = []
-    out.append("# Triage della qualita' del testo estraibile\n")
+    out.append("# Triage della qualità del testo estraibile\n")
     out.append(
         "> Generato da `tools/probe-pdf-text.py`. Non modificare a mano: si rigenera a ogni corsa.\n"
         f"> Sorgente: `{source}`\n"
     )
     out.append(
-        "\nIl campione si prende a meta' libro, non in testa, perche' i frontespizi sono tipografia "
-        "decorativa che qualunque OCR rende male anche quando il resto del volume e' pulito. "
+        "\nIl campione si prende a metà libro, non in testa, perché i frontespizi sono tipografia "
+        "decorativa che qualunque OCR rende male anche quando il resto del volume è pulito. "
         "L'indice combina la quota di parole di almeno 4 lettere, la quota di caratteri alfabetici "
-        "e la quota di righe che sembrano prosa. La densita' e' il numero di caratteri per pagina "
+        "e la quota di righe che sembrano prosa. La densità è il numero di caratteri per pagina "
         "campionata, e serve a distinguere un libro di prosa da uno fatto di notazione musicale, "
-        "dove il testo che c'e' e' leggibile ma non c'e' quasi testo.\n"
+        "dove il testo che c'e' è leggibile ma non c'e' quasi testo.\n"
     )
 
     conteggi = {}
@@ -229,7 +229,7 @@ def render(rows, source):
         out.append("\n## Candidati a una copia migliore del PDF\n")
         out.append(
             "Questi file non si possono digerire leggendone il testo estratto. Nell'ordine: "
-            "verificare se un'altra copia dello stesso titolo, gia' presente nel corpus, ha un "
+            "verificare se un'altra copia dello stesso titolo, già presente nel corpus, ha un "
             "verdetto migliore; altrimenti procurarsi una copia con testo nativo; altrimenti "
             "applicare la lettura visiva mirata di ADR-006 sulle sole pagine pertinenti.\n"
         )
@@ -249,13 +249,13 @@ def main():
     parser.add_argument("source", help="Cartella da scansionare ricorsivamente")
     parser.add_argument("--out", help="File Markdown da scrivere. Omesso: stampa a schermo.")
     parser.add_argument(
-        "--sample", type=int, default=4, help="Pagine campionate a meta' libro (default 4)"
+        "--sample", type=int, default=4, help="Pagine campionate a metà libro (default 4)"
     )
     args = parser.parse_args()
 
     source = Path(args.source)
     if not source.is_dir():
-        print(f"[errore] {source} non e' una cartella.")
+        print(f"[errore] {source} non è una cartella.")
         return 2
 
     pdfs = sorted(p for p in source.rglob("*") if p.suffix.lower() == ".pdf")

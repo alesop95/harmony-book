@@ -22,6 +22,6 @@ Si traccia sempre anche cosa non si è processato e perché, non solo cosa si è
 
 ## Stile del testo scritto per il libro
 
-Mai trattini lunghi (—): vale già in generale per la documentazione tecnica secondo `interaction-style.md`, e si applica altrettanto rigidamente alla prosa del libro stesso. Si riformula con la virgola, il punto, o i due punti.
+Mai trattini lunghi (-): vale già in generale per la documentazione tecnica secondo `interaction-style.md`, e si applica altrettanto rigidamente alla prosa del libro stesso. Si riformula con la virgola, il punto, o i due punti.
 
 Ogni affermazione armonica dimostrabile va accompagnata, dove ha senso, da un estratto musicale con pentagramma, non solo descritta a parole. Lo strumento è LilyPond, già nello stack del progetto secondo ADR-003 (`.claude/memory/decisions.md`): si genera un file `.ly` minimo mirato alla sola affermazione da dimostrare, si rende in PNG, si ritaglia al solo contenuto (niente intestazioni o tagline di LilyPond), e si inserisce come figura con didascalia. Nei documenti `.docx` ancora pre-manoscritto, la numerazione delle figure aggiunte fuori sequenza si tiene con un suffisso (`Figura 3bis`) invece di rinumerare le figure esistenti; quando il contenuto entra nel manoscritto LaTeX vero, la numerazione delle figure diventa automatica e il problema si estingue da sé. I file `.ly` di lavoro, una volta che il contenuto è nel manoscritto reale, si formalizzano in `manuscript/music/`, non restano solo in una cartella temporanea di sessione.

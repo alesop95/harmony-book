@@ -4,9 +4,9 @@
 skill-freshness.py - Rileva la deriva fra una skill derivata e le sue fonti.
 
 Una skill prodotta digerendo altri file (la dottrina del libro da _notes/, un libro di
-riferimento da un PDF) e' un artefatto derivato: le fonti restano canoniche e continuano a
-cambiare, la skill no. Senza un controllo, la deriva e' silenziosa e ci si accorge che la
-skill e' vecchia solo quando risponde con qualcosa che non vale piu'.
+riferimento da un PDF) è un artefatto derivato: le fonti restano canoniche e continuano a
+cambiare, la skill no. Senza un controllo, la deriva è silenziosa e ci si accorge che la
+skill è vecchia solo quando risponde con qualcosa che non vale più.
 
 Ogni skill derivata porta un manifesto `.sources.json` con lo sha256 di ciascuna fonte al
 momento della digestione. Questo script ricalcola gli hash e dice quali fonti sono cambiate.
@@ -164,7 +164,7 @@ def main():
 
     if stale:
         print(
-            "\nAlmeno una fonte e' cambiata. Rigenera le parti di skill interessate, poi\n"
+            "\nAlmeno una fonte è cambiata. Rigenera le parti di skill interessate, poi\n"
             "riallinea con: python tools/skill-freshness.py <skill> --update"
         )
     return 1 if stale else 0

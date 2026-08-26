@@ -4,7 +4,7 @@
 
 ## Principi nativi
 
-Il sistema e' gia progettato per non sprecare contesto, e queste pratiche valgono sempre.
+Il sistema è gia progettato per non sprecare contesto, e queste pratiche valgono sempre.
 
 Densita sopra completezza: una sintesi densa vale piu di un estratto lungo. Si scrive e si legge per segnale, non per volume.
 
@@ -16,7 +16,7 @@ Si legge un file quando serve davvero, e solo la porzione necessaria, non l'inte
 
 ## Disclosure progressiva su documenti voluminosi
 
-Un corpus documentale e' troppo grande per entrare in contesto: cento documenti possono valere oltre un milione di token, e l'ottanta per cento serve come riferimento ricercabile, non come materiale di ragionamento attivo. Invece di caricare tutto, si accede ai documenti per livelli crescenti di dettaglio, scendendo solo dove serve.
+Un corpus documentale è troppo grande per entrare in contesto: cento documenti possono valere oltre un milione di token, e l'ottanta per cento serve come riferimento ricercabile, non come materiale di ragionamento attivo. Invece di caricare tutto, si accede ai documenti per livelli crescenti di dettaglio, scendendo solo dove serve.
 
 Livello 1, scheletro: solo titolo, gerarchia delle intestazioni e conteggi per sezione, una manciata di token per documento. Permette di vedere un'intera cartella in poche decine di migliaia di token e decidere dove guardare.
 
@@ -50,7 +50,7 @@ Il principio "un task, una chat" mantiene il contesto sempre fresco: invece di u
 
 Quando il risparmio nativo non basta, per esempio in sessioni operative molto lunghe e ricche di output, si possono valutare strumenti esterni open source, sempre offerti come scelta al gate dei pacchetti e mai imposti.
 
-`caveman` riduce i token di output facendo rispondere l'agente in modo telegrafico, senza toccare il ragionamento. E' utile nelle sessioni operative pesanti, ma va tenuto spento quando il progetto produce documentazione o prosa leggibile, perche ne degraderebbe lo stile. Vive come tool di sessione, non come stato del progetto. Vedi la voce `caveman` in `templates/PACKAGES.md`.
+`caveman` riduce i token di output facendo rispondere l'agente in modo telegrafico, senza toccare il ragionamento. È utile nelle sessioni operative pesanti, ma va tenuto spento quando il progetto produce documentazione o prosa leggibile, perche ne degraderebbe lo stile. Vive come tool di sessione, non come stato del progetto. Vedi la voce `caveman` in `templates/PACKAGES.md`.
 
 Per esigenze piu spinte esistono alternative come un server MCP di compressione e caching del contesto (per esempio `token-optimizer-mcp`). Si adottano solo se il guadagno giustifica la dipendenza, valutando caso per caso.
 

@@ -3,17 +3,17 @@ richiesta da `.claude/skills/book-bib-extract/SKILL.md`.
 
 Le sessioni precedenti generavano questi PNG con comandi `pdftoppm` lanciati a mano, mai
 salvati: DPI e numero di pagine cambiavano di sessione in sessione (100/120/150 dpi osservati
-nelle cartelle *-titlepages esistenti). Questo script fissa i parametri una volta per tutte cosi'
+nelle cartelle *-titlepages esistenti). Questo script fissa i parametri una volta per tutte così
 il meccanismo torni riproducibile e tracciato in git, chiudendo quel gap.
 
 Motivo per cui non si usa il mirror Markdown di tools/doc-ingest.py per questo scopo: i libri di
-questo corpus sono perlopiu' PDF scansionati senza livello di testo nativo, quindi il mirror
+questo corpus sono perlopiù PDF scansionati senza livello di testo nativo, quindi il mirror
 Markdown (via markitdown) esce vuoto; la verifica visiva sulle pagine renderizzate resta il
 percorso pratico per bib_status.
 
-Convenzione di output osservata nei corpus gia' verificati: 3 pagine per libro (frontespizio,
-verso, colophon) sono quasi sempre sufficienti; si puo' alzare --pages per libri con colophon piu'
-in profondita'.
+Convenzione di output osservata nei corpus già verificati: 3 pagine per libro (frontespizio,
+verso, colophon) sono quasi sempre sufficienti; si può alzare --pages per libri con colophon più
+in profondità.
 
 Uso:
     py -3 tools/extract-titlepages.py LIBRO.pdf --slug nome-slug --out CARTELLA_DEST
