@@ -51,8 +51,8 @@ def repo_root():
 
 def resolve(root, recorded):
     """Le fonti dentro il repo si registrano relative alla radice; quelle fuori, per esempio su un
-    disco esterno, si registrano assolute, perche su Windows i drive non stanno in un albero unico
-    e un percorso relativo non puo attraversarli."""
+    disco esterno, si registrano assolute, perché su Windows i drive non stanno in un albero unico
+    e un percorso relativo non può attraversarli."""
     p = Path(recorded)
     return p if p.is_absolute() else root / p
 

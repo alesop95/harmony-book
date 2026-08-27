@@ -56,7 +56,7 @@ SOGLIA_MEDIO = 0.38
 MIN_CHARS_TESTO = 200
 
 # Densità minima di caratteri per pagina campionata perché valga la pena digerire il testo.
-# Sopra questa soglia c'e' prosa corrente; sotto, il testo è leggibile ma la pagina è fatta
+# Sopra questa soglia c'è' prosa corrente; sotto, il testo è leggibile ma la pagina è fatta
 # di notazione musicale o di tabelle, e digerirla dal testo estratto non rende. Riferimenti di
 # questo corpus: Berkman circa 1980, Levine circa 1550, Kostka circa 750, Beato circa 125.
 MIN_DENSITA = 300
@@ -130,7 +130,7 @@ def verdict(chars, indice, densita):
     if chars < MIN_CHARS_TESTO:
         return "assente"
     if densita < MIN_DENSITA:
-        # Il testo che c'e' è leggibile, ma ce n'e' troppo poco: pagine di sola notazione o
+        # Il testo che c'è' è leggibile, ma ce n'e' troppo poco: pagine di sola notazione o
         # di tabelle. Digerirle dal testo estratto non rende, a prescindere dall'indice.
         return "poco-testo"
     if indice >= SOGLIA_ALTO:
@@ -152,7 +152,7 @@ def probe(pdf, sample):
             "verdetto": "illeggibile",
         }
 
-    # Campione a metà libro: lì c'e' prosa, non frontespizi né indici.
+    # Campione a metà libro: lì c'è' prosa, non frontespizi né indici.
     start = max(1, pages // 2 - sample // 2)
     end = min(pages, start + sample - 1)
     text = extract(pdf, start, end)
@@ -165,7 +165,7 @@ def probe(pdf, sample):
         "pages": pages,
         "range": (start, end),
         "chars": chars,
-        "densita": densita,
+        "densità": densita,
         "indice": indice,
         "segnali": segnali,
         "verdetto": verdict(chars, indice, densita),
@@ -200,7 +200,7 @@ def render(rows, source):
         "L'indice combina la quota di parole di almeno 4 lettere, la quota di caratteri alfabetici "
         "e la quota di righe che sembrano prosa. La densità è il numero di caratteri per pagina "
         "campionata, e serve a distinguere un libro di prosa da uno fatto di notazione musicale, "
-        "dove il testo che c'e' è leggibile ma non c'e' quasi testo.\n"
+        "dove il testo che c'è' è leggibile ma non c'è' quasi testo.\n"
     )
 
     conteggi = {}
@@ -218,7 +218,7 @@ def render(rows, source):
     for r in rows:
         pages = r["pages"] if r["pages"] is not None else "?"
         out.append(
-            f"| {r['verdetto']} | {r['indice']:.2f} | {r.get('densita', 0):.0f} | {pages} "
+            f"| {r['verdetto']} | {r['indice']:.2f} | {r.get('densità', 0):.0f} | {pages} "
             f"| {r['chars']} | {r['file'].name} |"
         )
 
@@ -238,7 +238,7 @@ def render(rows, source):
             if r["verdetto"] == "basso":
                 motivo += f" (indice {r['indice']:.2f})"
             if r["verdetto"] == "poco-testo":
-                motivo += f" ({r.get('densita', 0):.0f} caratteri per pagina)"
+                motivo += f" ({r.get('densità', 0):.0f} caratteri per pagina)"
             out.append(f"- `{r['file'].name}`: {motivo}")
 
     return "\n".join(out) + "\n"

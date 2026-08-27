@@ -6,12 +6,12 @@ fra una scala e la sua coppia di tritoni.
 
 Nasce per verificare l'intuizione registrata nel movimento E del capitolo sul tritono: se
 ogni scala minore melodica di prima derivazione porta esattamente due tritoni, e se quella
-coppia individua la scala, allora fra scale e coppie di tritoni c'e una corrispondenza
-biunivoca. È una proprieta combinatoria, quindi si verifica contando, non cercando una
-fonte: e il precedente metodologico esiste, perche Browne nel 1981 ricavo l'ipotesi degli
+coppia individua la scala, allora fra scale e coppie di tritoni c'è una corrispondenza
+biunivoca. È una proprietà combinatoria, quindi si verifica contando, non cercando una
+fonte: e il precedente metodologico esiste, perché Browne nel 1981 ricavo l'ipotesi degli
 intervalli rari contando le molteplicita degli intervalli nel set diatonico.
 
-Rappresentazione: una scala e un insieme di classi di altezza, cioe di interi modulo 12. Un
+Rappresentazione: una scala e un insieme di classi di altezza, cioè di interi modulo 12. Un
 tritono e una coppia non ordinata {p, p+6}, quindi esistono soltanto 6 tritoni distinti:
 {0,6} {1,7} {2,8} {3,9} {4,10} {5,11}. Una coppia di tritoni e un sottoinsieme di 2 dei 6,
 quindi le coppie possibili sono 15.
@@ -66,20 +66,20 @@ def stabilizzatore(pcs):
 
 
 def spiega_degenerazione(famiglia, out):
-    """Perche una coppia di tritoni non puo mai individuare una scala sola.
+    """Perché una coppia di tritoni non può mai individuare una scala sola.
 
     Teorema 1. Per qualunque insieme di note, S e la sua trasposizione di tritono hanno
     lo stesso identico contenuto di tritoni. Dimostrazione in una riga: un tritono e
-    {a, a+6}, e traslarlo di 6 da {a+6, a+12} cioe {a+6, a}, che e lo stesso insieme.
+    {a, a+6}, e traslarlo di 6 da {a+6, a+12} cioè {a+6, a}, che è lo stesso insieme.
     Quindi T6 fissa ogni tritono, e percio fissa il contenuto di qualunque scala. Ne
     segue che nessun descrittore fondato sui soli tritoni potra MAI distinguere una
     scala dalla sua trasposizione di tritono: e un limite di principio, non un difetto
     del metodo.
 
-    Teorema 2. La degenerazione del descrittore, cioe quante scale condividono la stessa
+    Teorema 2. La degenerazione del descrittore, cioè quante scale condividono la stessa
     coppia, e uguale all'ampiezza dello stabilizzatore dell'insieme di note che la coppia
     forma. Se quelle quattro note formano una sesta eccedente francese, invariante solo
-    per T0 e T6, la degenerazione e 2, che e il minimo possibile per il teorema 1. Se
+    per T0 e T6, la degenerazione e 2, che è il minimo possibile per il teorema 1. Se
     formano una settima diminuita, invariante per T0, T3, T6 e T9, la degenerazione e 4.
     """
     s = scala(famiglia, 0)
@@ -149,13 +149,13 @@ def main():
         out(f"scale con esattamente 2 tritoni, su tutte le famiglie: {sum(len(v) for v in soloduetritoni.values())}")
         out(f"coppie di tritoni distinte da esse realizzate: {len(soloduetritoni)}")
         ambigue = {k: v for k, v in soloduetritoni.items() if len(v) > 1}
-        out(f"coppie condivise da piu di una scala: {len(ambigue)}")
+        out(f"coppie condivise da più di una scala: {len(ambigue)}")
         for k, v in sorted(ambigue.items(), key=lambda kv: sorted(nome_tritono(t) for t in kv[0])):
             et = ", ".join(sorted(nome_tritono(t) for t in k))
             chi = "; ".join(f"{NOMI[r]} {f}" for f, r in v)
             out(f"    [{et}] <- {chi}")
 
-        out("\n=== perche la degenerazione e quella, e non un'altra ===")
+        out("\n=== perché la degenerazione e quella, e non un'altra ===")
         out("Teorema 1: un tritono e {a, a+6}, e traslarlo di 6 lo lascia identico. Quindi T6 fissa")
         out("ogni tritono, e nessun descrittore fondato sui soli tritoni potra mai distinguere una")
         out("scala dalla sua trasposizione di tritono. Due a uno e il MINIMO possibile, non un limite")

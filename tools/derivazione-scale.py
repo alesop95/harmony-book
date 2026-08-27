@@ -4,19 +4,19 @@
 derivazione-scale.py - La macchina delle dominanti secondarie, primo e secondo livello.
 
 Implementa l'operazione su cui poggia il libro: si prende un accordo di settima diatonico
-che abbia gia la settima minore, gli si da la terza maggiore, e si legge la scala che la
+che abbia già la settima minore, gli si da la terza maggiore, e si legge la scala che la
 risoluzione lascia dietro di se.
 
 Definizioni fissate dall'utente il 2026-08-03.
   Livello I  - le scale che si ottengono alterando UNA SOLA nota a partire dalla tonalita
                diatonica di partenza.
   Livello II - le scale che si ottengono applicando la stessa operazione a ciascuna delle
-               scale di livello I, cioe rendendo dominante un accordo di quelle scale.
+               scale di livello I, cioè rendendo dominante un accordo di quelle scale.
 
 Punto delicato, corretto dall'utento il 2026-08-03 dopo un errore dell'agente: a una
 dominante la quinta NON serve. Cio che la rende dominante e il tritono fra terza maggiore
 e settima minore. Quindi al semidiminuito del settimo grado basta alzare la terza, e la
-quinta diminuita resta dov'e: si ottiene un accordo di settima con quinta bemolle, che e
+quinta diminuita resta dov'è: si ottiene un accordo di settima con quinta bemolle, che è
 una dominante a tutti gli effetti, con UNA sola alterazione. Pretendere la quinta giusta
 farebbe contare due alterazioni e falserebbe tutta la classificazione.
 
@@ -75,8 +75,8 @@ def settime(scala_ord):
 
 
 def deriva(scala_ord):
-    """Applica la macchina a ogni grado. Ritorna solo le derivazioni legittime, cioe
-    quelle che partono da un accordo che ha gia la settima minore e che costano una sola
+    """Applica la macchina a ogni grado. Ritorna solo le derivazioni legittime, cioè
+    quelle che partono da un accordo che ha già la settima minore e che costano una sola
     alterazione."""
     base = frozenset(scala_ord)
     esiti = []
@@ -87,7 +87,7 @@ def deriva(scala_ord):
             continue                      # non ha la settima minore: fuori
         terza_mag = (r + 4) % 12
         if terza_mag in acc:
-            continue                      # e gia una dominante
+            continue                      # e già una dominante
         terza_vecchia = next((x for x in acc if (x - r) % 12 == 3), None)
         if terza_vecchia is None:
             continue
@@ -95,7 +95,7 @@ def deriva(scala_ord):
         nuova = (base - acc) | dom
         alterazioni = sorted(nuova - base)
         if len(alterazioni) != 1:
-            continue                      # non e di questo livello
+            continue                      # non è di questo livello
         quinta_giusta = (r + 7) % 12 in dom
         ts, tb = tritoni_di(nuova), tritoni_di(base)
         esiti.append({
