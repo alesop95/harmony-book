@@ -60,6 +60,45 @@ import os
 import re
 import sys
 
+
+# Le macro LaTeX il cui argomento e' un identificatore e non prosa. Il loro contenuto
+# non va mai accentato ne' normalizzato: un'etichetta accentata compila soltanto se
+# ogni riferimento viene riscritto insieme a essa, e un riferimento rimasto indietro
+# produce due punti di domanda nel PDF senza che nulla lo segnali. E' lo stesso
+# principio per cui nei file Markdown si salta il contenuto dei blocchi recintati:
+# dentro un file convivono due linguaggi, e soltanto uno dei due vuole gli accenti.
+IDENTIFICATORI_TEX = re.compile(
+    r"\\(?:label|ref|pageref|eqref|autoref|cite|nocite|input|include"
+    r"|includegraphics|bibitem|hypertarget|hyperlink|url|href|usepackage"
+    r"|documentclass|newcommand|renewcommand|newenvironment|begin|end)"
+    r"(?:\[[^\]]*\])?"
+    r"\{[^{}]*\}")
+
+
+def maschera_identificatori(testo):
+    """Sostituisce gli argomenti-identificatore con segnaposto inerti.
+
+    Il segnaposto non contiene lettere accentabili, apostrofi ne' trattini, quindi
+    nessuna regola degli strumenti lo tocca. Restituisce il testo mascherato e la
+    lista degli originali, nell'ordine in cui vanno ripristinati.
+    """
+    salvati = []
+
+    def sostituisci(m):
+        salvati.append(m.group(0))
+        return "%sTEXID%d%s" % (SEGNAPOSTO, len(salvati) - 1, SEGNAPOSTO)
+
+    return IDENTIFICATORI_TEX.sub(sostituisci, testo), salvati
+
+
+def ripristina_identificatori(testo, salvati):
+    for i, originale in enumerate(salvati):
+        testo = testo.replace("%sTEXID%d%s" % (SEGNAPOSTO, i, SEGNAPOSTO), originale)
+    return testo
+
+
+SEGNAPOSTO = chr(0)
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # ---------------------------------------------------------------------------
@@ -189,10 +228,21 @@ def segmenta_markdown(testo):
     """
     tratti = []
     dentro_recinto = False
+    # Il front matter e' metadato e non prosa: un tag accentato e' un tag diverso, e
+    # due tag che differiscono per un accento non si uniscono in alcun indice. Si
+    # riconosce solo in apertura di file, perche' altrove tre trattini sono una linea.
+    dentro_front = testo.startswith('---' + chr(10))
+    prima_riga = True
     recinto = None
     # Si itera conservando l'a capo dentro la riga, così la concatenazione è esatta.
     for riga in testo.splitlines(keepends=True):
         nudo = riga.rstrip("\n")
+        if dentro_front:
+            tratti.append(("verbatim", riga))
+            if not prima_riga and nudo.strip() == '---':
+                dentro_front = False
+            prima_riga = False
+            continue
         m = re.match(r"^\s*(`{3,}|~{3,})", nudo)
         if not dentro_recinto and m:
             dentro_recinto, recinto = True, m.group(1)[0] * 3
@@ -255,13 +305,15 @@ def elabora(percorso, statistiche, residui, ambigui):
     crlf = b"\r\n" in corpo
     testo = corpo.decode("utf-8").replace("\r\n", "\n")
 
-    if percorso.lower().endswith(".ly"):
-        # Un file .ly e' musica per intero: non contiene prosa da correggere, e ogni
-        # apostrofo che contiene e' un'indicazione di ottava. Non si tocca.
-        return False, None
-    if percorso.lower().endswith(".lytex"):
-        nuovo = converti_lytex(testo, statistiche, residui, ambigui)
-    elif percorso.lower().endswith(".py"):
+    # Su un file .tex gli identificatori si mascherano prima di convertire: il nome di
+    # un'etichetta o di una chiave bibliografica non e' prosa, e riscriverlo produce un
+    # riferimento irrisolto silenzioso invece di un errore.
+    tex = percorso.lower().endswith((".tex", ".sty", ".cls", ".lytex"))
+    salvati = []
+    if tex:
+        testo, salvati = maschera_identificatori(testo)
+
+    if percorso.lower().endswith(".py"):
         nuovo = converti_python(testo, statistiche, residui, ambigui)
     elif percorso.lower().endswith(".md"):
         tratti = segmenta_markdown(testo)
@@ -276,6 +328,9 @@ def elabora(percorso, statistiche, residui, ambigui):
     else:
         nuovo = converti_prosa(testo, statistiche, residui, ambigui)
 
+    if tex:
+        nuovo = ripristina_identificatori(nuovo, salvati)
+        testo = ripristina_identificatori(testo, salvati)
     if nuovo == testo:
         return False, None
     uscita = nuovo.replace("\n", "\r\n") if crlf else nuovo
@@ -390,49 +445,6 @@ def converti_python(testo, statistiche, residui, ambigui):
         righe.append(prima + converti_lista_bianca(
             riga[pos:], statistiche, residui, ambigui))
     return "\n".join(righe)
-
-
-# ---------------------------------------------------------------------------
-# Notazione LilyPond: il caso specifico di questo progetto.
-# ---------------------------------------------------------------------------
-# In LilyPond l'apostrofo dopo il nome di una nota ne alza l'ottava: c' e' il Do
-# dell'ottava sopra e c'' quello due ottave sopra. La sequenza che il riconoscitore vede
-# e' identica a quella di un accento scritto con l'apostrofo, e la collisione non e'
-# teorica: fra i nomi delle note in notazione anglosassone ci sono a, b, e, f, g, e la
-# lettera e sta nella lista degli accenti gravi. Senza questa difesa la riga
-# \relative e' { ... } diventerebbe \relative con una e accentata, cioe' un sorgente
-# musicale rotto in un modo che il compilatore segnala male e il lettore non vede.
-#
-# La difesa e' strutturale e non un elenco di eccezioni: si saltano interamente i blocchi
-# in cui la notazione vive, cioe' gli ambienti lilypond, le righe che invocano un file
-# musicale o una espressione relativa, e i file .ly che sono musica e non prosa.
-LILY_AMBIENTE = re.compile(r"^\s*\\(begin|end)\{lilypond\}")
-LILY_RIGA = re.compile(r"\\(relative|lilypondfile|new\s+Staff|score|chordmode|drums|"
-                       r"lyricmode|absolute|fixed|transpose|key|clef|time)\b")
-
-
-def converti_lytex(testo, statistiche, residui, ambigui):
-    """Converte la prosa di un sorgente lytex, lasciando intatta la musica.
-
-    Un file lytex e' LaTeX con isole di LilyPond. Si attraversa riga per riga tenendo
-    conto se si e' dentro un ambiente lilypond, e si converte solo cio' che sta fuori e
-    non contiene un comando musicale. In caso di dubbio la riga resta come e': su un
-    sorgente musicale il costo di una conversione mancata e' un accento da correggere a
-    mano, il costo di una conversione sbagliata e' una nota che cambia altezza.
-    """
-    fuori = []
-    dentro = False
-    for riga in testo.splitlines(keepends=True):
-        m = LILY_AMBIENTE.match(riga)
-        if m:
-            dentro = m.group(1) == "begin"
-            fuori.append(riga)
-            continue
-        if dentro or LILY_RIGA.search(riga):
-            fuori.append(riga)
-            continue
-        fuori.append(converti_prosa(riga, statistiche, residui, ambigui))
-    return "".join(fuori)
 
 
 def raccogli(percorsi, estensioni):
@@ -559,24 +571,7 @@ def autotest():
         print("  FALLITO  la prosa fuori dai recinti non è stata convertita")
         fallite += 1
 
-    # Casi specifici di questo progetto: la notazione musicale non si tocca.
-    casi_lily = [
-        ("\\relative c" + Q + " { c4 d e f }\n", "\\relative c" + Q + " { c4 d e f }\n"),
-        ("\\relative e" + Q + " { e4 f g }\n", "\\relative e" + Q + " { e4 f g }\n"),
-        ("L" + Q + "intervallo e" + Q + " una quinta.\n",
-         "L" + Q + "intervallo \u00e8 una quinta.\n"),
-        ("\\begin{lilypond}\n\\relative e" + Q + " { e4 }\n\\end{lilypond}\n",
-         "\\begin{lilypond}\n\\relative e" + Q + " { e4 }\n\\end{lilypond}\n"),
-    ]
-    for ingresso, atteso in casi_lily:
-        st, re_, am = {}, {}, {}
-        ottenuto = converti_lytex(ingresso, st, re_, am)
-        if ottenuto != atteso:
-            print("  FALLITO lily  %r -> %r, atteso %r" % (ingresso, ottenuto, atteso))
-            fallite += 1
-
-    print("autotest: %d casi, %d falliti"
-          % (len(casi) + len(casi_python) + len(casi_lily) + 4, fallite))
+    print("autotest: %d casi, %d falliti" % (len(casi) + len(casi_python) + 4, fallite))
     return 1 if fallite else 0
 
 
@@ -589,7 +584,7 @@ def main():
     ap.add_argument("--check", action="store_true", help="non scrive, riporta")
     ap.add_argument("--residui", action="store_true",
                     help="elenca solo le forme non in lista bianca")
-    ap.add_argument("--ext", default=".md,.tex,.txt,.lytex",
+    ap.add_argument("--ext", default=".md,.tex,.txt",
                     help="estensioni da trattare, separate da virgola")
     args = ap.parse_args()
 
@@ -635,7 +630,11 @@ def main():
         tot = sum(statistiche.values())
         print("\n%d sostituzioni, %d forme distinte:" % (tot, len(statistiche)))
         for k, v in sorted(statistiche.items(), key=lambda x: -x[1])[:25]:
-            reso = ACUTO.get(k) or GRAVE.get(k)
+            # La resa va cercata anche nella regola dei suffissi, non solo nelle mappe
+            # esplicite: le parole in -ita', -eta' e simili sono convertite dalla regola e
+            # non compaiono in ACUTO ne' in GRAVE, quindi senza questo terzo tentativo il
+            # report le mostrerebbe come None pur avendole sostituite correttamente.
+            reso = ACUTO.get(k) or GRAVE.get(k) or per_suffisso(k) or "?"
             print("  %-16s -> %-16s x%d" % (k + "'", reso, v))
     if ambigui:
         print("\nda decidere a mano, non convertite:")
