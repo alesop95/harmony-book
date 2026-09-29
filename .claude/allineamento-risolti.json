@@ -1,0 +1,14 @@
+{
+  "tools/extract-titlepages.py": {
+    "testa": "4cddd1864827e76213f32b1569767c1de8534537",
+    "il": "2026-09-29"
+  },
+  "tools/latest-screenshot.ps1": {
+    "testa": "f397879dea6593a215104018f9e546c0e0ff922e",
+    "il": "2026-09-29"
+  },
+  "tools/render-bib-registry.py": {
+    "testa": "ac3f5e08b503b6a64faab504b017b47a7a7fd8c2",
+    "il": "2026-09-29"
+  }
+}

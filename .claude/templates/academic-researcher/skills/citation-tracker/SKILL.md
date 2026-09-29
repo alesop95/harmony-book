@@ -16,11 +16,11 @@ Questa skill implementa la sezione 7 di `research-vault/reference/claude-ricerca
 
 ## I tre stati
 
-Ogni fonte tracciata porta esattamente uno di tre stati, mai un quarto stato improvvisato. **Verificata**: titolo, autori, anno e DOI o arXiv-ID sono stati confermati contro almeno una fonte esterna, e la fonte non risulta ritirata. **Da verificare**: la fonte è stata trovata (da `literature-search`, da un upload dell'utente, o citata da un altro paper) ma non ancora incrociata. **Scartata**: la verifica ha fallito, i metadati non corrispondono, oppure la fonte risulta retracted.
+Ogni fonte tracciata porta esattamente uno di tre stati, mai un quarto stato improvvisato. *Verificata*: titolo, autori, anno e DOI o arXiv-ID sono stati confermati contro almeno una fonte esterna, e la fonte non risulta ritirata. *Da verificare*: la fonte è stata trovata (da `literature-search`, da un upload dell'utente, o citata da un altro paper) ma non ancora incrociata. *Scartata*: la verifica ha fallito, i metadati non corrispondono, oppure la fonte risulta retracted.
 
 ## Come si verifica
 
-Se il progetto ha connesso il server MCP `refchecker-mcp` (vedi `../PACKAGES.md`), invocare il suo tool `verify_citation` con titolo, autori, anno e DOI o arXiv-ID: ritorna `verified: true/false` con il record corrispondente o gli errori riscontrati. In assenza del MCP, la verifica equivalente si esegue manualmente incrociando i metadati con una ricerca su Semantic Scholar, OpenAlex o Crossref (via WebFetch o WebSearch), controllando in aggiunta lo stato di retrazione quando la fonte lo rende plausibile (correzioni, controversie note, editoria predatoria sospetta). L'assenza del MCP non abbassa il livello di verifica richiesto: cambia solo lo strumento usato.
+Se il progetto ha connesso `refchecker-mcp` (vedi `../PACKAGES.md`), invocare `verify_citation` con titolo, autori, anno e DOI o arXiv-ID. Se ha scelto il connector OpenAlex ufficiale, `resolve_references` controlla fino a 25 riferimenti per chiamata e comunica la confidenza del match; `get_work` permette di confrontare il record completo. Se nessuno dei due MCP è connesso, incrociare manualmente i metadati con Semantic Scholar, OpenAlex o Crossref. In ogni percorso controllare lo stato di retrazione con una fonte adatta e aprire il testo originale prima di attribuire un claim al paper: il match bibliografico conferma l'esistenza del record, non il contenuto della citazione.
 
 ## Dove si registra lo stato
 
