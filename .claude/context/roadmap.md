@@ -24,3 +24,9 @@ Scrivere un libro di armonia di qualità editoriale, portabile tra Windows 11 e 
 ## Idee e ipotesi da verificare
 
 Font e stile bibliografico definitivi alla prova del PDF (da verificare). Promozione di `manuscript/` a repository privato separato se servirà storia/backup remoti della prosa (ADR-004).
+
+## Prossimo incremento editoriale, fissato il 2026-10-07
+
+La priorità attiva è portare nel manoscritto il capitolo continuo sul tritono, un movimento alla volta. Il movimento A è in `manuscript/chapters/01-tritono.lytex`, con attribuzioni Bennett e Springsteen verificate sui sottotitoli e due citazioni bibliografiche. Il prossimo incremento è il movimento B; Sarti riguarda G e H. Prima di ogni incremento si legge la bozza privata e il registro dei ragionamenti; dopo si confrontano testo, figure, citazioni e indice delle pendenze. La ricerca esterna segue i nodi concettuali della scheda `research-method.md` e non sospende la stesura dove i claim sono già sostenuti. Le due verifiche storiche urgenti riguardano la divergenza fra Fétis e Yavorsky e la formulazione della storia del «diabolus»; i nuovi studi percettivi restano candidati finché non sono letti e registrati.
+
+Il saggio privato `modi_ionico_eolio_tonalita.docx` è destinato al libro e resta un filone distinto con cassaforte chiusa; dopo la priorità attiva sul tritono va pianificata la sua collocazione e trascrizione. Per il filone delle scale derivate la prima scheda è `_notes/percorso-libro/01-napoletana.md`: il calcolo interno è disponibile, mentre gli appunti cartacei dell'autore e il perimetro degli esempi sono ancora in attesa. Le otto decisioni del dossier hanno stato aggiornato in `_notes/percorso-libro/02-decisioni.md`.

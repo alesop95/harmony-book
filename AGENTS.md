@@ -1,0 +1,3 @@
+# Istruzioni per Codex in harmony-book
+
+Leggi `CLAUDE.md` come indice canonico del progetto e applica le regole di `.claude/rules/` pertinenti al lavoro. All'avvio leggi `.claude/memory/index.md` e `.claude/context/current-work.md`; per la scrittura e la ricerca usa `.claude/context/research-method.md`. Il contenuto del libro e il corpus bibliografico reale sono privati sotto `manuscript/` e `_notes/`: non portarli nei file pubblici. Dopo ogni giro sostanziale aggiorna i documenti di stato e `_notes/RESUME-PROMPT.md` nello stesso giro. Il testo del libro si promuove un movimento alla volta, conservando le bozze e tracciando il rapporto con fonti e ragionamenti. `git add`, commit, push e deploy restano manuali dell'utente.

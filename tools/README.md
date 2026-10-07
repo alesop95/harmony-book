@@ -1,5 +1,7 @@
 # tools
 
+`python tools/check-book.py` esegue il controllo preliminare in sola lettura del manoscritto privato; `python tools/check-book.py --main sample/main.lytex` usa il campione pubblico. Segnala inclusioni e bibliografie mancanti, citekey duplicate o irrisolte e capitoli `.lytex` presenti ma non inclusi nel main. Il controllo non sostituisce compilazione e lettura del PDF.
+
 La descrizione di tutti gli strumenti di questa cartella, con il ruolo architetturale di ciascuno, sta nella sezione "Gli strumenti sotto `tools/`" di `.claude/context/STACK.md`, che è la scheda che li copre. Qui restano le note d'uso dei due che hanno prerequisiti o parametri non ovvi.
 
 ## latest-screenshot.ps1

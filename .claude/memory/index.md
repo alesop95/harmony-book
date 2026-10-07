@@ -2,6 +2,12 @@
 
 > Da leggere per primo a inizio sessione. Fotografa lo stato del progetto al commit di riferimento e mappa ogni scheda al suo stato di verifica. È la fonte di verità su cosa è fatto, non le spunte del diario.
 
+## Stato operativo al 2026-10-07
+
+HEAD osservato: `c4b833d`, branch `main`, working tree modificato e non committato. La tabella storica sotto descrive il checkpoint del 2026-08-06 e non è un ancoraggio delle modifiche correnti. L'intervento odierno ha aggiunto `AGENTS.md`, `.claude/context/research-method.md` e `tools/check-book.py`; ha reso esplicito `.latexmkrc` nelle build Windows/Unix. Il movimento A del capitolo continuo sul tritono è ora in `manuscript/chapters/01-tritono.lytex`, incluso nel main privato; la bozza originale resta intatta. I due video di Bennett e Springsteen sono stati verificati nei sottotitoli pertinenti e registrati nel `.bib` e nel registro privato, con parafrasi limitate ai passaggi verificati. Il preflight conta 103 voci nel `.bib`, due citekey usate e due capitoli non inclusi intenzionalmente: scheletro `01-fondamenti.lytex` e introduzione legacy `01-introduzione.lytex`. La build campione ha prodotto cinque pagine; quella del manoscritto dieci pagine con due voci in bibliografia. Il prossimo incremento editoriale è il movimento B; Sarti riguarda G e H. Le nuove fonti percettive e il controllo storiografico sono nell'inbox, non nel `.bib`. La sintassi dello script Unix passa `bash -n`, ma la build Linux completa non è ancora provata. Il controllo dei file tracciati ha trovato dati personali preesistenti e li ha sostituiti con segnaposto nel working tree; la storia git precedente non è stata riscritta.
+
+Integrazione dello stesso giorno dopo il recupero della descrizione dell'autore: `_notes/00-PERCORSO-LIBRO.md` è l'ingresso al materiale privato e `_notes/percorso-libro/` ordina napoletana, otto decisioni e flusso editoriale. Il saggio `modi_ionico_eolio_tonalita.docx` è destinato al libro, non è superato e non è ancora nel manoscritto. La tabella del dossier stampato ha otto decisioni; Springsteen è ora registrato e la trascrizione è avviata solo per A, mentre Sarti rimane aperto per G/H. Gli appunti cartacei privati sulla napoletana non sono presenti; il calcolo interno è riproducibile con `tools/derivazione-scale.py`. Il controllo `chiudi -SoloControlli` passa dopo aver corretto tre apostrofi superflui in `tex-packages.txt`. `chiudi` non fa il backup delle cartelle private ignorate da Git.
+
 ## Stato
 
 ```

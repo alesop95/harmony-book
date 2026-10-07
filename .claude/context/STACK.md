@@ -26,7 +26,7 @@ Notazione musicale: LilyPond integrato tramite il preprocessore `lilypond-book`,
 
 Bibliografia: `biblatex` + `biber` (export Zotero -> BetterBibTeX nel `.bib`). Indice analitico: `imakeidx`. Glossario dei termini: `glossaries`. Riferimenti incrociati: `cleveref` (dopo `hyperref`). Figure vettoriali (cerchio delle quinte, schemi tonali): `tikz`/`pgfplots`.
 
-Ambiente riproducibile: TinyTeX user-local, descritto dal manifesto `tex-packages.txt` e installato dagli script `scripts/setup-tex.{ps1,sh}` (sezione 13 di `PROJECT-SYSTEM.md`); la distribuzione TeX materializzata non è versionata. Build a un comando con `scripts/build.{ps1,sh}`, che esegue la passata `lilypond-book` (per i `.lytex`) e poi `latexmk -lualatex`, con output in `build/` (ignorata). Portabilità Windows 11 / Linux garantita dalla coppia di script `.ps1`/`.sh` e da `.gitattributes` che forza LF. La procedura è incapsulata nella skill `latex-build`.
+Ambiente riproducibile: TinyTeX user-local, descritto dal manifesto `tex-packages.txt` e installato dagli script `scripts/setup-tex.{ps1,sh}` (sezione 13 di `PROJECT-SYSTEM.md`); la distribuzione TeX materializzata non è versionata. Build a un comando con `scripts/build.{ps1,sh}`, che esegue la passata `lilypond-book` (per i `.lytex`) e poi `latexmk -lualatex`, con output in `build/` (ignorata). La coppia di script `.ps1`/`.sh` e `.gitattributes` che forza LF preparano la portabilità Windows 11 / Linux; la build è stata provata su Windows, non ancora su Linux. La procedura è incapsulata nella skill `latex-build`.
 
 ## Alternative deliberatamente escluse
 
@@ -57,6 +57,8 @@ Due strumenti presidiano la convenzione della sorgente Markdown fissata in `.cla
 Restano due strumenti di servizio. `render-diagrams.mjs` rende i diagrammi Mermaid di `.claude/context/diagrams/*.mmd` nei corrispondenti `.svg` riusando il browser Chromium-based di sistema senza scaricare il Chromium di Puppeteer. `latest-screenshot.ps1`, scritto il 2026-08-06, restituisce il percorso e l'età dell'immagine più recente nella cartella di cattura, ed è lo strumento che `.claude/rules/manual-screenshots.md` presuppone quando un passo dello sviluppo è visibile solo all'utente.
 
 Nessuno di questi strumenti entra nella catena di build del libro: `scripts/build.{ps1,sh}` non li invoca, e il PDF si compila senza di essi. Vivono accanto al libro come strumenti di verifica e di manutenzione, e per questo sono tracciati mentre il contenuto che verificano non lo è.
+
+`check-book.py`, aggiunto il 2026-10-07, controlla in sola lettura il grafo degli `\input`, le risorse bibliografiche, le citekey citate e gli eventuali capitoli non inclusi. Non interpreta l'intero linguaggio TeX e non sostituisce la build. Gli script di build passano ora esplicitamente `.latexmkrc` a `latexmk`, perché la compilazione dei `.lytex` avviene dalla directory `build/`, dalla quale la configurazione di radice non veniva caricata automaticamente. Il preambolo nasconde in stampa il campo `note` delle voci bibliografiche: contiene lo stato interno di verifica e non è testo per il lettore. Metadati necessari al riferimento editoriale vanno quindi nei campi bibliografici appropriati, non soltanto in `note`.
 
 ## Riferimenti a snippet
 

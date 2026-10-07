@@ -42,6 +42,9 @@
 
 % --- Bibliografia (biblatex + biber); ogni main aggiunge \addbibresource ---
 \usepackage[backend=biber,style=authoryear,language=italian]{biblatex}
+% Il campo note del .bib privato contiene il grado di verifica e appunti di
+% ricerca: sono metadati editoriali interni, non testo per la bibliografia.
+\AtEveryBibitem{\clearfield{note}}
 
 % --- Indice analitico e glossario dei termini ---
 \usepackage{imakeidx}

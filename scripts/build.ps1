@@ -32,6 +32,7 @@ $ScriptDir   = Split-Path -Parent $MyInvocation.MyCommand.Path
 $ProjectRoot = Split-Path -Parent $ScriptDir
 $StyleDir    = Join-Path $ProjectRoot 'style'
 $OutDir      = Join-Path $ProjectRoot 'build'
+$LatexmkRc   = Join-Path $ProjectRoot '.latexmkrc'
 if (-not $TexDir) { $TexDir = Join-Path $env:APPDATA 'TinyTeX' }
 
 function Find-Bin {
@@ -113,7 +114,15 @@ $env:BIBINPUTS = "$SrcDir;$SrcDir\bib;$ProjectRoot;"
 
 if ($Clean) {
     Push-Location $OutDir
-    try { & $latexmk -c "$BaseName.tex" 2>$null } finally { Pop-Location }
+    try {
+        # PowerShell 5.1 trasforma anche gli avvisi Perl su stderr in errori con Stop.
+        $ErrorActionPreference = 'Continue'
+        & $latexmk -r $LatexmkRc -c "$BaseName.tex" 2>$null
+        if ($LASTEXITCODE -ne 0) { throw "[build] Pulizia fallita (latexmk exit $LASTEXITCODE)." }
+    } finally {
+        $ErrorActionPreference = 'Stop'
+        Pop-Location
+    }
     Write-Host "[build] Ausiliari rimossi in build/."
     return
 }
@@ -142,9 +151,9 @@ Push-Location $compileDir
 try {
     Write-Host "[build] Compilo $([System.IO.Path]::GetFileName($texToCompile)) con latexmk (LuaLaTeX) ..."
     if ($compileDir -eq $OutDir) {
-        & $latexmk -lualatex (Split-Path -Leaf $texToCompile)
+        & $latexmk -r $LatexmkRc -lualatex (Split-Path -Leaf $texToCompile)
     } else {
-        & $latexmk -lualatex -outdir="$OutDir" (Split-Path -Leaf $texToCompile)
+        & $latexmk -r $LatexmkRc -lualatex -outdir="$OutDir" (Split-Path -Leaf $texToCompile)
     }
     if ($LASTEXITCODE -ne 0) { throw "[build] Compilazione fallita (latexmk exit $LASTEXITCODE)." }
 }

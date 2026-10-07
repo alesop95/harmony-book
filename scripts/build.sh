@@ -44,6 +44,7 @@ SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 PROJECT_ROOT=$(dirname -- "$SCRIPT_DIR")
 STYLE_DIR="$PROJECT_ROOT/style"
 OUT_DIR="$PROJECT_ROOT/build"
+LATEXMK_RC="$PROJECT_ROOT/.latexmkrc"
 [ -n "$TEX_DIR" ] || TEX_DIR="$HOME/.TinyTeX"
 
 find_bin() {
@@ -82,7 +83,7 @@ export TEXINPUTS="$PROJECT_ROOT:$STYLE_DIR//:$SRC_DIR//:$OUT_DIR//:"
 export BIBINPUTS="$SRC_DIR:$SRC_DIR/bib:$PROJECT_ROOT:"
 
 if [ "$MODE" = "clean" ]; then
-  ( cd "$OUT_DIR" && "$LATEXMK" -c "$BASE.tex" 2>/dev/null || true )
+  ( cd "$OUT_DIR" && "$LATEXMK" -r "$LATEXMK_RC" -c "$BASE.tex" 2>/dev/null || true )
   echo "[build] Ausiliari rimossi in build/."; exit 0
 fi
 
@@ -108,9 +109,9 @@ fi
 # --- Compilazione LuaLaTeX via latexmk ---
 echo "[build] Compilo $(basename -- "$TEX_TO_COMPILE") con latexmk (LuaLaTeX) ..."
 if [ "$COMPILE_DIR" = "$OUT_DIR" ]; then
-  ( cd "$OUT_DIR" && "$LATEXMK" -lualatex "$(basename -- "$TEX_TO_COMPILE")" )
+  ( cd "$OUT_DIR" && "$LATEXMK" -r "$LATEXMK_RC" -lualatex "$(basename -- "$TEX_TO_COMPILE")" )
 else
-  ( cd "$COMPILE_DIR" && "$LATEXMK" -lualatex -outdir="$OUT_DIR" "$(basename -- "$TEX_TO_COMPILE")" )
+  ( cd "$COMPILE_DIR" && "$LATEXMK" -r "$LATEXMK_RC" -lualatex -outdir="$OUT_DIR" "$(basename -- "$TEX_TO_COMPILE")" )
 fi
 
 echo "[build] Fatto: $OUT_DIR/$BASE.pdf"

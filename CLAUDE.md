@@ -4,11 +4,11 @@
 
 ## Cos'è questo progetto
 
-Un libro di armonia. La scrittura deve restare portabile sia su Windows 11 sia su Linux, e il version control funge di fatto da stato di avanzamento del libro. Lo stack tecnico di composizione e di notazione musicale è ancora da decidere: vedi la procedura di ripresa e `_notes/RESUME-PROMPT.md`.
+Un libro di armonia. La scrittura deve restare portabile sia su Windows 11 sia su Linux. Lo stack è LuaLaTeX, `memoir` e LilyPond; vedi `.claude/context/STACK.md`. Il repository pubblico versiona il metodo, mentre il manoscritto e le note sostanziali sono privati e ignorati da git: il loro avanzamento va conservato anche nel backup privato.
 
 ## Procedura di ripresa in una sessione nuova
 
-Lo stato del progetto è interamente recuperabile su disco. All'inizio di una sessione si segue questo percorso fisso. Si legge per primo `.claude/memory/index.md`, che dà branch, commit di riferimento, stato di verifica di ogni scheda e punto di ripresa. Si legge poi `.claude/context/current-work.md` se c'è una feature attiva, per sapere cosa è in lavorazione e quali sono i TODO e i limiti d'ambiente. Si invoca la skill `sync-context` per verificare il drift tra schede e codice, e si leggono solo le schede pertinenti al task, mai tutte insieme. Il work-log `.claude/memory/progress.md` e il registro `.claude/memory/decisions.md` forniscono la storia e le decisioni quando servono. Il materiale grezzo sotto `_notes/` si apre solo per verificare un requisito originale.
+Lo stato documentato e presente su questo disco si recupera seguendo un percorso fisso; gli appunti cartacei non ancora consegnati restano esterni. Si legge per primo `.claude/memory/index.md`, che dà branch, commit di riferimento, stato di verifica di ogni scheda e punto di ripresa. Si legge poi `.claude/context/current-work.md` per la feature attiva e `_notes/00-PERCORSO-LIBRO.md` per la mappa sequenziale dei materiali privati. Si invoca la skill `sync-context` per verificare il drift tra schede e codice, e si leggono solo le schede pertinenti al task. Il work-log `.claude/memory/progress.md` e il registro `.claude/memory/decisions.md` forniscono la storia e le decisioni quando servono. Il materiale grezzo sotto `_notes/` si apre per verificare un requisito originale o un passaggio da promuovere nel libro.
 
 ## Indice dei file satellite tracciati
 
@@ -29,6 +29,7 @@ Schede tecniche, sotto `.claude/context/`, con frontmatter di riconciliazione.
 .claude/context/dev-testing.md          controlli di qualità, runner, hook
 .claude/context/current-work.md         feature attiva, definition of done, domande aperte
 .claude/context/roadmap.md              direzione e priorità
+.claude/context/research-method.md       protocollo di ricerca per i claim del libro
 ```
 
 Regole modulari caricate su necessità, sotto `.claude/rules/`, e skill richiamabili, sotto `.claude/skills/`. Lo standard di sistema completo è in `.claude/PROJECT-SYSTEM.md`.
@@ -42,4 +43,4 @@ Norme caricate su richiesta, una riga per situazione con le parole con cui si pr
 
 ## Vincoli di team
 
-Le operazioni di `git add`, commit e push restano sempre manuali dell'utente: l'agente prepara i file, non committa. L'identità git è impostata a livello locale del repo secondo `.claude/rules/git-identity-and-repo.md` (identità `alesop95`, remoto `git@github-personal:alesop95/harmony-book.git`). Lo stile di documentazione e di interazione è quello di `.claude/rules/interaction-style.md`. Claude non scrive autonomamente nei file di memoria e di contesto: li aggiorna solo su richiesta esplicita, così il versionamento resta sotto controllo umano.
+Le operazioni di `git add`, commit e push restano sempre manuali dell'utente: l'agente prepara i file, non committa. L'identità git e il remoto sono configurati a livello locale del repository secondo `.claude/rules/git-identity-and-repo.md`; i valori reali restano fuori dai file tracciati. Lo stile di documentazione e di interazione è quello di `.claude/rules/interaction-style.md`. I file di memoria e di contesto si aggiornano nello stesso giro di lavoro sostanziale, come prescrive `.claude/rules/chat-non-e-memoria.md`; il controllo del versionamento resta umano.

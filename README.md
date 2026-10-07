@@ -45,7 +45,7 @@ powershell -ExecutionPolicy Bypass -File scripts\build.ps1
 sh scripts/build.sh
 ```
 
-Il PDF esce in `build/`. La procedura è incapsulata nella skill `latex-build` (`.claude/skills/latex-build/SKILL.md`).
+Il PDF esce in `build/`. La procedura è incapsulata nella skill `latex-build` (`.claude/skills/latex-build/SKILL.md`). Prima della build, `python tools/check-book.py` controlla la catena degli `\input`, la presenza della bibliografia, le citekey duplicate e quelle citate senza voce; segnala anche i capitoli `.lytex` non inclusi. Usa il manoscritto locale se presente e accetta `--main sample/main.lytex` per verificare soltanto il campione. Il metodo per la ricerca accademica e la conservazione dei legami fra fonti, inferenze e capitoli è in `.claude/context/research-method.md`.
 
 ## Diagrammi del flusso di lavoro
 
