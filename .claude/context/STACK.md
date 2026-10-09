@@ -16,6 +16,21 @@ last-verified-commit: 9acc2e0
 
 # Stack applicativo
 
+
+## GPU e ancoraggi del lettore locale
+
+Il servizio isolato usa ora la GPU ripristinata. Qwen3 14B è interamente in VRAM con contesto 16.384, misurato dall'API. Il formato locale v3 chiede solo id di ancora per gli elementi: evidenze e localizzatori vengono derivati dalle unità integrali dal programma. La suddivisione conserva i genitori e riprova figli contigui dopo saturazione o fallimento della validazione. Landlock permette la directory RAM, i dispositivi effettivi NVIDIA e le scritture dei metadati virtuali `/proc` richieste da CUDA; il disco del server rimane non scrivibile. Stato, schede e dettagli di esecuzione rimangono privati.
+
+## Lettore semantico locale e corpus integrale
+
+`tools/local-reading.py` orchestra OCR, unità documentali, trascrizioni, indice SQLite FTS5 e schede locali in JSON/Markdown. Le porzioni conservano ogni carattere del testo preparato; le evidenze sono validate nell'unità d'origine. Temi, glossario, relazioni e frontiera sono derivati non revisionati, distinti dal ledger delle letture. La configurazione e tutti gli artefatti sono privati sotto `_notes/`; modelli, endpoint e percorsi reali non sono nel codice pubblico.
+
+`tools/start-local-reading.ps1` separa preparazione, trascrizioni, servizio, pilota e supervisione in processi Windows nascosti, con PID e log nel progetto. `tools/isolated-ollama-host.py` viene eseguito in memoria attraverso SSH; Landlock nega scritture sul filesystem remoto e consente soltanto temporanei in RAM e dispositivi, con pulizia al termine del canale. Pesi già installati, nessun pull o installazione remota. L'analizzatore usa output strutturati di Ollama e checkpoint dello stream; la supervisione prosegue dopo il pilota ancorato e arresta il servizio dedicato alla fine o all'errore. La disponibilità GPU è una misura d'esecuzione, non un requisito presunto. Procedura e copertura nella guida privata `_notes/00-regia/LETTURA-LOCALE.md`.
+
+## Recupero di fonti di comunità
+
+Il lettore già presente `.claude/templates/community-sources/tools/fetch-reddit.py` usa Arctic Shift e conserva post, albero dei commenti, metadati, mappa dei rinvii e stato della corsa sotto `_notes/20-ricerca/acquisizioni-community/`. `--radice` indica la destinazione del progetto; `post` acquisisce un seme, `riprendi` continua uno stato con tetti dichiarati. Non richiede credenziali e non apre il browser personale. Prima si applica `fonti-non-recuperabili`; poi il testo ottenuto viene letto, attribuito e collegato nel vault. Acquisizione, copertura e lettura sono attestazioni distinte.
+
 > Documento di recupero più importante: tracciato. Derivato dalla ricerca in `transform-into-claude-md/` (handoff ignorato) e dalle decisioni ADR-003/ADR-004.
 
 ## Stack e runtime
@@ -42,7 +57,7 @@ Il preambolo condiviso `style/preamble.tex` (pubblico) carica pacchetti e impost
 
 ## Gli strumenti sotto `tools/`
 
-Sezione aggiunta il 2026-08-06 insieme a `tools/**` nelle `covers-paths`, che prima mancava: fino a quel giorno un cambiamento sotto `tools/` non veniva confrontato con questa scheda, quindi il drift sugli script era per costruzione invisibile a `sync-context` da questo lato. Gli script sono undici, nove Python, uno Node e uno PowerShell, più il `README.md` della cartella. La scheda `current-work.md` copriva `tools/**` dal 2026-08-03, ma descrive il lavoro in corso, non lo stack: il posto dove questi strumenti vanno descritti è qui.
+Sezione aggiunta il 2026-08-06 insieme a `tools/**` nelle `covers-paths`, che prima mancava: fino a quel giorno un cambiamento sotto `tools/` non veniva confrontato con questa scheda, quindi il drift sugli script era per costruzione invisibile a `sync-context` da questo lato. Al 2026-10-07 gli script sono diciassette, quindici Python, uno Node e uno PowerShell, più il `README.md` e un file di esclusioni della cartella; la descrizione sotto copre i flussi principali. La scheda `current-work.md` copriva `tools/**` dal 2026-08-03, ma descrive il lavoro in corso, non lo stack: il posto dove questi strumenti vanno descritti è qui.
 
 Il criterio con cui questi strumenti esistono è quello di `.claude/rules/token-economy.md`, cioè spingere su codice deterministico tutto ciò che non richiede comprensione semantica, e quello di ADR-009 per i due che implementano affermazioni del libro: le definizioni che usano sono quelle del libro, non quelle scolastiche, e un cambio di definizione è un cambio di contenuto, non un refactor.
 
@@ -60,6 +75,10 @@ Nessuno di questi strumenti entra nella catena di build del libro: `scripts/buil
 
 `check-book.py`, aggiunto il 2026-10-07, controlla in sola lettura il grafo degli `\input`, le risorse bibliografiche, le citekey citate e gli eventuali capitoli non inclusi. Non interpreta l'intero linguaggio TeX e non sostituisce la build. Gli script di build passano ora esplicitamente `.latexmkrc` a `latexmk`, perché la compilazione dei `.lytex` avviene dalla directory `build/`, dalla quale la configurazione di radice non veniva caricata automaticamente. Il preambolo nasconde in stampa il campo `note` delle voci bibliografiche: contiene lo stato interno di verifica e non è testo per il lettore. Metadati necessari al riferimento editoriale vanno quindi nei campi bibliografici appropriati, non soltanto in `note`.
 
+`audit-local-sources.py`, aggiunto nello stesso ciclo, cataloga senza modificarli i PDF, EPUB e DOCX di una radice esterna, associa i percorsi esatti a quelli del registro e confronta fotografie successive per trovare arrivi o cambiamenti. La prima fotografia del corpus J: è privata in `_notes/`; un percorso non registrato non è automaticamente una fonte nuova. `render-bib-registry.py` mostra ora il titolo già verificato nel JSON per una fonte candidata non ancora nel `.bib`, quando quel campo è disponibile.
+
+Il programma di lettura completa usa tre strumenti di manutenzione aggiunti il 2026-10-08. `source-library.py` separa censimento, acquisizione tecnica per pagina e ledger autorato delle letture, conservando le attestazioni pregresse; l'estrazione nativa non prova lettura. `sync-book-bib.py` confronta proposte e bibliografia reale, importa soltanto anagrafiche verificate se la sessione lo autorizza, salva un backup e riconcilia i flag senza sovrascrivere voci esistenti. `fetch-source-files.py` acquisisce documenti accessibili con URL, data e hash, senza superare controlli di accesso. I dati reali e i digest stanno nel vault privato. Nessuno dei tre entra nella build LaTeX.
+
 ## Riferimenti a snippet
 
 - `.latexmkrc` - engine LuaLaTeX e pulizia ausiliari.
@@ -72,3 +91,11 @@ Nessuno di questi strumenti entra nella catena di build del libro: `scripts/buil
 - `tools/skill-freshness.py` - deriva fra skill e fonti; `--update` solo dopo la rigenerazione.
 - `tools/latest-screenshot.ps1` - percorso ed età dell'ultimo screenshot, per `manual-screenshots.md`.
 - Riferimenti esterni su LilyPond+LaTeX e autopubblicazione: vedi `README.md`, sezione "Risorse e riferimenti".
+
+## Censimento completo e destinazioni dopo il riordino
+
+`audit-local-sources.py --all-files` estende il censimento oltre PDF/EPUB/DOCX; l’uso senza il flag mantiene il perimetro precedente. `audit-reading-corpus.py --root <cartella> --name <nome>` censisce tutti i file in sola lettura, conserva hash, corrispondenze bibliografiche e metadati tecnici, estrae i DOCX in porzioni private e misura i media con ffprobe. Richiede Python e PyMuPDF per i PDF non già censiti; ffprobe è facoltativo, e se manca lo segnala. Non assegna livelli di lettura.
+
+`source-library.py` usa `_notes/10-biblioteca/` e `_notes/99-cache/doc-ingest/source-library/`. Il registro centrale conserva il percorso `_notes/book-bib-registry.json`; `sync-book-bib.py` conserva i propri report nella biblioteca riorganizzata. `fetch-community.py` delega al lettore vendorizzato, mantenendolo intatto, e indirizza le nuove acquisizioni verso `_notes/20-ricerca/acquisizioni-community/`. `post` e `riprendi` mantengono i comandi del template; l’help e la destinazione sono verificati senza acquisizione di nuovi contenuti in questo giro.
+
+Le procedure private attuali sono in `_notes/80-strumenti/`; gli script di lavorazioni precedenti sono archiviati e non vanno rieseguiti come aggiornamenti correnti. La procedura di snapshot esclude l’intera cache e i propri ZIP. La migrazione conserva hash, percorsi precedenti e copie delle note anteriori al riallineamento dei link; le validazioni distinguono file autoriali immutati da documentazione operativa aggiornata.

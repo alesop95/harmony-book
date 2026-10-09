@@ -30,4 +30,4 @@ Ciò che proviene da un archivio invece che dalla fonte viva si annota come tale
 
 ## Vincoli
 
-Non si percorrono le vie che la norma dichiara vietate, in particolare il token di un account personale su una piattaforma che lo proibisce. Non si aprono schede nel browser dell'utente senza chiedere prima. Le credenziali stanno in `.env`, che le regole di permesso di questo sistema negano all'agente: il file lo crea l'utente a mano, e la limitazione è voluta e non si aggira. Il materiale procurato dall'utente si salva sotto `_notes/fonti/`, che non è versionato.
+Non si percorrono le vie che la norma dichiara vietate, in particolare il token di un account personale su una piattaforma che lo proibisce. Non si aprono schede nel browser dell'utente senza chiedere prima. Le credenziali stanno in `.env`, che le regole di permesso di questo sistema negano all'agente: il file lo crea l'utente a mano, e la limitazione è voluta e non si aggira. Il materiale procurato dall'utente si salva sotto `_notes/20-ricerca/acquisizioni-community/`, che non è versionato.

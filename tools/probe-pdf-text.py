@@ -33,7 +33,7 @@ Dipendenze: pdftotext e pdfinfo (Poppler), già in uso nel progetto. Nessuna chi
 
 Uso:
     python tools/probe-pdf-text.py "J:/.../ARMONIA E TEORIA"
-    python tools/probe-pdf-text.py <cartella> --out _notes/corpus-digest-triage.md
+    python tools/probe-pdf-text.py <cartella> --out _notes/20-ricerca/corpus-digest-triage.md
     python tools/probe-pdf-text.py <cartella> --sample 6      # pagine campionate a metà libro
 """
 

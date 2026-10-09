@@ -4,11 +4,11 @@
 
 ## Il flusso a quattro passi
 
-**1. Cattura**, `_notes/fonti-da-processare.md`. Un'idea di fonte che viene in mente durante la scrittura (un PDF, un link, un titolo) si annota lì con una riga, senza fermarsi a formalizzarla. Si processa a lotti, non una alla volta mentre si scrive.
+**1. Cattura**, `_notes/20-ricerca/fonti-da-processare.md`. Un'idea di fonte che viene in mente durante la scrittura (un PDF, un link, un titolo) si annota lì con una riga, senza fermarsi a formalizzarla. Si processa a lotti, non una alla volta mentre si scrive.
 
 **2. Cassaforte**, `_notes/cassaforte-<filone>.md`, una per filone tematico del libro (per esempio `cassaforte-modi-tritono.md`). È lo staging tra la ricerca grezza e il manoscritto: ogni fonte trovata vi si fissa con citazione esatta, pagina, e perché conta, con uno stato a tre valori (`da validare`, `validata non ancora scritta`, `inserita`). Non si scrive mai nel manoscritto senza prima passare da qui, e non si scrive nel manoscritto senza che l'utente validi sia il contenuto sia la forma esatta del testo proposto.
 
-**3. Tracciamento**, `_notes/tracciamento-fonti-libro.md`. Ogni volta che una voce della cassaforte passa dallo stato "validata" a "inserita", si scrive lì una voce di log con: cosa è entrato, da quale fonte (citekey bibliografico quando applicabile), perché, quale file è stato toccato, e se la fonte grezza originale è stata spostata in archivio o resta al suo posto.
+**3. Tracciamento**, `_notes/40-libro/tracciamento-fonti-libro.md`. Ogni volta che una voce della cassaforte passa dallo stato "validata" a "inserita", si scrive lì una voce di log con: cosa è entrato, da quale fonte (citekey bibliografico quando applicabile), perché, quale file è stato toccato, e se la fonte grezza originale è stata spostata in archivio o resta al suo posto.
 
 **4. Bibliografia**, `_notes/book-bib-registry.json` + `manuscript/bib/references.bib`, secondo la skill `book-bib-extract`. Ogni fonte citata nel libro, se è un libro o un documento con una vera anagrafica bibliografica, ha una voce nel registro con `bib_status` e una citekey; la cassaforte e il tracciamento riusano quella citekey, non ne creano una parallela.
 

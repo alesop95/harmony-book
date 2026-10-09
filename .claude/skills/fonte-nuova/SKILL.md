@@ -31,7 +31,7 @@ La regola che ne discende, ed è il motivo per cui la skill esiste: la voce `.bi
 
 ## Procedura
 
-1. Chiedere all'utente da dove arriva la fonte e a che scopo la vuole, cioè quale affermazione del libro dovrebbe sostenere. Se non sostiene nessuna affermazione precisa, dirlo: e una fonte da inbox, va in `_notes/fonti-da-processare.md` e ci si ferma qui.
+1. Chiedere all'utente da dove arriva la fonte e a che scopo la vuole, cioè quale affermazione del libro dovrebbe sostenere. Se non sostiene nessuna affermazione precisa, dirlo: e una fonte da inbox, va in `_notes/90-archivio/stati-precedenti/fonti-da-processare.md` e ci si ferma qui.
 
 2. Provare ad arrivare al testo, in quest'ordine, che è per costo crescente. Il sito dell'editore o della rivista, che spesso ha il PDF libero anche quando l'aggregatore lo blocca; questa e la lezione del 2026-07-31, quando un HTTP 403 su ResearchGate si e rivelato non essere un paywall. Poi i repository ad accesso aperto. Poi la bibliografia di una fonte già letta, che spesso da l'anagrafica esatta anche quando il testo resta irraggiungibile. Non insistere oltre: se e dietro paywall, si scende di livello e lo si dichiara, non si indovina.
 
@@ -47,7 +47,7 @@ La regola che ne discende, ed è il motivo per cui la skill esiste: la voce `.bi
 
 8. Prima di scrivere, controllare le collisioni di citekey contro il `.bib` reale e contro il registro. La convenzione e cognome del primo autore più anno, minuscolo e senza accenti, con suffisso `a`, `b`, `c` in caso di collisione.
 
-9. Registrare il passo in `_notes/tracciamento-fonti-libro.md`, dichiarando anche cosa non si e processato e perché.
+9. Registrare il passo in `_notes/40-libro/tracciamento-fonti-libro.md`, dichiarando anche cosa non si e processato e perché.
 
 10. Se il progetto ha la skill `armonia-libro`, aggiornare le parti che dipendono dalla fonte nuova, tipicamente `fatti-verificati.md`, `fonti.md` e `agenda-ricerca.md`, e poi riallineare il manifesto con `python tools/skill-freshness.py .claude/skills/armonia-libro --update`.
 

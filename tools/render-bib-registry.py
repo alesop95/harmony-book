@@ -3,8 +3,8 @@
 Script deterministico, nessuna chiamata LLM. Da rilanciare a ogni aggiornamento del registro
 JSON (per esempio dopo ogni libro confermato da book-bib-extract), non come generazione una
 tantum. Il titolo mostrato in tabella viene letto dal .bib reale quando la voce è già stata
-scritta (bib_entry_written: true); altrimenti si usa il nome del file sorgente come segnaposto,
-perché il registro non conserva il titolo prima della conferma umana.
+scritta (bib_entry_written: true); altrimenti si usa il titolo registrato, se disponibile,
+e solo in sua assenza il nome del file sorgente come segnaposto.
 
 Uso:
     py -3 tools/render-bib-registry.py [--registry _notes/book-bib-registry.json]
@@ -18,10 +18,7 @@ import os
 import re
 from pathlib import Path
 
-BIB_ENTRY_RE = re.compile(r"@book\{([^,]+),(.*?)\n\}", re.S)
-BIB_FIELD_RE = re.compile(r"(\w+)\s*=\s*\{(.*?)\}\s*,?\s*$", re.M)
-
-
+BIB_ENTRY_RE = re.compile(r"@[A-Za-z]+\{([^,]+),(.*?)\n\}", re.S)
 def parse_bib_titles(bib_path):
     """Ritorna {citekey: titolo} leggendo solo i campi title dal .bib reale."""
     titles = {}
@@ -36,6 +33,8 @@ def parse_bib_titles(bib_path):
 
 
 def placeholder_title(entry):
+    if entry.get("title"):
+        return entry["title"]
     rel = entry.get("doc_ingest_source_rel") or ""
     if rel:
         return Path(rel).stem
@@ -50,10 +49,10 @@ def render_table(registry, titles):
         corpus = entry.get("corpus") or ""
         bib_status = entry.get("bib_status") or ""
         skill_status = entry.get("skill_status") or ""
-        if entry.get("bib_entry_written") and citekey in titles:
-            title = titles[citekey]
+        if entry.get("bib_entry_written"):
+            title = titles.get(citekey) or placeholder_title(entry)
         else:
-            title = f"(non confermato) {placeholder_title(entry)}"
+            title = f"(non ancora nel .bib) {placeholder_title(entry)}"
         rows.append((corpus, citekey, title, bib_status, skill_status, sha))
 
     rows.sort(key=lambda r: (r[0], r[1]))
