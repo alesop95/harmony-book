@@ -671,8 +671,16 @@ def ollama(cfg, messages, schema=SCHEMA):
         raise RuntimeError('Model stream ended without completion')
     value['message'] = {'role': 'assistant', 'content': ''.join(content)}
     if value.get('done_reason') == 'length':
+        if cfg.get('_current_chunk'):
+            write(CACHE / 'model-stream/history' / (cfg['_current_chunk'] + '-' + uuid4().hex + '-rejected.json'),
+                  {'chunk_id': cfg['_current_chunk'], 'rejected_utc': now(),
+                   'reason': 'length', 'unvalidated_response': value})
         raise RuntimeError('Model output hit its length limit; no truncation is accepted')
     if value.get('prompt_eval_count', 0) + value.get('eval_count', 0) >= cfg.get('num_ctx', 16384):
+        if cfg.get('_current_chunk'):
+            write(CACHE / 'model-stream/history' / (cfg['_current_chunk'] + '-' + uuid4().hex + '-rejected.json'),
+                  {'chunk_id': cfg['_current_chunk'], 'rejected_utc': now(),
+                   'reason': 'context-saturation', 'unvalidated_response': value})
         raise RuntimeError('Context saturation; reduce the block size')
     return value
 
@@ -767,6 +775,11 @@ def analyze(cfg, limit=None):
             con.commit()
             print('model error', chunk_id, str(error), flush=True)
             status('analyze', state='error', chunk_id=chunk_id, error=str(error))
+            # A terminal overflow in one short fragment is a local failure.
+            # Keep it unresolved and proceed to independent pending chunks.
+            if oversized:
+                report(con)
+                continue
             break
         done_this_run += 1
         report(con)

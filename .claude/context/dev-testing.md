@@ -8,6 +8,10 @@ last-verified-commit: 017b02a
 
 # Test di sviluppo
 
+## Recupero dei frammenti fuori limite, 2026-10-12
+
+La prova offline del percorso reale rifiuta e conserva la risposta completa restituita al limite di token e a saturazione di contesto. Simula poi un overflow su un piccolo frammento: il blocco resta error, il successivo viene chiamato e un errore diverso ferma ancora il batch. Nessuna scheda troncata accettata; blocchi successivi a quell'errore rimangono pending. Prova e artefatti conservati privatamente; l'analisi effettiva ha ripreso dal checkpoint.
+
 ## Risposta strutturata su segmenti brevi, 2026-10-09
 
 Osservato un superamento del limite di risposta su 25 segmenti ASR per soli 917 caratteri. La guardia basata soltanto sulla lunghezza lasciava il blocco indivisibile e fermava il batch. La prova sul checkpoint reale divide in 12 e 13 segmenti, conserva il padre e ricostruisce tutti i frammenti nell'ordine originale; la vecchia condizione riproduce l'impedimento. Il riavvio effettivo ha prodotto una nuova scheda valida su una delle parti, mentre prosegue sull'altra. Output limitato o interrotto non viene accettato come scheda; livelli di lettura e interpretazioni restano da revisionare. Checkpoint e prova dettagliata rimangono privati.
@@ -26,7 +30,7 @@ Verificato il corpus preparato: ricostruite 6.691 unità non vuote e 11.734.806 
 
 Il controllo privato `_notes/80-strumenti/verify-local-reading.py` esercita citazioni esatte e inventate, identificativi mancanti e pagina sbagliata, poi ricostruisce le unità reali dalle porzioni e interroga l'indice FTS. La mutazione su una copia del lettore ha tolto il controllo della presenza letterale: il test è fallito sull'evidenza inventata; hash operativo invariato. Le prove non certificano interpretazioni, completezza semantica o trascrizione musicale. Il pilota sul modello reale conserva output, errori e verifiche nel progetto; i livelli del ledger non sono promossi. Per la continuità, controllati otto originali e le 104/144 voci pregresse identici, insieme al preflight del libro. Nessuna build completa richiesta quando prosa, notazione e citazioni del manoscritto sono invariati.
 
-> Popolare leggendo la configurazione reale dei controlli. La checklist operativa locale dei test manuali vive invece in `_notes/00-regia/TEST-CHECKLIST.md`, ignorata da git.
+> Popolare leggendo la configurazione reale dei controlli. La checklist operativa locale dei test manuali vive invece in `_notes/00-regia/dettaglio/TEST-CHECKLIST.md`, ignorata da git.
 
 ## Test runner e comandi
 

@@ -12,6 +12,31 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+Focus operativo del 2026-10-14: roadmap ridotta a ricerca bibliografica e scrittura, con lettura completa e sintesi prima della nuova prosa. Ampliamenti tecnici differiti, storia e pendenze conservate privatamente. GPU condivisa: disponibilità misurata al momento del controllo, nessuna riserva esclusiva; checkpoint preservati in caso di indisponibilità. Decisione ADR-011, dettagli nel vault privato.
+
+Consolidamento del 2026-10-14: altra lettura diretta con esempi e apparati attestata nel vault privato; copie di continuità verificate durante la disponibilità temporanea del disco esterno. Registro, limiti e ripresa riconciliati; preparazione del versionamento manuale. Verifica del contesto in lettura sola: drift tecnico ancora aperto, ancoraggi conservati. Nessuna sintesi o nuova prosa promossa.
+
+Aggiornamento operativo del 2026-10-14: l’utente ha ripristinato l’alimentatore; accesso SSH e accelerazione GPU nuovamente verificati. Lettore automatico ripreso dal checkpoint con database e risultati conservati, isolamento temporaneo confermato. Revisione diretta e ricerca bibliografica proseguono; schede automatiche distinte da fonti lette. Dettagli e contatori nel vault privato.
+
+Giro di lettura del 2026-10-14 dopo la ripresa GPU: proseguiti controllo diretto di testi, partiture e apparati, rettifica delle descrizioni precedenti degli esemplari e verifica delle risorse multimediali. Attestazioni, provenienze e limiti conservati nel vault privato; corpus complessivo e ascolti ancora aperti. Nessuna sintesi o nuova prosa del manoscritto promossa.
+
+Aggiornamento del 2026-10-14: ripresa la lettura diretta del corpus e dei riferimenti pertinenti; risultati e limiti documentali restano nel vault privato. Disco esterno di nuovo accessibile, esemplari pertinenti presenti. L’utente conferma GPU ancora da ripristinare; proseguire senza nuovi tentativi sul servizio. Cache inventariata, nessuna cancellazione eseguita. Completata altra lettura documentale con esempi e apparati; riserve, rinvii e stato di ripresa aggiornati nel vault privato. La sintesi e la nuova prosa restano successive alla lettura.
+
+Aggiornamento del 2026-10-13: aggiunta su mandato esplicito una fonte autoriale storica, letti integralmente rapporto e implementazione nel proprio perimetro; citazioni accademiche e riferimenti tecnici hanno una coda distinta. Completati altri saggi e volumi, con versioni, obiezioni e audit conservati nel vault privato. Stati e contatori ricontati; il corpus complessivo resta aperto. Disco esterno tornato accessibile, copie pertinenti verificate. Accesso alla macchina GPU verificato indisponibile anche fuori sandbox; utente segnala un sospetto guasto dell’alimentatore, tentativi sospesi e lettura diretta proseguita. Nessuna nuova prosa o operazione Git di pubblicazione.
+
+Aggiornamento del 2026-10-13: aggiunta su mandato esplicito una fonte autoriale storica, letti integralmente rapporto e implementazione nel proprio perimetro; citazioni accademiche e riferimenti tecnici hanno una coda distinta. Completati altri saggi e volumi, con versioni, obiezioni e audit conservati nel vault privato. Stati e contatori ricontati; il corpus complessivo resta aperto. Disco esterno tornato accessibile, copie pertinenti verificate. Accesso alla macchina GPU verificato indisponibile anche fuori sandbox; utente segnala un sospetto guasto dell’alimentatore e ne prevede il ripristino; tentativi sospesi e lettura diretta proseguita. Nessuna nuova prosa o operazione Git di pubblicazione.
+
+## Mandato attivo: lettura completa delle fonti
+
+Ripresa del 2026-10-13: completata una nuova lettura integrale nel suo perimetro e collazionate le ultime riserve di un volume esteso; una lacuna di facsimile resta nominata. Digest, ledger, rinvii e prompt privati aggiornati. Il collegamento GPU oggi non risponde e il servizio ha esaurito i tentativi previsti: coda conservata, lettura diretta proseguita sui documenti locali. Il pacchetto Craft è arrivato; per questa lettura si usano gli strumenti già presenti. Il mandato resta completare le fonti prima di sintesi e nuova prosa, continuando poi la ricerca bibliografica. Nessun Git add, commit o push eseguito.
+
+Gli aggiornamenti successivi nel documento conservano la storia della ripresa. Stato vivo e prossimo documento nel livello privato.
+
+Ripresa dopo riavvio del PC il 2026-10-12: checkpoint conservati e integrità SQLite verificata. Servizio temporaneo GPU e analisi sono stati riavviati; lettura diretta da proseguire nel punto attestato dal ledger privato. Il mandato resta completare le fonti prima della sintesi. PdfCraft è annunciato in arrivo dal template; la lettura continua con gli strumenti presenti. Dettagli e contatori vivi in `_notes/RESUME-PROMPT.md`.
+
+
+2026-10-12: raggiunta l'ultima pagina di una fonte estesa con dodici blocchi di lettura diretta; conservati limiti di esemplare e verifiche musicali. Completati un audit di notazione e un capitolo storico nel proprio perimetro; i volumi e il corpus restano aperti dove richiesto. Digest, localizzatori, ledger e frontiera aggiornati nel livello privato. Il lettore conserva le risposte respinte per limite di lunghezza o saturazione e continua sui blocchi indipendenti quando un piccolo frammento non è più divisibile; output troncati restano respinti. Prova offline riuscita, ripresa dal checkpoint senza reset globale. Il mandato resta completare ingestione e verifiche prima di sintesi e scrittura, continuando poi la ricerca bibliografica.
+
 ## 2026-10-09 - Collazione disponibile e recupero degli esemplari
 
 Completata l'apertura delle 85 immagini disponibili della fonte guida, con calcoli e provenienze nel vault privato. Il livello resta L2: fotografia con continuazione assente e audit delle voci ancora aperti. Recuperato un PDF compresso tramite copia derivata verificata, originale immutato; acquisite tutte le 91 pagine. Risolto un collegamento a cartella senza eseguirlo: nove file censiti, sei documenti con anagrafiche verificate in coda distinta, una nuova lettura integrale attestata. Registro234, bibliografia163; diciassette unità chiuse nel ledger. Contenuti e dettagli bibliografici rimangono privati.
@@ -21,6 +46,8 @@ Corretto il rendering di schede con ancora non valida: output precedente conserv
 Verificati 8/8 originali,104/104 voci originarie e157/157 precedenti all'import identici, preflight riuscito; collegamenti del vault controllati. Acquisizione/OCR e analisi GPU proseguono con stati/PID privati. R1/R2 richiedono ancora audit, revisione e ascolto; R3 conserva altri record e41 esemplari non collegati; R4segue originali e controesempi. La scrittura attende sintesi, indice e approvazione del testo esatto qui. Milestone e backup nel prompt privato; nessun Git add,commit,push o deploy eseguito.
 
 # Lavoro in corso
+
+La guida operativa privata è `_notes/00-regia/PERCORSO-OPERATIVO-LIBRO.md`, raggiungibile da HOME e RESUME-PROMPT. Distingue opere correnti, originali, bozze, stampe storiche e copie per i commenti dell’autore; conserva l’ordine di ricerca, sintesi e revisione. Un ingresso privato alla revisione degli output GPU rimanda alle fonti e ai limiti, senza confondere schede automatiche e letture. Attestazioni e contenuti sostanziali sono nel vault.
 
 Ripresa 2026-10-09 dopo crash: completata L1 di Walker (articolo pp. 33-47, tutte le 16 pagine PDF, note e bibliografia); digest `_notes/10-biblioteca/digest/walker1973galilei.md`, ledger e registro bibliografico aggiornati. Rimane aperta la discrepanza Cohen p. 223 / pp. 233-264 citata da Caleon. Prossimi passi: audit pentagrammi Gaetani p. 49 e tavole ancora aperte, quindi Field pp. 29-44 in *Music and Mathematics*. L’analizzatore automatico risulta ancora attivo; checkpoint 12:18:42Z: 108 grounded-unreviewed, 2.630 pending, 45 split. Non chiudere fonti sulla base delle schede automatiche.
 
@@ -48,7 +75,7 @@ La preparazione tecnica è stata riaperta per 25 PDF: 2.503 pagine avevano outpu
 
 OCR su questo PC e analisi semantica sulla GPU proseguono in parallelo. I risultati precedenti e le cache vecchie sono conservati; l'analizzatore attende la preparazione completa di ogni fonte. Corretto anche un blocco SQLite effettivamente osservato: la preparazione libera il writer dopo ogni pagina e prima di attendere altro OCR; schede valide già salvate vengono riusate con controllo di hash ed evidenze. Il servizio riprova disconnessioni SSH con limite; il supervisore distingue esecuzione incompleta e conclusa. La GPU è operativa, l'istanza resta temporanea con dati in RAM e risultati durevoli nel progetto.
 
-Il primo lotto riguarda i 65 file locali, 59 identità tecniche. Per completare le fonti servono ancora batch e revisione di prosa, figure, pentagrammi, audio e trascrizioni, soluzione di un esemplare guasto e un collegamento, lettura degli altri record e acquisizione dei 41 esemplari non ancora collegati, seguito delle citazioni pertinenti. Registro 228, bibliografia 157 invariati; nessun livello o contenuto del manoscritto promosso. Stato dettagliato e contatori in `_notes/00-regia/FONTI-COSA-MANCA.md` e nei checkpoint del lettore. La scrittura segue sintesi, indice e approvazione qui del pezzo esatto.
+Il primo lotto riguarda i 65 file locali, 59 identità tecniche. Per completare le fonti servono ancora batch e revisione di prosa, figure, pentagrammi, audio e trascrizioni, soluzione di un esemplare guasto e un collegamento, lettura degli altri record e acquisizione dei 41 esemplari non ancora collegati, seguito delle citazioni pertinenti. Registro 228, bibliografia 157 invariati; nessun livello o contenuto del manoscritto promosso. Stato dettagliato e contatori in `_notes/00-regia/dettaglio/FONTI-COSA-MANCA.md` e nei checkpoint del lettore. La scrittura segue sintesi, indice e approvazione qui del pezzo esatto.
 
 ## Incremento corrente: elaborazione locale riprendibile
 
@@ -64,7 +91,7 @@ Tutti i risultati durevoli sono privati nel progetto. Landlock nega scritture su
 
 Ricerca completa prima della sintesi editoriale e della scrittura. Registro 228, bibliografia reale 157; sedici chiusure del nuovo ledger comprendono tre testi e tredici commenti esatti, con unità e limiti dichiarati. Il corpus locale obbligatorio è censito su tutti i formati: 65 file, di cui 31 PDF, tre DOCX, undici note testuali, diciannove media e un collegamento. Le pagine PDF distintamente apribili sono 6.268; un esemplare non si apre. Il censimento e le estrazioni non attestano lettura completa. Dettagli, identità e contenuti rimangono privati.
 
-Il vault è organizzato in otto sezioni numerate: regia, biblioteca, ricerca, tesi, libro, strumenti, archivio e cache. Ingresso `_notes/HOME.md`, roadmap privata `_notes/00-regia/ROADMAP-LETTURA-COMPLETA.md`, inventario completo `_notes/10-biblioteca/CORPUS-ARMONIA.md`. I percorsi precedenti hanno un manifest; originali e storia sono conservati. Cinque copie di cache identiche agli esemplari durevoli sono rimosse, 28.725.939 byte; ventitré materiali unici o storici sono conservati fuori dalla cache. Otto file principali e tutte le 104 voci originarie restano identici; anche le 144 voci precedenti all’ultimo import sono identiche. I collegamenti correnti risolvono; ledger e bibliografia non hanno flag divergenti. I conteggi nei blocchi successivi sono fotografie precedenti.
+Il vault è organizzato in otto sezioni numerate: regia, biblioteca, ricerca, tesi, libro, strumenti, archivio e cache. Ingresso `_notes/HOME.md`, roadmap privata `_notes/00-regia/dettaglio/ROADMAP-LETTURA-COMPLETA.md`, inventario completo `_notes/10-biblioteca/CORPUS-ARMONIA.md`. I percorsi precedenti hanno un manifest; originali e storia sono conservati. Cinque copie di cache identiche agli esemplari durevoli sono rimosse, 28.725.939 byte; ventitré materiali unici o storici sono conservati fuori dalla cache. Otto file principali e tutte le 104 voci originarie restano identici; anche le 144 voci precedenti all’ultimo import sono identiche. I collegamenti correnti risolvono; ledger e bibliografia non hanno flag divergenti. I conteggi nei blocchi successivi sono fotografie precedenti.
 
 Conferma dell’autore conservata verbatim: terminata ricerca, sintesi e indice, ogni pezzo viene proposto e approvato qui in chat prima di inserirlo nel manoscritto. Si conserva il testo esatto approvato insieme ai ragionamenti, alle obiezioni e ai legami fra concetti. Nessuna nuova prosa promossa in questo giro; nessun Git add, commit, push o deploy. Il punto di ripresa privato nomina una sola coda corrente.
 
@@ -189,13 +216,13 @@ Ciclo breve, senza contenuto nuovo nel libro. `python tools/skill-freshness.py` 
 
 Rigenerata la skill per intero salvo `voce.md`, riletta e confermata invariata. Aggiunti al manifesto `tools/tritoni-scale.py` e `tools/derivazione-scale.py`, perché la skill ne riporta i risultati come fatti calcolati e per ADR-009 le definizioni che implementano sono contenuto del libro. Scritto in `SKILL.md` e nel manifesto il vincolo d'ordine, cioè che `--update` si lancia solo dopo aver rigenerato. Verifica: `fresca: 15 fonti invariate`, exit code 0.
 
-Sanata una discrepanza fra note canoniche. L'intestazione della voce 19 della cassaforte e `_notes/00-regia/STATO-CAPITOLO-TRITONO.md` dichiaravano ancora non applicato il quadro a sette gradi, mentre il capitolo lo contiene dall'ottavo passo del 2026-08-03. Corrette entrambe, con i tre addenda della voce 19 che portavano una classificazione a tre casi superata dalla correzione dell'utente a due. Riscritto `_notes/00-regia/COME-SI-USA.md` con i conteggi verificati e un quinto strato che mancava, cioè `.claude/`, più la precisazione che dieci skill su quattordici non sono invocabili dall'agente.
+Sanata una discrepanza fra note canoniche. L'intestazione della voce 19 della cassaforte e `_notes/00-regia/dettaglio/STATO-CAPITOLO-TRITONO.md` dichiaravano ancora non applicato il quadro a sette gradi, mentre il capitolo lo contiene dall'ottavo passo del 2026-08-03. Corrette entrambe, con i tre addenda della voce 19 che portavano una classificazione a tre casi superata dalla correzione dell'utente a due. Riscritto `_notes/00-regia/dettaglio/COME-SI-USA.md` con i conteggi verificati e un quinto strato che mancava, cioè `.claude/`, più la precisazione che dieci skill su quattordici non sono invocabili dall'agente.
 
 Nota per chi riprende: la sezione precedente di questa scheda dice che il quadro a sette gradi non è applicato. È stale, ed è superata da questa voce. Il capitolo lo contiene.
 
 ## Feature attiva aggiornata il 2026-08-03: maturazione del capitolo sul tritono
 
-Il ciclo dal 2026-07-29 al 2026-08-03 ha portato il capitolo sul tritono da bozza validata a bozza matura, e ha costruito attorno ad esso l'infrastruttura che serviva. Il quadro completo, con la guida alla rilettura e l'elenco dei paragrafi cambiati, e in `_notes/00-regia/STATO-CAPITOLO-TRITONO.md`; la storia in `_notes/RESUME-PROMPT.md`, nota del 2026-08-03.
+Il ciclo dal 2026-07-29 al 2026-08-03 ha portato il capitolo sul tritono da bozza validata a bozza matura, e ha costruito attorno ad esso l'infrastruttura che serviva. Il quadro completo, con la guida alla rilettura e l'elenco dei paragrafi cambiati, e in `_notes/00-regia/dettaglio/STATO-CAPITOLO-TRITONO.md`; la storia in `_notes/RESUME-PROMPT.md`, nota del 2026-08-03.
 
 Il capitolo. Nove movimenti, 48314 caratteri, 90 paragrafi nel docx, sei figure, tredici riferimenti. Markdown e docx allineati, con otto backup datati in `_backup/`. Proporzioni: i movimenti D ed E, che sono il nucleo originale dell'autore, valgono il 38,9 per cento contro il 25 del 2026-07-31; il movimento G, storico, e scesa al 13,3. Il movimento E, al 22 per cento, e ormai il più lungo di parecchio, e se crescera ancora conviene valutare se spezzarlo.
 
@@ -216,3 +243,15 @@ Il movimento A della bozza continua sul tritono è ora incluso in `manuscript/ch
 ## Riconciliazione
 
 Ultima verifica: 2026-08-03, ancorata a `dd1c4d5` a mano e non tramite `sync-context`. La quasi totalita del lavoro di questo ciclo vive in file privati e ignorati, sotto `_notes/` e nelle due skill di contenuto; la parte tracciata sono i quattro strumenti in `tools/`, la skill `fonte-nuova`, i due ADR nuovi e queste schede. `covers-paths` e stata estesa a `tools/**` e `.claude/skills/**`, che prima non erano coperte da nessuna scheda.
+
+## Riordino per l'autore, 2026-10-09
+
+La regia privata espone una guida operativa; registri tecnici e roadmap dettagliate sono raccolti nella cartella di dettaglio. Ingresso alla revisione delle schede collegato alla guida e allo stato del lettore. Schede automatiche distinte dalle letture, provenienze e limiti conservati. Nessuna nuova prosa promossa.
+
+## Stato operativo 2026-10-12: materiali autore e GPU
+
+Originali, bozze, commenti e materiale di supporto classificati nella guida privata; la verifica dei commenti Word e i punti di ripresa restano nel vault. Il lettore ha subito un'interruzione del collegamento e ha poi ripreso dal checkpoint, senza reset dei risultati. Fotografie precedenti distinte dallo stato corrente. Il mandato resta completare il perimetro di lettura prima di sintesi e scrittura, continuando la ricerca bibliografica.
+
+## 2026-10-14 - Preparazione del versionamento
+
+Copie byte-esatte delle schede e del diff pendenti conservate nell'archivio privato prima della separazione dei dettagli. Gli aggiornamenti pubblici descrivono metodo e stato; attestazioni e contenuti mantengono il perimetro privato. Commit, push e deploy restano manuali. Il backup locale include note e manoscritto, con cache rigenerabile esclusa e copia coerente del database; serve una copia su un secondo supporto per la conservazione esterna.
