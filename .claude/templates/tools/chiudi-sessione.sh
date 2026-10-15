@@ -3,7 +3,7 @@
 #
 # Stessa sequenza e stesse ragioni di chiudi-sessione.ps1, a cui si rimanda per il commento
 # esteso: stato, controlli istanziati (si ferma se uno fallisce), commit con conferma, push
-# verificato, impronta di ripresa, wipe degli account se nessuna sessione Claude Code e' aperta.
+# verificato, impronta di ripresa, wipe degli account (conserva le sessioni ancora aperte) e resoconto.
 # Si lancia dal proprio terminale dopo aver chiuso Claude Code. Le regole che applica sono elencate
 # in testa a chiudi-sessione.ps1: il messaggio lo fa rispettare l'hook .githooks/commit-msg.
 #
@@ -150,7 +150,16 @@ if [ $haorigin = 0 ]; then nota "nessun remoto 'origin': push saltato, il commit
 elif ! git rev-parse -q --verify HEAD >/dev/null; then nota "nessun commit sul ramo: niente da pushare"
 else
     # Destinazione esplicita: un upstream diverso da origin non deve deviare la chiusura.
-    git push -u origin "HEAD:refs/heads/$ramo" || { echo "Push fallito: l'impronta non si registra finche' il remoto non e' allineato."; exit 1; }
+    # Un push caduto sulla rete non e' un push rifiutato: si ritenta, con attese
+    # crescenti, prima di dichiarare fallita la chiusura.
+    spinto=0
+    for attesa in 5 15 0; do
+        if git push -u origin "HEAD:refs/heads/$ramo"; then spinto=1; break; fi
+        [ "$attesa" = "0" ] && break
+        nota "push caduto, ritento fra $attesa secondi"
+        sleep "$attesa"
+    done
+    [ "$spinto" = "1" ] || { echo "Push fallito: l'impronta non si registra finche' il remoto non e' allineato."; exit 1; }
     locale="$(git rev-parse HEAD)"
     remoto="$(git ls-remote --exit-code origin "refs/heads/$ramo")" || { ko "verifica del ramo remoto fallita"; exit 1; }
     remoto="${remoto%%[[:space:]]*}"
@@ -185,11 +194,21 @@ for d in "$HOME"/.claude*; do
     [ -z "$account" ] || [ "$n" = ".claude-$account" ] || [ "$n" = "$account" ] || continue
     [ -f "$d/hooks/session-end-wipe.sh" ] && scripts+=("$d/hooks/session-end-wipe.sh")
 done
+# Dal 2026-10-09 il wipe toglie da se' cio' che appartiene a sessioni chiuse e conserva quelle
+# aperte, quindi si esegue anche con altre sessioni vive; una copia anteriore rimanda tutto.
 if [ ${#scripts[@]} -eq 0 ]; then nota "nessuno script di wipe installato negli account: passo saltato"
-elif pgrep -x claude >/dev/null 2>&1; then
-    nota "processi Claude Code ancora aperti: wipe rimandato. Chiuderli e lanciare:"
-    for s in "${scripts[@]}"; do nota "bash \"$s\""; done
 else
-    for s in "${scripts[@]}"; do bash "$s" && ok "$s" || ko "$s"; done
+    if pgrep -x claude >/dev/null 2>&1; then
+        nota "processi Claude Code ancora aperti: il wipe conserva le loro sessioni e toglie tutte le altre"
+    fi
+    for s in "${scripts[@]}"; do bash "$s" < /dev/null && ok "$s" || ko "$s"; done
 fi
+# Che cosa resta dopo il wipe: lo strumento e' in sola lettura, si cerca accanto a questo
+# script e, in un progetto che non lo ha, nelle home degli account.
+stato=""
+for c in "$(dirname "$0")/stato-magazzino.py" "$HOME"/.claude*/hooks/stato-magazzino.py; do
+    [ -f "$c" ] && { stato="$c"; break; }
+done
+if [ -n "$stato" ] && command -v python3 >/dev/null 2>&1; then python3 "$stato"
+else nota "stato-magazzino.py o python3 non disponibili: resoconto dei residui saltato"; fi
 fine ""

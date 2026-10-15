@@ -16,22 +16,28 @@ Copre un vuoto lasciato da `doc-ingest` (estrae struttura, non anagrafica) e da 
 
 Richiede che `doc-ingest` sia già stato eseguito sul file bersaglio: la skill legge il mirror Markdown già in cache e il `.manifest.json` della cartella di cache indicata. Se il file non risulta nel manifest, la skill si ferma e chiede di far girare prima `tools/doc-ingest.py` sulla cartella sorgente, invece di leggere il PDF originale essa stessa.
 
+Per i PDF scansionati senza testo nativo (il mirror Markdown esce vuoto o quasi), la precondizione non basta: vedi la sezione "Verifica visiva per PDF scansionati" più sotto.
+
 ## Quando si invoca
 
-Quando un libro è stato ingerito e si vuole ricavarne una voce bibliografica citabile per `manuscript/bib/references.bib` (o l'equivalente `.bib` reale del progetto). Si indica il percorso del file sorgente originale (per risalire all'hash nel manifest) o direttamente il file Markdown già in cache.
+Quando un libro è stato ingerito e si vuole ricavarne una voce bibliografica citabile per il `.bib` reale del progetto. Si indica il percorso del file sorgente originale (per risalire all'hash nel manifest) o direttamente il file Markdown già in cache.
 
 ## Procedura
 
 1. Risolvere l'hash `sha256` del file dal `.manifest.json` di `doc-ingest` corrispondente alla cartella di cache indicata. Se assente, fermarsi (vedi Precondizione).
-2. Leggere **solo** le prime pagine del mirror Markdown: frontespizio, verso del frontespizio, eventuale colophon, al massimo l'indice. Mai il libro intero: stessa disciplina di disclosure progressiva di `doc-ingest`/`book-digest`, applicata qui al solo sottoinsieme "pagine di metadati". Se il mirror è vuoto o troppo corto (PDF scansionato senza OCR riuscito), segnalarlo e fermarsi: non indovinare i campi dal solo nome del file.
+2. Leggere solo le prime pagine del mirror Markdown: frontespizio, verso del frontespizio, eventuale colophon, al massimo l'indice. Mai il libro intero: stessa disciplina di disclosure progressiva di `doc-ingest`/`book-digest`, applicata qui al solo sottoinsieme "pagine di metadati". Se il mirror è vuoto o troppo corto (PDF scansionato senza OCR riuscito), passare alla verifica visiva sotto invece di indovinare i campi dal solo nome del file.
 3. Proporre i campi secondo lo schema del paragrafo "Schema campi" e una citekey secondo la convenzione descritta li sotto, verificando le collisioni contro il `.bib` reale del progetto e contro le citekey già presenti nel registro.
 4. Presentare la proposta per la conferma "a colophon": chi invoca la skill guarda una volta il libro vero (il PDF originale o, se già inequivocabile, il frontespizio estratto) e conferma, corregge o scarta ogni campo.
 5. Aggiornare la voce del registro (vedi "Registro unificato"): stato `verificata` solo se confermata dall'utente, altrimenti `da-verificare` (proposta ancora aperta) o `scartata` (l'utente ha rifiutato la fonte, per esempio doppione o materiale non citabile).
-6. Solo se `bib_status: verificata`, appendere la voce al file `.bib` reale indicato dall'utente (default: `manuscript/bib/references.bib`), impostando `bib_entry_written: true`. Non scrivere mai una voce non confermata.
+6. Solo se `bib_status: verificata`, appendere la voce al file `.bib` reale indicato dall'utente. Non scrivere mai una voce non confermata.
 7. Non toccare mai il campo `skill_status` della voce: è di proprietà di `book-digest`, che lo aggiorna in modo indipendente quando il libro viene trasformato in skill.
 8. Non eseguire mai `git add`, `commit` o `push`: restano manuali dell'utente.
 
 Idempotenza: rilanciare la skill sullo stesso file aggiorna la voce esistente del registro (stesso hash), non ne crea una seconda. Se l'hash del file è cambiato rispetto alla voce registrata (nuova edizione, nuova scansione), la skill lo segnala come potenzialmente obsoleto invece di sovrascrivere in silenzio.
+
+## Verifica visiva per PDF scansionati
+
+Molti corpus di libri di studio (specie fotocopie o scansioni datate) non hanno un livello di testo nativo affidabile: il mirror Markdown di `doc-ingest` esce vuoto anche con `--ocr` attivo, perché l'OCR su scansioni di bassa qualità è spesso inaffidabile o rumoroso. In questo caso il percorso pratico è l'estrazione di un piccolo numero di pagine di frontespizio/colophon come immagini PNG (via `pdftoppm`/Poppler, già standardizzata in `tools/extract-titlepages.py` con DPI e range pagine fissi), lette visivamente pagina per pagina, mai OCR sull'intero corpus. La lettura visiva diretta della pagina è più economica in token (poche pagine mirate, mai il libro intero) e più affidabile per dati strutturati come anno/editore/ISBN, che vanno citati esattamente o dichiarati assenti, mai dedotti da OCR rumoroso. Per un buon numero di libri (copie con difetti di scansione che omettono la pagina di copyright) anche un controllo esteso a diverse pagine può non trovare alcun anno: è un limite pratico del metodo, non di ricerca insufficiente, e la voce resta `da-verificare` a tempo indeterminato salvo accesso alla copia fisica.
 
 ## Schema campi (.bib)
 
@@ -80,7 +86,11 @@ Percorso: `_notes/book-bib-registry.json` (privato, già coperto da `/_notes/` i
 }
 ```
 
-Accanto al JSON, rigenerare sempre `_notes/book-bib-registry.md`: una tabella leggibile (mai editata a mano), colonne citekey / titolo / bib_status / skill_status, utile per una scansione rapida senza aprire il JSON.
+Accanto al JSON, rigenerare sempre `_notes/book-bib-registry.md` con `tools/render-bib-registry.py` (mai editato a mano): una tabella leggibile, colonne citekey / titolo / bib_status / skill_status.
+
+### Caso limite: libro identificato ma non ancora ingerito
+
+Se una fonte è stata identificata (per esempio da un ISBN o dalla scheda di un rivenditore) ma non è ancora stata fisicamente acquisita o scansionata, non esiste un file sorgente da cui calcolare uno `sha256`. In questo caso si registra comunque una voce, con una chiave alternativa `manual-<identificatore>` (per esempio `manual-isbn-<ISBN>`) al posto dello sha256, e i campi `source_path`, `doc_ingest_cache_dir`, `doc_ingest_source_rel` a `null`. Il campo `skill_status` si lascia a `null` anziché `pending`: non c'è ancora nulla da ingerire con `doc-ingest`, quindi la voce non è in coda per `book-digest`. `bib_status` resta `da-verificare` finché non si verifica il colophon fisico; ogni campo desunto da una fonte secondaria (per esempio una pagina del rivenditore o una recensione) va annotato come tale nelle `notes`, mai promosso a fatto.
 
 ## Rapporto con gli altri pacchetti
 
@@ -89,3 +99,7 @@ Accanto al JSON, rigenerare sempre `_notes/book-bib-registry.md`: una tabella le
 ## Vincoli
 
 Densità sopra completezza nella proposta di ogni campo. Mai testo grezzo né pagine intere in output: solo i campi estratti. Mai scrivere nel `.bib` reale senza conferma umana esplicita. Mai inventare un campo assente. Non eseguire `git add`, `commit` o `push`.
+
+## Impostazioni di questo progetto
+
+Il file bibliografico reale è `manuscript/bib/references.bib`; manoscritto e corpus sono privati. Nel mandato corrente dell'autore l'inserimento delle anagrafiche verificate è già autorizzato in generale: non richiede una nuova conferma per ciascuna voce. Metadati incerti restano candidati e la verifica di identità, esemplare e colophon resta necessaria. La lettura del frontespizio non attesta la lettura integrale del libro.

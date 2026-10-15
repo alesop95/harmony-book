@@ -1,5 +1,9 @@
 # Ricerca accademica per il libro di armonia
 
+## Prerequisiti di persistenza dell’host, 2026-10-14
+
+Il vincolo esplicito dell’autore richiede verifica dei meccanismi di persistenza dell’host prima dell’invio di testi privati: tmpfs e Landlock attestano proprietà del percorso e delle scritture applicative, ma non impediscono swap o ibernazione. In assenza di verifica sufficiente si arresta il solo servizio del progetto, si controlla la rimozione dei temporanei e si prosegue nella lettura locale. Le tracce di sistema e le scritture pregresse non sono dichiarate assenti senza evidenza; nessuna pulizia di log condivisi o modifica globale viene eseguita.
+
 ## Analisi locale e attestazione della lettura
 
 Il lettore `tools/local-reading.py` preserva unità integrali e localizzatori, propone digest, glossario, archi fra concetti e riferimenti attraverso un modello locale e controlla che le evidenze esistano nella specifica unità. Le schede automatiche sono esplicitamente non revisionate: un ancoraggio letterale non verifica ogni interpretazione, completezza, attribuzione storica o notazione. OCR, trascrizioni e digest non promuovono livelli di lettura. La revisione torna ai facsimili, agli esempi ascoltati e ai passi completi; i riferimenti estratti alimentano una frontiera, senza attestare lettura delle destinazioni. Risultati e configurazione rimangono nel livello privato del progetto; il vincolo sui residui dell'host di inferenza è verificato prima dell'invio dei testi.

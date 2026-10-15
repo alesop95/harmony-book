@@ -1,4 +1,8 @@
 {
+  ".claude/skills/latex-build/SKILL.md": {
+    "testa": "b0e224c7889cfc13eef5675f8ddb4150e29bcc32",
+    "il": "2026-10-14"
+  },
   "tools/extract-titlepages.py": {
     "testa": "4cddd1864827e76213f32b1569767c1de8534537",
     "il": "2026-09-29"

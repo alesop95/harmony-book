@@ -1,5 +1,11 @@
 # tools
 
+## Chiusura e ripresa del progetto
+
+La chiusura ordinaria usa powershell -NoProfile -ExecutionPolicy Bypass -File tools/chiudi-sessione.ps1. L’agente esegue prima -SoloControlli; commit e push sono dell’utente. tools/sync-codex-skills.py genera e verifica wrapper delle skill canoniche; i wrapper privati seguono le esclusioni delle loro fonti. tools/verifica-schede.py controlla ancore, percorsi e drift; tools/verifica-ripresa.py verifica e registra l’impronta dopo il commit. Per una milestone durante lavoro ancora in corso, -NoWipe salta la pulizia delle sessioni.
+
+Il servizio remoto resta sospeso se il requisito sui residui non è verificato. I marcatori privati STOP e SERVER-STOP conservano l’arresto; verificare anche swap, ibernazione e limiti delle tracce di sistema prima di riprendere. Dettagli e prove rimangono nel vault.
+
 ## Elaborazione locale del corpus privato
 
 `python -B tools/local-reading.py prepare` prepara unità con pagine/paragrafi/minuti e un indice SQLite FTS5; riusa estrazioni, completa OCR e trascrive media con strumenti già presenti. `analyze` usa un modello locale via API Ollama, porzioni senza tagli, output strutturati ed evidenze controllate nella specifica unità. `report` aggiorna copertura e lacune, `search --query '<testo>'` interroga l'indice, `retry` rimette in coda schede fallite conservando gli output. Le schede restano non revisionate: non aggiornano L1/L2, bibliografia o manoscritto.

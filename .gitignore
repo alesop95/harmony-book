@@ -25,6 +25,10 @@ transform-into-claude-md/
 /.claude/skills/armonia-libro/
 /.claude/skills/libro-*/
 
+# Wrapper Codex delle skill private: stessi limiti delle fonti canoniche.
+/.agents/skills/armonia-libro/
+/.agents/skills/libro-*/
+
 # Estratti temporanei dei .docx (cartelle scratch)
 /_notes/.tmp-docx-*/
 .tmp-docx-*/

@@ -14,6 +14,12 @@ source-doc: transform-into-claude-md/devBook settings.docx
 last-verified-commit: 9acc2e0
 ---
 
+## Stato corrente del servizio e della chiusura, 2026-10-14
+
+Il servizio di inferenza del progetto è sospeso finché il requisito dell’autore sui residui dell’host non è verificato. Tmpfs e controllo delle scritture dell’applicazione non impediscono da soli persistenza dovuta a swap o ibernazione. Arresto del servizio e rimozione dei temporanei verificati nel livello privato; le sezioni successive conservano architettura e fotografie pregresse.
+
+tools/chiudi-sessione.ps1, tools/sync-codex-skills.py, tools/verifica-schede.py e tools/verifica-ripresa.py sono copie istanziate degli strumenti canonici del template. Il controllo delle schede ora opera nella radice reale del progetto, evitando il falso risultato di zero schede ottenibile lanciando il modello dalla sua sottocartella. L’ancora tecnica resta invariata fino alla riconciliazione per contenuto.
+
 # Stack applicativo
 
 

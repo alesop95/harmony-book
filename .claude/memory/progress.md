@@ -1,4 +1,11 @@
 
+
+## 2026-10-14 - Allineamento verificato e ripresa locale
+
+Verificato il commit manuale dell’utente `33da48e` su main, coincidente con origin/main. Allineato il bundle al template `f23f703, preservando gli adattamenti locali e istanziando in tools chiusura, wrapper Codex e verifiche di contesto/ripresa. Il messaggio preparato è monolinea; i comandi ordinari usano chiudi. Wrapper delle skill private ignorati insieme alle fonti canoniche. Il confronto del bundle e il controllo dei wrapper sono distinti dalla riconciliazione tecnica: STACK.md e current-work.md restano superate rispetto all’ancora 9acc2e0; non è dichiarato un allineamento completo del contenuto tecnico. Modifiche correnti ancora da versionare manualmente.
+
+Proseguita lettura diretta con facsimili e notazione, attestazioni nel vault. Servizio di inferenza del progetto arrestato e temporanei RAM rimossi dopo aver rilevato prerequisiti di persistenza insufficienti per il mandato dell’autore. Nessun intervento sui servizi condivisi. Lettura locale prosegue; nuova prosa e sintesi ancora successive alla lettura.
+
 Focus operativo del 2026-10-14: roadmap ridotta a ricerca bibliografica e scrittura, con lettura completa e sintesi prima della nuova prosa. Ampliamenti tecnici differiti, storia e pendenze conservate privatamente. GPU condivisa: disponibilità misurata al momento del controllo, nessuna riserva esclusiva; checkpoint preservati in caso di indisponibilità. Decisione ADR-011, dettagli nel vault privato.
 
 Consolidamento del 2026-10-14: altra lettura diretta con esempi e apparati attestata nel vault privato; copie di continuità verificate durante la disponibilità temporanea del disco esterno. Registro, limiti e ripresa riconciliati; preparazione del versionamento manuale. Verifica del contesto in lettura sola: drift tecnico ancora aperto, ancoraggi conservati. Nessuna sintesi o nuova prosa promossa.
@@ -47,7 +54,7 @@ Corretto anche il vecchio percorso d'origine citato nelle schede B00/B01: la fon
 
 Creato e collegato l’ingresso operativo privato del libro, con distinzione fra bozze correnti, originali e stampe storiche. Ricerca e sintesi precedono la revisione del testo esatto; commenti Word conservati su copie separate.
 
-Chiarito inoltre che “movimento” è una sezione A–I; il movimento B ha i microstep B01–B03 e il gate di ricerca in B00. Le stampe DOSSIER/QUADERNO del 2026-08-06 sono fotografie, mentre i corrispondenti di lavoro sono nel vault. La mappa ora spiega come fornire commenti Word su copie senza sovrascrivere gli originali.
+Chiarito inoltre che “movimento” è una sezione A-I; il movimento B ha i microstep B01-B03 e il gate di ricerca in B00. Le stampe DOSSIER/QUADERNO del 2026-08-06 sono fotografie, mentre i corrispondenti di lavoro sono nel vault. La mappa ora spiega come fornire commenti Word su copie senza sovrascrivere gli originali.
 
 ## 2026-10-09 - Organizzato l'ingresso alla revisione degli output GPU
 

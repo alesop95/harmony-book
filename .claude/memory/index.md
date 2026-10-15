@@ -1,4 +1,11 @@
 
+
+## 2026-10-14 - Allineamento verificato e ripresa locale
+
+Verificato il commit manuale dell’utente `33da48e` su main, coincidente con origin/main. Allineato il bundle al template `f23f703, preservando gli adattamenti locali e istanziando in tools chiusura, wrapper Codex e verifiche di contesto/ripresa. Il messaggio preparato è monolinea; i comandi ordinari usano chiudi. Wrapper delle skill private ignorati insieme alle fonti canoniche. Il confronto del bundle e il controllo dei wrapper sono distinti dalla riconciliazione tecnica: STACK.md e current-work.md restano superate rispetto all’ancora 9acc2e0; non è dichiarato un allineamento completo del contenuto tecnico. Modifiche correnti ancora da versionare manualmente.
+
+Proseguita lettura diretta con facsimili e notazione, attestazioni nel vault. Servizio di inferenza del progetto arrestato e temporanei RAM rimossi dopo aver rilevato prerequisiti di persistenza insufficienti per il mandato dell’autore. Nessun intervento sui servizi condivisi. Lettura locale prosegue; nuova prosa e sintesi ancora successive alla lettura.
+
 Focus operativo del 2026-10-14: roadmap ridotta a ricerca bibliografica e scrittura, con lettura completa e sintesi prima della nuova prosa. Ampliamenti tecnici differiti, storia e pendenze conservate privatamente. GPU condivisa: disponibilità misurata al momento del controllo, nessuna riserva esclusiva; checkpoint preservati in caso di indisponibilità. Decisione ADR-011, dettagli nel vault privato.
 
 Consolidamento del 2026-10-14: altra lettura diretta con esempi e apparati attestata nel vault privato; copie di continuità verificate durante la disponibilità temporanea del disco esterno. Registro, limiti e ripresa riconciliati; preparazione del versionamento manuale. Verifica del contesto in lettura sola: drift tecnico ancora aperto, ancoraggi conservati. Nessuna sintesi o nuova prosa promossa.
@@ -174,11 +181,11 @@ Data snapshot:         2026-08-06
 
 | Scheda | last-verified | Stato |
 |---|---|---|
-| STACK.md | 9acc2e0 | gap chiuso il 2026-08-06: `tools/**` e ora fra le `covers-paths` e la scheda descrive gli undici script in una sezione propria. Il contenuto e stato scritto leggendo i file, non riconciliato da un diff, quindi il confronto di drift su `tools/` parte dal prossimo commit |
+| STACK.md | 9acc2e0 | superata al controllo del 2026-10-14; 35 percorsi coperti cambiati da verificare per contenuto. Nota storica: gap chiuso il 2026-08-06: `tools/**` e ora fra le `covers-paths` e la scheda descrive gli undici script in una sezione propria. Il contenuto e stato scritto leggendo i file, non riconciliato da un diff, quindi il confronto di drift su `tools/` parte dal prossimo commit |
 | design-and-security.md | 9acc2e0 | nessun drift; diagrammi registrati e riconciliati, paradigmi da popolare |
 | deployment.md | 017b02a | da popolare (covers-paths vuoto, nessun confronto di drift applicabile) |
 | dev-testing.md | 017b02a | da popolare (covers-paths vuoto, nessun confronto di drift applicabile) |
-| current-work.md | 9acc2e0 | aggiornata il 2026-08-05 con la voce sulla rigenerazione di `armonia-libro` |
+| current-work.md | 9acc2e0 | superata al controllo del 2026-10-14; 62 percorsi coperti cambiati da verificare per contenuto. Nota storica: aggiornata il 2026-08-05 con la voce sulla rigenerazione di `armonia-libro` |
 | roadmap.md | 017b02a | aggiornata (covers-paths vuoto, nessun confronto di drift applicabile) |
 
 **Sync del 2026-08-05**: confronto `4942de1..9acc2e0` per STACK.md e design-and-security.md, `dd1c4d5..9acc2e0` per current-work.md. Zero file cambiati nelle aree coperte da ciascuna scheda, quindi il bump e un checkpoint e non una riconciliazione. Le tre schede con `covers-paths` vuoto restano fuori dal confronto e non si bumpano.
