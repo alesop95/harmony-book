@@ -1,8 +1,12 @@
 
 
+## 2026-10-15 - Lettura e passaggi editoriali
+
+Lettura diretta proseguita sulle copie locali, testo e notazione confrontati con le immagini. Digest, ledger, registro e frontiera aggiornati; rimangono distinti audio, destinazioni di repertorio e fonte intera. Scritta la lista degli step residui con collegamento alle fasi della roadmap e criteri di uscita. Verificato il nuovo commit manuale `103d5f8`; nessuna operazione Git di scrittura dell’agente. Nessun contatto con la macchina GPU durante la manutenzione. Corretto anche un delimitatore di codice rimasto aperto nel paragrafo pubblico del giro precedente e nel generatore privato.
+
 ## 2026-10-14 - Allineamento verificato e ripresa locale
 
-Verificato il commit manuale dell’utente `33da48e` su main, coincidente con origin/main. Allineato il bundle al template `f23f703, preservando gli adattamenti locali e istanziando in tools chiusura, wrapper Codex e verifiche di contesto/ripresa. Il messaggio preparato è monolinea; i comandi ordinari usano chiudi. Wrapper delle skill private ignorati insieme alle fonti canoniche. Il confronto del bundle e il controllo dei wrapper sono distinti dalla riconciliazione tecnica: STACK.md e current-work.md restano superate rispetto all’ancora 9acc2e0; non è dichiarato un allineamento completo del contenuto tecnico. Modifiche correnti ancora da versionare manualmente.
+Verificato il commit manuale dell’utente `33da48e` su main, coincidente con origin/main. Allineato il bundle al template `f23f703`, preservando gli adattamenti locali e istanziando in tools chiusura, wrapper Codex e verifiche di contesto/ripresa. Il messaggio preparato è monolinea; i comandi ordinari usano chiudi. Wrapper delle skill private ignorati insieme alle fonti canoniche. Il confronto del bundle e il controllo dei wrapper sono distinti dalla riconciliazione tecnica: STACK.md e current-work.md restano superate rispetto all’ancora 9acc2e0; non è dichiarato un allineamento completo del contenuto tecnico. Modifiche correnti ancora da versionare manualmente.
 
 Proseguita lettura diretta con facsimili e notazione, attestazioni nel vault. Servizio di inferenza del progetto arrestato e temporanei RAM rimossi dopo aver rilevato prerequisiti di persistenza insufficienti per il mandato dell’autore. Nessun intervento sui servizi condivisi. Lettura locale prosegue; nuova prosa e sintesi ancora successive alla lettura.
 

@@ -6,9 +6,13 @@ covers-paths: []
 last-verified-commit: 017b02a
 ---
 
+## 2026-10-15 - Lettura e passaggi editoriali
+
+La sequenza attiva comprende sei passaggi: completare le letture; recuperare esemplari e lacune; collazionare figure, notazione e media; seguire riferimenti pertinenti e controesempi; sintetizzare con indice e collocazione delle idee originali; scrivere per movimenti approvati e verificati nel PDF. I passaggi di ricerca si alimentano durante la lettura e continuano durante la scrittura. Nuove installazioni, edizione web e infrastruttura restano differite. Avanzamento effettivo, priorità, limiti e lista operativa sono nel vault privato; nessuna nuova sintesi o prosa promossa.
+
 ## 2026-10-14 - Allineamento verificato e ripresa locale
 
-Verificato il commit manuale dell’utente `33da48e` su main, coincidente con origin/main. Allineato il bundle al template `f23f703, preservando gli adattamenti locali e istanziando in tools chiusura, wrapper Codex e verifiche di contesto/ripresa. Il messaggio preparato è monolinea; i comandi ordinari usano chiudi. Wrapper delle skill private ignorati insieme alle fonti canoniche. Il confronto del bundle e il controllo dei wrapper sono distinti dalla riconciliazione tecnica: STACK.md e current-work.md restano superate rispetto all’ancora 9acc2e0; non è dichiarato un allineamento completo del contenuto tecnico. Modifiche correnti ancora da versionare manualmente.
+Verificato il commit manuale dell’utente `33da48e` su main, coincidente con origin/main. Allineato il bundle al template `f23f703`, preservando gli adattamenti locali e istanziando in tools chiusura, wrapper Codex e verifiche di contesto/ripresa. Il messaggio preparato è monolinea; i comandi ordinari usano chiudi. Wrapper delle skill private ignorati insieme alle fonti canoniche. Il confronto del bundle e il controllo dei wrapper sono distinti dalla riconciliazione tecnica: STACK.md e current-work.md restano superate rispetto all’ancora 9acc2e0; non è dichiarato un allineamento completo del contenuto tecnico. Modifiche correnti ancora da versionare manualmente.
 
 Proseguita lettura diretta con facsimili e notazione, attestazioni nel vault. Servizio di inferenza del progetto arrestato e temporanei RAM rimossi dopo aver rilevato prerequisiti di persistenza insufficienti per il mandato dell’autore. Nessun intervento sui servizi condivisi. Lettura locale prosegue; nuova prosa e sintesi ancora successive alla lettura.
 
