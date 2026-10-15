@@ -12,6 +12,10 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-10-15 - Avanzamento dei primi cinque passaggi
+
+Verificato il commit manuale dell’autore `164bf40`. Proseguita la lettura diretta fino alla fine di un esemplare esteso, con notazione e bibliografia; lacune dell’edizione, media e opere rinviate restano espliciti nel vault privato. Raccolte relazioni fra passi e capitoli dell’indice esistente come mappa provvisoria: la sintesi definitiva segue le letture concordate e la nuova prosa attende il passaggio editoriale previsto. Il mandato corrente riguarda i primi cinque passaggi; la scrittura per movimenti resta successiva. Nessun contatto con l’host di inferenza durante la manutenzione. Ancore tecniche conservate; nessuna operazione Git di scrittura dell’agente.
+
 ## 2026-10-15 - Lettura e passaggi editoriali
 
 Proseguita la lettura diretta del corpus locale nel testo e nei facsimili, con apparati di repertorio e trasformazioni musicali documentati privatamente. Ledger e digest aggiornati; ascolti e collazione delle destinazioni restano distinti. Resi espliciti i passaggi ancora necessari: letture, lacune, media, verifica dei riferimenti, sintesi con indice, poi scrittura per movimenti approvati. La ricerca bibliografica continua durante la scrittura. Il nuovo commit manuale dell’autore è `103d5f8`; le modifiche di questo giro restano da versionare. Macchina di inferenza in manutenzione, nessun collegamento tentato; lettura locale prosegue.
