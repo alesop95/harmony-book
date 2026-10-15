@@ -1,5 +1,9 @@
 
 
+## 2026-10-15 - Rappresentazioni e criteri della lettura
+
+Verificato il commit manuale dell’autore `60f0176`, albero inizialmente pulito su main. Proseguita la lettura diretta con tavole e apparati, terminato un libro interno e avviata la sezione successiva; volume ancora aperto. Aggiornate distinzioni fra dati, riduzioni e definizioni, raggiunti rinvii interni e confrontato un riferimento con record bibliografici senza attestare la lettura del suo originale. Mappe preparatorie e limiti conservati nel vault. Sintesi definitiva e prosa successive alla lettura concordata; host di inferenza non contattato durante la manutenzione. Ancore tecniche conservate e drift già dichiarato ancora aperto; nessuna operazione Git di scrittura.
+
 ## 2026-10-15 - Trasformazioni, contesto e limiti delle fonti
 
 Verificato il commit manuale dell’autore `932e404`, albero inizialmente pulito. Proseguita la lettura diretta di testo, facsimili, esempi e note; conclusi altri capitoli interni senza chiudere il volume. Registrate condizioni ed eccezioni delle regole, distinte ricostruzioni analitiche e dati osservati, aggiornati rinvii e mappa preparatoria nel vault. Sintesi definitiva e prosa restano successive alla lettura concordata. Nessun contatto con l’host di inferenza durante la manutenzione, nessuna operazione Git di scrittura. Ancore tecniche e drift già dichiarati conservati.
