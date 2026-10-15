@@ -12,6 +12,10 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-10-15 - Conclusione della lettura estesa e dissensi
+
+Verificato il commit manuale dell’autore `0931648`, albero inizialmente pulito su main e unico worktree. Terminata la lettura estesa di un testimone, comprese note, indice e immagini finali; collazione minuta ancora distinta dalla chiusura del record. Confrontati metadati editoriali, conservati dissensi, rinvii e date discordanti senza attestare originali non letti. Registro e mappe preparatorie aggiornati nel vault; coda documentale successiva indicata nel prompt di ripresa. Sintesi definitiva e prosa restano successive alla lettura concordata. Host di inferenza non contattato, ancore tecniche conservate; nessuna operazione Git di scrittura.
+
 ## 2026-10-15 - Rappresentazioni e criteri della lettura
 
 Verificato il commit manuale dell’autore `60f0176`, albero inizialmente pulito su main. Proseguita la lettura diretta con tavole e apparati, terminato un libro interno e avviata la sezione successiva; volume ancora aperto. Aggiornate distinzioni fra dati, riduzioni e definizioni, raggiunti rinvii interni e confrontato un riferimento con record bibliografici senza attestare la lettura del suo originale. Mappe preparatorie e limiti conservati nel vault. Sintesi definitiva e prosa successive alla lettura concordata; host di inferenza non contattato durante la manutenzione. Ancore tecniche conservate e drift già dichiarato ancora aperto; nessuna operazione Git di scrittura.
