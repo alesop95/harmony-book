@@ -12,6 +12,14 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-10-15 - Lettura documentale completa e prosecuzione della roadmap
+
+Conclusa la lettura diretta completa di un altro testimone, comprese notazione e appendici; la chiusura documentale mantiene distinti ascolti, esercizi, collazioni e opere rinviate. Aggiornati ledger, rinvii, mappa preparatoria e punto di ripresa nel vault, con riconto sullo stesso perimetro e conservazione delle riserve editoriali. Ripristino dell’accelerazione comunicato dall’autore e hardware verificato in sola lettura; prerequisiti di persistenza ancora insufficienti, nessun testo privato inviato. I backup sono affidati al progetto dedicato dell’autore, senza nuovi archivi dopo la sua correzione. Nuova prosa successiva al perimetro di lettura concordato; Git manuale e ancore tecniche conservate.
+
+## 2026-10-15 - Conservazione delle fonti e prosecuzione della lettura
+
+Verificato il commit manuale dell’autore `242c9c4`, albero inizialmente pulito su main. Consolidati il perimetro delle fonti esistenti, le copie locali con controllo di identità e i registri privati di provenienza; la ricerca successiva durante la scrittura rimane aperta. Proseguita la lettura diretta con immagini e tavole, mantenendo distinte conservazione, analisi automatica e lettura attestata. Host di inferenza verificato in sola lettura; altra sessione impegnata nella manutenzione, nessun testo inviato e nessun servizio avviato. Stato, limiti e ripresa aggiornati nel vault; prosa successiva alla lettura concordata. Ancore tecniche conservate, nessuna operazione Git di scrittura.
+
 ## 2026-10-15 - Conclusione della lettura estesa e dissensi
 
 Verificato il commit manuale dell’autore `0931648`, albero inizialmente pulito su main e unico worktree. Terminata la lettura estesa di un testimone, comprese note, indice e immagini finali; collazione minuta ancora distinta dalla chiusura del record. Confrontati metadati editoriali, conservati dissensi, rinvii e date discordanti senza attestare originali non letti. Registro e mappe preparatorie aggiornati nel vault; coda documentale successiva indicata nel prompt di ripresa. Sintesi definitiva e prosa restano successive alla lettura concordata. Host di inferenza non contattato, ancore tecniche conservate; nessuna operazione Git di scrittura.
