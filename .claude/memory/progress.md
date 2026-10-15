@@ -1,5 +1,9 @@
 
 
+## 2026-10-15 - Lettura storica e confronti interni
+
+Verificato il commit manuale dell’autore `3945c45`, albero inizialmente pulito su main. Proseguita la lettura diretta di una fonte storica nel testo e nei facsimili, con tavole, esempi e rinvii; unità interne concluse distinte dal volume ancora aperto. Documentati lessico, eccezioni e discrepanze verificate sulle immagini, con collazioni fini ancora nominate. Mappa preparatoria verso i capitoli esistenti aggiornata nel vault; la sintesi definitiva e la prosa restano successive alla lettura concordata. Nessun contatto con l’host di inferenza durante la manutenzione. Le ancore tecniche e il drift già dichiarato restano conservati; nessuna operazione Git di scrittura dell’agente.
+
 ## 2026-10-15 - Avanzamento dei primi cinque passaggi
 
 Verificato il commit manuale dell’autore `164bf40`. Proseguita la lettura diretta fino alla fine di un esemplare esteso, con notazione e bibliografia; lacune dell’edizione, media e opere rinviate restano espliciti nel vault privato. Raccolte relazioni fra passi e capitoli dell’indice esistente come mappa provvisoria: la sintesi definitiva segue le letture concordate e la nuova prosa attende il passaggio editoriale previsto. Il mandato corrente riguarda i primi cinque passaggi; la scrittura per movimenti resta successiva. Nessun contatto con l’host di inferenza durante la manutenzione. Ancore tecniche conservate; nessuna operazione Git di scrittura dell’agente.
