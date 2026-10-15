@@ -12,6 +12,10 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-10-15 - Trasformazioni, contesto e limiti delle fonti
+
+Verificato il commit manuale dell’autore `932e404`, albero inizialmente pulito. Proseguita la lettura diretta di testo, facsimili, esempi e note; conclusi altri capitoli interni senza chiudere il volume. Registrate condizioni ed eccezioni delle regole, distinte ricostruzioni analitiche e dati osservati, aggiornati rinvii e mappa preparatoria nel vault. Sintesi definitiva e prosa restano successive alla lettura concordata. Nessun contatto con l’host di inferenza durante la manutenzione, nessuna operazione Git di scrittura. Ancore tecniche e drift già dichiarati conservati.
+
 ## 2026-10-15 - Lettura storica e confronti interni
 
 Verificato il commit manuale dell’autore `3945c45`, albero inizialmente pulito su main. Proseguita la lettura diretta di una fonte storica nel testo e nei facsimili, con tavole, esempi e rinvii; unità interne concluse distinte dal volume ancora aperto. Documentati lessico, eccezioni e discrepanze verificate sulle immagini, con collazioni fini ancora nominate. Mappa preparatoria verso i capitoli esistenti aggiornata nel vault; la sintesi definitiva e la prosa restano successive alla lettura concordata. Nessun contatto con l’host di inferenza durante la manutenzione. Le ancore tecniche e il drift già dichiarato restano conservati; nessuna operazione Git di scrittura dell’agente.
