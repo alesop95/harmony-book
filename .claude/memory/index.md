@@ -1,4 +1,12 @@
 
+## 2026-10-16 - Riconciliazione editoriale e lettura dei facsimili
+
+Proseguita la lettura diretta di un testimone privo di testo estraibile, comprendendo notazione e consegne. Riconciliati revisione, ristampa e anno originale senza cambiare la chiave bibliografica; distinte lettura del documento, verifiche degli originali e affermazioni percettive. Registrati blocchi, rinvii e mappa preparatoria nel vault e ricontato lo stesso insieme di esemplari, senza dedurre una scadenza. Restano aperti il seguito del volume e la coda concordata. Conservate le modifiche del giro precedente ancora da versionare e le ancore tecniche arretrate. Nessun contatto con l’host di inferenza; backup affidati al progetto dedicato. Git manuale; sintesi definitiva e prosa successive alla lettura concordata.
+
+## 2026-10-16 - Conclusione di una lettura documentale
+
+Conclusa la lettura diretta completa di un altro testimone, con esempi musicali, tavole, note, indice e pagine prive di testo estraibile. Riconciliati apparati, rinvii e mappa preparatoria nel vault; chiusura del documento distinta dalla verifica degli originali e degli ascolti. Ricontato il residuo sul medesimo insieme di esemplari, senza dedurre una data finale dalle pagine. Verificato il commit manuale dell’autore e fissata la prossima unità, con identità editoriale da controllare. Nessun accesso all’host di inferenza né invio di testi privati. Backup affidati al progetto dedicato; Git manuale, ancore tecniche conservate, sintesi definitiva e prosa successive alla lettura concordata.
+
 ## 2026-10-16 - Lettura diretta e misura del lavoro residuo
 
 Proseguita la lettura diretta di un esemplare, con unità interne concluse ed esempi musicali verificati; volume e apparati finali restano aperti. Misurato il residuo sul medesimo perimetro documentale, distinguendo pagine, media, collazioni e fonti mancanti, senza una data finale non sostenuta da un ritmo misurato. Digest, riserve e punto di ripresa aggiornati nel vault. Verificato il nuovo commit manuale dell’autore; nessun contatto con l’host di inferenza e nessuna operazione Git di scrittura. Backup affidati al progetto dedicato dell’autore; ancore tecniche conservate, sintesi e prosa successive alla lettura concordata.
