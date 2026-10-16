@@ -1,5 +1,9 @@
 # Registro delle decisioni architetturali
 
+## ADR-013 - Conservazione compatta delle cache e avanzamenti accorpati
+
+Data: 2026-10-16 Stato: accettata su richiesta dell’autore. Contesto: gli avanzamenti di lettura producono molte rappresentazioni locali e richiedono frequenti consegne. Decisione: accorpare più blocchi prima della consegna e scegliere il formato derivato più piccolo fra quelli provati, verificandone il recupero. Originali, manoscritto e memoria mantengono identità e leggibilità; cache e temporanei hanno un ciclo esplicito. Motivazione: ridurre spazio e interruzioni senza perdere contenuti, provenienza o capacità di ripresa. Conseguenze: strumenti di conservazione e ingestione aggiornati, esiti misurati nel vault e miglioramenti riportati al template. Compressione e rendering non promuovono la lettura; backup e Git seguono i mandati già vigenti.
+
 > Convenzione ADR-lite, append-only. Ogni decisione architetturale non ovvia entra come voce numerata con data, stato, contesto, decisione, motivazione e conseguenze. Una decisione non si cancella e non si riscrive: quando viene superata, si aggiunge una nuova voce che dichiara di superare la precedente e ne cita il numero. Le inferenze non confermate si marcano come da verificare e si promuovono a decisione solo quando una fonte le conferma.
 
 ## ADR-001 - Adozione del sistema di progetto portabile

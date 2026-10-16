@@ -12,6 +12,10 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## Conservazione compatta e avanzamenti accorpati, 16 ottobre 2026
+
+Applicata la richiesta di accorpare gli avanzamenti e ridurre lo spazio locale. Misurati formati e recupero su cache reali, aggiunti selezione dei codec e lettura senza estrazione, compressione trasparente dei testi e ottimizzazione dei raster con verifica integrale di byte o pixel secondo il formato. Originali, memoria e backup mantengono il proprio ruolo. Estensione verificata e riportata al template, preservando il lavoro concorrente; nessuna operazione Git mutante. Le prove del rendering non promuovono la lettura: il prossimo passo resta quello documentato nel vault, con più blocchi per consegna.
+
 ## 2026-10-16 - Lettura della revisione e confronto editoriale
 
 Verificato il versionamento manuale e proseguita la lettura diretta della revisione successiva, con preliminari e primi otto capitoli completi, testo, esempi e consegne. Riconciliate le osservazioni pregresse, mantenuta distinta la data della prefazione da quella di stampa e raggiunto un rinvio interno del traduttore. Aggiornati nel vault copertura, candidati bibliografici, mappa preparatoria e misura sullo stesso insieme di testimoni. Il volume resta aperto; la ripresa è al capitolo successivo. Originali, ascolti, verifiche esterne e sintesi definitiva mantengono il proprio stato. Nessun contatto con l’host di inferenza; backup affidati al progetto dedicato e Git manuale.

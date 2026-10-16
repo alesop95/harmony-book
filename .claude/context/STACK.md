@@ -14,6 +14,10 @@ source-doc: transform-into-claude-md/devBook settings.docx
 last-verified-commit: 9acc2e0
 ---
 
+## Conservazione compatta delle cache, 2026-10-16
+
+tools/cache-storage.py gestisce i testi generati con codec della libreria standard, lettura in streaming, scrittura atomica e recupero verificato. tools/doc-ingest.py conserva plain come default e abilita auto su richiesta, migrando i mirror invariati senza nuova conversione e aggiornando l’indice al suffisso effettivo. La compressione trasparente LZX riguarda solo cache di testo su Windows/NTFS; i raster derivati vengono ottimizzati solo con identità di tutti i pixel e dei metadati pertinenti. Fonti e contenuti privati restano nel vault. L’ancora tecnica generale è conservata: questa integrazione puntuale non dichiara riconciliate le divergenze precedenti.
+
 ## Stato corrente del servizio e della chiusura, 2026-10-14
 
 Il servizio di inferenza del progetto è sospeso finché il requisito dell’autore sui residui dell’host non è verificato. Tmpfs e controllo delle scritture dell’applicazione non impediscono da soli persistenza dovuta a swap o ibernazione. Arresto del servizio e rimozione dei temporanei verificati nel livello privato; le sezioni successive conservano architettura e fotografie pregresse.
