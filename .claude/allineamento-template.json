@@ -1,8 +1,7 @@
 {
-  "template_commit": "f23f70338b0e747044f595a3e20962b9ad77bd01",
-  "template_albero_claude": "6a2b71cf5752f505ef17d6e7792e89318e9194bb",
-  "data_commit_template": "2026-10-14",
-  "allineato_il": "2026-10-15",
-  "strumento": "allinea-dal-template.py",
-  "verifica": "_notes/00-regia/verifiche/allineamento-template-2026-10-14-finale.json"
+    "template_commit":  "36bbb949e896bbd0315737f017c90947b8a77a28",
+    "template_albero_claude":  "8d2ee7b26724ca4c0c67ae0dfc160cec1e232a28",
+    "data_commit_template":  "2026-10-16",
+    "allineato_il":  "2026-10-16",
+    "strumento":  "allinea-tutti.ps1"
 }
