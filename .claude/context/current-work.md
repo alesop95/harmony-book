@@ -12,6 +12,10 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-10-16 - Lettura diretta e misura del lavoro residuo
+
+Proseguita la lettura diretta di un esemplare, con unità interne concluse ed esempi musicali verificati; volume e apparati finali restano aperti. Misurato il residuo sul medesimo perimetro documentale, distinguendo pagine, media, collazioni e fonti mancanti, senza una data finale non sostenuta da un ritmo misurato. Digest, riserve e punto di ripresa aggiornati nel vault. Verificato il nuovo commit manuale dell’autore; nessun contatto con l’host di inferenza e nessuna operazione Git di scrittura. Backup affidati al progetto dedicato dell’autore; ancore tecniche conservate, sintesi e prosa successive alla lettura concordata.
+
 ## 2026-10-15 - Lettura documentale completa e prosecuzione della roadmap
 
 Conclusa la lettura diretta completa di un altro testimone, comprese notazione e appendici; la chiusura documentale mantiene distinti ascolti, esercizi, collazioni e opere rinviate. Aggiornati ledger, rinvii, mappa preparatoria e punto di ripresa nel vault, con riconto sullo stesso perimetro e conservazione delle riserve editoriali. Ripristino dell’accelerazione comunicato dall’autore e hardware verificato in sola lettura; prerequisiti di persistenza ancora insufficienti, nessun testo privato inviato. I backup sono affidati al progetto dedicato dell’autore, senza nuovi archivi dopo la sua correzione. Nuova prosa successiva al perimetro di lettura concordato; Git manuale e ancore tecniche conservate.
