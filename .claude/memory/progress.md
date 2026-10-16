@@ -1,4 +1,8 @@
 
+## 2026-10-16 - Chiusura del testimone e prosecuzione del corpus
+
+Verificato il commit manuale dell’autore e conclusa la lettura diretta del testimone avviato, compresi tutti gli esempi musicali, le consegne, il supplemento e l’indice. Riconciliati copertura, rinvii e mappa preparatoria nel vault; conservate discordanze editoriali e alternative analitiche. La chiusura documentale mantiene distinti originali, esecuzioni e verifiche esterne. Ricontato lo stesso insieme di esemplari e fissati i preliminari della successiva revisione come prossima unità, senza trasferirvi le attestazioni. Nessun contatto con l’host di inferenza; backup affidati al progetto dedicato. Git manuale e ancore tecniche conservate; sintesi definitiva e prosa successive al perimetro di lettura concordato.
+
 ## 2026-10-16 - Riconciliazione editoriale e lettura dei facsimili
 
 Proseguita la lettura diretta di un testimone privo di testo estraibile, comprendendo notazione e consegne. Riconciliati revisione, ristampa e anno originale senza cambiare la chiave bibliografica; distinte lettura del documento, verifiche degli originali e affermazioni percettive. Registrati blocchi, rinvii e mappa preparatoria nel vault e ricontato lo stesso insieme di esemplari, senza dedurre una scadenza. Restano aperti il seguito del volume e la coda concordata. Conservate le modifiche del giro precedente ancora da versionare e le ancore tecniche arretrate. Nessun contatto con l’host di inferenza; backup affidati al progetto dedicato. Git manuale; sintesi definitiva e prosa successive alla lettura concordata.
