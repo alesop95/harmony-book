@@ -12,6 +12,10 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-10-16 - Lettura della revisione e confronto editoriale
+
+Verificato il versionamento manuale e proseguita la lettura diretta della revisione successiva, con preliminari e primi otto capitoli completi, testo, esempi e consegne. Riconciliate le osservazioni pregresse, mantenuta distinta la data della prefazione da quella di stampa e raggiunto un rinvio interno del traduttore. Aggiornati nel vault copertura, candidati bibliografici, mappa preparatoria e misura sullo stesso insieme di testimoni. Il volume resta aperto; la ripresa è al capitolo successivo. Originali, ascolti, verifiche esterne e sintesi definitiva mantengono il proprio stato. Nessun contatto con l’host di inferenza; backup affidati al progetto dedicato e Git manuale.
+
 ## 2026-10-16 - Chiusura del testimone e prosecuzione del corpus
 
 Verificato il commit manuale dell’autore e conclusa la lettura diretta del testimone avviato, compresi tutti gli esempi musicali, le consegne, il supplemento e l’indice. Riconciliati copertura, rinvii e mappa preparatoria nel vault; conservate discordanze editoriali e alternative analitiche. La chiusura documentale mantiene distinti originali, esecuzioni e verifiche esterne. Ricontato lo stesso insieme di esemplari e fissati i preliminari della successiva revisione come prossima unità, senza trasferirvi le attestazioni. Nessun contatto con l’host di inferenza; backup affidati al progetto dedicato. Git manuale e ancore tecniche conservate; sintesi definitiva e prosa successive al perimetro di lettura concordato.
