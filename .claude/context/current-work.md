@@ -12,6 +12,12 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-10-19 - Lettura dei primi due capitoli del nuovo testimone
+
+Lette direttamente diciannove immagini del nuovo esemplare, generalmente doppie pagine, fino alla conclusione di introduzione e primi due capitoli. Quattro digest privati, 54 esempi numerati, undici consegne e tre schemi ritmici; sette dettagli riaperti. Riconciliate anche tre immagini preliminari già usate per l'anagrafica. La copertura nel registro cresce di diciannove attestazioni per pagina; non è un conteggio delle pagine stampate o di aperture mai avvenute prima. Fonte ancora parziale, seguito dal prossimo capitolo.
+
+Conservate eccezioni, rappresentazioni analitiche e una riserva sulla chiusa di un esempio. Manoscritto e altre fonti preservati; registri e memoria aggiornati. Versionamento manuale precedente acquisito, albero inizialmente pulito. Vecchia regia conclusa, nessun nuovo carico remoto. Due ancore tecniche arretrate dichiarate senza riancoraggio. Controlli canonici superati 8/8, uscita 0 e ultima riga Controlli verdi. Audit locale superato su venti documenti e 21 collegamenti: immagini, ritagli, copertura, tabelle e conservazione verificati. Git resta manuale; backup già gestito dall'autore.
+
 ## 2026-10-19 - Collazione diretta del blocco iniziale
 
 Riletto direttamente il blocco iniziale della fonte guida: sedici immagini intere, tre dettagli e quattro schede private su prosa, diagrammi e notazione. Distinte le posizioni scritte dalle altezze subordinate a chiavi non stampate; conservate omissioni e qualificazioni del testo. Con le riletture precedenti è coperto il contenuto visibile dell'esemplare. Fonte ancora parziale per lacune e riserve fotografiche. Completato oggi il controllo retrospettivo degli artefatti del lotto rimasto senza audit, conservandone il checkpoint storico. Nessuna nuova prima apertura o modifica del manoscritto.
