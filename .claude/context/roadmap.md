@@ -6,6 +6,12 @@ covers-paths: []
 last-verified-commit: 017b02a
 ---
 
+## 2026-10-19 - Lettura dei capitoli III-IV e seguito armonico
+
+Letti fino alla conclusione due ulteriori capitoli dell'esemplare in corso: sedici immagini doppie, cinque digest privati, quarantanove esempi numerati e quattro consegne; dieci dettagli aperti. Copertura complessiva di trentacinque immagini su centodiciassette, introduzione e primi quattro capitoli conclusi nel testimone disponibile. Fonte ancora parziale; prossimo blocco dal capitolo successivo.
+
+Registrate convenzioni analitiche, interpretazioni alternative, un limite interno alla definizione di un ornamento e distinzioni fra livelli ritmici. Manoscritto e altre fonti preservati; eventi precedenti conservati, registri e ripresa aggiornati. Commit manuale precedente acquisito durante il giro, albero pulito prima della registrazione. Vecchia regia conclusa, nessun nuovo carico remoto. Due ancore tecniche arretrate dichiarate senza riancoraggio. Controlli canonici superati 8/8, uscita 0 e ultima riga Controlli verdi. Audit locale superato su 21 documenti e 29 collegamenti: immagini, ritagli, copertura, tabelle e conservazione verificati. Git resta manuale; backup già gestito dall'autore.
+
 ## 2026-10-19 - Lettura dei primi due capitoli del nuovo testimone
 
 Lette direttamente diciannove immagini del nuovo esemplare, generalmente doppie pagine, fino alla conclusione di introduzione e primi due capitoli. Quattro digest privati, 54 esempi numerati, undici consegne e tre schemi ritmici; sette dettagli riaperti. Riconciliate anche tre immagini preliminari già usate per l'anagrafica. La copertura nel registro cresce di diciannove attestazioni per pagina; non è un conteggio delle pagine stampate o di aperture mai avvenute prima. Fonte ancora parziale, seguito dal prossimo capitolo.
