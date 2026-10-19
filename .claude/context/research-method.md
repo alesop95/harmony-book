@@ -1,5 +1,9 @@
 # Ricerca accademica per il libro di armonia
 
+## Verifica per servizio e durata effettiva, 2026-10-17
+
+Il requisito di persistenza è verificato sul servizio concreto prima dell'invio dei testi: cgroup senza swap, proprio blocco della sospensione, tmpfs e confinamento delle scritture. Il controllo continua durante l'esecuzione; non si dichiara eliminata ogni traccia amministrativa del collegamento. I risultati automatici restano non revisionati. Nelle prove di uso prolungato registrare pause, errori e copertura dei sensori: ore trascorse e campioni raccolti non equivalgono a ore sotto carico, né un servizio su CPU prova concorrenza GPU. La disponibilità futura della quota è un limite operativo, non un risultato già dimostrato.
+
 ## Prerequisiti di persistenza dell’host, 2026-10-14
 
 Il vincolo esplicito dell’autore richiede verifica dei meccanismi di persistenza dell’host prima dell’invio di testi privati: tmpfs e Landlock attestano proprietà del percorso e delle scritture applicative, ma non impediscono swap o ibernazione. In assenza di verifica sufficiente si arresta il solo servizio del progetto, si controlla la rimozione dei temporanei e si prosegue nella lettura locale. Le tracce di sistema e le scritture pregresse non sono dichiarate assenti senza evidenza; nessuna pulizia di log condivisi o modifica globale viene eseguita.
@@ -46,3 +50,7 @@ Il controllo `python tools/check-book.py` verifica collegamenti `\input`, file `
 Configurazione privata `additional_corpora` per accodare inventari con lo stesso schema; gli hash mantengono le identità. `source_overrides.processing_pdf` indica una copia derivata privata, il suo SHA-256 e il manifest di trasformazione: hash derivato e originale verificati prima dell'acquisizione, provenienza nelle unità. Un collegamento può avere una cartella risolta e verificata; non viene eseguito né dichiarato letto il suo contenuto.
 
 Il rendering conserva schede non valide senza eccezione su localizzatori mancanti e mostra gli errori. La prova privata `verify-reader-recovery-2026-10-09.py` usa una scheda fallita reale, riproduce il vecchio arresto, conserva SHA-256/output e verifica che l'ancora inesistente resti respinta. Per segmenti ASR molto brevi l'evidenza può coincidere con l'intero segmento non vuoto anche sotto15 caratteri; la sottostringa breve di un testo lungo rimane non valida. Sono controlli di provenienza letterale, non di validità dell'interpretazione. La revisione di fonte, figure, notazione e ascolto rimane necessaria.
+
+## Prosecuzione parallela
+
+L’inferenza locale può proseguire sui testi acquisiti mentre continua la lettura diretta. Ogni scheda conserva ancoraggi e stato non revisionato; presenza del risultato e correttezza delle citazioni non certificano l’interpretazione. La finestra autorizzata, le evidenze di isolamento, le metriche e i comandi di arresto vivono nel vault. Un benchmark condiviso trasferisce esclusivamente dati tecnici anonimi, senza provenienza bibliografica o testo delle fonti. La ripresa di Codex usa checkpoint documentali e attende il rinnovo della quota: cambiare sessione non rinnova il plafond.

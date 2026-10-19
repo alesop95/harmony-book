@@ -14,6 +14,14 @@ source-doc: transform-into-claude-md/devBook settings.docx
 last-verified-commit: 9acc2e0
 ---
 
+## 2026-10-19 - Recupero del lavoro e ripresa dal checkpoint
+
+La finestra temporizzata precedente è terminata e i processi della sua regia risultano assenti. Il controllo remoto corrente non trova la porta dedicata in ascolto né directory temporanee del lettore in RAM. La ripresa ordinaria è documentale e locale; nessun nuovo carico o servizio è stato avviato. Le descrizioni delle fasi attive precedenti restano storiche. I due correttivi privati alla supervisione e alla consegna sono provati sui dati osservati; l'ancora tecnica generale rimane arretrata e non viene riallineata da questa ricognizione.
+
+## Stato vigente del lettore e della supervisione, 2026-10-17
+
+Il servizio del progetto è ripartito dopo prova viva di MemorySwapMax=0, proprio inibitore della sospensione, confinamento delle scritture e rimozione dei temporanei RAM. La configurazione globale dell'host resta invariata. Le successive descrizioni della sospensione precedente sono storiche. Supervisione delle letture, attese della quota e telemetria conservano checkpoint e scadenza nel vault; i contatori includono tutti gli avvii del carico e i riavvii del monitor non azzerano il budget termico. Questa verifica puntuale non riallinea automaticamente l'ancora tecnica generale.
+
 ## Conservazione compatta delle cache, 2026-10-16
 
 tools/cache-storage.py gestisce i testi generati con codec della libreria standard, lettura in streaming, scrittura atomica e recupero verificato. tools/doc-ingest.py conserva plain come default e abilita auto su richiesta, migrando i mirror invariati senza nuova conversione e aggiornando l’indice al suffisso effettivo. La compressione trasparente LZX riguarda solo cache di testo su Windows/NTFS; i raster derivati vengono ottimizzati solo con identità di tutti i pixel e dei metadati pertinenti. Fonti e contenuti privati restano nel vault. L’ancora tecnica generale è conservata: questa integrazione puntuale non dichiara riconciliate le divergenze precedenti.
@@ -111,3 +119,7 @@ Il programma di lettura completa usa tre strumenti di manutenzione aggiunti il 2
 `source-library.py` usa `_notes/10-biblioteca/` e `_notes/99-cache/doc-ingest/source-library/`. Il registro centrale conserva il percorso `_notes/book-bib-registry.json`; `sync-book-bib.py` conserva i propri report nella biblioteca riorganizzata. `fetch-community.py` delega al lettore vendorizzato, mantenendolo intatto, e indirizza le nuove acquisizioni verso `_notes/20-ricerca/acquisizioni-community/`. `post` e `riprendi` mantengono i comandi del template; l’help e la destinazione sono verificati senza acquisizione di nuovi contenuti in questo giro.
 
 Le procedure private attuali sono in `_notes/80-strumenti/`; gli script di lavorazioni precedenti sono archiviati e non vanno rieseguiti come aggiornamenti correnti. La procedura di snapshot esclude l’intera cache e i propri ZIP. La migrazione conserva hash, percorsi precedenti e copie delle note anteriori al riallineamento dei link; le validazioni distinguono file autoriali immutati da documentazione operativa aggiornata.
+
+## Inferenza confinata e checkpoint compatti
+
+Il servizio transitorio utente avvia Ollama con MemorySwapMax=0 e un proprio inibitore sleep block. L’helper verifica cgroup e inibitore prima di avviare il modello e durante l’esecuzione; Landlock conserva i soli temporanei in RAM. Non basta una directory tmpfs se il processo può usare swap. LOCAL_READING_COMPACT=1 abilita JSON e schede Markdown compressi con codec verificato, mentre i piccoli checkpoint operativi restano leggibili; il lettore accetta entrambe le forme e conserva i percorsi effettivi nel database. La supervisione temporizzata e termica è privata nel vault.

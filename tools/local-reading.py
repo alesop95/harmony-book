@@ -34,6 +34,10 @@ from urllib.parse import urlparse
 import xml.etree.ElementTree as ET
 from zipfile import ZipFile
 
+_storage_spec = importlib.util.spec_from_file_location('reading_cache_storage', Path(__file__).with_name('cache-storage.py'))
+_storage = importlib.util.module_from_spec(_storage_spec)
+_storage_spec.loader.exec_module(_storage)
+
 ROOT = Path(__file__).resolve().parents[1]
 N = ROOT / '_notes'
 BASE = N / '10-biblioteca/lettura-locale'
@@ -46,7 +50,11 @@ def now():
     return datetime.now(timezone.utc).isoformat()
 
 def read(path, fallback=None):
-    return json.loads(Path(path).read_text(encoding='utf-8-sig')) if Path(path).is_file() else fallback
+    actual = _storage.cache_variant(path)
+    if actual is None:
+        return fallback
+    with _storage.open_text(actual) as stream:
+        return json.loads(stream.read().lstrip('\ufeff'))
 
 def write(path, data):
     path = Path(path)
@@ -65,9 +73,18 @@ def write(path, data):
     if os.path.commonpath([target, ancestor]) != ancestor:
         raise ValueError('Artifact path is outside the private project notes')
     path.parent.mkdir(parents=True, exist_ok=True)
+    if os.environ.get('LOCAL_READING_COMPACT') == '1' and not path.name.endswith(('-stato.json', '-process.json')):
+        return _storage.write_cached_text(path, json.dumps(data, ensure_ascii=False, separators=(',', ':')) + '\n')
     temporary = path.with_name(path.name + '.' + uuid4().hex + '.writing')
     temporary.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     temporary.replace(path)
+    return path
+
+def write_markdown(path, text):
+    if os.environ.get('LOCAL_READING_COMPACT') == '1':
+        return _storage.write_cached_text(path, text)
+    Path(path).write_text(text, encoding='utf-8')
+    return Path(path)
 
 def relative(path):
     return Path(path).relative_to(ROOT).as_posix()
@@ -731,20 +748,22 @@ def analyze(cfg, limit=None):
                     break
                 messages.append({'role': 'assistant', 'content': result['message']['content']})
                 messages.append({'role': 'user', 'content': 'Correggi soltanto questi errori, scegliendo id di ancora esistenti: ' + '; '.join(errors)})
-            if output.exists():
+            if _storage.cache_variant(output):
                 stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
                 archive = output.parent / 'history' / (chunk_id + '-' + stamp + '.json')
                 write(archive, read(output))
-                if output.with_suffix('.md').exists():
-                    archive.with_suffix('.md').write_bytes(output.with_suffix('.md').read_bytes())
-            write(output, {'created_utc': now(), 'prompt_version': PROMPT_VERSION, 'model': cfg['model'], 'source_sha256': sid,
+                old_markdown = _storage.cache_variant(output.with_suffix('.md'))
+                if old_markdown:
+                    with _storage.open_text(old_markdown) as stream:
+                        write_markdown(archive.with_suffix('.md'), stream.read())
+            written = write(output, {'created_utc': now(), 'prompt_version': PROMPT_VERSION, 'model': cfg['model'], 'source_sha256': sid,
                   'chunk_id': chunk_id, 'fragments_hash': hashlib.sha256(fragment_json.encode()).hexdigest(), 'card': card,
                   'validation_errors': errors, 'attempts': attempts, 'human_reviewed': False,
                   'reused_verified_checkpoint': reused,
                   'reading_level_promoted': False, 'limits': 'Grounded quotations validate anchors, not every interpretation or exhaustive capture of source information.'})
-            output.with_suffix('.md').write_text(card_markdown(read(output), source), encoding='utf-8')
+            write_markdown(output.with_suffix('.md'), card_markdown(read(output), source))
             state = 'grounded-unreviewed' if not errors else 'needs-review'
-            con.execute('UPDATE chunks SET state=?,output=?,error=? WHERE chunk_id=?', (state, relative(output), '; '.join(errors) if errors else None, chunk_id))
+            con.execute('UPDATE chunks SET state=?,output=?,error=? WHERE chunk_id=?', (state, relative(written), '; '.join(errors) if errors else None, chunk_id))
             con.commit()
             print('local model', chunk_id, state, flush=True)
             if errors and (len(fragments) > 1 or sum(len(f['text']) for f in fragments) > 2000):
@@ -765,7 +784,7 @@ def analyze(cfg, limit=None):
             if transient and network_failures.get(chunk_id, 0) < 3:
                 network_failures[chunk_id] = network_failures.get(chunk_id, 0) + 1
                 partial = CACHE / 'model-stream' / (chunk_id + '.partial.json')
-                if partial.exists():
+                if _storage.cache_variant(partial):
                     write(CACHE / 'model-stream/history' / (chunk_id + '-' + uuid4().hex + '.json'), read(partial))
                 status('analyze', state='retrying-transport', chunk_id=chunk_id,
                        attempt=network_failures[chunk_id], error=str(error))
@@ -840,7 +859,12 @@ def serve_session(cfg):
     port = int(cfg.get('isolated_port', 11501))
     encoded = base64.b64encode((ROOT / 'tools/isolated-ollama-host.py').read_bytes()).decode('ascii')
     bootstrap = "import base64;exec(compile(base64.b64decode('" + encoded + "'),'<ssh-stdin-helper>','exec'))"
-    remote = ['python3', '-B', '-c', bootstrap, '--models', cfg['remote_model_directory'], '--port', str(port), '--heartbeats']
+    remote = ['systemd-run', '--user', '--quiet', '--wait', '--pipe', '--collect',
+              '-p', 'MemorySwapMax=0', '-p', 'LimitCORE=0', '-p', 'CoredumpFilter=0x0',
+              '-p', 'RuntimeMaxSec=' + str(int(cfg.get('remote_max_seconds', 172900))),
+              'systemd-inhibit', '--no-ask-password', '--what=sleep', '--mode=block',
+              '--who=local-worker', '--why=temporary-computation',
+              'python3', '-B', '-c', bootstrap, '--models', cfg['remote_model_directory'], '--port', str(port), '--heartbeats']
     argv = [cfg.get('ssh', 'ssh'), '-T', '-o', 'BatchMode=yes', '-o', 'ExitOnForwardFailure=yes',
             '-o', 'ServerAliveInterval=30', '-o', 'ServerAliveCountMax=3',
             '-L', f'127.0.0.1:{port}:127.0.0.1:{port}', cfg['ssh_alias'], shlex.join(remote)]
@@ -905,7 +929,8 @@ def report(con=None):
             output = read(ROOT / output_path)
             if not output:
                 continue
-            source_cards.append(f"- [{chunk_id}]({Path(output_path).name.replace('.json', '.md')}) - {state}")
+            markdown = _storage.cache_variant(BASE / 'schede' / sid / (chunk_id + '.md'))
+            source_cards.append(f"- [{chunk_id}]({markdown.name if markdown else Path(output_path).name}) - {state}")
             for key, destination in [('terms', glossary), ('relations', relations), ('references', references)]:
                 destination.extend({'source_sha256': sid, 'chunk_id': chunk_id, 'state': state, 'human_reviewed': False, **item} for item in output['card'].get(key, []))
         if source_cards:

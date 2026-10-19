@@ -16,6 +16,31 @@ import subprocess
 import tempfile
 import threading
 import sys
+import time
+
+
+def memory_protection():
+    """Check the live service cgroup and its own sleep inhibitor, not host defaults."""
+    group = next(line.split(':', 2)[2] for line in Path('/proc/self/cgroup').read_text().splitlines() if line.startswith('0::'))
+    directory = Path('/sys/fs/cgroup') / group.lstrip('/')
+    swap_max = (directory / 'memory.swap.max').read_text().strip()
+    swap_current = int((directory / 'memory.swap.current').read_text())
+    ancestors = set()
+    pid = os.getpid()
+    while pid > 1 and pid not in ancestors:
+        ancestors.add(pid)
+        pid = int(next(line.split()[1] for line in Path(f'/proc/{pid}/status').read_text().splitlines() if line.startswith('PPid:')))
+    inhibitors = json.loads(subprocess.check_output([
+        'busctl', '--system', '--json=short', 'call', 'org.freedesktop.login1',
+        '/org/freedesktop/login1', 'org.freedesktop.login1.Manager', 'ListInhibitors'], timeout=5))['data'][0]
+    held = [item for item in inhibitors if 'sleep' in item[0].split(':') and item[3] == 'block' and item[5] in ancestors]
+    mounts = [line.split() for line in Path('/proc/mounts').read_text().splitlines()]
+    proof = {'cgroup': group, 'memory_swap_max': swap_max, 'memory_swap_current': swap_current,
+             'own_sleep_inhibitor': bool(held), 'inhibitor_pids': [item[5] for item in held],
+             'scratch_is_tmpfs': any(row[1:3] == ['/dev/shm', 'tmpfs'] for row in mounts)}
+    if swap_max != '0' or swap_current != 0 or not held or not proof['scratch_is_tmpfs']:
+        raise RuntimeError('Protected service prerequisites failed: ' + json.dumps(proof))
+    return proof
 
 
 class Ruleset(ctypes.Structure):
@@ -69,6 +94,8 @@ def main():
     parser.add_argument('--probe', action='store_true')
     parser.add_argument('--heartbeats', action='store_true')
     args = parser.parse_args()
+    print(json.dumps({'memory_protection': memory_protection()}), flush=True)
+    resource.setrlimit(resource.RLIMIT_CORE, (0, 0))
     scratch = Path(tempfile.mkdtemp(prefix='local-reader-', dir='/dev/shm'))
     child = None
     try:
@@ -115,7 +142,9 @@ def main():
                     pass
                 os.kill(os.getpid(), signal.SIGTERM)
             threading.Thread(target=control_channel, daemon=True).start()
-        child.wait()
+        while child.poll() is None:
+            memory_protection()
+            time.sleep(2)
     finally:
         if child and child.poll() is None:
             os.killpg(child.pid, signal.SIGTERM)
