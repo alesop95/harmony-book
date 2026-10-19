@@ -1,4 +1,11 @@
 
+## 2026-10-19 - Collazione diretta del blocco iniziale
+
+Riletto direttamente il blocco iniziale della fonte guida: sedici immagini intere, tre dettagli e quattro schede private su prosa, diagrammi e notazione. Distinte le posizioni scritte dalle altezze subordinate a chiavi non stampate; conservate omissioni e qualificazioni del testo. Con le riletture precedenti è coperto il contenuto visibile dell'esemplare. Fonte ancora parziale per lacune e riserve fotografiche. Completato oggi il controllo retrospettivo degli artefatti del lotto rimasto senza audit, conservandone il checkpoint storico. Nessuna nuova prima apertura o modifica del manoscritto.
+
+Registri e rimandi riconciliati; prossimo lavoro dal primo blocco di un esemplare locale ancora non letto. Versionamento manuale precedente verificato, albero inizialmente pulito. Regia automatizzata conclusa; nessun nuovo carico remoto. Due ancore tecniche arretrate dichiarate, senza riancoraggio. Controlli canonici superati 8/8, con uscita 0 e ultima riga Controlli verdi. Verifiche locali di pixel, copertura, rimandi e conservazione superate. Git resta manuale; il backup è già gestito dall'autore.
+
+
 ## 2026-10-19 - Recupero del lavoro e ripresa dal checkpoint
 
 Ricognizione della finestra automatizzata conclusa: il lavoro documentale è conservato nel vault, un esemplare terminato e la fonte guida ancora parziale. La ripresa corrente individua il blocco iniziale da collazionare, le lacune e un audit conclusivo mancante; nessuna nuova lettura o modifica al manoscritto dedotta dal recupero. I processi della precedente regia sono assenti e non sono state aperte altre finestre automatiche.

@@ -570,3 +570,10 @@ Conservata nell'archivio privato la sequenza completa delle letture, con tutte l
 ## 2026-10-14 - Preparazione del versionamento
 
 Copie byte-esatte delle schede e del diff pendenti conservate nell'archivio privato prima della separazione dei dettagli. Gli aggiornamenti pubblici descrivono metodo e stato; attestazioni e contenuti mantengono il perimetro privato. Commit, push e deploy restano manuali. Il backup locale include note e manoscritto, con cache rigenerabile esclusa e copia coerente del database; serve una copia su un secondo supporto per la conservazione esterna.
+
+## 2026-10-19 - Collazione diretta del blocco iniziale
+
+Riletto direttamente il blocco iniziale della fonte guida: sedici immagini intere, tre dettagli e quattro schede private su prosa, diagrammi e notazione. Distinte le posizioni scritte dalle altezze subordinate a chiavi non stampate; conservate omissioni e qualificazioni del testo. Con le riletture precedenti è coperto il contenuto visibile dell'esemplare. Fonte ancora parziale per lacune e riserve fotografiche. Completato oggi il controllo retrospettivo degli artefatti del lotto rimasto senza audit, conservandone il checkpoint storico. Nessuna nuova prima apertura o modifica del manoscritto.
+
+Registri e rimandi riconciliati; prossimo lavoro dal primo blocco di un esemplare locale ancora non letto. Versionamento manuale precedente verificato, albero inizialmente pulito. Regia automatizzata conclusa; nessun nuovo carico remoto. Due ancore tecniche arretrate dichiarate, senza riancoraggio. Controlli canonici superati 8/8, con uscita 0 e ultima riga Controlli verdi. Verifiche locali di pixel, copertura, rimandi e conservazione superate. Git resta manuale; il backup è già gestito dall'autore.
+
