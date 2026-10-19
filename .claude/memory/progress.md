@@ -588,3 +588,30 @@ Conservate eccezioni, rappresentazioni analitiche e una riserva sulla chiusa di 
 Letti fino alla conclusione due ulteriori capitoli dell'esemplare in corso: sedici immagini doppie, cinque digest privati, quarantanove esempi numerati e quattro consegne; dieci dettagli aperti. Copertura complessiva di trentacinque immagini su centodiciassette, introduzione e primi quattro capitoli conclusi nel testimone disponibile. Fonte ancora parziale; prossimo blocco dal capitolo successivo.
 
 Registrate convenzioni analitiche, interpretazioni alternative, un limite interno alla definizione di un ornamento e distinzioni fra livelli ritmici. Manoscritto e altre fonti preservati; eventi precedenti conservati, registri e ripresa aggiornati. Commit manuale precedente acquisito durante il giro, albero pulito prima della registrazione. Vecchia regia conclusa, nessun nuovo carico remoto. Due ancore tecniche arretrate dichiarate senza riancoraggio. Controlli canonici superati 8/8, uscita 0 e ultima riga Controlli verdi. Audit locale superato su 21 documenti e 29 collegamenti: immagini, ritagli, copertura, tabelle e conservazione verificati. Git resta manuale; backup già gestito dall'autore.
+
+## 2026-10-19 - Conclusa la lettura dell’esemplare in corso
+
+Conclusa la lettura documentale dell'esemplare in corso, con tutti gli undici capitoli, conclusione e indice finale. Il lotto aggiunge ottantadue immagini intere, dieci digest privati, dieci dettagli, duecentotrentadue esempi numerati e quarantasei consegne. Totale di diciannove digest contigui, con attestazione separata dal rendering e limiti delle interpretazioni conservati.
+
+Aggiornati registri, rinvii, mappa preparatoria e ripresa. La ricerca bibliografica continua; la scrittura segue il perimetro di lettura concordato e la sintesi, con approvazione del testo esatto. Il lavoro complessivo resta ampio, senza data finale attendibile. Manoscritto e altre fonti preservati; nuovo allineamento del template acquisito durante il giro senza annullare la storia. Due ancore tecniche arretrate dichiarate. Controlli canonici superati 8/8, uscita 0 e ultima riga Controlli verdi. Audit locale superato su 27 documenti e 42 collegamenti: immagini, ritagli, copertura, tabelle e conservazione verificati. Git resta manuale, nessun nuovo carico remoto o backup.
+
+## 2026-10-19 - Nuovo esemplare e ripresa del supporto GPU
+
+Letti preliminari e primo capitolo completo del nuovo esemplare, aperto il secondo: ventitré immagini doppie, quattro digest privati, trentatré esempi e quattordici figure. Fonte ancora parziale; seguito dal punto registrato, senza ricominciare il volume. Conservate distinzioni fra segni, gesto, risultato sonoro e prove percettive. Manoscritto e altre fonti preservati.
+
+Su rinnovata richiesta è ripartita una coda locale di analisi assistita, in un nuovo lotto limitato a otto ore con telemetria, raffreddamento e arresti protettivi. Modello e risultati automatici non certificano lettura integrale. Servizio remoto effimero: scritture del progetto soltanto in RAM, swap e core dump esclusi, risultati sul computer del progetto; prova di isolamento superata. Pulizia finale del servizio attivo ancora da osservare. Metadati amministrativi generici della connessione restano un limite dichiarato; vecchio rapporto operativo conservato.
+
+Registri, roadmap e ripresa aggiornati. Ricerca bibliografica in corso; sintesi e scrittura seguono il perimetro concordato, senza data finale attendibile. Due ancore tecniche arretrate conservate, nessun riancoraggio. Controlli canonici superati 8/8, uscita 0 e ultima riga Controlli verdi. Audit locale superato su 23 documenti e 26 collegamenti: immagini, copertura, tabelle e conservazione verificati. Lotto di lettura consolidato; servizio GPU distinto e pulizia finale ancora da verificare dopo l’arresto. Git manuale, backup già gestito dall'autore.
+
+Vincolo permanente preesistente per ogni ripresa GPU: nessun dato o residuo del progetto sul disco della macchina remota. Elaborazione solo in RAM con protezioni verificate prima dei testi; alla chiusura controllare arresto e rimozione della propria directory temporanea. Non trattare questo vincolo come una nuova richiesta a ogni sessione.
+
+
+Prescrizione GPU permanente presente anche in CLAUDE.md, indice canonico da leggere a ogni avvio; correzione del resoconto che la presentava come appena acquisita.
+
+## 2026-10-19 - Due capitoli conclusi e usi delle fonti tracciati
+
+Lette altre ventuno immagini doppie, con cinque digest privati, sessanta esempi numerati, quattordici figure e quattro consegne didattiche lette ma non svolte. Conclusi due capitoli ulteriori; fonte ancora parziale, seguito preciso nel livello privato. Manoscritto e altre fonti preservati.
+
+Su richiesta esplicita dell'autore rafforzata la catena fra informazione, esemplare, localizzatore, ragionamento, motivo della collocazione, citazione e limiti. Creato un indice di recupero di tutti i record e un catalogo delle occorrenze interne delle letture recenti, con una mappa autorata degli usi proposti. Reperibilità, comprensione, bibliografia risolta e inserimento nel testo restano stati distinti; le collocazioni non ancora decise sono aperte. Nessuna sintesi finale o prosa del libro promossa.
+
+Il servizio GPU già avviato continua nel lotto limitato e protetto, preparando schede da revisionare. Il vincolo permanente di nessun dato del progetto sul disco remoto resta operativo; la pulizia del servizio attivo si verifica dopo la chiusura. Nessun nuovo stress test, export o backup. Due ancore tecniche arretrate conservate. Controlli canonici superati 8/8, uscita0 e ultima riga Controlli verdi. Audit degli artefatti superato:21 immagini,32 documenti e579 collegamenti; indice di256 record,428 esempi interni e28 usi proposti verificati. Manoscritto, altri255 record e quattro digest/eventi precedenti preservati. Fonte ancora L2; completezza della mappa editoriale non inferita. Pulizia del servizio GPU attivo da verificare dopo la chiusura. Git resta manuale.

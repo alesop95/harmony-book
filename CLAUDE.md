@@ -45,4 +45,6 @@ Norme caricate su richiesta, una riga per situazione con le parole con cui si pr
 
 ## Vincoli di team
 
+Il divieto di lasciare residui del progetto sulla macchina GPU è permanente e già stabilito dall'autore. Testi, cache, schede, log e altri artefatti persistenti restano sul computer del progetto; sul server si elabora soltanto in RAM, con scritture su disco negate, swap e core dump esclusi. Prima di inviare testi si verifica l'isolamento effettivo; alla chiusura si verifica l'arresto della propria istanza e la rimozione della sua directory temporanea. Non serve che l'autore ripeta il vincolo a ogni ripresa. La prova riguarda i dati del progetto; non autorizza a cancellare log amministrativi o alterare servizi condivisi.
+
 Le operazioni di `git add`, commit e push restano sempre manuali dell'utente: l'agente prepara i file, non committa. L'identità git e il remoto sono configurati a livello locale del repository secondo `.claude/rules/git-identity-and-repo.md`; i valori reali restano fuori dai file tracciati. Lo stile di documentazione e di interazione è quello di `.claude/rules/interaction-style.md`. I file di memoria e di contesto si aggiornano nello stesso giro di lavoro sostanziale, come prescrive `.claude/rules/chat-non-e-memoria.md`; il controllo del versionamento resta umano.
