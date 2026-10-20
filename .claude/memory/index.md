@@ -1,4 +1,12 @@
 
+## 2026-10-20 - Lettura estesa e gerarchie musicali documentate
+
+Completati altri sette capitoli e iniziato il successivo: trentadue nuove immagini doppie, otto digest privati, quarantacinque esempi, quattordici figure e sette consegne lette ma non svolte. Fonte ancora parziale; punto di ripresa e contatori nel livello privato. Manoscritto, altri record e quaranta digest ed eventi precedenti preservati.
+
+Aggiunti venti usi motivati con localizzatore, spiegazione, collocazione proposta, citazione e limiti. Elementi della tessitura, parti reali, raddoppi e numero dei musicisti distinti; gerarchie variabili nella frase documentate. Convenzioni delle ottave, osservazioni percettive e spiegazioni ipotetiche conservate senza promozioni automatiche. Indice dei record e catalogo degli esempi aggiornati; scrittura e sintesi finale restano successive alle letture.
+
+Nessuna operazione GPU nel lotto; rimangono la precedente chiusura protettiva verificata e il vincolo permanente di nessun dato del progetto sul disco remoto. Commit dell'autore acquisito. Trentatré percorsi dell'allineamento esterno conservati; Git manuale limitato ai quattro file di stato. Due ancore tecniche arretrate, zero difetti strutturali, nessun riancoraggio. Controlli obbligatori superati 8/8, uscita0 e ultima riga Controlli verdi. Audit degli artefatti superato:32 immagini, nessun nuovo dettaglio,31 documenti e947 collegamenti; indice di256 record,733 esempi interni e122 usi proposti verificati. Manoscritto, altri255 record e40 digest/eventi precedenti preservati. Fonte ancora L2; nessuna mappa complessiva o comprensione integrale del corpus dichiarata completa. Nessuna operazione remota GPU nel lotto. La precedente anomalia informativa delle lezioni del template risulta risolta dalla lavorazione esterna: chiamata canonica riuscita, nessuna lezione nuova nel lotto e registro assente segnalato correttamente.
+
 ## 2026-10-20 - Lettura estesa e convenzioni esecutive documentate
 
 Conclusi altri tre capitoli dell'esemplare e proseguito il successivo: trentadue nuove immagini doppie, un dettaglio supplementare, otto digest privati, sessantuno esempi, venticinque figure e una consegna letta ma non svolta. Fonte ancora parziale; totale e punto di ripresa conservati nel livello privato. Manoscritto, altri record e trentadue digest ed eventi precedenti preservati.
