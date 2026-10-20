@@ -6,6 +6,14 @@ covers-paths: []
 last-verified-commit: 017b02a
 ---
 
+## 2026-10-20 - Ulteriore lettura e raccordo per la scrittura
+
+Conclusi altri tre capitoli dell'esemplare in corso e avviato il successivo: trentadue nuove immagini doppie lette, otto digest privati, cinquantasei esempi, ventidue figure e sette consegne lette ma non svolte. Fonte ancora parziale; punto di ripresa e immagini solo preparate distinti nel livello privato. Manoscritto, altri record e ventiquattro digest ed eventi precedenti preservati.
+
+Aggiunti diciotto usi motivati con localizzatore, ragionamento, collocazione proposta, citazione e limiti. Indice di tutti i record e catalogo degli esempi aggiornati; grafia, strumento indicato, strumento effettivo e suono reale distinti. Congetture storiche, parti omesse e prove esecutive ancora aperte. Nessuna sintesi finale o prosa del libro promossa.
+
+Nessuna nuova operazione sulla macchina GPU in questo lotto. Conservata la precedente chiusura verificata dopo l'arresto termico e il vincolo permanente di nessun dato del progetto sul disco remoto. Si prosegue localmente. Due ancore tecniche arretrate, zero difetti strutturali, nessun riancoraggio. Commit dell'autore acquisito; ventinove percorsi esterni del template conservati e consegna Git limitata ai quattro documenti di stato. Controlli canonici superati 8/8, uscita0 e ultima riga Controlli verdi. Audit degli artefatti superato:32 immagini,31 documenti e819 collegamenti; indice di256 record,627 esempi interni e82 usi proposti verificati. Manoscritto, altri255 record e24 digest/eventi precedenti preservati. Fonte ancora L2; nessuna mappa complessiva o comprensione integrale del corpus dichiarata completa. Nessuna operazione remota GPU nel lotto.
+
 ## 2026-10-20 - Tre capitoli letti e chiusura GPU verificata
 
 Conclusi tre ulteriori capitoli dell'esemplare in corso: trenta immagini doppie, sette digest privati, sessantasei esempi, tredici figure e quattro consegne lette ma non svolte. Fonte ancora parziale; punto di ripresa preciso conservato nel livello privato. Manoscritto, altri record e attestazioni precedenti preservati.
