@@ -1,99 +1,98 @@
 ---
 name: craft-apps
 description: >
-  Porta un artefatto visivo o documentale dentro il lavoro della sessione usando le
-  applicazioni Craft installate sulla macchina, scegliendo fra riga di comando e server MCP
-  secondo la forma del lavoro invece che per abitudine. Si carica quando serve modificare,
-  ispezionare, convertire o rendere un'immagine, un PSD, un file vettoriale, un'animazione
-  Lottie o un progetto di motion graphics, un PDF, un impaginato, un documento di testo, un
-  foglio di calcolo, una presentazione, un disegno CAD, un file audio o un montaggio video;
-  quando serve estrarre o cercare il testo di molti PDF, riconoscerne il testo con l'OCR,
-  oscurarne una parte o toglierne le informazioni nascoste; quando una figura di una
-  pubblicazione va prodotta o ritoccata; e quando si deve decidere se collegare uno di questi
-  server MCP a una sessione, perché quella decisione ha un costo di contesto che va speso
-  sapendo. Non installa niente da sé e non collega niente senza dirlo.
+  Prima di produrre o modificare un documento, una presentazione, un PDF, un'immagine, una
+  grafica vettoriale, un'interfaccia, un foglio di calcolo, un audio, un video o un disegno
+  CAD, e prima di scrivere uno script o installare una libreria per farlo, verifica in locale
+  se le applicazioni Craft della suite ArtCraft sono installate e, se ci sono, le usa: sono
+  open source, girano sulla macchina senza account, senza rete e senza consumare token, e
+  hanno una riga di comando scriptabile. Copre la ricetta dal Markdown al documento o alle
+  slide con il design system del progetto, l'estrazione e l'OCR di molti PDF, e la scelta fra
+  riga di comando e server MCP, che ha un costo di contesto. Non installa niente da sé e non
+  collega niente senza dirlo.
 ---
 
-# Lavorare su un artefatto con le applicazioni Craft
+# Lavorare su un artefatto con le applicazioni Craft, in locale
 
-## Quando questa skill serve davvero, e quando no
+Il principio è *local-first*, ed è una scelta del proprietario del 2026-10-19: quando il lavoro chiede un artefatto, si guarda prima che cosa c'è sulla macchina. Le applicazioni Craft sono tredici programmi open source, con licenza MIT o Apache-2.0 a scelta, dell'organizzazione GitHub `storytold`, e ciascuno ha accanto un binario `<app>-cli` che lavora senza finestra. Girano senza account e senza rete: PdfCraft e FigCraft lo dichiarano esplicitamente nei loro README, e per le altre nessun README lega l'uso a un accesso. I crediti a pagamento del sito getartcraft.com riguardano lo studio AI di generazione di immagini e video, che è un prodotto separato; il launcher che chiede di creare un account non è necessario, perché ogni applicazione si installa anche dai rilasci di GitHub, con l'impronta verificata. Fonti e date nel README del pacchetto `.claude/templates/craft-apps/`.
 
-Serve quando il risultato che l'utente chiede è un file che oggi si produrrebbe aprendo a mano un programma di grafica, di video, di audio, di impaginazione o di PDF. Non serve quando il file va soltanto letto come fonte: per quello valgono gli strumenti di lettura già presenti nel progetto, che costano meno. La distinzione è fra consumare un artefatto e produrne o modificarne uno.
+Serve quando il risultato è un file che oggi si produrrebbe aprendo a mano un programma di grafica, di video, di audio, di impaginazione, di ufficio o di PDF, oppure scrivendo uno script con una libreria che fa la stessa cosa. Non serve quando il file va soltanto letto come fonte: per quello valgono gli strumenti di lettura già presenti nel progetto, che costano meno.
 
-## Passo 1 - Nominare l'artefatto, poi l'applicazione
+Gli strumenti stanno in `.claude/templates/craft-apps/tools/`, che arriva in ogni progetto con l'allineamento; se il progetto li ha istanziati sotto `tools/`, valgono quelli. Nei comandi qui sotto `T` sta per quella cartella.
 
-Si parte dal file e non dall'applicazione, perché la scelta sbagliata più comune è prendere il programma di cui si è sentito parlare invece di quello che apre quel formato. La corrispondenza è questa.
+## Passo 1 - Verificare in locale che cosa c'è
+
+```
+python T/craft-apps.py rileva
+```
+
+Non usa la rete: per ogni applicazione dice versione installata e percorso del binario, su Windows sotto `Program Files` o nella cartella portabile, su Linux nel tarball, in `/usr`, in `/opt`. Esce con 0 se ne trova almeno una. Se quella che serve c'è, si usa quella, e si dichiara all'utente con versione e percorso. Se manca, si passa al passo 4 e non si ripiega in silenzio su uno script o su un servizio esterno: il punto è proprio non uscire dalla macchina senza che il proprietario lo sappia.
+
+## Passo 2 - Nominare l'artefatto, poi l'applicazione
+
+Si parte dal file e non dall'applicazione, perché la scelta sbagliata più comune è prendere il programma di cui si è sentito parlare invece di quello che apre quel formato.
 
 | Artefatto | Applicazione | Binario |
 |---|---|---|
+| Documento di testo: DOCX, ODT, RTF, PDF, HTML, Markdown, TeX | WordCraft | `wordcraft-cli` |
+| Presentazione, diapositive, temi, forme, tabelle, grafici | DeckCraft | `deckcraft-cli` |
+| PDF: testo, pagine, segnalibri, moduli, OCR, oscuramento, firme, PDF/A | PdfCraft | `pdfcraft-cli` |
 | Immagine raster, PSD, PNG, JPEG, TIFF, WebP, EXR | PhotoCraft | `photocraft-cli` |
 | Grafica vettoriale, SVG, tracciati, ricolorazione, vettorializzazione | VectorCraft | `vectorcraft-cli` |
-| Animazione Lottie, motion graphics, effetti, composizioni, fotogrammi chiave | EffectCraft | `effectcraft-cli` |
+| Interfaccia, prototipo, mockup, esportazione in PNG, SVG, PDF | FigCraft | `figcraft-cli` |
+| Impaginato, pagine, posizionamento di immagini, pubblicazione | DesignCraft | `designcraft-cli` |
+| Foglio di calcolo, intervalli, formule, grafici, tabelle | GridCraft | `gridcraft-cli` |
+| Animazione Lottie, motion graphics, effetti, fotogrammi chiave | EffectCraft | `effectcraft-cli` |
 | Montaggio video, sequenze, importazione di media, rendering | FilmCraft | `filmcraft-cli` |
 | Fotografia raw, sviluppo non distruttivo, libreria, preset | LightCraft | `lightcraft-cli` |
-| PDF: testo, pagine, segnalibri, moduli, OCR, oscuramento, firme, PDF/A | PdfCraft | `pdfcraft-cli` |
-| Impaginato, pagine, posizionamento di immagini, pubblicazione | DesignCraft | `designcraft-cli` |
-| Documento di testo, DOCX | WordCraft | `wordcraft-cli` |
 | Audio, sessioni, importazione, missaggio, esportazione | SoundCraft | `soundcraft-cli` |
-| Presentazione, diapositive, forme, tabelle, grafici | DeckCraft | `deckcraft-cli` |
 | Disegno CAD, entità, quote | CADCraft | `cadcraft-cli` |
-| Foglio di calcolo, intervalli, formule, grafici, tabelle | GridCraft | `gridcraft-cli` |
 
-Se nessuna riga corrisponde, lo si dice invece di forzare la più vicina: la suite non copre tutto, e per molti domini esiste uno strumento specializzato che il progetto già usa.
+Se nessuna riga corrisponde, lo si dice invece di forzare la più vicina. Ogni binario elenca i propri comandi, con `<app>-cli commands`, e ne spiega uno, con `describe` o `--help`.
 
-## Passo 2 - Chiedere a GitHub quella sola applicazione
+## Passo 3 - La ricetta dei documenti e delle slide
 
-Non si presume che la suite sia installata, e non si pretende che lo sia: quasi sempre serve un'applicazione sola, e averle tutte costerebbe quasi seicento megabyte per niente. Lo stato di quella sola si chiede sul momento.
-
-```
-python tools/craft-apps.py stato <app>
-```
-
-Il comando interroga i rilasci di GitHub e risponde con quattro cose per questa macchina: la versione installata se c'è, l'ultima pubblicata, il peso del file che servirebbe per questo sistema, questa architettura e questo canale, e l'esito. Il peso viene dal rilascio e non da una tabella, perché la domanda che segue sempre a «non installata» è quanto costa averla, e una cifra ricordata invecchia a ogni versione.
-
-Se manca, non si installa di propria iniziativa. Si riporta all'utente la versione, il peso misurato e il comando per prendere quella sola applicazione, e si aspetta la sua risposta, perché installare aggiunge un programma alla sua macchina.
+Il contenuto si scrive in Markdown, che resta la fonte versionabile e leggibile in un diff; si converte con l'applicazione installata; gli si applica il design del progetto. Lo fa uno strumento, per una ragione pratica: i comandi delle CLI Craft prendono parametri JSON, e Windows PowerShell 5.1 toglie le virgolette doppie dagli argomenti di un eseguibile, quindi un comando scritto a mano nel terminale arriva rotto.
 
 ```
-python tools/craft-apps.py installa <app>
+python T/craft-documento.py documento relazione.md --out relazione.pdf --stile stile.json
+python T/craft-documento.py slide sintesi.md --out sintesi.pptx --stile stile.json
+python T/craft-documento.py riferimento --stile stile.json --out modello.docx
 ```
 
-Il canale predefinito non chiede privilegi di amministratore: su Windows lo zip portabile sotto `%LOCALAPPDATA%\CraftApps`, su Linux il tarball sotto `~/.local/share/craft-apps`. Su Linux il tarball è preferito all'AppImage per una ragione che riguarda proprio questa skill: l'AppImage tiene il binario `<app>-cli` dentro di sé, quindi l'agente non lo trova e il collegamento MCP non si può generare, mentre il tarball espone `bin/<app>` e `bin/<app>-cli` affiancati. Chi vuole l'installazione di sistema chiede `--canale msi`, `deb` o `rpm`, e il comando privilegiato viene stampato perché lo esegua l'utente.
+Il documento passa da WordCraft, verso docx, pdf, odt, rtf, html o tex. Le slide passano da DeckCraft: ogni titolo del Markdown diventa una diapositiva e ogni voce di elenco un punto, verso pptx o pdf. Il file di stile è il ponte con il design system: pochi valori, cioè font dei titoli, del testo e del codice, colore dei titoli e del testo, dimensioni per stile e colori del tema delle slide. Il design non si sceglie per abitudine ma dal repository, regola del proprietario del 2026-10-19, e `--stile auto` la applica: vale prima `.claude/craft-stile.json` del progetto, se il progetto ne ha scelto uno; altrimenti l'identità git del repository, per cui un dominio di posta dichiarato aziendale in `~/.craft-apps/stili-per-identita.json`, che sta sulla macchina e non in un repository, prende il suo design aziendale, e ogni altra identità prende il design privato `templates/craft-apps/stili/privato-tecnico-sobrio.json`, scelto quel giorno: documentazione da senior engineer, titoli in Inter, testo in Georgia, un solo accento blu ardesia, codice in Consolas. Lo strumento dice quale stile ha preso e perché. `--riferimento modello.docx` copia gli stili da un documento esistente, ma i valori del file di stile si applicano comunque, perché in WordCraft il font del corpo vive nel tema e la copia degli stili non lo porta. <!-- ref-assente -->
 
-Se GitHub risponde che la quota delle richieste anonime è esaurita, lo strumento lo dice e indica `GITHUB_TOKEN`; non si inventa una versione né si procede alla cieca. Se la macchina è senza rete, si dice che lo stato non è verificabile adesso e si lavora con ciò che è già installato, oppure si rimanda.
+Prima di consegnare, l'artefatto si guarda: `wordcraft-cli render doc.docx pagina.png` e `deckcraft-cli render slide.pptx --all cartella` producono le immagini da leggere. Le applicazioni sono in alpha, e un comando che esce con 0 non prova che abbia fatto ciò che si chiedeva: in WordCraft 0.8.0 tre nomi sbagliati della chiave del font sono accettati e ignorati senza errore, ed è emerso solo aprendo `word/styles.xml`. `craft-documento.py --collaudo` rifà la prova sui byte dei file prodotti.
 
-## Passo 3 - Scegliere la via, che è la decisione che costa
+## Passo 4 - Se l'applicazione manca
 
-La domanda non è quale via sia più potente ma quale forma abbia il lavoro, e la risposta decide quanto contesto si spende.
-
-Se il lavoro è a passo unico e si sa già che cosa fare, si usa la riga di comando. Convertire, estrarre testo, rendere un fotogramma, applicare una lista di azioni a una cartella, esportare: tutto questo è un comando che nasce e muore, costa zero token di dichiarazione e lascia l'esito in un riepilogo di poche righe. È il caso più frequente, e va provato per primo.
-
-Si collega il server MCP soltanto quando il lavoro è esplorativo, cioè quando bisogna guardare la struttura di un documento, provare un valore, rivedere il risultato e correggerlo in giro chiuso. Lì il server ripaga il suo costo, perché evita decine di avvii di processo e tiene lo stato aperto. Il costo si misura prima di decidere, non dopo.
+Non si installa di propria iniziativa. Si chiede a GitHub lo stato di quella sola applicazione, che dice versione disponibile e peso del file per questa macchina, e si riporta all'utente con il comando per prenderla.
 
 ```
-python tools/craft-mcp.py elenca --conta
+python T/craft-apps.py stato <app>
+python T/craft-apps.py installa <app>
 ```
 
-## Passo 4 - Collegare, confinando, e dichiarando il costo
+L'installazione parla solo con GitHub, verifica l'impronta SHA-256 pubblicata dal rilascio e non chiede né account né privilegi di amministratore: su Windows lo zip portabile sotto `%LOCALAPPDATA%\CraftApps`, su Linux il tarball sotto `~/.local/share/craft-apps`, che a differenza dell'AppImage espone il binario `-cli`. Chi vuole l'installazione di sistema chiede `--canale msi`, `deb` o `rpm`, e il comando privilegiato viene stampato perché lo esegua l'utente. Quasi sempre serve un'applicazione sola, e averle tutte costerebbe centinaia di megabyte per niente. Se GitHub risponde che la quota delle richieste anonime è esaurita, lo strumento lo dice e indica `GITHUB_TOKEN`.
 
-Il collegamento si genera e non si scrive a mano, perché la parte che si sbaglia è sempre il confinamento.
+## Passo 5 - Riga di comando o server MCP
+
+Se il lavoro è a passo unico e si sa già che cosa fare, si usa la riga di comando: convertire, estrarre testo, rendere una pagina, applicare una lista di comandi con `run`. Costa zero token di dichiarazione e lascia l'esito in poche righe. È il caso più frequente, e va provato per primo.
+
+Si collega il server MCP soltanto quando il lavoro è esplorativo, cioè quando bisogna guardare la struttura di un documento, provare un valore e correggerlo in giro chiuso. Il costo si misura prima di decidere, il collegamento si genera e non si scrive a mano, perché la parte che si sbaglia è il confinamento, e si dice all'utente quanto costerà e quali cartelle diventeranno il perimetro: mai la radice del disco, mai una cartella personale.
 
 ```
-python tools/craft-mcp.py genera <app> --scrittura <cartella del progetto> --per claude --scrivi
-python tools/craft-mcp.py controlla
+python T/craft-mcp.py elenca --conta
+python T/craft-mcp.py genera <app> --scrittura <cartella del progetto> --per claude --scrivi
+python T/craft-mcp.py controlla
 ```
 
-Prima di generarlo si dice all'utente quanto costerà quel server in contesto, con il numero misurato al passo precedente, e si nominano le cartelle che diventeranno il perimetro. Un server Craft si collega a una cartella del progetto, mai alla radice del disco e mai a una cartella personale dell'utente.
-
-Il collegamento non entra in vigore a metà sessione: un server dichiarato in `.mcp.json` resta in attesa di approvazione e non viene connesso finché la sessione successiva non lo approva. Lo si dice all'utente invece di lasciarglielo scoprire, e per il lavoro di adesso si resta sulla riga di comando.
-
-## Passo 5 - Spegnere quando il lavoro è finito
-
-Un server che resta collegato continua a costare in ogni sessione successiva, comprese quelle che non toccano artefatti. Finito il lavoro si toglie la voce da `.mcp.json`, oppure la si lascia dichiarata e la si elenca in `disabledMcpjsonServers` dentro `.claude/settings.local.json`: un server disabilitato resta scritto, pronto da riaccendere, e non viene connesso. È la forma preferibile in un progetto che tocca artefatti ogni tanto, perché conserva la configurazione confinata già verificata invece di farla riscrivere ogni volta.
+Un server dichiarato in `.mcp.json` non entra in vigore a metà sessione: resta in attesa di approvazione fino alla sessione successiva, quindi per il lavoro di adesso si resta sulla riga di comando. Finito il lavoro lo si spegne, togliendo la voce oppure elencandola in `disabledMcpjsonServers` dentro `.claude/settings.local.json`. <!-- ref-assente -->
 
 ## Il vincolo che non si negozia
 
-Prima di puntare una di queste applicazioni a una cartella, si guarda che cosa contiene. PdfCraft con l'OCR su una cartella di documenti dell'utente è esattamente la situazione della regola `documenti-personali.md`: un contratto, una busta paga o un documento d'identità non si aprono senza una richiesta espressa per quei documenti, e il nome del file serve a riconoscerli ed escluderli, non a decidere di leggerli. Vale anche per ciò che le applicazioni lasciano dietro di sé, cioè le copie di autosalvataggio e la cache dei fotogrammi renderizzati, che stanno fuori da ogni radice di confinamento e fuori da ogni repository: lo studio del pacchetto dice dove, e `craft-mcp.py controlla` segnala `--autosave` proprio per questo.
+Prima di puntare una di queste applicazioni a una cartella, si guarda che cosa contiene. PdfCraft con l'OCR su una cartella di documenti dell'utente è esattamente la situazione della regola `documenti-personali.md`: un contratto, una busta paga o un documento d'identità non si aprono senza una richiesta espressa per quei documenti. Vale anche per ciò che le applicazioni lasciano dietro di sé, cioè le copie di autosalvataggio e la cache dei fotogrammi, che stanno fuori da ogni radice di confinamento: il README del pacchetto dice dove, e `craft-mcp.py controlla` lo segnala.
 
 ## Quando il lavoro è finito
 
-Si dichiara che cosa è stato prodotto, con quale applicazione e quale versione, e se si è passati dalla riga di comando o dal server. Un artefatto generato da un'applicazione in alpha si guarda prima di considerarlo buono, e quando l'artefatto ha un formato nativo, per esempio un `.ecproj`, si conserva anche l'esportazione in un formato che si legge altrove.
+Si dichiara che cosa è stato prodotto, con quale applicazione e quale versione, e se si è passati dalla riga di comando o dal server. La fonte Markdown e il file di stile restano nel progetto, così l'artefatto si rigenera invece di ritoccarsi a mano; quando l'artefatto ha un formato nativo, per esempio un `.deckcraft`, si conserva anche l'esportazione in un formato che si legge altrove.

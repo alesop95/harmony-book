@@ -1,17 +1,15 @@
 ---
 name: craft-apps
 description: >
-  Porta un artefatto visivo o documentale dentro il lavoro della sessione usando le
-  applicazioni Craft installate sulla macchina, scegliendo fra riga di comando e server MCP
-  secondo la forma del lavoro invece che per abitudine. Si carica quando serve modificare,
-  ispezionare, convertire o rendere un'immagine, un PSD, un file vettoriale, un'animazione
-  Lottie o un progetto di motion graphics, un PDF, un impaginato, un documento di testo, un
-  foglio di calcolo, una presentazione, un disegno CAD, un file audio o un montaggio video;
-  quando serve estrarre o cercare il testo di molti PDF, riconoscerne il testo con l'OCR,
-  oscurarne una parte o toglierne le informazioni nascoste; quando una figura di una
-  pubblicazione va prodotta o ritoccata; e quando si deve decidere se collegare uno di questi
-  server MCP a una sessione, perché quella decisione ha un costo di contesto che va speso
-  sapendo. Non installa niente da sé e non collega niente senza dirlo.
+  Prima di produrre o modificare un documento, una presentazione, un PDF, un'immagine, una
+  grafica vettoriale, un'interfaccia, un foglio di calcolo, un audio, un video o un disegno
+  CAD, e prima di scrivere uno script o installare una libreria per farlo, verifica in locale
+  se le applicazioni Craft della suite ArtCraft sono installate e, se ci sono, le usa: sono
+  open source, girano sulla macchina senza account, senza rete e senza consumare token, e
+  hanno una riga di comando scriptabile. Copre la ricetta dal Markdown al documento o alle
+  slide con il design system del progetto, l'estrazione e l'OCR di molti PDF, e la scelta fra
+  riga di comando e server MCP, che ha un costo di contesto. Non installa niente da sé e non
+  collega niente senza dirlo.
 ---
 
 <!-- generato da sync-codex-skills.py; non modificare -->
