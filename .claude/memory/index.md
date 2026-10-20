@@ -1,4 +1,26 @@
 
+## 2026-10-20 - Tre capitoli letti e chiusura GPU verificata
+
+Conclusi tre ulteriori capitoli dell'esemplare in corso: trenta immagini doppie, sette digest privati, sessantasei esempi, tredici figure e quattro consegne lette ma non svolte. Fonte ancora parziale; punto di ripresa preciso conservato nel livello privato. Manoscritto, altri record e attestazioni precedenti preservati.
+
+Aggiunti sedici usi motivati con pagina, ragionamento, collocazione, citazione e limiti. Aggiornati indice di tutti i record e catalogo degli esempi interni. Convenzioni locali della notazione e giudizi estetici sono distinti dai risultati sperimentali; parti omesse e rinvii non consultati restano espliciti. Nessuna sintesi finale o prosa del libro promossa.
+
+Il lotto GPU precedente si è chiuso alla soglia protettiva della CPU dopo41 richieste, senza completare le otto ore. Arresto del servizio e rimozione della directory RAM dedicata verificati anche via SSH in sola lettura; nessun riavvio dopo l'arresto termico. Vincolo permanente di nessun dato del progetto sul disco remoto rispettato dal servizio confinato; nessuna cancellazione dei log condivisi, nuova installazione, esportazione o backup. Risultati automatici da revisionare, nessuna lettura promossa dal modello.
+
+Due ancore tecniche arretrate conservate e zero difetti strutturali osservati, nessun riancoraggio. Allineamenti del template acquisiti nel frattempo, quattro modifiche di stato preesistenti di questo lavoro conservate; Git sempre manuale. Controlli canonici superati 8/8, uscita0 e ultima riga Controlli verdi. Audit degli artefatti superato:30 immagini,33 documenti e765 collegamenti; indice di256 record,571 esempi interni e64 usi proposti verificati. Manoscritto, altri255 record e17 digest/eventi precedenti preservati. Fonte ancora L2 e mappa editoriale complessiva non dichiarata completa; chiusura GPU verificata anche in sola lettura remota.
+
+Allineamento del template arrivato da altra lavorazione durante l'audit: percorsi esterni conservati, consegna Git limitata ai quattro documenti di stato.
+
+## 2026-10-19 - Quattro capitoli letti e usi editoriali ampliati
+
+Conclusi altri quattro capitoli dell'esemplare in corso: trentatré immagini doppie, otto digest privati, settantasette esempi, diciannove figure e sei consegne lette ma non svolte. Fonte ancora parziale, seguito registrato senza ripetere il contenuto già letto. Manoscritto e altri record preservati.
+
+La mappa preparatoria aggiunge venti usi motivati, ciascuno con pagina, ragionamento, motivo della collocazione, citazione e limiti. Aggiornati indice completo dei record e catalogo degli esempi interni; le opere primarie non collazionate e le interpretazioni da verificare restano esplicite. Individuate generalizzazioni prive di conteggio e una spiegazione acustica da non adottare come dimostrata. Nessuna sintesi finale o prosa del libro promossa.
+
+Versionamento manuale precedente acquisito, albero inizialmente pulito. Servizio GPU già attivo nel medesimo lotto protetto, schede ancora da revisionare; nessun dato del progetto sul disco remoto, verifica della rimozione del temporaneo alla chiusura ancora pendente. Nessun nuovo stress test, export o backup. Due ancore tecniche arretrate conservate, nessun riancoraggio. Controlli canonici superati 8/8, uscita0 e ultima riga Controlli verdi. Audit degli artefatti superato:33 immagini,32 documenti e664 collegamenti; indice di256 record,505 esempi interni e48 usi proposti verificati. Manoscritto, altri255 record e nove digest/eventi precedenti preservati. Fonte ancora L2; completezza della mappa editoriale non inferita. Pulizia del servizio GPU attivo da verificare dopo la chiusura. Git resta manuale.
+
+Allineamento del template arrivato durante l'audit da altra lavorazione, sette percorsi distinti registrati e preservati; consegna Git limitata ai quattro documenti di stato, senza chiusura globale dell'albero condiviso.
+
 ## 2026-10-19 - Due capitoli conclusi e usi delle fonti tracciati
 
 Lette altre ventuno immagini doppie, con cinque digest privati, sessanta esempi numerati, quattordici figure e quattro consegne didattiche lette ma non svolte. Conclusi due capitoli ulteriori; fonte ancora parziale, seguito preciso nel livello privato. Manoscritto e altre fonti preservati.
