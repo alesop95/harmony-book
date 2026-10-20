@@ -6,6 +6,14 @@ covers-paths: []
 last-verified-commit: 017b02a
 ---
 
+## 2026-10-20 - Lettura estesa e convenzioni esecutive documentate
+
+Conclusi altri tre capitoli dell'esemplare e proseguito il successivo: trentadue nuove immagini doppie, un dettaglio supplementare, otto digest privati, sessantuno esempi, venticinque figure e una consegna letta ma non svolta. Fonte ancora parziale; totale e punto di ripresa conservati nel livello privato. Manoscritto, altri record e trentadue digest ed eventi precedenti preservati.
+
+Aggiunti venti usi motivati con localizzatore, ragionamento, collocazione proposta, citazione e limiti. Ricostruzione delle ottave, convenzioni locali ed enarmonia esecutiva distinte dal significato armonico. Un estratto con stato meccanico iniziale incompleto resta aperto; osservazioni percettive non trasformate in misure sperimentali. Indice completo dei record e catalogo degli esempi aggiornati; nessuna sintesi finale o prosa del libro promossa.
+
+Nessuna nuova operazione GPU: resta conservata la precedente chiusura dopo protezione termica e il vincolo permanente di nessun dato del progetto sul disco remoto. Commit dell'autore acquisito. Allineamento del template proseguito da altra lavorazione, da ventinove a trentadue percorsi esterni conservati; consegna Git limitata ai quattro documenti di stato. Due ancore tecniche arretrate, zero difetti strutturali e nessun riancoraggio. Controlli obbligatori superati 8/8, uscita0 e ultima riga Controlli verdi. Audit degli artefatti superato:32 immagini, un dettaglio,31 documenti e891 collegamenti; indice di256 record,688 esempi interni e102 usi proposti verificati. Manoscritto, altri255 record e32 digest/eventi precedenti preservati. Fonte ancora L2; nessuna mappa complessiva o comprensione integrale del corpus dichiarata completa. Nessuna operazione remota GPU nel lotto. La sezione informativa delle lezioni del template ha restituito errore di argomento nella chiamata dallo script; controllo diretto riuscito, uscita0 e registro assente. Correzione della chiamata ancora aperta nell'allineamento esterno, senza blocco dei controlli obbligatori; evidenza conservata nella prova canonica privata.
+
 ## 2026-10-20 - Ulteriore lettura e raccordo per la scrittura
 
 Conclusi altri tre capitoli dell'esemplare in corso e avviato il successivo: trentadue nuove immagini doppie lette, otto digest privati, cinquantasei esempi, ventidue figure e sette consegne lette ma non svolte. Fonte ancora parziale; punto di ripresa e immagini solo preparate distinti nel livello privato. Manoscritto, altri record e ventiquattro digest ed eventi precedenti preservati.
