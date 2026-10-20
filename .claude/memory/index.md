@@ -1,4 +1,12 @@
 
+## 2026-10-20 - Nuova lettura estesa e lacuna documentata
+
+Avviata la lettura diretta di un altro manuale teorico locale: quarantasei immagini PDF, undici digest e trenta usi proposti con spiegazione, pagina, collocazione motivata, citazione e limiti. Fonte ancora L2; otto capitoli completi, uno con lacuna materiale e il successivo iniziato. La scansione salta due pagine stampate: gli esempi coinvolti restano esplicitamente incompleti. Corretto il rapporto fra pagine PDF e pagine stampate dopo il salto.
+
+Registrati modello teorico e limiti delle sue generalizzazioni; distinte voci dei prefatori, interventi editoriali e rinvii non ancora letti. Scheda principale, frontiera, catalogo interno e indice di tutti i record aggiornati. Il numero delle fonti integralmente chiuse rimane invariato; un lotto letto non chiude l'intero documento. Manoscritto e altri record preservati. La lettura delle fonti precede la sintesi finale e la nuova scrittura.
+
+Nessuna operazione remota GPU nel lotto; resta permanente il divieto di dati del progetto sul disco remoto. Nessun backup aggiuntivo. Identità Git e perimetro del commit verificati prima della consegna; chiusura manuale dell'utente. Due ancore tecniche arretrate, zero difetti strutturali nella verifica iniziale, nessun riancoraggio automatico. Controlli obbligatori superati 8/8, uscita0 e ultima riga Controlli verdi. Audit degli artefatti superato:46 immagini confrontate con il PDF,35 documenti,263 collegamenti e18 tabelle; verificati indice dei256 record,85 numeri d’esempio con due parziali e30 usi proposti. Manoscritto, altri255 record e baseline preservati. Fonte ancora L2,63 immagini e una lacuna di due pagine stampate restano aperte. Nessuna operazione remota GPU. Il controllo informativo delle fonti del template segnala una voce da censire, senza bloccare gli otto controlli.
+
 ## 2026-10-20 - Lettura integrale conclusa e usi documentati
 
 Conclusa la lettura integrale del testimone: ultimo lotto di quaranta immagini doppie, dieci digest privati, dieci esempi, cinquanta figure e quarantaquattro consegne lette ma non svolte. Coperti anche conclusione e indice; registro promosso a L1 documentale. Ascolti, esercizi eseguiti, verifica dei primari e perfezionamento bibliografico restano pendenze distinte. Manoscritto, altri record e quarantotto digest ed eventi precedenti preservati.
