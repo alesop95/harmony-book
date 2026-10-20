@@ -12,6 +12,14 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-10-20 - Lettura integrale conclusa e usi documentati
+
+Conclusa la lettura integrale del testimone: ultimo lotto di quaranta immagini doppie, dieci digest privati, dieci esempi, cinquanta figure e quarantaquattro consegne lette ma non svolte. Coperti anche conclusione e indice; registro promosso a L1 documentale. Ascolti, esercizi eseguiti, verifica dei primari e perfezionamento bibliografico restano pendenze distinte. Manoscritto, altri record e quarantotto digest ed eventi precedenti preservati.
+
+Aggiunti venti usi motivati con pagina, spiegazione, collocazione proposta, citazione e limiti. Peso timbrico, funzione, registro, parti reali e raddoppi sono collegati alla condotta; ipotesi acustiche e giudizi estetici restano attribuiti. Scheda principale, catalogo degli esempi e indice dei record aggiornati. La lettura delle altre fonti precede la sintesi finale e la scrittura.
+
+Nessuna operazione remota GPU nel lotto; rimane il vincolo permanente di nessun dato del progetto sul disco remoto. Commit dell'autore e successivi commit esterni acquisiti senza modificare le lavorazioni concorrenti. Git manuale limitato ai quattro documenti di stato e alla correzione della scheda esterna. I controlli hanno trovato in quella scheda un’ancora non valida e diciotto accenti con apostrofo: corretti preservando il contenuto tecnico. Lo stato esterno usa ora relazioni ai file, senza dichiarare verifica del codice o dell’host. Restano due ancore tecniche arretrate, zero difetti strutturali. Controlli obbligatori superati 8/8, uscita0 e ultima riga Controlli verdi. Audit degli artefatti superato:40 immagini, nessun nuovo dettaglio,36 documenti e990 collegamenti; indice di256 record,743 esempi interni e142 usi proposti verificati. Manoscritto, altri255 record e48 digest/eventi precedenti preservati. Fonte L1 documentale, corpus e mappa complessiva ancora aperti. Nessuna operazione remota GPU nel lotto. Corretti i metadati e i diciotto accenti della nuova scheda esterna che bloccavano la prima chiusura; misure ricevute conservate, senza nuova verifica dell’host. Due ancore tecniche arretrate e zero difetti strutturali. Il censimento informativo delle fonti del template segnala ancora una voce esterna da censire, senza bloccare gli otto controlli.
+
 ## 2026-10-20 - Lettura estesa e gerarchie musicali documentate
 
 Completati altri sette capitoli e iniziato il successivo: trentadue nuove immagini doppie, otto digest privati, quarantacinque esempi, quattordici figure e sette consegne lette ma non svolte. Fonte ancora parziale; punto di ripresa e contatori nel livello privato. Manoscritto, altri record e quaranta digest ed eventi precedenti preservati.
