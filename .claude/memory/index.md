@@ -1,4 +1,12 @@
 
+## 2026-10-20 - Testimone terminato e apparati collazionati
+
+Terminata la sequenza disponibile del manuale in lettura: sessantatré nuove immagini, sedici nuove schede, ventisette complessive. Letti capitoli finali, glossario, correzioni e indici. Sessanta usi editoriali proposti con spiegazione, localizzatore, destinazione motivata, citazione e limite; catalogo degli esempi collegato anche ai seguiti tra schede.
+
+La fonte resta parziale per due pagine materialmente assenti: leggere tutte le immagini del testimone non chiude una fonte incompleta. Corretti i rimandi editoriali alla luce dell'appendice, senza ricostruire il testo mancante; incongruenze interne e rimandi inesatti degli indici mantenuti verificabili. Nessun aumento del numero delle letture integrali chiuse. Gli altri record, le schede del lotto precedente e il manoscritto sono preservati.
+
+Memoria privata, roadmap, indice e punto di ripresa aggiornati nello stesso giro. Nessuna operazione remota GPU, vincolo permanente di nessun dato del progetto sul disco remoto, nessun backup aggiuntivo. Commit e push manuali. Controlli obbligatori superati 8/8, uscita0 e ultima riga Controlli verdi. Audit degli artefatti superato:63 immagini e un dettaglio confrontati con il PDF,40 documenti,377 collegamenti e23 tabelle. Verificati indice dei256 record,172 identificativi di esempio con due parziali e60 usi proposti. Manoscritto, altri255 record,11 digest precedenti e baseline preservati. Tutte le109 immagini lette, fonte ancora L2 per due pagine stampate assenti; appendice collazionata. Nessuna operazione remota GPU. Il controllo informativo del template segnala una voce da censire senza bloccare gli otto controlli.
+
 ## 2026-10-20 - Nuova lettura estesa e lacuna documentata
 
 Avviata la lettura diretta di un altro manuale teorico locale: quarantasei immagini PDF, undici digest e trenta usi proposti con spiegazione, pagina, collocazione motivata, citazione e limiti. Fonte ancora L2; otto capitoli completi, uno con lacuna materiale e il successivo iniziato. La scansione salta due pagine stampate: gli esempi coinvolti restano esplicitamente incompleti. Corretto il rapporto fra pagine PDF e pagine stampate dopo il salto.
