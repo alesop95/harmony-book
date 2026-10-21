@@ -12,6 +12,14 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-10-20 - Quattro capitoli del manuale successivo letti
+
+Letti preliminari e prima parte del manuale successivo: ottantasei immagini, quattro capitoli completi, undici schede, cinquantasei esempi e diciassette sezioni di autoverifica lette ma non svolte. Trentadue usi proposti con spiegazione, pagina, collocazione motivata, citazione e limiti. Catalogo interno e indice di tutti i record aggiornati; inventario di possibilità, selezione didattica e funzione armonica tenuti distinti.
+
+La fonte resta parziale con punto di ripresa nel vault; registrati convenzioni locali, incongruenze e materiali esterni non consultati. Tentato il recupero delle due pagine mancanti nella fonte precedente: originale identico, candidato web restituisce una verifica del browser, nessuna pagina acquisita o dichiarata letta. Il recupero resta aperto senza fermare le altre letture. Manoscritto e altri record preservati; numero delle fonti integralmente chiuse invariato.
+
+Nessuna operazione remota GPU o backup aggiuntivo. Resta permanente il divieto di dati del progetto sul disco remoto. Stato privato, roadmap e punto di ripresa aggiornati nello stesso giro; commit e push manuali. Controlli obbligatori superati8/8, uscita0 e ultima riga Controlli verdi. Audit superato:86 pagine confrontate con il PDF in43 immagini doppie,36 documenti,252 collegamenti e17 tabelle. Indice256 record,56 esempi,17 sezioni di autoverifica e32 usi proposti verificati. Manoscritto10 file, altri255 record e baseline preservati. Fonte ancora L2 con603 immagini residue; recupero di due pagine della fonte precedente non riuscito e non contato come lettura. Nessuna operazione remota GPU. La voce del template ancora da censire è informativa e non blocca gli otto controlli.
+
 ## 2026-10-20 - Testimone terminato e apparati collazionati
 
 Terminata la sequenza disponibile del manuale in lettura: sessantatré nuove immagini, sedici nuove schede, ventisette complessive. Letti capitoli finali, glossario, correzioni e indici. Sessanta usi editoriali proposti con spiegazione, localizzatore, destinazione motivata, citazione e limite; catalogo degli esempi collegato anche ai seguiti tra schede.
