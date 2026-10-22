@@ -12,9 +12,19 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-10-22 - Tre manuali letti e collazione locale conclusa
+
+Completata la lettura documentale di tre manuali, compresi colophon, diagrammi, esempi musicali, partiture e seguiti: settantasei nuove immagini e tre chiusure. Conservate nove schede dei manuali e due del confronto fra copie; quaranta proposte editoriali con pagine, collocazione motivata, citazione e limiti. Distinti ascolto ed esecuzione, ancora da svolgere.
+
+Il confronto locale conferma lo stesso margine tagliato in entrambe le copie del manuale precedente. La pagina resta parziale ed è ora esclusa anche dal campo di copertura piena: nessun recupero inventato o trasferimento fra copie. Registri, catalogo, indice degli usi e ripresa privata aggiornati nello stesso giro; corpus e raccordo editoriale complessivo ancora aperti. Nessun movimento del manoscritto promosso.
+
+Prossimo gruppo nella coda privata di arrangiamento e strumento. Nessuna operazione remota GPU, permanente il vincolo sui residui; nessun backup aggiuntivo. Versionamento precedente acquisito e cartella inizialmente pulita. Due ancore tecniche arretrate e zero difetti strutturali, nessun riancoraggio automatico. Chiusura manuale dopo i controlli. Le sezioni seguenti sono storiche.
+
+Controlli obbligatori superati8/8 e audit del lotto superato: corrispondenza dei raster con i PDF, collegamenti e conservazione del lavoro precedente verificati. Le tre letture documentali sono chiuse; la fonte con margine tagliato resta aperta. Identità Git verificata senza esportarne i valori. Chiusura Git manuale pronta.
+
 ## 2026-10-22 - Percorso della scansione e collazione delle lacune
 
-Percorso tutto il corpo disponibile della scansione corrente, compresi gli esempi musicali e le consegne. Il lotto aggiunge centoventicinque immagini alla copertura e registra un?immagine parziale separatamente; otto nuove schede recuperabili, settantadue esempi numerati e trentasei proposte editoriali con pagina, destinazione motivata, citazione e limite.
+Percorso tutto il corpo disponibile della scansione corrente, compresi gli esempi musicali e le consegne. Il lotto aggiunge centoventicinque immagini alla copertura e registra un'immagine parziale separatamente; otto nuove schede recuperabili, settantadue esempi numerati e trentasei proposte editoriali con pagina, destinazione motivata, citazione e limite.
 
 Confermate sei pagine stampate assenti e riserve sull’edizione. Un difetto dell’originale è recuperato soltanto nell’altra copia, senza trasferire l’attestazione: il volume resta aperto. Audio e compiti non eseguiti. Registri, cataloghi, indice degli usi e ripresa privata aggiornati nello stesso giro. Nessun movimento del manoscritto promosso; corpus e raccordo editoriale complessivo ancora aperti.
 
