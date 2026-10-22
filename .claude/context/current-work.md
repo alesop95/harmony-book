@@ -12,6 +12,16 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-10-22 - Arrangiamento, arpeggi e fascicoli di pratica letti
+
+Lette tutte le pagine disponibili di cinque documenti di arrangiamento e pratica: centocinquantanove nuove immagini, ventidue schede recuperabili e quarantotto proposte editoriali con pagine, destinazioni motivate e limiti. Catalogati anche gli esercizi con i loro seguiti, distinguendo lettura, esecuzione e ascolto.
+
+Due unità hanno chiusura documentale; tre fascicoli statici sono interamente letti, mentre il corso cui rimandano resta aperto per spiegazioni, altre sezioni e audio. Un’esclusione bibliografica è circoscritta al tipo di documento e riaperta come candidata; nessuna anagrafica inventata o citazione promossa nel manoscritto.
+
+Registri, indici degli usi, roadmap e ripresa privata aggiornati nello stesso giro; lavoro precedente preservato. Prossimo passo nella coda locale di improvvisazione e strumento. Nessun accesso remoto GPU, permanente il vincolo sui residui; nessun backup aggiuntivo. Commit precedente acquisito e cartella inizialmente pulita. Due ancore tecniche arretrate e zero difetti strutturali, senza riancoraggio automatico. Chiusura Git manuale dopo i controlli. Le sezioni seguenti sono storiche. Template: nessuna nuova lezione generale.
+
+Controlli obbligatori superati 8/8 e audit del lotto superato: immagini confrontate con gli originali, collegamenti e conservazione del lavoro precedente verificati. Le due unità documentali sono chiuse; il corso con fascicoli parziali resta aperto. Identità Git verificata senza esportarne i valori. Chiusura manuale pronta.
+
 ## 2026-10-22 - Tre manuali letti e collazione locale conclusa
 
 Completata la lettura documentale di tre manuali, compresi colophon, diagrammi, esempi musicali, partiture e seguiti: settantasei nuove immagini e tre chiusure. Conservate nove schede dei manuali e due del confronto fra copie; quaranta proposte editoriali con pagine, collocazione motivata, citazione e limiti. Distinti ascolto ed esecuzione, ancora da svolgere.
