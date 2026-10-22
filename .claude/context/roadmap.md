@@ -6,6 +6,22 @@ covers-paths: []
 last-verified-commit: 017b02a
 ---
 
+## 2026-10-22 - Lettura integrale conclusa e apparati collegati
+
+Conclusa la lettura diretta dell’intero volume corrente: ventotto capitoli, appendici, risposte, glossario e indici. Il lotto finale aggiunge duecentodiciassette pagine e ventuno schede; tutte le parti notate riprodotte e i seguiti sono stati letti. Distinte lettura del documento, svolgimento delle consegne, ascolto e verifica dei testi originali citati.
+
+Aggiunti quarantotto usi editoriali con contenuto, pagina, collocazione motivata, forma della citazione e limite. Collegati i quesiti alle risposte e mantenute le riserve dell’edizione. Registri, cataloghi e ripresa privata allineati; il corpus complessivo e il raccordo editoriale restano aperti. Nessun movimento del manoscritto promosso.
+
+Prossimo passo nella coda privata già disponibile. Nessuna operazione remota GPU o dato inviato alla macchina di inferenza; resta permanente il vincolo sui residui. Il flag precedente dell’automatismo non misura il saldo dei token dell’account. Due aggiornamenti concorrenti del template acquisiti e preservati, quattro soli documenti pubblici di stato pendenti per la chiusura manuale. Controlli obbligatori superati8/8 e audit di conservazione e reperibilità superato. La lettura documentale del volume è conclusa; il corpus complessivo rimane aperto. Preservati manoscritto e lavoro precedente. Restano due ancore tecniche arretrate, con zero difetti strutturali: nessun allineamento globale dichiarato o riancoraggio automatico. Chiusura Git manuale pronta.
+
+## 2026-10-21 - Ripresa della lettura e completamento del cromatismo
+
+Lette altre sessantuno pagine e tre capitoli completi: otto nuove schede e trenta nuovi usi editoriali con spiegazione, pagina, collocazione motivata, citazione e limiti. Il volume corrente comprende venticinque capitoli letti e resta aperto. Distinte riscrittura e reinterpretazione enarmonica, insieme di note e funzione, condotta effettiva e trasformazioni analitiche; esplicitati dominio e vincoli delle misure di distanza.
+
+Completati partiture, riduzioni, seguiti, riepiloghi e consegne incontrati; esempi su più schede contati una volta. Autoverifiche lette senza dichiararle svolte, ascolti e primari non inferiti. Rinvii bibliografici riconciliati con i record esistenti o mantenuti come candidati, senza nuove consultazioni inventate. Registri, catalogo, indice e ripresa privata aggiornati; manoscritto e materiali precedenti preservati.
+
+L'autore conferma token disponibili e rinnova la prosecuzione. Il flag dell'obiettivo automatico non dimostra esaurimento del saldo dell'account: lettura effettivamente ripresa nel turno richiesto, senza dichiarare riattivato l'automatismo o garantire ripartenze dopo il turno. Nessun cambio di account, nuovo lettore o timer di rinnovo quota. Versionamento precedente acquisito e cartella pulita all'avvio; ora quattro documenti pubblici preparati per la chiusura manuale. Zero operazioni GPU remote, permanente il divieto di dati sul disco remoto, nessun backup aggiuntivo. Ricevuto in corso un allineamento concorrente del template: undici file ulteriori, preservati senza modifiche dell’agente di lettura. Verificati i delta pertinenti e i controlli del progetto. Lo script di chiusura mostra e include tutte le modifiche presenti, anche quelle del template, prima della conferma manuale. Controlli obbligatori superati8/8, uscita0 e ultima riga Controlli verdi. Audit superato:61 pagine confrontate con il PDF in30 immagini doppie e una singola,35 documenti,705 collegamenti e18 tabelle. Indice256 record,413 esempi distinti,48 sezioni di autoverifica e188 usi proposti verificati. Manoscritto10 file,55 schede ed eventi precedenti, altri255 record e baseline preservati. Fonte ancora L2 con217 pagine residue; tre capitoli aggiuntivi letti, venticinque complessivi. Ripresa effettiva nel turno richiesto; flag nativo distinto dal saldo token, automatismo non dichiarato riattivato. Nessuna operazione remota GPU. La voce del template ancora da censire è informativa e non blocca gli otto controlli.
+
 ## 2026-10-21 - Forme e cromatismo: altri tre capitoli completi
 
 Stato osservato alla consegna: la piattaforma ha impostato l'obiettivo nativo su usageLimited dopo il checkpoint verificato. Nessuna ulteriore lettura avviata dopo il limite; ripresa da PDF412 quando quota e piattaforma lo consentiranno, senza timer di cinque ore garantito. Il mandato su tutte le fonti resta confermato; l'obiettivo non è completo.
