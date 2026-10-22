@@ -12,6 +12,16 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-10-22 - Improvvisazione letta fino alla fine delle copie
+
+Percorse fino alla fine due copie locali di improvvisazione: duecentoventi immagini, duecentodiciassette pienamente attestate e tre ritagli parziali. Il corpo presente e i seguiti sono letti; una pagina stampata non è rappresentata. Le unità restano aperte con lacune precise, senza trasformare il raggiungimento dell’ultima pagina in lettura integrale dell’edizione.
+
+Persistite trentadue schede, due indici, catalogo dei numeri principali e quarantotto proposte editoriali con pagine, destinazioni motivate e limiti. Confrontate anche etichette uguali riferite a note diverse e conservate le contraddizioni della fonte. Registri, indice degli usi, roadmap e ripresa privata aggiornati; audio e pratica distinti dalla lettura, nessuna citazione promossa nel manoscritto.
+
+Il versionamento manuale del lotto precedente è stato rilevato durante il lavoro e acquisito; il lotto corrente resta da versionare. Le quattro schede e il lavoro precedente sono preservati. Nessuna operazione remota GPU, permanente il vincolo sui residui; nessun backup aggiuntivo. Due ancore tecniche arretrate conservate, senza riancoraggio automatico. Prossima fonte nella coda locale di strumento. Controlli di chiusura superati; versionamento manuale. Le sezioni seguenti sono storiche. Template: nessuna nuova lezione generale.
+
+Controlli obbligatori superati otto su otto e audit del lotto superato: pagine confrontate con gli originali, collegamenti e conservazione del lavoro precedente verificati. Tavole temporanee eliminate dopo verifica, immagini native conservate senza ricodifica. Identità Git e assenza dei relativi identificativi nei file tracciati verificate. Il lotto precedente risulta versionato, quello corrente è pronto per la chiusura manuale.
+
 ## 2026-10-22 - Arrangiamento, arpeggi e fascicoli di pratica letti
 
 Lette tutte le pagine disponibili di cinque documenti di arrangiamento e pratica: centocinquantanove nuove immagini, ventidue schede recuperabili e quarantotto proposte editoriali con pagine, destinazioni motivate e limiti. Catalogati anche gli esercizi con i loro seguiti, distinguendo lettura, esecuzione e ascolto.
