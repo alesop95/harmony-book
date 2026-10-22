@@ -6,6 +6,16 @@ covers-paths: []
 last-verified-commit: 017b02a
 ---
 
+## 2026-10-22 - Percorso della scansione e collazione delle lacune
+
+Percorso tutto il corpo disponibile della scansione corrente, compresi gli esempi musicali e le consegne. Il lotto aggiunge centoventicinque immagini alla copertura e registra un?immagine parziale separatamente; otto nuove schede recuperabili, settantadue esempi numerati e trentasei proposte editoriali con pagina, destinazione motivata, citazione e limite.
+
+Confermate sei pagine stampate assenti e riserve sull’edizione. Un difetto dell’originale è recuperato soltanto nell’altra copia, senza trasferire l’attestazione: il volume resta aperto. Audio e compiti non eseguiti. Registri, cataloghi, indice degli usi e ripresa privata aggiornati nello stesso giro. Nessun movimento del manoscritto promosso; corpus e raccordo editoriale complessivo ancora aperti.
+
+Il prossimo passo è la collazione locale di una lacuna del manuale successivo con l’altra copia disponibile. Zero operazioni remote GPU, permanente il vincolo sui residui e nessun backup aggiuntivo. Acquisito e preservato l’allineamento concorrente del template; due ancore tecniche arretrate e zero difetti strutturali, nessun riancoraggio automatico. Identità Git verificata in sessione. Chiusura manuale dopo i controlli. Le sezioni seguenti sono storiche.
+
+Controlli obbligatori superati8/8 e audit del lotto superato: corrispondenza delle immagini con il PDF, collegamenti e conservazione dei documenti precedenti verificati. La lettura del corpo disponibile è percorsa; le lacune dell’edizione mantengono aperta la fonte. Chiusura Git manuale pronta.
+
 ## 2026-10-22 - Lettura integrale conclusa e apparati collegati
 
 Conclusa la lettura diretta dell’intero volume corrente: ventotto capitoli, appendici, risposte, glossario e indici. Il lotto finale aggiunge duecentodiciassette pagine e ventuno schede; tutte le parti notate riprodotte e i seguiti sono stati letti. Distinte lettura del documento, svolgimento delle consegne, ascolto e verifica dei testi originali citati.
