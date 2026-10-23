@@ -12,6 +12,26 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-10-23 - Raccolta percorsa fino all’ultima pagina e apparati collegati
+
+Percorsa fino all’ultima pagina una raccolta in tre volumi. Il corpo presente è letto; tre copertine parziali mantengono aperta la chiusura documentale. Aggiunte schede recuperabili, quaranta proposte editoriali con localizzatori e limiti, catalogo degli esempi e frontiera dei riferimenti indiretti. Nessuna citazione promossa nel manoscritto o prova pratica attestata.
+
+Analisi GPU parallela effettiva e monitorata: modello in memoria video, temperature rilevate e risultati automatici distinti dalla lettura revisionata. Istanza isolata terminata e propria directory RAM assente verificata sul server. Un flusso interrotto alla scadenza resta da riprendere; nessun artefatto applicativo persistente del progetto sul server.
+
+Registri, indice degli usi, roadmap e ripresa privata aggiornati; preservato il lavoro precedente già presente ma non versionato. Prossima fonte nella coda locale; lacune e copertine restano registrate. Due ancore tecniche arretrate conservate, nessun riancoraggio automatico. Controlli finali nel rapporto canonico e chiusura Git manuale. Nessun backup aggiuntivo. Le sezioni seguenti sono storiche. Template: nessuna nuova lezione generale.
+
+Audit superato: corrispondenza delle immagini con gli originali, collegamenti, cataloghi e conservazione del lavoro precedente verificati. Evidenze dell’analisi GPU e della rimozione della propria directory RAM conservate privatamente. Identità Git verificata senza esportare valori. Chiusura manuale pronta dopo i controlli canonici.
+
+## 2026-10-22 - Due volumi percorsi e analisi GPU sorvegliata
+
+Percorsi due volumi di una raccolta locale: centotrentadue immagini, centotrenta pienamente lette e due copertine parziali. Venti schede, indice recuperabile, trentasei usi editoriali con pagine e limiti e domande collegate alle soluzioni. La raccolta resta aperta con punto di ripresa esatto; nessuna prova eseguita o citazione promossa nel manoscritto.
+
+Avviata in parallelo l’analisi dei testi sulla GPU con isolamento verificato, monitoraggio termico, pausa per uso condiviso e arresto sorvegliato. Elaborazione effettiva e residenza in memoria misurate; risultati automatici ancora da revisionare. Istanza terminata e assenza della propria directory RAM verificata. Nessun artefatto del progetto conservato sul server, nessuna cancellazione di log amministrativi o modifica dei servizi condivisi.
+
+Registri, mappe degli usi, roadmap e ripresa privata aggiornati; distinte le incongruenze della fonte dalle correzioni analitiche. Il versionamento precedente è acquisito e la cartella era pulita all’avvio. Due ancore tecniche arretrate conservate, nessun riancoraggio automatico. Controlli finali nel rapporto canonico e chiusura Git manuale. Nessun backup aggiuntivo. Le sezioni seguenti sono storiche. Template: nessuna nuova lezione generale.
+
+Audit superato: pagine confrontate con gli originali, collegamenti e conservazione del lavoro precedente verificati. Evidenze di esecuzione GPU, temperatura, interruzione alla scadenza e rimozione della directory RAM persistite privatamente. Identità Git verificata senza esportarne i valori. Chiusura manuale pronta dopo i controlli canonici.
+
 ## 2026-10-22 - Improvvisazione letta fino alla fine delle copie
 
 Percorse fino alla fine due copie locali di improvvisazione: duecentoventi immagini, duecentodiciassette pienamente attestate e tre ritagli parziali. Il corpo presente e i seguiti sono letti; una pagina stampata non è rappresentata. Le unità restano aperte con lacune precise, senza trasformare il raggiungimento dell’ultima pagina in lettura integrale dell’edizione.
