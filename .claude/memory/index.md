@@ -1,5 +1,15 @@
 
 
+## 2026-10-23 - Workbook letto fino alle soluzioni e collegato al libro
+
+Completata la lettura del corpo e delle soluzioni di un manuale: ottanta immagini visitate, settantotto complete, due copertine parziali. Conservato lo stato aperto per la collazione editoriale; venti schede, un indice, catalogo di cinquantanove esercizi collegati alle risposte e quaranta usi proposti con pagine e limiti. Nessuna pratica o registrazione attestata, nessun testo promosso nel libro.
+
+Analisi GPU parallela effettiva, isolata e monitorata; risultati automatici ancora da revisionare. Istanza terminata e assenza della propria directory RAM verificata sul server. Materiale e log del progetto conservati soltanto sulla macchina del progetto, servizi condivisi e log amministrativi non alterati.
+
+Registri, indice degli usi, roadmap e ripresa privata aggiornati. Versionamento precedente acquisito con albero inizialmente pulito; prossima copia nella coda locale, da identificare rispetto a una scansione correlata. Due ancore tecniche arretrate conservate senza riancoraggio automatico. Controlli finali nel rapporto canonico e chiusura Git manuale. Nessun backup aggiuntivo. Le sezioni seguenti sono storiche. Template: nessuna nuova lezione generale.
+
+Audit superato: copertura del corpo e riserve delle due copertine, immagini, collegamenti, catalogo e conservazione del lavoro precedente verificati. Rimozione dei temporanei RAM della propria istanza GPU verificata sul server. Identità Git verificata senza esportare valori. Chiusura manuale pronta dopo i controlli canonici.
+
 ## 2026-10-23 - Due manuali di picking letti integralmente e collegati al libro
 
 Completata la lettura documentale di due manuali: centocinquanta immagini, testo, notazione, seguiti e apparati, con due chiusure. Persistite ventisei schede, due indici, catalogo di ventotto partiture e quarantotto proposte editoriali con localizzatori e limiti. Registrati separatamente i rinvii di ascolto; nessun audio o esercizio attestato, nessuna citazione promossa nel manoscritto.
