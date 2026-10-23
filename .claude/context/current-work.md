@@ -12,6 +12,16 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-10-23 - Copia lacunosa collazionata e riuso privato delle fonti documentato
+
+Percorsa fino alla fine una copia di manuale con gravi lacune già presenti nelle immagini originali: dieci schede, catalogo per pagine/tracce e trentadue usi editoriali con riserve. Verificata l’identità di due denominazioni dello stesso file, evitando una lettura duplicata. Recuperata la pagina editoriale finale e aggiunta una voce bibliografica verificata; lettura integrale ancora aperta per le parti mancanti.
+
+Documentato privatamente il riuso delle estrazioni esistenti dagli altri progetti autorizzati: punto d’ingresso, localizzatori, stato di revisione e limiti. Nessun caricamento automatico del contesto, trasferimento della memoria operativa o modifica ad altri repository. Analisi GPU parallela reale e sorvegliata, output automatici non revisionati; istanza terminata e assenza dei propri temporanei RAM verificata sul server.
+
+Registri, bibliografia, indice degli usi, roadmap e ripresa privata aggiornati. Versionamento precedente acquisito con albero inizialmente pulito; preservati i contenuti precedenti. Nessun testo del libro promosso o backup aggiuntivo. Due ancore tecniche arretrate conservate senza riancoraggio automatico. Controlli finali nel rapporto canonico e chiusura Git manuale. Le sezioni seguenti sono storiche. Template: nessuna nuova lezione generale.
+
+Audit superato: immagini e lacune della copia, identità dei percorsi duplicati, bibliografia in append, collegamenti, guida privata di riuso e conservazione del lavoro precedente verificati. Istanza GPU terminata e assenza dei propri temporanei RAM verificata sul server. Identità Git verificata senza esportare valori. Chiusura manuale pronta dopo i controlli canonici.
+
 ## 2026-10-23 - Workbook letto fino alle soluzioni e collegato al libro
 
 Completata la lettura del corpo e delle soluzioni di un manuale: ottanta immagini visitate, settantotto complete, due copertine parziali. Conservato lo stato aperto per la collazione editoriale; venti schede, un indice, catalogo di cinquantanove esercizi collegati alle risposte e quaranta usi proposti con pagine e limiti. Nessuna pratica o registrazione attestata, nessun testo promosso nel libro.
