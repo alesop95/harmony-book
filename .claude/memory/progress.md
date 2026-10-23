@@ -1,5 +1,15 @@
 
 
+## 2026-10-23 - Due manuali di picking letti integralmente e collegati al libro
+
+Completata la lettura documentale di due manuali: centocinquanta immagini, testo, notazione, seguiti e apparati, con due chiusure. Persistite ventisei schede, due indici, catalogo di ventotto partiture e quarantotto proposte editoriali con localizzatori e limiti. Registrati separatamente i rinvii di ascolto; nessun audio o esercizio attestato, nessuna citazione promossa nel manoscritto.
+
+Analisi GPU parallela reale, isolata e sorvegliata; risultati automatici ancora da revisionare. Istanza terminata e assenza della propria directory RAM verificata. Testi, risultati e log del progetto conservati soltanto sul computer del progetto; servizi condivisi e log amministrativi non alterati.
+
+Registri, indice degli usi, roadmap e ripresa privata aggiornati; versionamento precedente acquisito durante il giro e lavoro conservato. Prossima fonte nella coda locale, con anagrafica da verificare. Due ancore tecniche arretrate conservate, nessun riancoraggio automatico. Controlli finali nel rapporto canonico e chiusura Git manuale. Nessun backup aggiuntivo. Le sezioni seguenti sono storiche. Template: nessuna nuova lezione generale.
+
+Audit superato: copertura dei due documenti, immagini, collegamenti, cataloghi e conservazione del lavoro precedente verificati. La rimozione dei temporanei RAM della propria istanza GPU è verificata sul server. Identità Git verificata senza esportare valori. Chiusura manuale pronta dopo i controlli canonici.
+
 ## 2026-10-23 - Raccolta percorsa fino all’ultima pagina e apparati collegati
 
 Percorsa fino all’ultima pagina una raccolta in tre volumi. Il corpo presente è letto; tre copertine parziali mantengono aperta la chiusura documentale. Aggiunte schede recuperabili, quaranta proposte editoriali con localizzatori e limiti, catalogo degli esempi e frontiera dei riferimenti indiretti. Nessuna citazione promossa nel manoscritto o prova pratica attestata.
