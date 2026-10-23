@@ -6,6 +6,16 @@ covers-paths: []
 last-verified-commit: 017b02a
 ---
 
+## 2026-10-23 - Teoria, localizzatori e nuovo carico GPU verificabile
+
+Avanzata la lettura diretta di un manuale di teoria: sedici schede, sessantuno immagini piene e tre parziali, catalogo delle consegne e trentadue proposte editoriali con riferimenti e limiti. Rilevata una pagina ripetuta nella copia, corretti i localizzatori e mantenuta aperta la lettura del seguito. Anagrafica già verificata, nessuna nuova voce bibliografica.
+
+Avviato su richiesta un nuovo carico GPU con testi utili al progetto e telemetria. Il primo blocco si è interrotto per un errore di checkpoint sul computer locale, con pulizia remota verificata; corretta la scrittura concorrente e provata la correzione reintroducendo il difetto. Secondo blocco sorvegliato concluso; esito e pulizia finale verificati. Analisi automatiche separate dalle attestazioni di lettura.
+
+Registri, indice degli usi, roadmap e ripresa privata aggiornati. Preservati manoscritto, bibliografia, schede e altri record; contenuti privati fuori dai documenti pubblici. Versionamento precedente acquisito con albero inizialmente pulito; nessun add/commit/push o backup aggiuntivo. Due ancore tecniche arretrate conservate. Controlli finali nel rapporto canonico e chiusura Git manuale. Le sezioni seguenti sono storiche.
+
+Secondo blocco GPU concluso con telemetria e modello interamente in VRAM; risultati automatici non revisionati. Istanza propria terminata e assenza della relativa directory RAM verificata sul server. Il blocco breve non qualifica una giornata operativa né l’uso simultaneo di altre applicazioni.
+
 ## 2026-10-23 - Copia lacunosa collazionata e riuso privato delle fonti documentato
 
 Percorsa fino alla fine una copia di manuale con gravi lacune già presenti nelle immagini originali: dieci schede, catalogo per pagine/tracce e trentadue usi editoriali con riserve. Verificata l’identità di due denominazioni dello stesso file, evitando una lettura duplicata. Recuperata la pagina editoriale finale e aggiunta una voce bibliografica verificata; lettura integrale ancora aperta per le parti mancanti.
