@@ -12,6 +12,14 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-10-26 - Secondo volume esaminato fino alla fine, lacune documentate
+
+Esaminato fino all’ultima pagina un volume in scansione: novanta immagini visitate, settantasette piene e tredici parziali, ventitré schede con catalogo e usi proposti nel libro. Restano parti assenti e margini tagliati: lettura documentale ancora aperta. Nessuna nuova voce bibliografica o prosa nel manoscritto.
+
+Elaborazione GPU sorvegliata con sedici richieste complete; interrotta prima del termine per un errore di scrittura del checkpoint sul computer del progetto. Risultati automatici non revisionati. Istanza propria fermata e directory RAM assente verificata con una nuova connessione; vincolo permanente applicato. Nessuna qualifica di otto ore o uso simultaneo con altre applicazioni.
+
+Registri, localizzatori, lacune, mappe e ripresa aggiornati. Preservati documenti precedenti, altri record, bibliografia e manoscritto. Versionamento precedente acquisito con albero inizialmente pulito; nessuna mutazione Git o backup aggiuntivo. Due ancore tecniche arretrate conservate. Controlli finali nel rapporto canonico e chiusura Git manuale dopo esito verde. Le sezioni seguenti sono storiche.
+
 ## 2026-10-26 - Primo corso letto integralmente e catalogato per la scrittura
 
 Completata la lettura visiva di un corso in scansione: settantotto immagini, venti schede e centoventi esercizi distinti per sezione, con catalogo e trentadue usi proposti nel libro. Chiusa la lettura documentale del testimone; datazione della ristampa e pratica restano distinte. Nessuna nuova voce bibliografica o prosa nel manoscritto.
