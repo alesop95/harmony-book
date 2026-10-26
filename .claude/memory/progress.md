@@ -1,5 +1,15 @@
 
 
+## 2026-10-26 - Primi sette capitoli e nuovo blocco GPU sorvegliato
+
+Letti preliminari e primi sette capitoli di un ulteriore manuale: ventotto schede, centoundici immagini piene e una parziale. Informazioni collegate alle pagine, agli usi proposti nel libro e ai relativi limiti. Quarantanove consegne consultate, senza esecuzioni o ascolti attestati. Continuazione e recupero della copertina restano aperti.
+
+Nuovo blocco GPU sorvegliato concluso, con risultati automatici separati dalla lettura verificata. Istanza propria fermata e assenza della sua directory RAM verificata con nuova connessione. Il blocco breve non qualifica una giornata operativa o la concorrenza con altre applicazioni. Vincolo permanente di assenza di residui applicato.
+
+Registri, note recuperabili, proposte di citazione e ripresa privata aggiornati. Conservati bibliografia, manoscritto, documenti precedenti e altri record. Versionamento precedente acquisito con albero inizialmente pulito; nessuna mutazione Git o backup aggiuntivo. Due ancore tecniche arretrate conservate. Controlli finali nel rapporto canonico e chiusura Git manuale dopo esito verde. Le sezioni seguenti sono storiche.
+
+Template: nessuna nuova lezione generale.
+
 ## 2026-10-23 - Lettura fino agli apparati e ulteriore analisi GPU
 
 Percorso fino al fondo un manuale già avviato, inclusi apparati e risposte a stampa: ventiquattro nuove schede, novantacinque immagini piene e due nuove parziali. Registrate informazioni, pagine, collocazioni proposte e limiti per la scrittura. Due pagine ripetute nella copia non duplicano le consegne. Restano cinque margini incompleti: mantenuta aperta la riserva sul documento. Nessun esercizio pratico attestato.
