@@ -6,6 +6,14 @@ covers-paths: []
 last-verified-commit: 017b02a
 ---
 
+## 2026-10-26 - Finale del manuale e apparati letti, copertina e audio distinti
+
+Raggiunta l’ultima pagina del manuale corrente: altri sei capitoli e tutti gli apparati, centotrenta immagini piene e trentacinque schede. Consegne e risposte stampate sono distinte dalle prestazioni e dagli ascolti; collegamenti alle pagine, usi nel libro e riserve disponibili nel livello privato. Corpo e apparati completi, copertina parziale e audio ancora aperti; nessuna nuova chiusura integrale. Prossima fonte e checkpoint aggiornati.
+
+Nuovo blocco GPU sorvegliato, risultati automatici non revisionati. Istanza propria fermata e assenza della propria directory RAM verificata con nuova connessione. Vincolo permanente di assenza di residui applicato; profilo breve senza qualifica di otto ore o uso simultaneo con altre applicazioni.
+
+Registri, catalogo cumulativo, mappe e ripresa aggiornati. Documenti precedenti, altri record, bibliografia e manoscritto conservati. Versionamento precedente acquisito con albero inizialmente pulito; nessuna mutazione Git o backup aggiuntivo. Due ancore tecniche arretrate conservate. Controlli finali nel rapporto canonico e chiusura Git manuale dopo esito verde. Le sezioni seguenti sono storiche.
+
 ## 2026-10-26 - Altri sette capitoli, usi editoriali e GPU sorvegliata
 
 Letti altri sette capitoli dello stesso manuale: novantasei immagini piene, ventisei schede e trentasette ulteriori consegne numerate. Informazioni recuperabili con pagine, usi nel libro e limiti; rinvii bibliografici distinti dalle opere consultate. Nessuna esecuzione, soluzione o traccia audio attestata. Lettura integrale ancora aperta, checkpoint privato aggiornato.
