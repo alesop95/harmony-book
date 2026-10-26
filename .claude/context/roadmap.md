@@ -6,6 +6,14 @@ covers-paths: []
 last-verified-commit: 017b02a
 ---
 
+## 2026-10-26 - Altri sette capitoli, usi editoriali e GPU sorvegliata
+
+Letti altri sette capitoli dello stesso manuale: novantasei immagini piene, ventisei schede e trentasette ulteriori consegne numerate. Informazioni recuperabili con pagine, usi nel libro e limiti; rinvii bibliografici distinti dalle opere consultate. Nessuna esecuzione, soluzione o traccia audio attestata. Lettura integrale ancora aperta, checkpoint privato aggiornato.
+
+Nuovo blocco GPU sorvegliato, risultati automatici separati dalla lettura verificata. Istanza propria fermata e assenza della sua directory RAM verificata con nuova connessione. Vincolo permanente di assenza di residui applicato; il profilo breve non qualifica otto ore o uso simultaneo con altre applicazioni.
+
+Registri, catalogo cumulativo, mappe di citazione e ripresa aggiornati; documenti precedenti, altri record, bibliografia e manoscritto conservati. Versionamento precedente acquisito con albero inizialmente pulito. Nessuna mutazione Git o backup aggiuntivo. Due ancore tecniche arretrate conservate. Controlli finali nel rapporto canonico e chiusura Git manuale dopo esito verde. Le sezioni seguenti sono storiche.
+
 ## 2026-10-26 - Primi sette capitoli e nuovo blocco GPU sorvegliato
 
 Letti preliminari e primi sette capitoli di un ulteriore manuale: ventotto schede, centoundici immagini piene e una parziale. Informazioni collegate alle pagine, agli usi proposti nel libro e ai relativi limiti. Quarantanove consegne consultate, senza esecuzioni o ascolti attestati. Continuazione e recupero della copertina restano aperti.
