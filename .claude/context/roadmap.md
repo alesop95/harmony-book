@@ -6,6 +6,14 @@ covers-paths: []
 last-verified-commit: 017b02a
 ---
 
+## 2026-10-23 - Lettura fino agli apparati e ulteriore analisi GPU
+
+Percorso fino al fondo un manuale già avviato, inclusi apparati e risposte a stampa: ventiquattro nuove schede, novantacinque immagini piene e due nuove parziali. Registrate informazioni, pagine, collocazioni proposte e limiti per la scrittura. Due pagine ripetute nella copia non duplicano le consegne. Restano cinque margini incompleti: mantenuta aperta la riserva sul documento. Nessun esercizio pratico attestato.
+
+Nuovo blocco GPU sorvegliato concluso, con telemetria e risultati automatici distinti dalla lettura verificata. Istanza propria terminata e assenza della sua directory RAM verificata sul server. Il profilo breve non qualifica una giornata operativa o la concorrenza con altre applicazioni. Vincolo permanente di assenza di residui applicato.
+
+Registri, mappe per la scrittura, catalogo delle risposte e ripresa privata aggiornati. Bibliografia, manoscritto, schede precedenti e altri record conservati. Versionamento precedente acquisito con albero inizialmente pulito; nessun add/commit/push o backup aggiuntivo. Due ancore tecniche arretrate conservate. Controlli finali nel rapporto canonico e chiusura Git manuale dopo esito verde. Le sezioni seguenti sono storiche.
+
 ## 2026-10-23 - Teoria, localizzatori e nuovo carico GPU verificabile
 
 Avanzata la lettura diretta di un manuale di teoria: sedici schede, sessantuno immagini piene e tre parziali, catalogo delle consegne e trentadue proposte editoriali con riferimenti e limiti. Rilevata una pagina ripetuta nella copia, corretti i localizzatori e mantenuta aperta la lettura del seguito. Anagrafica già verificata, nessuna nuova voce bibliografica.
