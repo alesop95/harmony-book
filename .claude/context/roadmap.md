@@ -6,6 +6,14 @@ covers-paths: []
 last-verified-commit: 017b02a
 ---
 
+## 2026-10-26 - Primo corso letto integralmente e catalogato per la scrittura
+
+Completata la lettura visiva di un corso in scansione: settantotto immagini, venti schede e centoventi esercizi distinti per sezione, con catalogo e trentadue usi proposti nel libro. Chiusa la lettura documentale del testimone; datazione della ristampa e pratica restano distinte. Nessuna nuova voce bibliografica o prosa nel manoscritto.
+
+Nuovo blocco GPU sorvegliato sui testi già estratti, con risultati automatici non revisionati. Istanza propria fermata e directory RAM assente verificata via nuova connessione. Vincolo permanente di assenza di residui applicato; perimetro breve senza qualifica di otto ore o uso simultaneo con altre applicazioni.
+
+Registri, mappe, catalogo e ripresa aggiornati. Preservati documenti precedenti, altri record, bibliografia e manoscritto. Versionamento precedente acquisito con albero inizialmente pulito; nessuna mutazione Git o backup aggiuntivo. Due ancore tecniche arretrate conservate. Controlli finali nel rapporto canonico e chiusura Git manuale dopo esito verde. Le sezioni seguenti sono storiche.
+
 ## 2026-10-26 - Finale del manuale e apparati letti, copertina e audio distinti
 
 Raggiunta l’ultima pagina del manuale corrente: altri sei capitoli e tutti gli apparati, centotrenta immagini piene e trentacinque schede. Consegne e risposte stampate sono distinte dalle prestazioni e dagli ascolti; collegamenti alle pagine, usi nel libro e riserve disponibili nel livello privato. Corpo e apparati completi, copertina parziale e audio ancora aperti; nessuna nuova chiusura integrale. Prossima fonte e checkpoint aggiornati.
