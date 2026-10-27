@@ -1,5 +1,13 @@
 
 
+## 2026-10-27 - Revisione letta fino alla fine e discrepanze conservate
+
+Esaminata fino alla parola finale una revisione in scansione: centotredici immagini lette, ventinove schede con catalogo, localizzatori e usi proposti nel libro. Restano discrepanze interne da collazionare e datazione da verificare; nessuna nuova chiusura integrale o voce bibliografica. Nessuna prosa promossa.
+
+Due blocchi separati di analisi GPU sorvegliata, risultati automatici non revisionati. Isolamento verificato prima dei testi, istanza propria fermata e directory RAM assente verificata con nuova connessione per entrambi i blocchi. Il rapporto distingue durata del controller, carico campionato e pause; nessuna qualifica di otto ore o uso simultaneo con altre applicazioni.
+
+Registri, mappe e ripresa aggiornati; documenti precedenti, altri record, bibliografia e manoscritto conservati. Versionamento precedente acquisito con albero inizialmente pulito; nessuna mutazione Git o backup aggiuntivo. Due ancore tecniche arretrate conservate. Controlli finali nel rapporto canonico e chiusura Git manuale dopo esito verde. Le sezioni seguenti sono storiche.
+
 ## 2026-10-26 - Metodo letto integralmente e anagrafica verificata
 
 Letto integralmente un metodo in scansione: quarantotto immagini, dodici schede con catalogo, localizzatori e usi proposti nel libro. Anno verificato nel documento; aggiunta una voce bibliografica nel livello privato, preservando le precedenti. Nessuna nuova prosa nel manoscritto.
