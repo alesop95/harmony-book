@@ -12,6 +12,14 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-10-27 - Due testimoni percorsi e lacune circoscritte
+
+Attraversati fino all’ultima pagina due testimoni: centottantatré immagini, centosessantasei intere e diciassette parziali, quarantasei schede e altrettante proposte motivate per la scrittura. Registrate le lacune dei margini e dei preliminari, distinguendo fine del file e completezza documentale; nessuna chiusura attribuita alle copie incomplete. Cataloghi, localizzatori, discrepanze editoriali e rinvii conservati nel livello privato. Bibliografia e manoscritto conservati.
+
+Concluso un blocco GPU sorvegliato su testi acquisiti, risultati automatici non revisionati. Isolamento prima dei testi, istanza propria fermata e assenza della sua directory RAM verificata con nuova connessione. Richieste incomplete escluse; durata, pause e sensori nel rapporto privato. Nessuna qualifica di otto ore o concomitanza.
+
+Registri, mappe e ripresa aggiornati insieme. Versionamento precedente acquisito; nessuna mutazione Git, installazione o copia di backup aggiuntiva. Schede precedenti, altri record e due ancore tecniche arretrate conservati. Controlli finali nel rapporto canonico e chiusura Git manuale dopo esito verde. Le sezioni seguenti sono storiche.
+
 ## 2026-10-27 - Tre letture concluse e informazioni collegate al libro
 
 Conclusa la lettura disponibile di tre testimoni: duecentoquattordici immagini, cinquantacinque schede, cataloghi e proposte motivate per la scrittura. Due chiusure documentali; per il terzo restano preliminari e anagrafica da recuperare. Una prefazione era in fondo al file: localizzatore corretto e riserva di lacuna rimossa. Distinti copyright, edizione e date delle singole opere. Bibliografia e manoscritto conservati.
