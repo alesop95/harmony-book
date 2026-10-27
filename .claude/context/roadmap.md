@@ -6,6 +6,14 @@ covers-paths: []
 last-verified-commit: 017b02a
 ---
 
+## 2026-10-27 - Tre letture concluse e informazioni collegate al libro
+
+Conclusa la lettura disponibile di tre testimoni: duecentoquattordici immagini, cinquantacinque schede, cataloghi e proposte motivate per la scrittura. Due chiusure documentali; per il terzo restano preliminari e anagrafica da recuperare. Una prefazione era in fondo al file: localizzatore corretto e riserva di lacuna rimossa. Distinti copyright, edizione e date delle singole opere. Bibliografia e manoscritto conservati.
+
+Concluso un blocco di inferenza GPU sorvegliata su testi acquisiti, con risultati automatici non revisionati. Isolamento verificato prima dei testi, istanza propria fermata e assenza della directory RAM verificata con nuova connessione. Richieste incomplete escluse; durata, pause e copertura dei sensori nel rapporto privato. Nessuna qualifica di otto ore o concomitanza con altre applicazioni.
+
+Registri, mappe e ripresa aggiornati; schede precedenti e altri record conservati. Nessuna prosa promossa, mutazione Git o copia di backup aggiuntiva. Versionamento precedente acquisito, due ancore tecniche arretrate conservate. Controlli finali nel rapporto canonico e chiusura Git manuale dopo esito verde. Le sezioni seguenti sono storiche.
+
 ## 2026-10-27 - Tre testimoni letti e componenti bibliografici distinti
 
 Letti fino alla fine disponibile tre testimoni: centosettantasei immagini, quarantacinque schede, cataloghi delle unità e proposte motivate per il libro. Due chiusure documentali; per il terzo resta da collazionare un salto nei preliminari e verificare la data della revisione. Un testimone contiene tre opere con copyright distinti: aggiunte due voci bibliografiche verificate e corretta una nota della voce precedente. Nessuna prosa promossa.
