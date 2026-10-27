@@ -12,6 +12,14 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-10-27 - Tre testimoni letti e componenti bibliografici distinti
+
+Letti fino alla fine disponibile tre testimoni: centosettantasei immagini, quarantacinque schede, cataloghi delle unità e proposte motivate per il libro. Due chiusure documentali; per il terzo resta da collazionare un salto nei preliminari e verificare la data della revisione. Un testimone contiene tre opere con copyright distinti: aggiunte due voci bibliografiche verificate e corretta una nota della voce precedente. Nessuna prosa promossa.
+
+Concluso un blocco di analisi GPU sorvegliata su testi acquisiti, risultati automatici non revisionati. Isolamento verificato prima dei testi, istanza propria fermata e assenza della sua directory RAM verificata con nuova connessione. Il rapporto distingue durata, carico, pause e copertura dei sensori; nessuna qualifica di otto ore o concomitanza con altre applicazioni.
+
+Registri, mappe e ripresa aggiornati. Schede precedenti, altri record e prosa del manoscritto conservati; modifica bibliografica limitata ai metadati verificati. Versionamento precedente acquisito con albero inizialmente pulito; nessuna mutazione Git o backup aggiuntivo. Due ancore tecniche arretrate conservate. Controlli finali nel rapporto canonico e chiusura Git manuale dopo esito verde. Le sezioni seguenti sono storiche.
+
 ## 2026-10-27 - Revisione completa, duetti e studio finale riutilizzabili
 
 Letta integralmente una revisione in scansione: centonove immagini, ventotto schede, catalogo delle unità e proposte motivate per il libro. Conclusione effettiva riscontrata; data della nota introduttiva distinta dall’anno della specifica stampa, ancora da accertare. Una nuova chiusura documentale, nessuna nuova voce bibliografica o prosa nel manoscritto.
