@@ -6,6 +6,14 @@ covers-paths: []
 last-verified-commit: 017b02a
 ---
 
+## 2026-10-27 - Due letture integrali e confronti accordali verificati
+
+Completata la lettura documentale di due testimoni, con schede, cataloghi e usi proposti per la scrittura. Tutte le immagini disponibili lette; controllati anche alcuni dettagli accordali con ingrandimenti. Anagrafica ancora candidata dove manca la data, discrepanze conservate con i rispettivi localizzatori. Rinvii agli originali distinti dagli adattamenti consultati. Bibliografia e manoscritto conservati.
+
+Concluso un blocco GPU sorvegliato su testi acquisiti, risultati automatici non revisionati. Richieste incomplete escluse; durata effettiva, pause e sensori nel rapporto privato. Isolamento prima dei testi, istanza propria fermata e assenza della directory RAM verificata con nuova connessione. Nessuna qualifica di otto ore o concomitanza.
+
+Registri, mappe e ripresa aggiornati insieme; versione precedente acquisita e due allineamenti sopravvenuti del template verificati, con lettura delle regole aggiornate. Schede precedenti, altri record e due ancore tecniche arretrate conservati. Nessuna mutazione Git, installazione o copia di backup aggiuntiva. Controlli finali nel rapporto canonico e chiusura Git manuale dopo esito verde. Le sezioni seguenti sono storiche.
+
 ## 2026-10-27 - Tre letture percorse e riuso editoriale documentato
 
 Percorsi fino all’ultima pagina tre testimoni, con schede di lettura, cataloghi e proposte motivate per la scrittura. Piccoli tagli nelle immagini e parti editoriali non rappresentate restano lacune esplicite: fine del file e lettura integrale tenute distinte. Informazioni, pagine, riserve e modalità di citazione conservate nel livello privato; bibliografia e manoscritto conservati.
