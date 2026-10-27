@@ -12,6 +12,14 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-10-27 - Tre letture percorse e riuso editoriale documentato
+
+Percorsi fino all’ultima pagina tre testimoni, con schede di lettura, cataloghi e proposte motivate per la scrittura. Piccoli tagli nelle immagini e parti editoriali non rappresentate restano lacune esplicite: fine del file e lettura integrale tenute distinte. Informazioni, pagine, riserve e modalità di citazione conservate nel livello privato; bibliografia e manoscritto conservati.
+
+Concluso un blocco GPU sorvegliato su testi acquisiti, risultati automatici non revisionati. Isolamento prima dei testi, istanza propria fermata e assenza della directory RAM verificata con nuova connessione. Durata, richieste complete, pause e sensori nel rapporto privato; nessuna qualifica di otto ore o concomitanza.
+
+Registri, mappe e ripresa aggiornati insieme; versione precedente acquisita. Schede precedenti, altri record e due ancore tecniche arretrate conservati. Nessuna mutazione Git, installazione o copia di backup aggiuntiva. Controlli finali nel rapporto canonico, chiusura Git manuale dopo esito verde. Le sezioni seguenti sono storiche.
+
 ## 2026-10-27 - Due testimoni percorsi e lacune circoscritte
 
 Attraversati fino all’ultima pagina due testimoni: centottantatré immagini, centosessantasei intere e diciassette parziali, quarantasei schede e altrettante proposte motivate per la scrittura. Registrate le lacune dei margini e dei preliminari, distinguendo fine del file e completezza documentale; nessuna chiusura attribuita alle copie incomplete. Cataloghi, localizzatori, discrepanze editoriali e rinvii conservati nel livello privato. Bibliografia e manoscritto conservati.
