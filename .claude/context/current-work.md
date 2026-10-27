@@ -12,6 +12,14 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-10-27 - Revisione completa, duetti e studio finale riutilizzabili
+
+Letta integralmente una revisione in scansione: centonove immagini, ventotto schede, catalogo delle unità e proposte motivate per il libro. Conclusione effettiva riscontrata; data della nota introduttiva distinta dall’anno della specifica stampa, ancora da accertare. Una nuova chiusura documentale, nessuna nuova voce bibliografica o prosa nel manoscritto.
+
+Concluso un blocco di analisi GPU sorvegliata sui testi acquisiti, risultati automatici non revisionati. Isolamento verificato prima dei testi, istanza propria fermata e assenza della sua directory RAM verificata con nuova connessione. Il rapporto distingue risposte complete, pause, errori e copertura dei sensori; nessuna qualifica di otto ore o uso simultaneo con altre applicazioni.
+
+Registri, mappe e ripresa aggiornati. Documenti precedenti, altri record, bibliografia e manoscritto conservati. Versionamento precedente acquisito con albero inizialmente pulito; nessuna mutazione Git o backup aggiuntivo. Due ancore tecniche arretrate conservate. Controlli finali nel rapporto canonico e chiusura Git manuale dopo esito verde. Le sezioni seguenti sono storiche.
+
 ## 2026-10-27 - Revisione letta fino alla fine e discrepanze conservate
 
 Esaminata fino alla parola finale una revisione in scansione: centotredici immagini lette, ventinove schede con catalogo, localizzatori e usi proposti nel libro. Restano discrepanze interne da collazionare e datazione da verificare; nessuna nuova chiusura integrale o voce bibliografica. Nessuna prosa promossa.
