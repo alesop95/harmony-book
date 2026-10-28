@@ -1,5 +1,15 @@
 
 
+## 2026-10-27 - Due testimoni percorsi e contenuti pronti per il riuso
+
+Percorsi altri due testimoni fino alla fine dei file, con schede, cataloghi e indicazioni di citazione per la scrittura. Corpi disponibili letti; circoscritti un margine tagliato e preliminari mancanti, senza forzare chiusure integrali. Registrate discrepanze di nomenclatura e recuperato un identificatore editoriale nella quarta. Originali, rinvii e trascrizioni mediate distinti; bibliografia e manoscritto conservati.
+
+Concluso un blocco GPU sorvegliato su testi acquisiti, con risultati automatici da revisionare. Isolamento verificato prima dei testi, istanza propria fermata e assenza della directory RAM verificata con nuova connessione. Metriche e durata effettiva nel rapporto privato; nessuna qualifica di otto ore o concomitanza.
+
+Registri, mappe e ripresa aggiornati insieme; commit precedente acquisito e controlli finali nel rapporto canonico. Schede precedenti, altri record e due ancore tecniche arretrate conservati. Nessuna mutazione Git, installazione o copia di backup aggiuntiva. Chiusura Git manuale dopo esito verde; sezioni seguenti storiche.
+
+Template: nessuna modifica generale necessaria in questo lotto.
+
 ## 2026-10-27 - Due letture integrali e confronti accordali verificati
 
 Completata la lettura documentale di due testimoni, con schede, cataloghi e usi proposti per la scrittura. Tutte le immagini disponibili lette; controllati anche alcuni dettagli accordali con ingrandimenti. Anagrafica ancora candidata dove manca la data, discrepanze conservate con i rispettivi localizzatori. Rinvii agli originali distinti dagli adattamenti consultati. Bibliografia e manoscritto conservati.
