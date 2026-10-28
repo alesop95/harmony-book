@@ -1,5 +1,13 @@
 
 
+## 2026-10-28 - Manuale percorso, riuso e limite della copia
+
+Percorso fino alla fine un altro testimone, con schede, mappa di riuso e riferimenti localizzati. Un bordo tagliato confermato ingrandito conserva il livello documentale prudenziale, senza falsa chiusura integrale. Verificati anagrafica, paginazione e divisori; aggiunta una sola voce bibliografica da evidenza primaria, conservando le precedenti. Distinti compatibilità delle note, funzione, condotta delle voci e previsioni percettive.
+
+Blocco GPU concluso e sorvegliato su testi già estratti, risultati automatici non revisionati. Isolamento verificato prima dei testi, servizio proprio fermato e temporanei RAM assenti verificati tramite nuova connessione. Durata e metriche nel rapporto privato, senza qualifica di otto ore o concomitanza.
+
+Registri, cataloghi, mappe e ripresa aggiornati insieme; commit precedente acquisito e file esterno del giro precedente ora tracciato dall’utente. Un allineamento tecnico concorrente è verificato separatamente, senza assorbirne le scritture nel lotto di lettura. Versionamento manuale con il perimetro verificato dopo controlli verdi. Sezioni storiche e due ancore tecniche arretrate conservate; nessuna mutazione Git, installazione o copia di backup aggiuntiva.
+
 ## 2026-10-28 - Due letture integrali, contesti modali e pratica
 
 È comparso tools/esclusi-personali.esempio.txt, assente nello snapshot iniziale e identico byte per byte al modello già tracciato. Non è fra le scritture del lotto: resta intatto ed escluso dal commit proposto. La chiusura usa comandi manuali sui soli quattro file di stato, perché chiudi non supporta quel perimetro e includerebbe anche il file esterno; nessuna mutazione Git eseguita dall’agente.
