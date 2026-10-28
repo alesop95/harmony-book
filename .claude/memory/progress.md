@@ -1,5 +1,17 @@
 
 
+## 2026-10-28 - Due letture integrali, contesti modali e pratica
+
+È comparso tools/esclusi-personali.esempio.txt, assente nello snapshot iniziale e identico byte per byte al modello già tracciato. Non è fra le scritture del lotto: resta intatto ed escluso dal commit proposto. La chiusura usa comandi manuali sui soli quattro file di stato, perché chiudi non supporta quel perimetro e includerebbe anche il file esterno; nessuna mutazione Git eseguita dall’agente.
+
+Concluse altre due letture integrali documentali con schede, mappe e limiti di citazione. Distinti contesto modale, materiale selezionato e funzione; le discrepanze fra formule, didascalie e notazione sono localizzate. Riconciliate tavole illustrate fuori dall’ordine numerico e anagrafiche; aggiunta alla bibliografia una sola voce verificata sul colophon, conservando integralmente le precedenti. Il resto del manoscritto è conservato.
+
+Il blocco GPU sorvegliato su testi già estratti è stato fermato dalla protezione termica della CPU; nessun riavvio in questo lotto. Risultati automatici non revisionati. Isolamento verificato prima dei testi, istanza propria fermata e directory RAM assente verificata tramite nuova connessione. Metriche e durata nel rapporto privato; nessuna qualifica di otto ore o concomitanza misurata.
+
+Registri, cataloghi, mappe e ripresa aggiornati insieme; commit precedente acquisito, sezioni storiche e due ancore tecniche arretrate conservate. Controlli finali nel rapporto canonico; avviso tecnico upstream precedente seguito separatamente. Nessuna mutazione Git, installazione o copia di backup aggiuntiva. Chiusura Git manuale dopo esito verde.
+
+**Template:** nessuna.
+
 ## 2026-10-28 - Letture complete dei file, guide e riletture armoniche
 
 Letti altri due file fino all’ultima immagine e collegati i contenuti ai capitoli mediante schede e mappe con localizzatori e limiti di citazione. Una chiusura integrale documentale; l’altro esemplare mantiene le lacune riscontrate nella numerazione, senza contenuti ricostruiti. Distinti note scritte, radici sottintese e funzione contestuale; corretta la posizione di un dato editoriale. Bibliografia e manoscritto conservati.
