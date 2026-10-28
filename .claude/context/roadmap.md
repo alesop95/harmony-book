@@ -6,6 +6,14 @@ covers-paths: []
 last-verified-commit: 017b02a
 ---
 
+## 2026-10-28 - Letture complete dei file, guide e riletture armoniche
+
+Letti altri due file fino all’ultima immagine e collegati i contenuti ai capitoli mediante schede e mappe con localizzatori e limiti di citazione. Una chiusura integrale documentale; l’altro esemplare mantiene le lacune riscontrate nella numerazione, senza contenuti ricostruiti. Distinti note scritte, radici sottintese e funzione contestuale; corretta la posizione di un dato editoriale. Bibliografia e manoscritto conservati.
+
+Concluso un blocco GPU sorvegliato su testi già estratti; risultati automatici da revisionare. Isolamento prima dei testi, propria istanza fermata e directory RAM assente verificata mediante nuova connessione. Durata effettiva e campioni nel rapporto privato; nessuna qualifica di otto ore o concomitanza.
+
+Registri, cataloghi e ripresa aggiornati insieme; commit precedente acquisito, sezioni storiche e due ancore tecniche arretrate conservate. Controlli finali nel rapporto canonico; avviso tecnico upstream precedente seguito separatamente. Nessuna mutazione Git, installazione o copia di backup aggiuntiva. Chiusura manuale dopo esito verde.
+
 ## 2026-10-27 - Due testimoni percorsi e contenuti pronti per il riuso
 
 Percorsi altri due testimoni fino alla fine dei file, con schede, cataloghi e indicazioni di citazione per la scrittura. Corpi disponibili letti; circoscritti un margine tagliato e preliminari mancanti, senza forzare chiusure integrali. Registrate discrepanze di nomenclatura e recuperato un identificatore editoriale nella quarta. Originali, rinvii e trascrizioni mediate distinti; bibliografia e manoscritto conservati.
