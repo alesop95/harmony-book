@@ -12,6 +12,14 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-10-28 - Tre manuali percorsi, ritmo e articolazione
+
+Percorsi fino alla fine altri testimoni, con schede, cataloghi e mappe per la scrittura. Difetti ai margini e riserve di collazione conservano il livello documentale prudenziale; nessuna chiusura integrale fittizia. Verificate le anagrafiche su evidenza primaria e aggiunte le sole voci bibliografiche necessarie, preservando le precedenti. Distinti contenuto delle note, contesto armonico, articolazione e risultato percettivo.
+
+Blocco GPU sorvegliato su testi già estratti, risultati automatici non revisionati. Isolamento verificato prima dei testi, istanza propria fermata e assenza dei suoi temporanei RAM verificata da nuova connessione; rapporto privato con durata e metriche reali.
+
+Registri, mappe e ripresa aggiornati insieme. Acquisito il versionamento dell’utente, nuova chiusura manuale dopo controlli verdi. Sezioni storiche e ancore tecniche conservate. Nessuna mutazione Git, installazione, copia di backup aggiuntiva o scrittura in altri progetti.
+
 ## 2026-10-28 - Manuale percorso, riuso e limite della copia
 
 Percorso fino alla fine un altro testimone, con schede, mappa di riuso e riferimenti localizzati. Un bordo tagliato confermato ingrandito conserva il livello documentale prudenziale, senza falsa chiusura integrale. Verificati anagrafica, paginazione e divisori; aggiunta una sola voce bibliografica da evidenza primaria, conservando le precedenti. Distinti compatibilità delle note, funzione, condotta delle voci e previsioni percettive.
