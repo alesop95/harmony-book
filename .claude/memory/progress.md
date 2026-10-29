@@ -1,5 +1,13 @@
 
 
+## 2026-10-29 - Tecnica, scale e accompagnamento collegati al libro
+
+Percorsi altri testimoni fino alla fine dei file disponibili. Schede e mappe collegano informazione, pagina, collocazione nel libro, motivo e limite. Chiusura integrale soltanto per il testimone senza lacune identificate; margini tagliati, pagine non identificate e date degli allegati restano dichiarati. Bibliografia e manoscritto conservati.
+
+Blocco GPU sorvegliato su testi già estratti concluso; risultati automatici non revisionati. Isolamento verificato prima dei testi, istanza propria fermata e assenza dei suoi temporanei RAM verificata da nuova connessione. Metriche e durata effettive nel rapporto privato.
+
+Registri, cataloghi e ripresa aggiornati insieme; ricevuto un allineamento documentale del template già versionato. Sezioni storiche e ancore tecniche conservate. Chiusura manuale dopo controlli canonici verdi. Trasferita una prova hardware anonimizzata su richiesta esplicita, con verifica dei contenuti esportati e aggiornamento del contesto destinatario. Nessuna mutazione Git, installazione o copia di backup aggiuntiva.
+
 ## 2026-10-29 - Tecniche, accordi e articolazione nelle fonti
 
 Percorso un altro testimone fino alla fine del file disponibile. Schede e mappa collegano informazione, pagina, collocazione nel libro, motivo e limite. Margini tagliati e incertezze documentali restano dichiarati; la fine del file non basta per chiudere la lettura integrale. Bibliografia e manoscritto conservati.
