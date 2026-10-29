@@ -1,4 +1,11 @@
 
+## 2026-10-29 - Contenuti recuperabili e preparazione della scrittura
+
+Aggiunto recupero locale unificato del materiale privato: note, mappe, risultati automatici, estratti e commenti dei documenti dell'autore. Ogni risultato conserva provenienza, stato di revisione e localizzatore; il recupero rifiuta evidenze cambiate. La disponibilità nel contesto non modifica attestazioni di lettura né approva contenuti per il manoscritto.
+
+Definita la ripresa dei documenti commentati con originali conservati, revisioni separate e promozione di un movimento dopo approvazione del testo concreto. Verifiche su dati reali e prova di mutazione distinguono integrità del recupero e correttezza semantica. I risultati automatici richiedono confronto con la fonte.
+
+Blocco GPU su estratti già disponibili concluso, con monitoraggio e isolamento prima dei testi. Istanza propria fermata e assenza dei propri temporanei verificata da nuova connessione; esito nel livello privato. Aggiornati stato, ripresa e accesso ai materiali insieme, conservando sezioni storiche e ancore tecniche arretrate. Nessuna mutazione Git, installazione o scrittura in altri progetti. Versionamento manuale dopo controlli canonici verdi.
 
 ## 2026-10-29 - Tecnica, scale e accompagnamento collegati al libro
 

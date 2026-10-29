@@ -1,5 +1,9 @@
 # Ricerca accademica per il libro di armonia
 
+## Recupero del contesto e commenti dell'autore
+
+Prima di lavorare su un nodo o sui DOCX commentati, consultare l'indice locale con `python -X utf8 -B tools/book-context.py search --query "concetto" --scope reviewed`; estendere poi ad `author`, `automatic`, `raw` o `all`. Il comando `show --id <numero>` recupera il contenuto intero con impronta, localizzatore e stato. L'indicizzazione rende recuperabili i concetti estratti dalla GPU e le letture precedenti, senza attestare completezza o validità delle interpretazioni. Gli originali DOCX conservano commenti, porzioni ancorate e revisioni: il recupero non accetta modifiche, non applica commenti e non promuove prosa. Nuove versioni si confrontano con gli originali conservati; ogni proposta segue l'approvazione del movimento esatto e il tracciamento delle fonti. Copertura, lacune e istruzioni di ripresa stanno nel livello privato.
+
 ## Verifica per servizio e durata effettiva, 2026-10-17
 
 Il requisito di persistenza è verificato sul servizio concreto prima dell'invio dei testi: cgroup senza swap, proprio blocco della sospensione, tmpfs e confinamento delle scritture. Il controllo continua durante l'esecuzione; non si dichiara eliminata ogni traccia amministrativa del collegamento. I risultati automatici restano non revisionati. Nelle prove di uso prolungato registrare pause, errori e copertura dei sensori: ore trascorse e campioni raccolti non equivalgono a ore sotto carico, né un servizio su CPU prova concorrenza GPU. La disponibilità futura della quota è un limite operativo, non un risultato già dimostrato.
