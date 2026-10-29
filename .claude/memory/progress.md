@@ -1,5 +1,13 @@
 
 
+## 2026-10-29 - Due testimoni percorsi e usi localizzati
+
+Percorsi altri testimoni fino alla fine dei file disponibili, con schede e mappe per la scrittura. Chiusura integrale soltanto per la copia senza lacune identificate; riserve di leggibilità e collazione conservate per l’altra. Ogni uso collega informazione, pagina, collocazione e limite. Dati editoriali incerti restano tali, con bibliografia e manoscritto conservati.
+
+Blocco GPU sorvegliato concluso su testi già estratti; risultati automatici non revisionati. Isolamento verificato prima dei testi, istanza propria fermata e assenza dei suoi temporanei RAM verificata da nuova connessione. Rapporto privato con metriche e durata reali.
+
+Registri, cataloghi e ripresa aggiornati insieme; acquisito un allineamento tecnico esterno già versionato. Sezioni storiche e ancore tecniche conservate. Chiusura manuale dopo controlli canonici verdi. Nessuna mutazione Git, installazione, copia di backup aggiuntiva o scrittura in altri progetti.
+
 ## 2026-10-28 - Tre manuali percorsi, ritmo e articolazione
 
 Percorsi fino alla fine altri testimoni, con schede, cataloghi e mappe per la scrittura. Difetti ai margini e riserve di collazione conservano il livello documentale prudenziale; nessuna chiusura integrale fittizia. Verificate le anagrafiche su evidenza primaria e aggiunte le sole voci bibliografiche necessarie, preservando le precedenti. Distinti contenuto delle note, contesto armonico, articolazione e risultato percettivo.
