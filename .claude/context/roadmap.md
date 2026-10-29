@@ -6,6 +6,14 @@ covers-paths: []
 last-verified-commit: 017b02a
 ---
 
+## 2026-10-29 - Tecniche, accordi e articolazione nelle fonti
+
+Percorso un altro testimone fino alla fine del file disponibile. Schede e mappa collegano informazione, pagina, collocazione nel libro, motivo e limite. Margini tagliati e incertezze documentali restano dichiarati; la fine del file non basta per chiudere la lettura integrale. Bibliografia e manoscritto conservati.
+
+Blocco GPU sorvegliato su testi già estratti concluso; risultati automatici non revisionati. Isolamento verificato prima dei testi, istanza propria fermata e assenza dei suoi temporanei RAM verificata da nuova connessione. Metriche e durata reali nel rapporto privato.
+
+Registri, cataloghi e ripresa aggiornati insieme. Sezioni storiche e ancore tecniche conservate. Chiusura manuale dopo controlli canonici verdi. Nessuna mutazione Git, installazione, copia di backup aggiuntiva o scrittura in altri progetti.
+
 ## 2026-10-29 - Due testimoni percorsi e usi localizzati
 
 Percorsi altri testimoni fino alla fine dei file disponibili, con schede e mappe per la scrittura. Chiusura integrale soltanto per la copia senza lacune identificate; riserve di leggibilità e collazione conservate per l’altra. Ogni uso collega informazione, pagina, collocazione e limite. Dati editoriali incerti restano tali, con bibliografia e manoscritto conservati.
