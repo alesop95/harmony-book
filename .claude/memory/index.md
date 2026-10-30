@@ -1,4 +1,12 @@
 
+## 2026-10-29 - Lettura accorpata e checkpoint sostanziali
+
+Accorpata la lettura di più testimoni in un unico checkpoint sostanziale, con salvataggi continui del contesto e versionamento manuale meno frequente. Schede, cataloghi e mappe collegano contenuto, pagina, collocazione nel libro, motivo e limite. Integrale soltanto il testimone senza lacune identificate; margini e metadati ancora incerti restano dichiarati. Bibliografia e manoscritto conservati.
+
+Blocco semantico GPU concluso per arresto protettivo alla soglia CPU prevista; limiti termici invariati e risultati automatici non revisionati. Isolamento verificato prima dei testi, servizio proprio fermato e assenza dei propri temporanei RAM controllata da nuova connessione. Metriche ed evidenze nel livello privato. Nessuna attribuzione di lettura alle sole inferenze.
+
+Registri e documenti di ripresa consolidati insieme. Indice di recupero aggiornato con verifiche sui contenuti e cache derivata compressa a impronta invariata; esito delle verifiche canoniche conservato con il checkpoint privato, prima della chiusura manuale. Sezioni storiche e ancore tecniche conservate. Nessuna mutazione Git, installazione, copia di backup aggiuntiva o trasferimento esterno.
+
 ## 2026-10-29 - Contenuti recuperabili e preparazione della scrittura
 
 Aggiunto recupero locale unificato del materiale privato: note, mappe, risultati automatici, estratti e commenti dei documenti dell'autore. Ogni risultato conserva provenienza, stato di revisione e localizzatore; il recupero rifiuta evidenze cambiate. La disponibilità nel contesto non modifica attestazioni di lettura né approva contenuti per il manoscritto.
