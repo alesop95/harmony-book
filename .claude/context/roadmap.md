@@ -6,6 +6,16 @@ covers-paths: []
 last-verified-commit: 017b02a
 ---
 
+## 2026-10-30 - Geometria, accordi e pratica nel contesto
+
+Concluso un lotto accorpato di letture fino alla fine dei file disponibili, con schede localizzate, mappe e cataloghi che collegano informazioni, uso editoriale e limiti. Chiusura integrale distinta dalle lacune delle copie; apparato bibliografico e contenuti reali restano privati. Manoscritto conservato.
+
+Blocco GPU concluso e misurato: isolamento prima dei testi, servizio proprio fermato e assenza dei propri temporanei RAM verificata da nuova connessione. Risposte attribuite agli estratti effettivi e da revisionare; nessuna chiusura per sola inferenza.
+
+Registri riconciliati; indice ricostruito con recuperi reali e collegamenti verificati. Compressione senza perdita e impronte conservate. Otto controlli canonici verdi con stdout reale nelle evidenze private. Nessuna mutazione Git o trasferimento esterno. Conservati i 28 percorsi dell’allineamento concorrente: versione manuale limitata ai quattro file di stato. Corretto il solo paragrafo storico dell’allineamento che aveva lettere perse per codifica, con prova privata esatta; altre sezioni storiche e ancore tecniche conservate.
+
+Una risposta GPU è stata revisionata sul facsimile: correzioni interpretative documentate e collegate alla scheda automatica, senza alterare la risposta originale né promuovere lo stato di lettura. Citazioni letterali valide non garantiscono interpretazioni corrette.
+
 ## 2026-10-30 - Composizione e pratica in un lotto
 
 Concluso un lotto accorpato di letture fino alla fine dei file disponibili, con schede progressive, mappe e cataloghi che collegano contenuto, localizzatore, uso editoriale e limite. Chiusura integrale distinta da lettura con lacune materiali; dettagli nel livello privato. Manoscritto e bibliografia conservati.
@@ -14,7 +24,7 @@ Blocco GPU concluso e misurato: isolamento verificato prima dei testi, servizio 
 
 Registri riconciliati; indice e recuperi reali verificati, esiti finali di compressione e controlli nelle evidenze del checkpoint prima della chiusura manuale. Nessuna mutazione Git, installazione, copia di backup o trasferimento esterno. Sezioni storiche e ancore tecniche conservate.
 
-? arrivato in parallelo l?allineamento del template 88984ef, ricevuta .claude/ultimo-allineamento.md: 25 file della passata, AGENTS.md e due metadati/ricevute, 28 percorsi estranei alla lettura, nessun conflitto segnalato. File conservati e impronte rilevate senza attribuirli a questo lavoro. Non proporre chiudi mentre sono presenti questi aggiornamenti di un?altra sessione: git-commands-format.md, paragrafo sul perimetro concorrente, richiede commit manuale limitato ai quattro file di stato della lettura. Allineamento del template escluso dal commit proposto; esito canonico distinto dalla verifica funzionale completa delle sue novit?.
+È arrivato in parallelo l'allineamento del template 88984ef, ricevuta .claude/ultimo-allineamento.md: 25 file della passata, AGENTS.md e due metadati/ricevute, 28 percorsi estranei alla lettura, nessun conflitto segnalato. File conservati e impronte rilevate senza attribuirli a questo lavoro. Non proporre chiudi mentre sono presenti questi aggiornamenti di un'altra sessione: git-commands-format.md, paragrafo sul perimetro concorrente, richiede commit manuale limitato ai quattro file di stato della lettura. Allineamento del template escluso dal commit proposto; esito canonico distinto dalla verifica funzionale completa delle sue novità.
 
 ## 2026-10-30 - Volume lungo e lettura continuativa
 
