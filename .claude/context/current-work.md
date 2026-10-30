@@ -12,6 +12,14 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-10-30 - Comping, repertorio e ritmo nel contesto
+
+Concluso il lotto accorpato fino alla fine delle copie disponibili: schede, mappe e cataloghi collegano informazioni, pagine, uso e limiti di citazione. Lacune e pagine duplicate registrate senza chiusure integrali indebite; contenuti e bibliografia reali restano privati, manoscritto conservato.
+
+GPU fermata automaticamente alla soglia prudenziale della CPU; esito termico registrato e servizio isolato chiuso, propri temporanei RAM assenti da nuova connessione. Risposte automatiche attribuite ai chunk reali e ancora da revisionare. Nessun riavvio del carico dopo lo stop protettivo.
+
+Registri riconciliati; indice ricostruito con recuperi reali e collegamenti verificati. Compressione senza perdita e impronte conservate. Otto controlli canonici verdi con stdout reale nelle evidenze private. Allineamento concorrente conservato: versionamento manuale dei soli quattro stati, senza chiusura globale. Nessuna mutazione Git, backup o trasferimento esterno. Template: nessuna nuova lezione generale da propagare in questo lotto.
+
 ## 2026-10-30 - Geometria, accordi e pratica nel contesto
 
 Concluso un lotto accorpato di letture fino alla fine dei file disponibili, con schede localizzate, mappe e cataloghi che collegano informazioni, uso editoriale e limiti. Chiusura integrale distinta dalle lacune delle copie; apparato bibliografico e contenuti reali restano privati. Manoscritto conservato.
