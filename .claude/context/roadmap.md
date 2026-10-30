@@ -6,6 +6,14 @@ covers-paths: []
 last-verified-commit: 017b02a
 ---
 
+## 2026-10-30 - Volume lungo e lettura continuativa
+
+Completata la lettura di un volume lungo in un unico checkpoint sostanziale, con schede progressive e salvataggi continui del contesto. Schede, catalogo e mappa collegano informazione, pagina, collocazione nel libro, ragione e limite; errori interni e attribuzioni mediate restano espliciti. Chiusura del documento disponibile distinta da allegati e originali citati. Bibliografia e manoscritto conservati.
+
+Blocco semantico GPU concluso con sorveglianza e soglie invariate; risultati automatici da revisionare. Isolamento verificato prima dei testi, servizio proprio fermato e assenza dei propri temporanei RAM controllata da nuova connessione. Evidenze nel livello privato. Nessuna lettura chiusa per sola inferenza.
+
+Indice di recupero aggiornato con verifiche sui contenuti e cache derivata compressa a impronta invariata; esito delle verifiche canoniche conservato con il checkpoint privato prima della chiusura manuale. Sezioni storiche e ancore tecniche conservate. Nessuna mutazione Git, installazione, copia di backup aggiuntiva o trasferimento esterno.
+
 ## 2026-10-29 - Lettura accorpata e checkpoint sostanziali
 
 Accorpata la lettura di più testimoni in un unico checkpoint sostanziale, con salvataggi continui del contesto e versionamento manuale meno frequente. Schede, cataloghi e mappe collegano contenuto, pagina, collocazione nel libro, motivo e limite. Integrale soltanto il testimone senza lacune identificate; margini e metadati ancora incerti restano dichiarati. Bibliografia e manoscritto conservati.
