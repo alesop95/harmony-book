@@ -12,6 +12,16 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-10-30 - Composizione e pratica in un lotto
+
+Concluso un lotto accorpato di letture fino alla fine dei file disponibili, con schede progressive, mappe e cataloghi che collegano contenuto, localizzatore, uso editoriale e limite. Chiusura integrale distinta da lettura con lacune materiali; dettagli nel livello privato. Manoscritto e bibliografia conservati.
+
+Blocco GPU concluso e misurato: isolamento verificato prima dei testi, servizio proprio fermato, assenza dei propri temporanei RAM controllata da nuova connessione. Risposte automatiche attribuite agli estratti effettivi e marcate da revisionare; nessuna lettura chiusa per sola inferenza.
+
+Registri riconciliati; indice e recuperi reali verificati, esiti finali di compressione e controlli nelle evidenze del checkpoint prima della chiusura manuale. Nessuna mutazione Git, installazione, copia di backup o trasferimento esterno. Sezioni storiche e ancore tecniche conservate.
+
+? arrivato in parallelo l?allineamento del template 88984ef, ricevuta .claude/ultimo-allineamento.md: 25 file della passata, AGENTS.md e due metadati/ricevute, 28 percorsi estranei alla lettura, nessun conflitto segnalato. File conservati e impronte rilevate senza attribuirli a questo lavoro. Non proporre chiudi mentre sono presenti questi aggiornamenti di un?altra sessione: git-commands-format.md, paragrafo sul perimetro concorrente, richiede commit manuale limitato ai quattro file di stato della lettura. Allineamento del template escluso dal commit proposto; esito canonico distinto dalla verifica funzionale completa delle sue novit?.
+
 ## 2026-10-30 - Volume lungo e lettura continuativa
 
 Completata la lettura di un volume lungo in un unico checkpoint sostanziale, con schede progressive e salvataggi continui del contesto. Schede, catalogo e mappa collegano informazione, pagina, collocazione nel libro, ragione e limite; errori interni e attribuzioni mediate restano espliciti. Chiusura del documento disponibile distinta da allegati e originali citati. Bibliografia e manoscritto conservati.
