@@ -1,18 +1,22 @@
 {
   ".claude/skills/latex-build/SKILL.md": {
     "testa": "b0e224c7889cfc13eef5675f8ddb4150e29bcc32",
-    "il": "2026-10-14"
+    "il": "2026-11-04",
+    "locale_sha256_lf": "db45f4b1dc1065fa817dbb1149052e7e27c00e48368e95690b41b495fbe2e0cb"
   },
   "tools/extract-titlepages.py": {
     "testa": "4cddd1864827e76213f32b1569767c1de8534537",
-    "il": "2026-09-29"
+    "il": "2026-11-04",
+    "locale_sha256_lf": "ccd87efa940b5c4fa7360cce19c7fec07d8c67f2843e9ccc8d4383604384c623"
   },
   "tools/latest-screenshot.ps1": {
     "testa": "f397879dea6593a215104018f9e546c0e0ff922e",
-    "il": "2026-09-29"
+    "il": "2026-11-04",
+    "locale_sha256_lf": "b96726b42b660882a61bf1990ee3909f24d964b6a946a64a46f7539f8759e481"
   },
   "tools/render-bib-registry.py": {
     "testa": "dc4cfe7f4a9c568d3fdc1b4b7d3182d6a74c80a0",
-    "il": "2026-10-19"
+    "il": "2026-11-04",
+    "locale_sha256_lf": "211205ed3aae9d53e73551d0d0c3579e64429630ebdfb0f578aa11ad3c6c2d8a"
   }
 }
