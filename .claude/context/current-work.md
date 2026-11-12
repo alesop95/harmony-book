@@ -12,6 +12,21 @@ last-verified-commit: 9acc2e0
 stato: in corso
 ---
 
+## 2026-11-12 - Chiusura e ripresa condivisa
+
+Chiusura richiesta dall’autore: consolidato il punto di ripresa condiviso, verificato sul registro e sui file presenti. La fonte corrente rimane aperta, con localizzatore e lacune nel checkpoint privato. Il ciclo autonomo precedente è terminato alla scadenza; la ripresa non lo riavvia. Stato e vincoli durevoli in _notes/HANDOFF.md, punto operativo in _notes/RESUME-PROMPT.md.
+
+Ramo main, riferimento di chiusura 8da96ff; allineamenti del template acquisiti e già versionati. Skill canonica riprendi e adattatori Codex verificati coerenti. Le due ancore tecniche storiche arretrate restano dichiarate; nessun allineamento tecnico globale o controllo di sicurezza completo dedotto da questa chiusura. Controlli e prove di conservazione nel livello privato.
+
+Il versionamento finale resta manuale con chiudi; l’impronta viene registrata dopo la verifica del push. Contenuti, bozze, schede semantiche e bibliografia restano nel livello privato. Template: nessuna nuova lezione generale; applicata la procedura di chiusura esistente.
+
+
+## 2026-11-02 - Prosecuzione autonoma delle letture
+
+Proseguita la lettura diretta dal checkpoint effettivo nella coda riconciliata, con salvataggi progressivi, schede localizzate, mappe e registri aggiornati. La fonte corrente resta aperta; collazioni e limiti di consultazione nelle note private. Contenuti e misure restano nel livello privato; manoscritto, bibliografia e digest antecedenti conservati.
+
+Supervisore esistente verificato vivo, prosecuzione sequenziale e nessuna azione richiesta ora. Nessun nuovo agente, thread o supervisore; nessuna attività remota, GPU, installazione o cambio di configurazione. Controlli di conservazione e recupero nel checkpoint privato; controlli canonici prima di una proposta di versione. Git e chiusura manuali. Ancore tecniche storiche conservate. Template: nessuna nuova lezione generale.
+
 ## 2026-10-30 - Comping, repertorio e ritmo nel contesto
 
 Concluso il lotto accorpato fino alla fine delle copie disponibili: schede, mappe e cataloghi collegano informazioni, pagine, uso e limiti di citazione. Lacune e pagine duplicate registrate senza chiusure integrali indebite; contenuti e bibliografia reali restano privati, manoscritto conservato.

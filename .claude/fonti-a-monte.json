@@ -1,0 +1,13 @@
+{
+  "fonti": [
+    {
+      "id": "github:blader/humanizer",
+      "pacchetto": "skills/humanizer",
+      "scheda": ".claude/skills/humanizer/README.md",
+      "ruolo": "skill-e-agenti",
+      "motivo": "citato nel materiale del progetto, in .claude/skills/humanizer/README.md; la citazione non prova l'installazione",
+      "controllo": "release"
+    }
+  ],
+  "falsi": []
+}
